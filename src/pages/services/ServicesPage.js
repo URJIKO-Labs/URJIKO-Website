@@ -22,10 +22,10 @@ export function renderServicesPage() {
     ${renderServiceCards()}
     ${renderSmartBizFeature()}
     ${renderGlobalCTA({
-      title: "Ready to Build Your Solution?",
+      title: "Ready to build your solution?",
       description:
         "Tell us about your project requirements. We will help you identify the right technology approach.",
-      primaryBtnLabel: "Discuss Your Project",
+      primaryBtnLabel: "Get a Free Consultation",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Solutions",
       secondaryBtnPath: "/solutions",

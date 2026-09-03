@@ -21,10 +21,10 @@ export function renderPortfolioPage() {
     ${renderPortfolioCapabilities()}
     ${renderIndustryCoverage()}
     ${renderGlobalCTA({
-      title: "Have a Problem That Software Could Solve?",
+      title: "Like what you see?",
       description:
         "Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",
-      primaryBtnLabel: "Discuss Your Project",
+      primaryBtnLabel: "Request a Demo",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Services",
       secondaryBtnPath: "/services",

@@ -23,10 +23,10 @@ export function renderSolutionsPage() {
     ${renderCapabilityGrid()}
     ${renderCrossNavigation()}
     ${renderGlobalCTA({
-      title: "Have a Problem Technology Could Solve?",
+      title: "Need a custom solution for your industry?",
       description:
         "Tell us what you are trying to improve. We will help you identify a practical digital solution.",
-      primaryBtnLabel: "Discuss Your Project",
+      primaryBtnLabel: "Get a Free Consultation",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Work",
       secondaryBtnPath: "/portfolio",
