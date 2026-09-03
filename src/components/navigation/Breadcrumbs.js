@@ -1,5 +1,5 @@
 export function renderBreadcrumbs(items = []) {
-  if (!items || items.length <= 1) return '';
+  if (!items || items.length <= 1) return "";
 
   const itemsHtml = items
     .map((item, index) => {
@@ -13,12 +13,12 @@ export function renderBreadcrumbs(items = []) {
       }
       return `
         <li>
-          <a href="${item.path || '#'}" data-link class="text-muted hover:text-teal">${item.label}</a>
+          <a href="${item.path || "#"}" data-link class="text-muted hover:text-teal">${item.label}</a>
           <span class="mx-2 text-muted" aria-hidden="true" style="margin: 0 var(--space-2);">/</span>
         </li>
       `;
     })
-    .join('');
+    .join("");
 
   return `
     <nav aria-label="Breadcrumb" class="mb-6">

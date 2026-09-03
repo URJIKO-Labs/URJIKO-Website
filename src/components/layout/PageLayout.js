@@ -1,9 +1,9 @@
-import { renderNavbar } from './Navbar.js';
-import { renderFooter } from './Footer.js';
-import { initMobileMenu } from '../navigation/MobileMenu.js';
-import { seoConfig } from '../../config/company.js';
+import { renderNavbar } from "./Navbar.js";
+import { renderFooter } from "./Footer.js";
+import { initMobileMenu } from "../navigation/MobileMenu.js";
+import { seoConfig } from "../../config/company.js";
 
-export function renderPageLayout({ path = '/', content = '' }) {
+export function renderPageLayout({ path = "/", content = "" }) {
   const routeMeta = seoConfig.routes[path] || {
     title: seoConfig.defaultTitle,
     description: seoConfig.defaultDescription,
@@ -12,7 +12,7 @@ export function renderPageLayout({ path = '/', content = '' }) {
   document.title = routeMeta.title;
   let metaDescTag = document.querySelector('meta[name="description"]');
   if (metaDescTag) {
-    metaDescTag.setAttribute('content', routeMeta.description);
+    metaDescTag.setAttribute("content", routeMeta.description);
   }
 
   return `
@@ -35,17 +35,17 @@ export function renderPageLayout({ path = '/', content = '' }) {
 export function attachPageLayoutEvents() {
   initMobileMenu();
 
-  const navbar = document.getElementById('site-navbar');
+  const navbar = document.getElementById("site-navbar");
   if (navbar) {
     const handleScroll = () => {
       if (window.scrollY > 20) {
-        navbar.classList.add('navbar--scrolled');
+        navbar.classList.add("navbar--scrolled");
       } else {
-        navbar.classList.remove('navbar--scrolled');
+        navbar.classList.remove("navbar--scrolled");
       }
     };
-    window.removeEventListener('scroll', handleScroll);
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
   }
 }

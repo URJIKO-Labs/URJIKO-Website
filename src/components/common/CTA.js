@@ -1,12 +1,12 @@
-import { companyConfig } from '../../config/company.js';
+import { companyConfig } from "../../config/company.js";
 
 export function renderGlobalCTA({
-  title = 'Have a problem that technology could solve?',
+  title = "Have a problem that technology could solve?",
   description = "Let's build a practical, high-performance digital solution tailored for your organization.",
   primaryBtnLabel = companyConfig.primaryCTA.label,
   primaryBtnPath = companyConfig.primaryCTA.path,
-  secondaryBtnLabel = 'View Our Solutions',
-  secondaryBtnPath = '/solutions',
+  secondaryBtnLabel = "View Our Solutions",
+  secondaryBtnPath = "/solutions",
 } = {}) {
   return `
     <section class="section" aria-labelledby="cta-section-heading">
@@ -25,7 +25,7 @@ export function renderGlobalCTA({
                 ${secondaryBtnLabel}
               </a>
             `
-                : ''
+                : ""
             }
           </div>
         </div>

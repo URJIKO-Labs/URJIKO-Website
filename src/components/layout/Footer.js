@@ -1,27 +1,37 @@
-import { companyConfig } from '../../config/company.js';
-import { icons } from '../common/Icons.js';
+import { companyConfig } from "../../config/company.js";
+import { icons } from "../common/Icons.js";
 
 export function renderFooter() {
   const currentYear = new Date().getFullYear() || 2026;
 
   const companyLinksHtml = companyConfig.footerNav.company
-    .map((item) => `<li><a href="${item.path}" data-link class="footer__link">${item.label}</a></li>`)
-    .join('');
+    .map(
+      (item) =>
+        `<li><a href="${item.path}" data-link class="footer__link">${item.label}</a></li>`,
+    )
+    .join("");
 
   const serviceLinksHtml = companyConfig.footerNav.services
-    .map((item) => `<li><a href="${item.path}" data-link class="footer__link">${item.label}</a></li>`)
-    .join('');
+    .map(
+      (item) =>
+        `<li><a href="${item.path}" data-link class="footer__link">${item.label}</a></li>`,
+    )
+    .join("");
 
   const connectLinksHtml = companyConfig.footerNav.connect
     .map((item) => {
-      let icon = '';
-      if (item.type === 'telegram') icon = icons.telegram('w-4 h-4 text-teal');
-      if (item.type === 'github') icon = icons.github('w-4 h-4');
-      if (item.type === 'linkedin') icon = icons.linkedin('w-4 h-4');
-      if (item.type === 'email') icon = icons.mail('w-4 h-4');
+      let icon = "";
+      if (item.type === "telegram") icon = icons.telegram("w-4 h-4 text-teal");
+      if (item.type === "github") icon = icons.github("w-4 h-4");
+      if (item.type === "linkedin") icon = icons.linkedin("w-4 h-4");
+      if (item.type === "email") icon = icons.mail("w-4 h-4");
 
-      const isExternal = item.href.startsWith('http') || item.href.startsWith('mailto:');
-      const targetAttr = isExternal && !item.href.startsWith('mailto:') ? 'target="_blank" rel="noopener noreferrer"' : '';
+      const isExternal =
+        item.href.startsWith("http") || item.href.startsWith("mailto:");
+      const targetAttr =
+        isExternal && !item.href.startsWith("mailto:")
+          ? 'target="_blank" rel="noopener noreferrer"'
+          : "";
 
       return `
         <li>
@@ -32,7 +42,7 @@ export function renderFooter() {
         </li>
       `;
     })
-    .join('');
+    .join("");
 
   return `
     <footer class="footer" role="contentinfo">

@@ -1,7 +1,7 @@
-import { companyConfig } from '../../config/company.js';
-import { icons } from '../common/Icons.js';
+import { companyConfig } from "../../config/company.js";
+import { icons } from "../common/Icons.js";
 
-export function renderNavbar(activePath = '/') {
+export function renderNavbar(activePath = "/") {
   const navLinksHtml = companyConfig.navLinks
     .map((link) => {
       const isActive = activePath === link.path;
@@ -10,15 +10,15 @@ export function renderNavbar(activePath = '/') {
           <a 
             href="${link.path}" 
             data-link 
-            class="navbar__link ${isActive ? 'navbar__link--active' : ''}"
-            ${isActive ? 'aria-current="page"' : ''}
+            class="navbar__link ${isActive ? "navbar__link--active" : ""}"
+            ${isActive ? 'aria-current="page"' : ""}
           >
             ${link.label}
           </a>
         </li>
       `;
     })
-    .join('');
+    .join("");
 
   return `
     <header class="navbar" id="site-navbar" role="banner">
@@ -83,15 +83,15 @@ export function renderNavbar(activePath = '/') {
                       <a 
                         href="${link.path}" 
                         data-link 
-                        class="navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}"
-                        ${isActive ? 'aria-current="page"' : ''}
+                        class="navbar__mobile-link ${isActive ? "navbar__mobile-link--active" : ""}"
+                        ${isActive ? 'aria-current="page"' : ""}
                       >
                         ${link.label}
                       </a>
                     </li>
                   `;
                 })
-                .join('')}
+                .join("")}
             </ul>
           </nav>
           
