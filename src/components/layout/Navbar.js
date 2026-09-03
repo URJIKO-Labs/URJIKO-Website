@@ -24,15 +24,16 @@ export function renderNavbar(activePath = "/") {
     <header class="navbar" id="site-navbar" role="banner">
       <div class="container navbar__inner">
         <!-- Logo -->
-        <a href="/" data-link class="navbar__logo" aria-label="${companyConfig.name} Home">
+        <a href="/" data-link class="navbar__logo flex items-center gap-2" aria-label="${companyConfig.name} Home" style="text-decoration: none;">
           <img 
             src="/src/assets/images/urjiko-logo.jpg" 
             alt="${companyConfig.name} Logo" 
-            width="48" 
-            height="48" 
+            width="40" 
+            height="40" 
             loading="eager"
-            style="height: 3rem; width: 3rem; object-fit: contain; border-radius: 4px;"
+            style="height: 2.5rem; width: 2.5rem; object-fit: contain;"
           />
+          <span style="font-size: 1.125rem; font-weight: 700; color: var(--color-navy); letter-spacing: -0.01em;">URJIKO Labs</span>
         </a>
 
         <!-- Desktop Navigation Links -->

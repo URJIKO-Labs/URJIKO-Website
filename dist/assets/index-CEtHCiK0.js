@@ -42,7 +42,7 @@
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
       <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
     </svg>
-  `};function g(t="/"){const a=n.navLinks.map(e=>{const s=t===e.path;return`
+  `};function m(t="/"){const a=n.navLinks.map(e=>{const s=t===e.path;return`
         <li>
           <a 
             href="${e.path}" 
@@ -57,15 +57,16 @@
     <header class="navbar" id="site-navbar" role="banner">
       <div class="container navbar__inner">
         <!-- Logo -->
-        <a href="/" data-link class="navbar__logo" aria-label="${n.name} Home">
+        <a href="/" data-link class="navbar__logo flex items-center gap-2" aria-label="${n.name} Home" style="text-decoration: none;">
           <img 
             src="/src/assets/images/urjiko-logo.jpg" 
             alt="${n.name} Logo" 
-            width="48" 
-            height="48" 
+            width="40" 
+            height="40" 
             loading="eager"
-            style="height: 3rem; width: 3rem; object-fit: contain; border-radius: 4px;"
+            style="height: 2.5rem; width: 2.5rem; object-fit: contain;"
           />
+          <span style="font-size: 1.125rem; font-weight: 700; color: var(--color-navy); letter-spacing: -0.01em;">URJIKO Labs</span>
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -131,7 +132,7 @@
         </div>
       </div>
     </header>
-  `}function m(){const t=new Date().getFullYear()||2026,a=n.footerNav.company.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),e=n.footerNav.services.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),s=n.footerNav.connect.map(i=>{let o="";i.type==="telegram"&&(o=r.telegram("w-4 h-4")),i.type==="github"&&(o=r.github("w-4 h-4")),i.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),i.type==="email"&&(o=r.mail("w-4 h-4"));const l=(i.href.startsWith("http")||i.href.startsWith("mailto:"))&&!i.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
+  `}function h(){const t=new Date().getFullYear()||2026,a=n.footerNav.company.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),e=n.footerNav.services.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),s=n.footerNav.connect.map(i=>{let o="";i.type==="telegram"&&(o=r.telegram("w-4 h-4")),i.type==="github"&&(o=r.github("w-4 h-4")),i.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),i.type==="email"&&(o=r.mail("w-4 h-4"));const l=(i.href.startsWith("http")||i.href.startsWith("mailto:"))&&!i.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
         <li>
           <a href="${i.href}" class="footer__link flex items-center gap-2" ${l}>
             ${o}
@@ -186,21 +187,21 @@
         </div>
       </div>
     </footer>
-  `}function h(){const t=document.getElementById("navbar-toggle-btn"),a=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let s=!1;function i(){s=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",a&&(a.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){s=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",a&&(a.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),s?o():i()},document.addEventListener("keydown",l=>{l.key==="Escape"&&s&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{s&&o()})}),document.addEventListener("click",l=>{s&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function x({path:t="/",content:a=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let s=document.querySelector('meta[name="description"]');return s&&s.setAttribute("content",e.description),`
+  `}function x(){const t=document.getElementById("navbar-toggle-btn"),a=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let s=!1;function i(){s=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",a&&(a.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){s=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",a&&(a.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),s?o():i()},document.addEventListener("keydown",l=>{l.key==="Escape"&&s&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{s&&o()})}),document.addEventListener("click",l=>{s&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function f({path:t="/",content:a=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let s=document.querySelector('meta[name="description"]');return s&&s.setAttribute("content",e.description),`
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
       <a href="#main-content" class="sr-only" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-blue); border-radius: 4px;">
         Skip to main content
       </a>
 
-      ${g(t)}
+      ${m(t)}
 
       <main id="main-content" class="flex-1" style="flex: 1 0 auto;" role="main">
         ${a}
       </main>
 
-      ${m()}
+      ${h()}
     </div>
-  `}function f(){h();const t=document.getElementById("site-navbar");if(t){const a=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",a),window.addEventListener("scroll",a,{passive:!0}),a()}}function y(){return`
+  `}function y(){x();const t=document.getElementById("site-navbar");if(t){const a=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",a),window.addEventListener("scroll",a,{passive:!0}),a()}}function w(){return`
     <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -329,7 +330,7 @@
         }
       }
     </style>
-  `}function w(){return`
+  `}function k(){return`
     <section class="section--sm bg-soft" aria-label="Why organizations trust URJIKO Labs" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         <div class="grid grid--4 gap-6">
@@ -349,7 +350,7 @@
         </div>
       </div>
     </section>
-  `}function k(){return`
+  `}function S(){return`
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
         <!-- Section Header -->
@@ -395,7 +396,7 @@
         </div>
       </div>
     </section>
-  `}function S(){return`
+  `}function C(){return`
     <section class="section bg-soft" aria-labelledby="solutions-heading" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -553,7 +554,7 @@
         }
       }
     </style>
-  `}function C(){return`
+  `}function _(){return`
     <section class="section" aria-labelledby="why-heading">
       <div class="container">
         <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -606,7 +607,7 @@
         }
       }
     </style>
-  `}function _(){return`
+  `}function P(){return`
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -655,30 +656,30 @@
         </div>
       </div>
     </section>
-  `}function P(){return`
+  `}function $(){return`
     <div class="home-page">
       <!-- 1. Hero -->
-      ${y()}
-
-      <!-- 2. Value Strip -->
       ${w()}
 
-      <!-- 3. What We Do -->
+      <!-- 2. Value Strip -->
       ${k()}
 
-      <!-- 4. Featured Solutions -->
+      <!-- 3. What We Do -->
       ${S()}
 
-      <!-- 5. Why URJIKO Labs -->
+      <!-- 4. Featured Solutions -->
       ${C()}
 
-      <!-- 6. How We Work -->
+      <!-- 5. Why URJIKO Labs -->
       ${_()}
+
+      <!-- 6. How We Work -->
+      ${P()}
 
       <!-- 7. Final CTA -->
       ${d({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
     </div>
-  `}function $(){return`
+  `}function A(){return`
     <section class="section section--lg" aria-labelledby="services-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -774,7 +775,7 @@
         }
       }
     </style>
-  `}function A(){return`
+  `}function j(){return`
     <section class="section bg-soft" aria-labelledby="services-approach-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -826,7 +827,7 @@
 
       </div>
     </section>
-  `}function j(){return`
+  `}function B(){return`
     <section class="section" aria-labelledby="core-services-heading">
       <div class="container">
         <!-- Section Heading -->
@@ -875,7 +876,7 @@
         </div>
       </div>
     </section>
-  `}function B(){return`
+  `}function z(){return`
     <section class="section bg-white" aria-labelledby="smartbiz-feature-title" style="background-color: var(--color-white); position: relative;">
       <div class="container">
         <div class="grid smartbiz-feature-grid items-center">
@@ -984,13 +985,13 @@
         }
       </style>
     </section>
-  `}function z(){return`
-    ${$()}
+  `}function R(){return`
     ${A()}
     ${j()}
     ${B()}
+    ${z()}
     ${d({title:"Ready to Build Your Solution?",description:"Tell us about your project requirements. We will help you identify the right technology approach.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Solutions",secondaryBtnPath:"/solutions"})}
-  `}function R(){return`
+  `}function T(){return`
     <section class="section section--lg" aria-labelledby="solutions-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -1094,7 +1095,7 @@
         }
       }
     </style>
-  `}const T=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function I(){return T.map(t=>`
+  `}const I=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function E(){return I.map(t=>`
     <section 
       id="${t.id}" 
       class="section ${t.bgClass}" 
@@ -1161,7 +1162,7 @@
       </div>
     </section>
   `).join(`
-`)}function E(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
+`)}function F(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
     <section class="section bg-soft problem-solution-section" aria-labelledby="problem-solution-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -1385,7 +1386,7 @@
         }
       }
     </style>
-  `}function F(){return`
+  `}function O(){return`
     <section class="section bg-white" aria-labelledby="capabilities-heading">
       <div class="container">
         <!-- Section Header -->
@@ -1454,7 +1455,7 @@
         height: 20px;
       }
     </style>
-  `}function O(){return`
+  `}function L(){return`
     <section class="section bg-white" aria-labelledby="cross-nav-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -1534,14 +1535,14 @@
         transition: transform var(--transition-fast);
       }
     </style>
-  `}function L(){return`
-    ${R()}
-    ${I()}
+  `}function M(){return`
+    ${T()}
     ${E()}
     ${F()}
     ${O()}
+    ${L()}
     ${d({title:"Have a Problem Technology Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Work",secondaryBtnPath:"/portfolio"})}
-  `}function M(){return`
+  `}function D(){return`
     <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-14); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
@@ -1632,7 +1633,7 @@
         }
       }
     </style>
-  `}function D(){return`
+  `}function H(){return`
     <section class="section" aria-labelledby="portfolio-intro-heading" style="padding-top: var(--space-10); padding-bottom: var(--space-10); background: var(--color-bg-soft); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container" style="max-width: 52rem;">
         <div class="text-center">
@@ -1655,7 +1656,7 @@
         </div>
       </div>
     </section>
-  `}const H=[{id:"smartbiz",number:"01",name:"SmartBiz ERP",category:"Business Management",badge:"BUSINESS MANAGEMENT",statusBadge:"Active Project",tagline:"Business Management & Inventory Solution",description:"A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",problem:"Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",solution:"SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",features:["Dashboard & Analytics","Point of Sale (POS)","Inventory Management","Product Management","Customer Management","Credit & Balances","Sales Tracking","Profit & Reporting","Business Insights","Mobile-Friendly UI"],businessValue:["Centralized business information","Better organization of daily operations","Easier sales and inventory monitoring","Clearer reporting and business insights","More efficient daily workflows"],technologies:["React","Node.js","Express","PostgreSQL","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#business-solutions",solutionLabel:"Business Solutions",layout:"left"},{id:"transport",number:"02",name:"Transport Management System",category:"Transport & Operations",badge:"TRANSPORT & OPERATIONS",statusBadge:"Management System",tagline:"Transport & Operations Management Solution",description:"A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",problem:"Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",solution:"A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",features:["Authentication & Roles","Transport Requests","Vehicle Management","Driver Management","Operations Dashboard","Workflow Management","Administration Panel","Reports & Data"],businessValue:["Centralized operations management","Better visibility into transport activities","Structured request and approval workflows","Easier administration and reporting","Improved coordination across teams"],technologies:["JavaScript","Node.js","Express","MySQL","REST API","Role-Based Access","Responsive UI"],solutionLink:"/solutions#transport-solutions",solutionLabel:"Transport Solutions",layout:"right"},{id:"eduflow",number:"03",name:"EduFlow",category:"Education",badge:"EDUCATION",statusBadge:"MVP / Prototype",tagline:"School Management Solution",description:"An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",problem:"Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",solution:"A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",features:["Student Management","Teacher Management","Class Organization","Attendance Tracking","Grade Management","Timetable & Scheduling","Administration Dashboard","Role-Based Access"],businessValue:["Organized school information","Centralized administration","Easier student and teacher monitoring","Structured academic workflows","Improved visibility for school leaders"],technologies:["React","JavaScript","Node.js","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#education-solutions",solutionLabel:"Education Solutions",layout:"left"},{id:"shegerhealth",number:"04",name:"ShegerHealth",category:"Healthcare",badge:"HEALTHCARE",statusBadge:"Demo / Concept",tagline:"Digital Healthcare Platform Demo",description:"A digital healthcare platform concept focused on structured workflows, management dashboards, and administrative tools for healthcare organizations.",problem:"Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",solution:"A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",features:["Digital Records","Patient Workflows","Management Dashboard","Forms & Data Entry","Navigation & Routing","Responsive Interface","Administrative Tools"],businessValue:["Organized digital information","Structured healthcare workflows","Easier administrative management","Digital accessibility for staff","Clearer management interfaces"],technologies:["JavaScript","React","REST API","Responsive UI"],solutionLink:"/solutions#healthcare-solutions",solutionLabel:"Healthcare Solutions",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows. It is not a certified medical system.",layout:"right"}],W=[{id:"ethiobrew",name:"EthioBrew",category:"Business / Hospitality",description:"A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",capabilities:["UX/UI Design","Responsive Design","Product Presentation","Business Workflows"]},{id:"haramaya-gym",name:"Haramaya Gym",category:"Business Website",description:"A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",capabilities:["Professional Web Design","Responsive Layout","Service Presentation","CTAs"]},{id:"abebe-bookstore",name:"Abebe Book Store",category:"Retail / E-commerce",description:"A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",capabilities:["Product Presentation","Retail Experience","Responsive Interface","Customer Workflows"]}],N=["Business Management Systems","Inventory Management","Point of Sale","Dashboards & Analytics","Reporting","Authentication","Role-Based Access","Workflow Automation","Data Management","Administration","Responsive Web Applications","API Integration"],U=[{name:"Business",description:"Business management, inventory, POS, customer workflows, and operational reporting.",project:"SmartBiz ERP"},{name:"Education",description:"Student, teacher, attendance, grades, timetable, and school administration.",project:"EduFlow"},{name:"Transport",description:"Operations, vehicles, drivers, requests, workflows, and reporting.",project:"Transport Management"},{name:"Healthcare",description:"Digital workflows, records, dashboards, and administrative tools.",project:"ShegerHealth"},{name:"Retail & Hospitality",description:"Customer-facing websites, product presentation, and digital experiences.",project:"EthioBrew, Abebe Book Store"}];function b(){return`
+  `}const W=[{id:"smartbiz",number:"01",name:"SmartBiz ERP",category:"Business Management",badge:"BUSINESS MANAGEMENT",statusBadge:"Active Project",tagline:"Business Management & Inventory Solution",description:"A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",problem:"Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",solution:"SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",features:["Dashboard & Analytics","Point of Sale (POS)","Inventory Management","Product Management","Customer Management","Credit & Balances","Sales Tracking","Profit & Reporting","Business Insights","Mobile-Friendly UI"],businessValue:["Centralized business information","Better organization of daily operations","Easier sales and inventory monitoring","Clearer reporting and business insights","More efficient daily workflows"],technologies:["React","Node.js","Express","PostgreSQL","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#business-solutions",solutionLabel:"Business Solutions",layout:"left"},{id:"transport",number:"02",name:"Transport Management System",category:"Transport & Operations",badge:"TRANSPORT & OPERATIONS",statusBadge:"Management System",tagline:"Transport & Operations Management Solution",description:"A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",problem:"Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",solution:"A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",features:["Authentication & Roles","Transport Requests","Vehicle Management","Driver Management","Operations Dashboard","Workflow Management","Administration Panel","Reports & Data"],businessValue:["Centralized operations management","Better visibility into transport activities","Structured request and approval workflows","Easier administration and reporting","Improved coordination across teams"],technologies:["JavaScript","Node.js","Express","MySQL","REST API","Role-Based Access","Responsive UI"],solutionLink:"/solutions#transport-solutions",solutionLabel:"Transport Solutions",layout:"right"},{id:"eduflow",number:"03",name:"EduFlow",category:"Education",badge:"EDUCATION",statusBadge:"MVP / Prototype",tagline:"School Management Solution",description:"An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",problem:"Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",solution:"A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",features:["Student Management","Teacher Management","Class Organization","Attendance Tracking","Grade Management","Timetable & Scheduling","Administration Dashboard","Role-Based Access"],businessValue:["Organized school information","Centralized administration","Easier student and teacher monitoring","Structured academic workflows","Improved visibility for school leaders"],technologies:["React","JavaScript","Node.js","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#education-solutions",solutionLabel:"Education Solutions",layout:"left"},{id:"shegerhealth",number:"04",name:"ShegerHealth",category:"Healthcare",badge:"HEALTHCARE",statusBadge:"Demo / Concept",tagline:"Digital Healthcare Platform Demo",description:"A digital healthcare platform concept focused on structured workflows, management dashboards, and administrative tools for healthcare organizations.",problem:"Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",solution:"A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",features:["Digital Records","Patient Workflows","Management Dashboard","Forms & Data Entry","Navigation & Routing","Responsive Interface","Administrative Tools"],businessValue:["Organized digital information","Structured healthcare workflows","Easier administrative management","Digital accessibility for staff","Clearer management interfaces"],technologies:["JavaScript","React","REST API","Responsive UI"],solutionLink:"/solutions#healthcare-solutions",solutionLabel:"Healthcare Solutions",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows. It is not a certified medical system.",layout:"right"}],N=[{id:"ethiobrew",name:"EthioBrew",category:"Business / Hospitality",description:"A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",capabilities:["UX/UI Design","Responsive Design","Product Presentation","Business Workflows"]},{id:"haramaya-gym",name:"Haramaya Gym",category:"Business Website",description:"A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",capabilities:["Professional Web Design","Responsive Layout","Service Presentation","CTAs"]},{id:"abebe-bookstore",name:"Abebe Book Store",category:"Retail / E-commerce",description:"A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",capabilities:["Product Presentation","Retail Experience","Responsive Interface","Customer Workflows"]}],U=["Business Management Systems","Inventory Management","Point of Sale","Dashboards & Analytics","Reporting","Authentication","Role-Based Access","Workflow Automation","Data Management","Administration","Responsive Web Applications","API Integration"],V=[{name:"Business",description:"Business management, inventory, POS, customer workflows, and operational reporting.",project:"SmartBiz ERP"},{name:"Education",description:"Student, teacher, attendance, grades, timetable, and school administration.",project:"EduFlow"},{name:"Transport",description:"Operations, vehicles, drivers, requests, workflows, and reporting.",project:"Transport Management"},{name:"Healthcare",description:"Digital workflows, records, dashboards, and administrative tools.",project:"ShegerHealth"},{name:"Retail & Hospitality",description:"Customer-facing websites, product presentation, and digital experiences.",project:"EthioBrew, Abebe Book Store"}];function v(){return`
     <div class="card card--lg" role="region" aria-label="SmartBiz ERP Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1712,7 +1713,7 @@
         </div>
       </div>
     </div>
-  `}function V(){return`
+  `}function q(){return`
     <div class="card card--lg" role="region" aria-label="Transport Operations Panel Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1833,7 +1834,7 @@
         <span class="text-xs font-bold" style="color: var(--color-blue);">Updated</span>
       </div>
     </div>
-  `}function q(){return`
+  `}function K(){return`
     <div class="card card--lg" role="region" aria-label="ShegerHealth Healthcare Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1889,7 +1890,7 @@
         <span class="text-xs font-bold" style="color: var(--color-blue);">Enforced</span>
       </div>
     </div>
-  `}function K(t){switch(t.id){case"smartbiz":return b();case"transport":return V();case"eduflow":return G();case"shegerhealth":return q();default:return b()}}function Y(){const t=`
+  `}function J(t){switch(t.id){case"smartbiz":return v();case"transport":return q();case"eduflow":return G();case"shegerhealth":return K();default:return v()}}function Y(){const t=`
     <style>
       @media (min-width: 1024px) {
         .project-layout { grid-template-columns: 1fr 1fr !important; }
@@ -1899,7 +1900,7 @@
         .project-layout--right .project-content { order: 1; }
       }
     </style>
-  `,a=H.map((e,s)=>{const i=s%2===0?"var(--color-white)":"var(--color-bg-soft)";return`
+  `,a=W.map((e,s)=>{const i=s%2===0?"var(--color-white)":"var(--color-bg-soft)";return`
         <section class="section" id="project-${e.id}" aria-labelledby="project-${e.id}-title" style="border-top: 1px solid var(--color-border-subtle); background: ${i};">
           <div class="container">
             <!-- Project Header -->
@@ -1953,7 +1954,7 @@
 
               <!-- Visual Column: CSS-only project dashboard mockup -->
               <div class="project-visual">
-                ${K(e)}
+                ${J(e)}
               </div>
             </div>
 
@@ -1974,7 +1975,7 @@
       `}).join("");return`
     ${t}
     ${a}
-  `}function J(){return`
+  `}function Q(){return`
     <section class="section bg-white" aria-labelledby="secondary-projects-heading" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         
@@ -1989,7 +1990,7 @@
 
         <!-- Secondary Projects Grid -->
         <div class="grid grid--3">
-          ${W.map(t=>`
+          ${N.map(t=>`
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
               <!-- Placeholder Visual Area -->
@@ -2025,7 +2026,7 @@
 
       </div>
     </section>
-  `}function Q(t=N){return`
+  `}function Z(t=U){return`
     <section class="section bg-soft" aria-labelledby="portfolio-capabilities-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         <!-- Section Header -->
@@ -2082,7 +2083,7 @@
         flex-shrink: 0;
       }
     </style>
-  `}function Z(){return`
+  `}function X(){return`
     <section class="section bg-white" aria-labelledby="industry-coverage-heading" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         <!-- Section Heading (Centered) -->
@@ -2096,7 +2097,7 @@
 
         <!-- Industry Grid -->
         <div class="industry-grid">
-          ${U.map(a=>`
+          ${V.map(a=>`
         <div class="industry-card">
           <div>
             <h3 class="text-navy font-semibold text-lg mb-2">${a.name}</h3>
@@ -2158,15 +2159,15 @@
         flex-shrink: 0;
       }
     </style>
-  `}function X(){return`
-    ${M()}
+  `}function ee(){return`
     ${D()}
+    ${H()}
     ${Y()}
-    ${J()}
     ${Q()}
     ${Z()}
+    ${X()}
     ${d({title:"Have a Problem That Software Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
-  `}function ee(){return`
+  `}function te(){return`
     <section class="section bg-white" aria-labelledby="about-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
       <div class="container text-center" style="max-width: 56rem;">
         <h1 id="about-hero-title" class="text-balance mb-6" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;">
@@ -2185,7 +2186,7 @@
         </div>
       </div>
     </section>
-  `}function te(){return`
+  `}function ae(){return`
     <section class="section bg-soft" aria-labelledby="company-intro-title" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-10);">
@@ -2229,7 +2230,7 @@
         </div>
       </div>
     </section>
-  `}function ae(){return`
+  `}function se(){return`
     <section class="section">
       <div class="container">
         <div class="grid grid--2 gap-8">
@@ -2244,7 +2245,7 @@
         </div>
       </div>
     </section>
-  `}function se(){return`
+  `}function ie(){return`
     <section class="section bg-soft py-12">
       <div class="container">
         <h2 class="text-navy font-bold mb-8 text-center text-3xl">What We Believe</h2>
@@ -2282,7 +2283,7 @@
         </div>
       </div>
     </section>
-  `}function ie(){return`
+  `}function oe(){return`
     <section class="section" style="background-color: var(--color-bg-soft);">
       <div class="container">
         <div class="card card--lg" style="border-top: 4px solid var(--color-blue);">
@@ -2334,7 +2335,7 @@
         </div>
       </div>
     </section>
-  `}function oe(){return`
+  `}function re(){return`
     <section class="section" style="background-color: var(--color-bg-soft);">
       <div class="container">
         <div class="mb-12">
@@ -2358,7 +2359,7 @@
         </div>
       </div>
     </section>
-  `}function re(){return`
+  `}function ne(){return`
     <section class="section bg-soft" aria-labelledby="what-we-build-title">
       <div class="container">
         
@@ -2421,16 +2422,16 @@
         </div>
       </div>
     </section>
-  `}function ne(){return`
-    ${ee()}
+  `}function le(){return`
     ${te()}
     ${ae()}
     ${se()}
     ${ie()}
     ${oe()}
     ${re()}
+    ${ne()}
     ${d({title:"Let's Build Something Useful.",description:"Have a business process that could work better with technology? Let's discuss the problem and find a practical place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
-  `}function le(){return`
+  `}function de(){return`
     <section class="section bg-white" aria-labelledby="contact-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
       <div class="container text-center" style="max-width: 48rem;">
         <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
@@ -2444,7 +2445,7 @@
         </p>
       </div>
     </section>
-  `}function de(){return`
+  `}function ce(){return`
     <div class="flex flex-col gap-6" style="height: 100%;">
       
       <div style="background: var(--color-bg-soft); padding: var(--space-6); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg);">
@@ -2489,7 +2490,7 @@
       </div>
       
     </div>
-  `}function ce(){return`
+  `}function pe(){return`
     <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border-subtle);">
       <h3 class="text-navy font-bold mb-4" style="font-size: 1.5rem;">Project Inquiry</h3>
       <p class="text-secondary mb-6">Fill out the form below and our team will get back to you within 24 hours.</p>
@@ -2577,7 +2578,7 @@
         })();
       <\/script>
     </div>
-  `}function pe(){return`
+  `}function ue(){return`
     <section class="section" style="background-color: var(--color-bg-soft);">
       <div class="container">
         <div class="mb-8" style="text-align: center;">
@@ -2612,7 +2613,7 @@
         </div>
       </div>
     </section>
-  `}function ue(){return`
+  `}function be(){return`
     <section class="section">
       <div class="container">
         <h2 class="text-navy font-bold mb-8 text-center">Frequently Asked Questions</h2>
@@ -2644,27 +2645,27 @@
         </div>
       </div>
     </section>
-  `}function be(){return`
-    ${le()}
+  `}function ve(){return`
+    ${de()}
     
     <section class="section" aria-label="Contact Methods" style="background: var(--color-white); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container" style="max-width: 64rem;">
         <div class="grid items-start" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
           <div style="flex: 1;">
-            ${de()}
+            ${ce()}
           </div>
           <div style="flex: 1.5;">
-            ${ce()}
+            ${pe()}
           </div>
         </div>
       </div>
     </section>
 
-    ${pe()}
     ${ue()}
+    ${be()}
     
     ${d({title:"Have a Problem Worth Solving?",description:"Start with the problem. We'll help you figure out the right technology and the right first step.",primaryBtnLabel:"Start a Conversation",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Portfolio",secondaryBtnPath:"/portfolio"})}
-  `}const u={"/":()=>P(),"/services":()=>z(),"/solutions":()=>L(),"/portfolio":()=>X(),"/about":()=>ne(),"/contact":()=>be(),"/404":()=>`
+  `}const u={"/":()=>$(),"/services":()=>R(),"/solutions":()=>M(),"/portfolio":()=>ee(),"/about":()=>le(),"/contact":()=>ve(),"/404":()=>`
     <div class="container section text-center">
       <div style="max-width: 32rem; margin: 0 auto; padding: var(--space-12) 0;">
         <span class="badge badge--navy mb-4">404 Error</span>
@@ -2679,4 +2680,4 @@
         </div>
       </div>
     </div>
-  `};class ve{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",a=>{const e=a.target.closest("a[data-link]");if(e){const s=e.getAttribute("href");s&&!s.startsWith("http")&&!s.startsWith("mailto:")&&(a.preventDefault(),this.navigateTo(s))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(a){window.location.pathname!==a&&window.history.pushState(null,null,a),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const s=u[e]||u["/404"]||u["/"],i=s?s():"";this.appContainer&&(this.appContainer.innerHTML=x({path:e,content:i}),f())}}function v(){window.urjikoRouter||(window.urjikoRouter=new ve)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",v):v();
+  `};class b{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",a=>{const e=a.target.closest("a[data-link]");if(e){const s=e.getAttribute("href");s&&!s.startsWith("http")&&!s.startsWith("mailto:")&&(a.preventDefault(),this.navigateTo(s))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(a){window.location.pathname!==a&&window.history.pushState(null,null,a),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const s=u[e]||u["/404"]||u["/"],i=s?s():"";this.appContainer&&(this.appContainer.innerHTML=f({path:e,content:i}),y())}}function g(){window.urjikoRouter||(window.urjikoRouter=new b)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",g):g();function ge(){const t=new IntersectionObserver(a=>{a.forEach(e=>{e.isIntersecting&&e.target.classList.add("is-visible")})},{threshold:.1,rootMargin:"0px 0px -50px 0px"});document.querySelectorAll(".section, .card").forEach(a=>{a.classList.add("fade-up"),t.observe(a)})}const me=b.prototype.renderCurrentRoute;b.prototype.renderCurrentRoute=function(){me.call(this),setTimeout(ge,100)};

@@ -34,6 +34,14 @@
   outline-offset: 2px;
 }
 
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* Primary — Royal Blue bg, white text */
 .btn--primary {
   background-color: var(--color-blue);
@@ -290,10 +298,6 @@
   color: var(--color-navy);
 }
 
-.badge--teal {
-  background-color: var(--color-bg-light-blue);
-  color: var(--color-blue);
-}
 
 .badge--outline {
   background-color: transparent;

@@ -79,3 +79,26 @@ if (document.readyState === "loading") {
 } else {
   startApp();
 }
+
+// Intersection Observer for subtle scroll animations
+function initScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  document.querySelectorAll('.section, .card').forEach(el => {
+    el.classList.add('fade-up');
+    observer.observe(el);
+  });
+}
+
+// Intercept page renders to re-init observer
+const originalRender = Router.prototype.renderCurrentRoute;
+Router.prototype.renderCurrentRoute = function() {
+  originalRender.call(this);
+  setTimeout(initScrollAnimations, 100);
+};
