@@ -12,7 +12,7 @@ export function renderAboutHero() {
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="/contact" data-link class="btn btn--primary btn--lg">
-            Discuss Your Project ${icons.arrowRight("w-4 h-4")}
+            Start a Conversation ${icons.arrowRight("w-4 h-4")}
           </a>
           <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
             Explore Our Work

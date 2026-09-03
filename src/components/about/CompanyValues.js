@@ -1,8 +1,8 @@
 export function renderCompanyValues() {
   return `
-    <section class="section bg-soft py-12">
+    <section class="section bg-soft">
       <div class="container">
-        <h2 class="text-navy font-bold mb-8 text-center text-3xl">What We Believe</h2>
+        <h2 class="text-navy font-bold mb-8 text-center" style="font-size: var(--font-size-3xl);">What We Believe</h2>
         <div class="grid grid--3 gap-6">
           <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
             <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
