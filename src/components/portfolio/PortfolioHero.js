@@ -26,7 +26,7 @@ export function renderPortfolioHero() {
 
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Discuss Your Project</span>
+                <span>Request a Demo</span>
                 ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">

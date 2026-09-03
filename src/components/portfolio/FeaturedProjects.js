@@ -75,7 +75,7 @@ function renderTransportVisual() {
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
         <div class="flex items-center gap-2">
           <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
-          <span class="text-sm font-semibold text-navy">Transport Operations Panel</span>
+          <span class="text-sm font-semibold text-navy">Transport Panel</span>
         </div>
         <span class="badge badge--blue text-xs font-semibold">Fleet Live</span>
       </div>
@@ -106,7 +106,7 @@ function renderTransportVisual() {
           <div class="flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
               <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
-              <span class="font-medium text-navy">In Transit (Active Routes)</span>
+              <span class="font-medium text-navy">In Transit (Active)</span>
             </div>
             <span class="font-bold text-navy">14 Vehicles</span>
           </div>
@@ -131,7 +131,7 @@ function renderTransportVisual() {
       <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
         <div class="flex items-center gap-2">
           <span class="badge badge--navy text-xs">DISPATCH #842</span>
-          <span class="text-xs font-medium text-navy">Route Central &bull; Driver Assigned</span>
+          <span class="text-xs font-medium text-navy">Route Central</span>
         </div>
         <span class="text-xs font-bold" style="color: var(--color-blue);">In Progress</span>
       </div>
@@ -149,7 +149,7 @@ function renderEduFlowVisual() {
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
         <div class="flex items-center gap-2">
           <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
-          <span class="text-sm font-semibold text-navy">EduFlow School Dashboard</span>
+          <span class="text-sm font-semibold text-navy">EduFlow Dashboard</span>
         </div>
         <span class="badge badge--blue text-xs font-semibold">Semester Active</span>
       </div>
@@ -192,7 +192,7 @@ function renderEduFlowVisual() {
       <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
         <div class="flex items-center gap-2">
           <span class="badge badge--navy text-xs">TERM 2</span>
-          <span class="text-xs font-medium text-navy">Timetable &amp; Grade Records Synced</span>
+          <span class="text-xs font-medium text-navy">Timetable &amp; Grades Synced</span>
         </div>
         <span class="text-xs font-bold" style="color: var(--color-blue);">Updated</span>
       </div>
@@ -210,7 +210,7 @@ function renderShegerHealthVisual() {
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
         <div class="flex items-center gap-2">
           <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
-          <span class="text-sm font-semibold text-navy">ShegerHealth Platform Demo</span>
+          <span class="text-sm font-semibold text-navy">ShegerHealth Demo</span>
         </div>
         <span class="badge badge--blue text-xs font-semibold">Workflow Concept</span>
       </div>
@@ -255,7 +255,7 @@ function renderShegerHealthVisual() {
       <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
         <div class="flex items-center gap-2">
           <span style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
-          <span class="text-xs font-medium text-navy">Role-Based Access &amp; Data Security</span>
+          <span class="text-xs font-medium text-navy">Role-Based Access &amp; Security</span>
         </div>
         <span class="text-xs font-bold" style="color: var(--color-blue);">Enforced</span>
       </div>
@@ -299,6 +299,9 @@ export function renderFeaturedProjects() {
         .project-visual .grid[style*="repeat(3"] {
           grid-template-columns: repeat(2, 1fr) !important;
         }
+        .project-visual .grid--2 {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
       }
     </style>
   `;
@@ -320,7 +323,7 @@ export function renderFeaturedProjects() {
             <p class="text-secondary mb-2" style="font-size: var(--font-size-md);">${project.tagline}</p>
             
             <!-- Two Column Layout: Content + Visual (alternating based on layout field) -->
-            <div class="grid items-start project-layout project-layout--${project.layout}" style="grid-template-columns: 1fr; gap: var(--space-10); margin-top: var(--space-8);">
+            <div class="grid items-start project-layout project-layout--${project.layout}" style="grid-template-columns: 1fr; gap: var(--space-8); margin-top: var(--space-8);">
               
               <!-- Content Column (always first in DOM for mobile, use CSS order for desktop) -->
               <div class="project-content">
