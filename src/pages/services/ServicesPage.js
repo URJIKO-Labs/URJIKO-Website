@@ -1,8 +1,8 @@
-import { renderServicesHero } from '../../components/services/ServicesHero.js';
-import { renderServicesApproach } from '../../components/services/ServicesApproach.js';
-import { renderServiceCards } from '../../components/services/ServiceCards.js';
-import { renderSmartBizFeature } from '../../components/services/SmartBizFeature.js';
-import { renderGlobalCTA } from '../../components/common/CTA.js';
+import { renderServicesHero } from "../../components/services/ServicesHero.js";
+import { renderServicesApproach } from "../../components/services/ServicesApproach.js";
+import { renderServiceCards } from "../../components/services/ServiceCards.js";
+import { renderSmartBizFeature } from "../../components/services/SmartBizFeature.js";
+import { renderGlobalCTA } from "../../components/common/CTA.js";
 
 /**
  * URJIKO Labs — Services Page
@@ -22,12 +22,13 @@ export function renderServicesPage() {
     ${renderServiceCards()}
     ${renderSmartBizFeature()}
     ${renderGlobalCTA({
-      title: 'Ready to Build Your Solution?',
-      description: 'Tell us about your project requirements. We will help you identify the right technology approach.',
-      primaryBtnLabel: 'Discuss Your Project',
-      primaryBtnPath: '/contact',
-      secondaryBtnLabel: 'View Our Solutions',
-      secondaryBtnPath: '/solutions',
+      title: "Ready to Build Your Solution?",
+      description:
+        "Tell us about your project requirements. We will help you identify the right technology approach.",
+      primaryBtnLabel: "Discuss Your Project",
+      primaryBtnPath: "/contact",
+      secondaryBtnLabel: "View Our Solutions",
+      secondaryBtnPath: "/solutions",
     })}
   `;
 }
