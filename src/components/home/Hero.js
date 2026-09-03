@@ -1,15 +1,14 @@
-import { companyConfig } from "../../config/company.js";
-import { icons } from "../common/Icons.js";
+import { companyConfig } from '../../config/company.js';
+import { icons } from '../common/Icons.js';
 
 /**
  * Hero Section for URJIKO Labs Home Page
- *
- * Clean white-first layout with bold Navy typography, controlled Teal accents,
- * and a sophisticated CSS-driven digital product/ecosystem visual on the right.
+ * 
+ * Clean White + Navy foundation, Royal Blue technology depth, and restrained Turquoise accents.
  */
 export function renderHero() {
   return `
-    <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden;">
+    <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
           
@@ -17,26 +16,26 @@ export function renderHero() {
           <div class="flex flex-col items-start">
             
             <!-- Eyebrow -->
-            <div class="badge badge--teal mb-4" style="text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); font-weight: 600; padding: 0.35rem 0.85rem;">
-              Digital Solutions for Modern Organizations
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+              DIGITAL SOLUTIONS FOR MODERN ORGANIZATIONS
             </div>
 
-            <!-- Headline -->
+            <!-- Headline: Navy dominant with subtle blue tone -->
             <h1 id="hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
               Build Smarter. <br/>
-              <span style="color: var(--color-teal);">Grow With Better Technology.</span>
+              <span>Grow With Better Technology.</span>
             </h1>
 
             <!-- Description -->
             <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.1875rem); max-width: 38rem; line-height: 1.65;">
-              ${companyConfig.shortDescription || "URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow."}
+              ${companyConfig.shortDescription || 'URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.'}
             </p>
 
             <!-- Actions -->
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${icons.arrowRight("w-4 h-4")}
+                ${icons.arrowRight('w-4 h-4')}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Solutions</span>
@@ -45,11 +44,11 @@ export function renderHero() {
 
           </div>
 
-          <!-- Right Column: Abstract Software / Product Ecosystem Visual (Pure CSS & SVGs) -->
+          <!-- Right Column: Abstract Technology & Software Ecosystem Visual -->
           <div class="hero-visual-wrapper" aria-hidden="true" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
-            <div style="width: 100%; max-width: 520px; background: linear-gradient(135deg, var(--color-bg-soft) 0%, #FFFFFF 100%); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl); position: relative;">
+            <div style="width: 100%; max-width: 520px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl); position: relative;">
               
-              <!-- Subtle top bar simulating modern application frame -->
+              <!-- Subtle top bar -->
               <div class="flex items-center justify-between pb-4 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
                 <div class="flex items-center gap-2">
                   <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; opacity: 0.7;"></span>
@@ -61,35 +60,35 @@ export function renderHero() {
                 </div>
               </div>
 
-              <!-- Main Dashboard Preview Area -->
+              <!-- Main Metric Cards -->
               <div class="grid grid--2 gap-3 mb-4">
-                <!-- Mini Metric Card 1 -->
-                <div style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-xs);">
-                  <div class="text-xs text-muted font-medium mb-1">Operational Efficiency</div>
+                <!-- Mini Metric Card 1 (Light Blue background with Navy/Blue text) -->
+                <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-xs);">
+                  <div class="text-xs text-muted font-medium mb-1">Operational Reliability</div>
                   <div class="text-navy font-bold" style="font-size: var(--font-size-2xl);">99.4%</div>
-                  <div class="text-xs text-teal font-medium mt-1 flex items-center gap-1">
-                    <span>↑ High Reliability</span>
+                  <div class="text-xs font-semibold mt-1 flex items-center gap-1" style="color: var(--color-blue);">
+                    <span>↑ High Performance</span>
                   </div>
                 </div>
 
-                <!-- Mini Metric Card 2 -->
-                <div style="background: var(--color-navy); border-radius: var(--radius-md); padding: var(--space-4); color: white; box-shadow: var(--shadow-md);">
-                  <div class="text-xs font-medium mb-1" style="color: rgba(255,255,255,0.7);">Active Architecture</div>
+                <!-- Mini Metric Card 2 (Navy Background with Royal Blue / Turquoise accent) -->
+                <div style="background: var(--gradient-tech); border-radius: var(--radius-md); padding: var(--space-4); color: white; box-shadow: var(--shadow-md);">
+                  <div class="text-xs font-medium mb-1" style="color: rgba(255,255,255,0.75);">Architecture</div>
                   <div class="text-white font-bold" style="font-size: var(--font-size-2xl); color: #FFFFFF;">Modular</div>
-                  <div class="text-xs font-medium mt-1 flex items-center gap-1" style="color: var(--color-teal-light);">
+                  <div class="text-xs font-medium mt-1 flex items-center gap-1" style="color: var(--color-turquoise-light);">
                     <span>● Live Sync</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Mini Data Activity Bar / Wave representation -->
-              <div style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-3);">
+              <!-- Data Stream Activity Card -->
+              <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-3);">
                 <div class="flex justify-between items-center mb-3">
-                  <span class="text-xs font-semibold text-navy">Business Operations & Workflow Stream</span>
-                  <span class="badge badge--teal text-xs">Automated</span>
+                  <span class="text-xs font-semibold text-navy">Business Operations Stream</span>
+                  <span class="badge text-xs" style="background: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600;">Active</span>
                 </div>
                 
-                <!-- Geometric Progress Bars -->
+                <!-- Progress Bars: Royal Blue and Deep Navy -->
                 <div class="flex flex-col gap-2">
                   <div>
                     <div class="flex justify-between text-xs text-muted mb-1">
@@ -97,7 +96,7 @@ export function renderHero() {
                       <span class="font-medium text-navy">Optimal</span>
                     </div>
                     <div style="width: 100%; height: 6px; background: var(--color-bg-muted); border-radius: 3px; overflow: hidden;">
-                      <div style="width: 88%; height: 100%; background: var(--color-teal); border-radius: 3px;"></div>
+                      <div style="width: 88%; height: 100%; background: var(--color-blue); border-radius: 3px;"></div>
                     </div>
                   </div>
 
@@ -113,10 +112,10 @@ export function renderHero() {
                 </div>
               </div>
 
-              <!-- Floating Micro-Card Indicator -->
+              <!-- Floating Micro-Card -->
               <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); background: var(--color-bg-soft); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                 <div class="flex items-center gap-2">
-                  <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-teal);"></span>
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-turquoise);"></span>
                   <span class="text-xs font-medium text-secondary">Custom Systems Ready for Deployment</span>
                 </div>
                 <span class="text-xs font-semibold text-navy">Enterprise Ready</span>
@@ -129,7 +128,7 @@ export function renderHero() {
       </div>
     </section>
 
-    <!-- Responsive Style Overrides specifically for Hero Grid on desktop -->
+    <!-- Desktop Grid Override -->
     <style>
       @media (min-width: 1024px) {
         .section--lg .container > .grid {

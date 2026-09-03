@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))i(a);new MutationObserver(a=>{for(const o of a)if(o.type==="childList")for(const d of o.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&i(d)}).observe(document,{childList:!0,subtree:!0});function e(a){const o={};return a.integrity&&(o.integrity=a.integrity),a.referrerPolicy&&(o.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?o.credentials="include":a.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(a){if(a.ep)return;a.ep=!0;const o=e(a);fetch(a.href,o)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com"},telegram:{url:"https://t.me/urjikolabs",ctaText:"Message Us on Telegram"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},v={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — URJIKO Labs",description:"Explore our technology services: Web Development, Business Management Systems, Custom Software, and AI Intelligent Solutions.",heading:"Engineering Capabilities & Services"},"/solutions":{title:"Solutions — URJIKO Labs",description:"Specialized digital solutions engineered for businesses, schools, clinics, hotels, and growing organizations.",heading:"Specialized Industry Solutions"},"/portfolio":{title:"Portfolio — URJIKO Labs",description:"Selected case studies and digital systems engineered by URJIKO Labs for real-world impact.",heading:"Selected Works & Case Studies"},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},r={telegram:(t="w-5 h-5")=>`
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))i(a);new MutationObserver(a=>{for(const o of a)if(o.type==="childList")for(const d of o.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&i(d)}).observe(document,{childList:!0,subtree:!0});function e(a){const o={};return a.integrity&&(o.integrity=a.integrity),a.referrerPolicy&&(o.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?o.credentials="include":a.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(a){if(a.ep)return;a.ep=!0;const o=e(a);fetch(a.href,o)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com"},telegram:{url:"https://t.me/urjikolabs",ctaText:"Message Us on Telegram"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},u={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — URJIKO Labs",description:"Explore our technology services: Web Development, Business Management Systems, Custom Software, and AI Intelligent Solutions.",heading:"Engineering Capabilities & Services"},"/solutions":{title:"Solutions — URJIKO Labs",description:"Specialized digital solutions engineered for businesses, schools, clinics, hotels, and growing organizations.",heading:"Specialized Industry Solutions"},"/portfolio":{title:"Portfolio — URJIKO Labs",description:"Selected case studies and digital systems engineered by URJIKO Labs for real-world impact.",heading:"Selected Works & Case Studies"},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},r={telegram:(t="w-5 h-5")=>`
     <svg class="${t}" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .34z"/>
     </svg>
@@ -186,7 +186,7 @@
         </div>
       </div>
     </footer>
-  `}function m(){const t=document.getElementById("navbar-toggle-btn"),s=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let i=!1;function a(){i=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",s&&(s.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){i=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",s&&(s.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),i?o():a()},document.addEventListener("keydown",l=>{l.key==="Escape"&&i&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{i&&o()})}),document.addEventListener("click",l=>{i&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function f({path:t="/",content:s=""}){const e=v.routes[t]||{title:v.defaultTitle,description:v.defaultDescription};document.title=e.title;let i=document.querySelector('meta[name="description"]');return i&&i.setAttribute("content",e.description),`
+  `}function m(){const t=document.getElementById("navbar-toggle-btn"),s=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let i=!1;function a(){i=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",s&&(s.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){i=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",s&&(s.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),i?o():a()},document.addEventListener("keydown",l=>{l.key==="Escape"&&i&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{i&&o()})}),document.addEventListener("click",l=>{i&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function f({path:t="/",content:s=""}){const e=u.routes[t]||{title:u.defaultTitle,description:u.defaultDescription};document.title=e.title;let i=document.querySelector('meta[name="description"]');return i&&i.setAttribute("content",e.description),`
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
       <a href="#main-content" class="sr-only" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-teal); border-radius: 4px;">
         Skip to main content
@@ -201,7 +201,7 @@
       ${b()}
     </div>
   `}function y(){m();const t=document.getElementById("site-navbar");if(t){const s=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",s),window.addEventListener("scroll",s,{passive:!0}),s()}}function x(){return`
-    <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden;">
+    <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
           
@@ -209,14 +209,14 @@
           <div class="flex flex-col items-start">
             
             <!-- Eyebrow -->
-            <div class="badge badge--teal mb-4" style="text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); font-weight: 600; padding: 0.35rem 0.85rem;">
-              Digital Solutions for Modern Organizations
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+              DIGITAL SOLUTIONS FOR MODERN ORGANIZATIONS
             </div>
 
-            <!-- Headline -->
+            <!-- Headline: Navy dominant with subtle blue tone -->
             <h1 id="hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
               Build Smarter. <br/>
-              <span style="color: var(--color-teal);">Grow With Better Technology.</span>
+              <span>Grow With Better Technology.</span>
             </h1>
 
             <!-- Description -->
@@ -237,11 +237,11 @@
 
           </div>
 
-          <!-- Right Column: Abstract Software / Product Ecosystem Visual (Pure CSS & SVGs) -->
+          <!-- Right Column: Abstract Technology & Software Ecosystem Visual -->
           <div class="hero-visual-wrapper" aria-hidden="true" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
-            <div style="width: 100%; max-width: 520px; background: linear-gradient(135deg, var(--color-bg-soft) 0%, #FFFFFF 100%); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl); position: relative;">
+            <div style="width: 100%; max-width: 520px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl); position: relative;">
               
-              <!-- Subtle top bar simulating modern application frame -->
+              <!-- Subtle top bar -->
               <div class="flex items-center justify-between pb-4 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
                 <div class="flex items-center gap-2">
                   <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; opacity: 0.7;"></span>
@@ -253,35 +253,35 @@
                 </div>
               </div>
 
-              <!-- Main Dashboard Preview Area -->
+              <!-- Main Metric Cards -->
               <div class="grid grid--2 gap-3 mb-4">
-                <!-- Mini Metric Card 1 -->
-                <div style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-xs);">
-                  <div class="text-xs text-muted font-medium mb-1">Operational Efficiency</div>
+                <!-- Mini Metric Card 1 (Light Blue background with Navy/Blue text) -->
+                <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-xs);">
+                  <div class="text-xs text-muted font-medium mb-1">Operational Reliability</div>
                   <div class="text-navy font-bold" style="font-size: var(--font-size-2xl);">99.4%</div>
-                  <div class="text-xs text-teal font-medium mt-1 flex items-center gap-1">
-                    <span>↑ High Reliability</span>
+                  <div class="text-xs font-semibold mt-1 flex items-center gap-1" style="color: var(--color-blue);">
+                    <span>↑ High Performance</span>
                   </div>
                 </div>
 
-                <!-- Mini Metric Card 2 -->
-                <div style="background: var(--color-navy); border-radius: var(--radius-md); padding: var(--space-4); color: white; box-shadow: var(--shadow-md);">
-                  <div class="text-xs font-medium mb-1" style="color: rgba(255,255,255,0.7);">Active Architecture</div>
+                <!-- Mini Metric Card 2 (Navy Background with Royal Blue / Turquoise accent) -->
+                <div style="background: var(--gradient-tech); border-radius: var(--radius-md); padding: var(--space-4); color: white; box-shadow: var(--shadow-md);">
+                  <div class="text-xs font-medium mb-1" style="color: rgba(255,255,255,0.75);">Architecture</div>
                   <div class="text-white font-bold" style="font-size: var(--font-size-2xl); color: #FFFFFF;">Modular</div>
-                  <div class="text-xs font-medium mt-1 flex items-center gap-1" style="color: var(--color-teal-light);">
+                  <div class="text-xs font-medium mt-1 flex items-center gap-1" style="color: var(--color-turquoise-light);">
                     <span>● Live Sync</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Mini Data Activity Bar / Wave representation -->
-              <div style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-3);">
+              <!-- Data Stream Activity Card -->
+              <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin-bottom: var(--space-3);">
                 <div class="flex justify-between items-center mb-3">
-                  <span class="text-xs font-semibold text-navy">Business Operations & Workflow Stream</span>
-                  <span class="badge badge--teal text-xs">Automated</span>
+                  <span class="text-xs font-semibold text-navy">Business Operations Stream</span>
+                  <span class="badge text-xs" style="background: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600;">Active</span>
                 </div>
                 
-                <!-- Geometric Progress Bars -->
+                <!-- Progress Bars: Royal Blue and Deep Navy -->
                 <div class="flex flex-col gap-2">
                   <div>
                     <div class="flex justify-between text-xs text-muted mb-1">
@@ -289,7 +289,7 @@
                       <span class="font-medium text-navy">Optimal</span>
                     </div>
                     <div style="width: 100%; height: 6px; background: var(--color-bg-muted); border-radius: 3px; overflow: hidden;">
-                      <div style="width: 88%; height: 100%; background: var(--color-teal); border-radius: 3px;"></div>
+                      <div style="width: 88%; height: 100%; background: var(--color-blue); border-radius: 3px;"></div>
                     </div>
                   </div>
 
@@ -305,10 +305,10 @@
                 </div>
               </div>
 
-              <!-- Floating Micro-Card Indicator -->
+              <!-- Floating Micro-Card -->
               <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); background: var(--color-bg-soft); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                 <div class="flex items-center gap-2">
-                  <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-teal);"></span>
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-turquoise);"></span>
                   <span class="text-xs font-medium text-secondary">Custom Systems Ready for Deployment</span>
                 </div>
                 <span class="text-xs font-semibold text-navy">Enterprise Ready</span>
@@ -321,7 +321,7 @@
       </div>
     </section>
 
-    <!-- Responsive Style Overrides specifically for Hero Grid on desktop -->
+    <!-- Desktop Grid Override -->
     <style>
       @media (min-width: 1024px) {
         .section--lg .container > .grid {
@@ -681,7 +681,7 @@
       <!-- 7. Final CTA -->
       ${p({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
     </div>
-  `}function A({title:t="Have a project idea?",description:s="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const i=n.telegram.url;return`
+  `}function L({title:t="Have a project idea?",description:s="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const i=n.telegram.url;return`
     <div class="card card--lg flex flex-col items-start gap-4" style="border-left: 4px solid var(--color-teal); background-color: var(--color-bg-soft);">
       <div class="flex items-center gap-3">
         <div class="card__icon" style="margin-bottom: 0; color: var(--color-teal); background-color: var(--color-white);">
@@ -718,7 +718,7 @@
       `).join("")}
       </ol>
     </nav>
-  `}const u={"/":()=>$(),"/services":()=>`
+  `}const v={"/":()=>$(),"/services":()=>`
     <div class="container section">
       ${c([{label:"Home",path:"/"},{label:"Services"}])}
       <div class="section-heading">
@@ -840,7 +840,7 @@
       <div class="grid grid--2 mb-12">
         <!-- Direct Telegram CTA Component -->
         <div>
-          ${A({title:"Quickest Response via Telegram",description:"Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates."})}
+          ${L({title:"Quickest Response via Telegram",description:"Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates."})}
 
           <div class="card mt-6" style="margin-top: var(--space-6);">
             <h4 class="card__title mb-2">Email Inquiries</h4>
@@ -896,4 +896,4 @@
         </div>
       </div>
     </div>
-  `};class L{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",s=>{const e=s.target.closest("a[data-link]");if(e){const i=e.getAttribute("href");i&&!i.startsWith("http")&&!i.startsWith("mailto:")&&(s.preventDefault(),this.navigateTo(i))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(s){window.location.pathname!==s&&window.history.pushState(null,null,s),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const i=u[e]||u["/404"]||u["/"],a=i?i():"";this.appContainer&&(this.appContainer.innerHTML=f({path:e,content:a}),y())}}function g(){window.urjikoRouter||(window.urjikoRouter=new L)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",g):g();
+  `};class A{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",s=>{const e=s.target.closest("a[data-link]");if(e){const i=e.getAttribute("href");i&&!i.startsWith("http")&&!i.startsWith("mailto:")&&(s.preventDefault(),this.navigateTo(i))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(s){window.location.pathname!==s&&window.history.pushState(null,null,s),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const i=v[e]||v["/404"]||v["/"],a=i?i():"";this.appContainer&&(this.appContainer.innerHTML=f({path:e,content:a}),y())}}function g(){window.urjikoRouter||(window.urjikoRouter=new A)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",g):g();
