@@ -140,7 +140,7 @@ export function renderServiceCards() {
         </div>
 
         <!-- 5 Service Cards Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: var(--space-6);">
+        <div class="grid grid--2 gap-6">
           ${cardsHtml}
         </div>
       </div>

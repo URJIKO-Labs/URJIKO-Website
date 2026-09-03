@@ -295,6 +295,11 @@ export function renderFeaturedProjects() {
         .project-layout--right .project-visual { order: 2; }
         .project-layout--right .project-content { order: 1; }
       }
+      @media (max-width: 768px) {
+        .project-visual .grid[style*="repeat(3"] {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
     </style>
   `;
 

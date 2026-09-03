@@ -15,7 +15,7 @@ export function renderContactPage() {
     
     <section class="section" aria-label="Contact Methods" style="background: var(--color-white); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container" style="max-width: 64rem;">
-        <div class="grid items-start" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+        <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-8);">
           <div style="flex: 1;">
             ${renderContactInfo()}
           </div>
@@ -23,6 +23,13 @@ export function renderContactPage() {
             ${renderContactForm()}
           </div>
         </div>
+        <style>
+          @media (min-width: 768px) {
+            .container > .grid[style*="grid-template-columns: 1fr"] {
+              grid-template-columns: 1fr 1.5fr !important;
+            }
+          }
+        </style>
       </div>
     </section>
 

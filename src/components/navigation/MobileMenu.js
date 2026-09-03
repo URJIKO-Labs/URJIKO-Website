@@ -1,11 +1,23 @@
 import { icons } from "../common/Icons.js";
 
+// Global references for cleanup to prevent duplicate listeners on navigation
+let currentKeydownHandler = null;
+let currentDocumentClickHandler = null;
+
 export function initMobileMenu() {
   const toggleBtn = document.getElementById("navbar-toggle-btn");
   const toggleIcon = document.getElementById("navbar-toggle-icon");
   const mobilePanel = document.getElementById("mobile-nav-panel");
 
   if (!toggleBtn || !mobilePanel) return;
+
+  // Cleanup previous global listeners if they exist
+  if (currentKeydownHandler) {
+    document.removeEventListener("keydown", currentKeydownHandler);
+  }
+  if (currentDocumentClickHandler) {
+    document.removeEventListener("click", currentDocumentClickHandler);
+  }
 
   let isOpen = false;
 
@@ -14,7 +26,12 @@ export function initMobileMenu() {
     toggleBtn.setAttribute("aria-expanded", "true");
     toggleBtn.setAttribute("aria-label", "Close Navigation Menu");
     mobilePanel.removeAttribute("hidden");
-    mobilePanel.classList.add("is-open");
+    
+    // Slight delay to allow CSS display to apply before adding class for transition
+    setTimeout(() => {
+      mobilePanel.classList.add("is-open");
+    }, 10);
+    
     document.body.style.overflow = "hidden";
     if (toggleIcon) toggleIcon.innerHTML = icons.close();
 
@@ -26,10 +43,17 @@ export function initMobileMenu() {
     isOpen = false;
     toggleBtn.setAttribute("aria-expanded", "false");
     toggleBtn.setAttribute("aria-label", "Open Navigation Menu");
-    mobilePanel.setAttribute("hidden", "");
+    
     mobilePanel.classList.remove("is-open");
     document.body.style.overflow = "";
     if (toggleIcon) toggleIcon.innerHTML = icons.menu();
+
+    // Wait for CSS transition to finish before hiding
+    setTimeout(() => {
+      if (!isOpen) {
+        mobilePanel.setAttribute("hidden", "");
+      }
+    }, 300);
   }
 
   toggleBtn.onclick = (e) => {
@@ -41,12 +65,13 @@ export function initMobileMenu() {
     }
   };
 
-  document.addEventListener("keydown", (e) => {
+  currentKeydownHandler = (e) => {
     if (e.key === "Escape" && isOpen) {
       closeMenu();
       toggleBtn.focus();
     }
-  });
+  };
+  document.addEventListener("keydown", currentKeydownHandler);
 
   const links = mobilePanel.querySelectorAll("a");
   links.forEach((link) => {
@@ -55,7 +80,7 @@ export function initMobileMenu() {
     });
   });
 
-  document.addEventListener("click", (e) => {
+  currentDocumentClickHandler = (e) => {
     if (
       isOpen &&
       !mobilePanel.contains(e.target) &&
@@ -63,5 +88,6 @@ export function initMobileMenu() {
     ) {
       closeMenu();
     }
-  });
+  };
+  document.addEventListener("click", currentDocumentClickHandler);
 }

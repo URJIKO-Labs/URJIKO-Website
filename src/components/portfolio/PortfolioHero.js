@@ -6,7 +6,7 @@ import { icons } from "../common/Icons.js";
  */
 export function renderPortfolioHero() {
   return `
-    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-14); background: #FFFFFF; position: relative; overflow: hidden;">
+    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-12); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
 
@@ -93,6 +93,11 @@ export function renderPortfolioHero() {
       @media (min-width: 1024px) {
         section[aria-labelledby="portfolio-hero-title"] .container > .grid {
           grid-template-columns: 1.15fr 0.85fr !important;
+        }
+      }
+      @media (max-width: 768px) {
+        section[aria-labelledby="portfolio-hero-title"] .container > .grid {
+          gap: var(--space-8) !important;
         }
       }
     </style>

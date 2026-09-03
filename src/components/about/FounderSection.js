@@ -10,7 +10,7 @@ export function renderFounderSection() {
             <!-- Left Column: Intro -->
             <div class="founder-info">
               <div class="badge badge--navy mb-4">Founder</div>
-              <h2 class="text-navy mb-2" style="font-size: 2.25rem; font-weight: 800; line-height: 1.1;">GEMACHIS TESFAYE</h2>
+              <h2 class="text-navy mb-2" style="font-size: clamp(1.75rem, 5vw, 2.25rem); font-weight: 800; line-height: 1.1;">GEMACHIS TESFAYE</h2>
               <p class="text-blue font-bold mb-4" style="font-size: 1.125rem;">Software Engineer</p>
               
               <p class="text-muted" style="line-height: 1.7; font-size: 1.05rem;">

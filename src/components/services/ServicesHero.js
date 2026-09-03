@@ -101,6 +101,11 @@ export function renderServicesHero() {
           grid-template-columns: 1.15fr 0.85fr !important;
         }
       }
+      @media (max-width: 768px) {
+        section[aria-labelledby="services-hero-title"] .container > .grid {
+          gap: var(--space-8) !important;
+        }
+      }
     </style>
   `;
 }

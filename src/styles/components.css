@@ -587,7 +587,6 @@
 }
 
 .navbar__mobile {
-  display: none;
   position: fixed;
   inset: 0;
   top: 4.5rem;
@@ -595,10 +594,14 @@
   z-index: var(--z-fixed);
   padding: var(--space-6) var(--padding-page-mobile);
   overflow-y: auto;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .navbar__mobile.is-open {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 1024px) {
