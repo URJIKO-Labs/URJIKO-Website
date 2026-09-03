@@ -1,6 +1,6 @@
 /**
  * Why URJIKO Labs Section
- * 
+ *
  * Clean split layout:
  * Left: Headline & engineering ethos
  * Right: 5 numbered principles with teal accents
@@ -8,29 +8,34 @@
 export function renderWhyUrjiko() {
   const principles = [
     {
-      number: '01',
-      title: 'Understand the Problem',
-      description: 'We focus on the underlying business challenge and operational workflow before choosing the technology stack.',
+      number: "01",
+      title: "Understand the Problem",
+      description:
+        "We focus on the underlying business challenge and operational workflow before choosing the technology stack.",
     },
     {
-      number: '02',
-      title: 'Practical Technology',
-      description: 'We prioritize useful features, high usability, and measurable value over unnecessary complexity.',
+      number: "02",
+      title: "Practical Technology",
+      description:
+        "We prioritize useful features, high usability, and measurable value over unnecessary complexity.",
     },
     {
-      number: '03',
-      title: 'Modern Engineering',
-      description: 'Solutions are built with clean code, standard conventions, and maintainable software architecture.',
+      number: "03",
+      title: "Modern Engineering",
+      description:
+        "Solutions are built with clean code, standard conventions, and maintainable software architecture.",
     },
     {
-      number: '04',
-      title: 'Designed to Grow',
-      description: 'Systems are structured modularly so they can expand seamlessly as your organization scales.',
+      number: "04",
+      title: "Designed to Grow",
+      description:
+        "Systems are structured modularly so they can expand seamlessly as your organization scales.",
     },
     {
-      number: '05',
-      title: 'Continued Support',
-      description: 'We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch.',
+      number: "05",
+      title: "Continued Support",
+      description:
+        "We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch.",
     },
   ];
 
@@ -50,9 +55,9 @@ export function renderWhyUrjiko() {
           </p>
         </div>
       </div>
-    `
+    `,
     )
-    .join('');
+    .join("");
 
   return `
     <section class="section" aria-labelledby="why-heading">

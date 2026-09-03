@@ -1,14 +1,14 @@
-import { renderHero } from '../../components/home/Hero.js';
-import { renderValueStrip } from '../../components/home/ValueStrip.js';
-import { renderServicesPreview } from '../../components/home/ServicesPreview.js';
-import { renderFeaturedSolutions } from '../../components/home/FeaturedSolutions.js';
-import { renderWhyUrjiko } from '../../components/home/WhyUrjiko.js';
-import { renderProcess } from '../../components/home/Process.js';
-import { renderGlobalCTA } from '../../components/common/CTA.js';
+import { renderHero } from "../../components/home/Hero.js";
+import { renderValueStrip } from "../../components/home/ValueStrip.js";
+import { renderServicesPreview } from "../../components/home/ServicesPreview.js";
+import { renderFeaturedSolutions } from "../../components/home/FeaturedSolutions.js";
+import { renderWhyUrjiko } from "../../components/home/WhyUrjiko.js";
+import { renderProcess } from "../../components/home/Process.js";
+import { renderGlobalCTA } from "../../components/common/CTA.js";
 
 /**
  * URJIKO Labs — Home Page View (Route: `/`)
- * 
+ *
  * Order of Sections:
  * 1. Hero
  * 2. Trust / Value Strip
@@ -41,12 +41,13 @@ export function renderHomePage() {
 
       <!-- 7. Final CTA -->
       ${renderGlobalCTA({
-        title: 'Have a problem that technology could solve?',
-        description: "Tell us what you're trying to improve. We'll help you explore a practical digital solution.",
-        primaryBtnLabel: 'Discuss Your Project',
-        primaryBtnPath: '/contact',
-        secondaryBtnLabel: 'Explore Our Solutions',
-        secondaryBtnPath: '/solutions',
+        title: "Have a problem that technology could solve?",
+        description:
+          "Tell us what you're trying to improve. We'll help you explore a practical digital solution.",
+        primaryBtnLabel: "Discuss Your Project",
+        primaryBtnPath: "/contact",
+        secondaryBtnLabel: "Explore Our Solutions",
+        secondaryBtnPath: "/solutions",
       })}
     </div>
   `;

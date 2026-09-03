@@ -1,15 +1,15 @@
-import { renderHomePage } from './home/HomePage.js';
-import { renderGlobalCTA } from '../components/common/CTA.js';
-import { renderTelegramCTA } from '../components/contact/TelegramCTA.js';
-import { renderBreadcrumbs } from '../components/navigation/Breadcrumbs.js';
-import { companyConfig } from '../config/company.js';
+import { renderHomePage } from "./home/HomePage.js";
+import { renderGlobalCTA } from "../components/common/CTA.js";
+import { renderTelegramCTA } from "../components/contact/TelegramCTA.js";
+import { renderBreadcrumbs } from "../components/navigation/Breadcrumbs.js";
+import { companyConfig } from "../config/company.js";
 
 export const routes = {
-  '/': () => renderHomePage(),
+  "/": () => renderHomePage(),
 
-  '/services': () => `
+  "/services": () => `
     <div class="container section">
-      ${renderBreadcrumbs([{ label: 'Home', path: '/' }, { label: 'Services' }])}
+      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "Services" }])}
       <div class="section-heading">
         <span class="section-heading__label">Our Capabilities</span>
         <h1 class="section-heading__title">Engineering & Technology Services</h1>
@@ -29,12 +29,12 @@ export const routes = {
         </div>
       </div>
     </div>
-    ${renderGlobalCTA({ title: 'Ready to build your solution?', description: 'Contact us to discuss your system requirements and timeline.' })}
+    ${renderGlobalCTA({ title: "Ready to build your solution?", description: "Contact us to discuss your system requirements and timeline." })}
   `,
 
-  '/solutions': () => `
+  "/solutions": () => `
     <div class="container section">
-      ${renderBreadcrumbs([{ label: 'Home', path: '/' }, { label: 'Solutions' }])}
+      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "Solutions" }])}
       <div class="section-heading">
         <span class="section-heading__label">Tailored Solutions</span>
         <h1 class="section-heading__title">Industry-Specific Digital Systems</h1>
@@ -64,9 +64,9 @@ export const routes = {
     ${renderGlobalCTA()}
   `,
 
-  '/portfolio': () => `
+  "/portfolio": () => `
     <div class="container section">
-      ${renderBreadcrumbs([{ label: 'Home', path: '/' }, { label: 'Portfolio' }])}
+      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "Portfolio" }])}
       <div class="section-heading">
         <span class="section-heading__label">Case Studies</span>
         <h1 class="section-heading__title">Selected Works & Systems</h1>
@@ -102,9 +102,9 @@ export const routes = {
     ${renderGlobalCTA()}
   `,
 
-  '/about': () => `
+  "/about": () => `
     <div class="container section">
-      ${renderBreadcrumbs([{ label: 'Home', path: '/' }, { label: 'About' }])}
+      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "About" }])}
       <div class="section-heading">
         <span class="section-heading__label">Company</span>
         <h1 class="section-heading__title">About URJIKO Labs</h1>
@@ -123,9 +123,9 @@ export const routes = {
     ${renderGlobalCTA()}
   `,
 
-  '/contact': () => `
+  "/contact": () => `
     <div class="container section">
-      ${renderBreadcrumbs([{ label: 'Home', path: '/' }, { label: 'Contact' }])}
+      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "Contact" }])}
       <div class="section-heading">
         <span class="section-heading__label">Get in Touch</span>
         <h1 class="section-heading__title">Discuss Your Project</h1>
@@ -138,8 +138,9 @@ export const routes = {
         <!-- Direct Telegram CTA Component -->
         <div>
           ${renderTelegramCTA({
-            title: 'Quickest Response via Telegram',
-            description: 'Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates.',
+            title: "Quickest Response via Telegram",
+            description:
+              "Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates.",
           })}
 
           <div class="card mt-6" style="margin-top: var(--space-6);">
@@ -183,7 +184,7 @@ export const routes = {
     </div>
   `,
 
-  '/404': () => `
+  "/404": () => `
     <div class="container section text-center">
       <div style="max-width: 32rem; margin: 0 auto; padding: var(--space-12) 0;">
         <span class="badge badge--navy mb-4">404 Error</span>

@@ -1,9 +1,9 @@
-import { companyConfig } from '../../config/company.js';
-import { icons } from '../common/Icons.js';
+import { companyConfig } from "../../config/company.js";
+import { icons } from "../common/Icons.js";
 
 /**
  * Hero Section for URJIKO Labs Home Page
- * 
+ *
  * Clean white-first layout with bold Navy typography, controlled Teal accents,
  * and a sophisticated CSS-driven digital product/ecosystem visual on the right.
  */
@@ -29,14 +29,14 @@ export function renderHero() {
 
             <!-- Description -->
             <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.1875rem); max-width: 38rem; line-height: 1.65;">
-              ${companyConfig.shortDescription || 'URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.'}
+              ${companyConfig.shortDescription || "URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow."}
             </p>
 
             <!-- Actions -->
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${icons.arrowRight('w-4 h-4')}
+                ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Solutions</span>

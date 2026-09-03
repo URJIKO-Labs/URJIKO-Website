@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 /**
  * Featured Solutions Section
@@ -51,7 +51,7 @@ export function renderFeaturedSolutions() {
 
                 <a href="/portfolio" data-link class="btn btn--primary flex items-center gap-2">
                   <span>View Solution Overview</span>
-                  ${icons.arrowRight('w-4 h-4')}
+                  ${icons.arrowRight("w-4 h-4")}
                 </a>
               </div>
 
@@ -106,7 +106,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight('w-4 h-4')}
+                  ${icons.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -127,7 +127,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight('w-4 h-4')}
+                  ${icons.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -148,7 +148,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight('w-4 h-4')}
+                  ${icons.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>

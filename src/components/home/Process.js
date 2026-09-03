@@ -1,40 +1,46 @@
 /**
  * How We Work (Process) Section
- * 
+ *
  * 6-step project delivery process:
  * 01 Discover, 02 Plan, 03 Design, 04 Develop, 05 Test, 06 Deploy & Support
  */
 export function renderProcess() {
   const steps = [
     {
-      number: '01',
-      title: 'Discover',
-      description: 'Understand your business goals, users, pain points, and existing operational workflow.',
+      number: "01",
+      title: "Discover",
+      description:
+        "Understand your business goals, users, pain points, and existing operational workflow.",
     },
     {
-      number: '02',
-      title: 'Plan',
-      description: 'Define scope, technical priorities, system architecture, deliverables, and core MVP.',
+      number: "02",
+      title: "Plan",
+      description:
+        "Define scope, technical priorities, system architecture, deliverables, and core MVP.",
     },
     {
-      number: '03',
-      title: 'Design',
-      description: 'Create clean, intuitive user experiences, component layouts, and database models.',
+      number: "03",
+      title: "Design",
+      description:
+        "Create clean, intuitive user experiences, component layouts, and database models.",
     },
     {
-      number: '04',
-      title: 'Develop',
-      description: 'Build your solution using modern engineering practices, clean code, and robust APIs.',
+      number: "04",
+      title: "Develop",
+      description:
+        "Build your solution using modern engineering practices, clean code, and robust APIs.",
     },
     {
-      number: '05',
-      title: 'Test',
-      description: 'Verify functionality, performance, security, mobile responsiveness, and data integrity.',
+      number: "05",
+      title: "Test",
+      description:
+        "Verify functionality, performance, security, mobile responsiveness, and data integrity.",
     },
     {
-      number: '06',
-      title: 'Deploy & Support',
-      description: 'Launch the system reliably, onboard your team, and provide continuous technical support.',
+      number: "06",
+      title: "Deploy & Support",
+      description:
+        "Launch the system reliably, onboard your team, and provide continuous technical support.",
     },
   ];
 
@@ -51,9 +57,9 @@ export function renderProcess() {
           <p class="text-sm text-secondary mb-0" style="line-height: 1.55;">${s.description}</p>
         </div>
       </div>
-    `
+    `,
     )
-    .join('');
+    .join("");
 
   return `
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
