@@ -112,6 +112,12 @@ export function renderSmartBizFeature() {
             gap: var(--space-12);
           }
         }
+
+        @media (max-width: 768px) {
+          .smartbiz-visual-wrapper .grid--2 {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
       </style>
     </section>
   `;
