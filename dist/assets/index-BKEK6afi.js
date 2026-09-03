@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))a(s);new MutationObserver(s=>{for(const o of s)if(o.type==="childList")for(const d of o.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&a(d)}).observe(document,{childList:!0,subtree:!0});function e(s){const o={};return s.integrity&&(o.integrity=s.integrity),s.referrerPolicy&&(o.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?o.credentials="include":s.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function a(s){if(s.ep)return;s.ep=!0;const o=e(s);fetch(s.href,o)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com"},telegram:{url:"https://t.me/urjikolabs",ctaText:"Message Us on Telegram"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},p={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — Website Development, Business Systems & Custom Software | URJIKO Labs",description:"Professional software development services in Ethiopia — website development, business management systems, custom software, AI solutions, and ongoing technical support for organizations.",heading:"Technology Built Around Your Business"},"/solutions":{title:"Solutions — Business, Education, Transport & Healthcare Software | URJIKO Labs",description:"Practical digital solutions for real-world problems — business operations, education management, transport systems, and healthcare platforms built by URJIKO Labs in Ethiopia.",heading:"Practical Software for Real-World Problems"},"/portfolio":{title:"Portfolio — URJIKO Labs",description:"Selected case studies and digital systems engineered by URJIKO Labs for real-world impact.",heading:"Selected Works & Case Studies"},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},r={telegram:(t="w-5 h-5")=>`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))s(i);new MutationObserver(i=>{for(const r of i)if(r.type==="childList")for(const d of r.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&s(d)}).observe(document,{childList:!0,subtree:!0});function e(i){const r={};return i.integrity&&(r.integrity=i.integrity),i.referrerPolicy&&(r.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?r.credentials="include":i.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function s(i){if(i.ep)return;i.ep=!0;const r=e(i);fetch(i.href,r)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com"},telegram:{url:"https://t.me/urjikolabs",ctaText:"Message Us on Telegram"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},p={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — Website Development, Business Systems & Custom Software | URJIKO Labs",description:"Professional software development services in Ethiopia — website development, business management systems, custom software, AI solutions, and ongoing technical support for organizations.",heading:"Technology Built Around Your Business"},"/solutions":{title:"Solutions — Business, Education, Transport & Healthcare Software | URJIKO Labs",description:"Practical digital solutions for real-world problems — business operations, education management, transport systems, and healthcare platforms built by URJIKO Labs in Ethiopia.",heading:"Practical Software for Real-World Problems"},"/portfolio":{title:"Portfolio | URJIKO Labs",description:"Explore software solutions, business systems, and digital experiences developed by URJIKO Labs.",heading:"Software Built to Solve Real Problems."},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},o={telegram:(t="w-5 h-5")=>`
     <svg class="${t}" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .34z"/>
     </svg>
@@ -42,13 +42,13 @@
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
       <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
     </svg>
-  `};function g(t="/"){const i=n.navLinks.map(e=>{const a=t===e.path;return`
+  `};function m(t="/"){const a=n.navLinks.map(e=>{const s=t===e.path;return`
         <li>
           <a 
             href="${e.path}" 
             data-link 
-            class="navbar__link ${a?"navbar__link--active":""}"
-            ${a?'aria-current="page"':""}
+            class="navbar__link ${s?"navbar__link--active":""}"
+            ${s?'aria-current="page"':""}
           >
             ${e.label}
           </a>
@@ -64,14 +64,14 @@
             width="120" 
             height="40" 
             loading="eager"
-            style="height: 2.5rem; width: auto; object-fit: contain;"
+            style="height: 1.75rem; width: auto; object-fit: contain;"
           />
         </a>
 
         <!-- Desktop Navigation Links -->
         <nav aria-label="Main Navigation" class="hide-mobile">
           <ul class="navbar__links" role="list">
-            ${i}
+            ${a}
           </ul>
         </nav>
 
@@ -90,7 +90,7 @@
             aria-label="Open Navigation Menu"
           >
             <span class="navbar__toggle-icon" id="navbar-toggle-icon">
-              ${r.menu()}
+              ${o.menu()}
             </span>
           </button>
         </div>
@@ -108,13 +108,13 @@
         <div class="flex flex-col gap-4">
           <nav aria-label="Mobile Navigation">
             <ul class="flex flex-col gap-2" role="list">
-              ${n.navLinks.map(e=>{const a=t===e.path;return`
+              ${n.navLinks.map(e=>{const s=t===e.path;return`
                     <li>
                       <a 
                         href="${e.path}" 
                         data-link 
-                        class="navbar__mobile-link ${a?"navbar__mobile-link--active":""}"
-                        ${a?'aria-current="page"':""}
+                        class="navbar__mobile-link ${s?"navbar__mobile-link--active":""}"
+                        ${s?'aria-current="page"':""}
                       >
                         ${e.label}
                       </a>
@@ -131,11 +131,11 @@
         </div>
       </div>
     </header>
-  `}function h(){const t=new Date().getFullYear()||2026,i=n.footerNav.company.map(s=>`<li><a href="${s.path}" data-link class="footer__link">${s.label}</a></li>`).join(""),e=n.footerNav.services.map(s=>`<li><a href="${s.path}" data-link class="footer__link">${s.label}</a></li>`).join(""),a=n.footerNav.connect.map(s=>{let o="";s.type==="telegram"&&(o=r.telegram("w-4 h-4")),s.type==="github"&&(o=r.github("w-4 h-4")),s.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),s.type==="email"&&(o=r.mail("w-4 h-4"));const l=(s.href.startsWith("http")||s.href.startsWith("mailto:"))&&!s.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
+  `}function h(){const t=new Date().getFullYear()||2026,a=n.footerNav.company.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),e=n.footerNav.services.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),s=n.footerNav.connect.map(i=>{let r="";i.type==="telegram"&&(r=o.telegram("w-4 h-4")),i.type==="github"&&(r=o.github("w-4 h-4")),i.type==="linkedin"&&(r=o.linkedin("w-4 h-4")),i.type==="email"&&(r=o.mail("w-4 h-4"));const l=(i.href.startsWith("http")||i.href.startsWith("mailto:"))&&!i.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
         <li>
-          <a href="${s.href}" class="footer__link flex items-center gap-2" ${l}>
-            ${o}
-            <span>${s.label}</span>
+          <a href="${i.href}" class="footer__link flex items-center gap-2" ${l}>
+            ${r}
+            <span>${i.label}</span>
           </a>
         </li>
       `}).join("");return`
@@ -152,7 +152,7 @@
           <div>
             <h4 class="footer__heading">Company</h4>
             <ul class="footer__links" role="list">
-              ${i}
+              ${a}
             </ul>
           </div>
 
@@ -168,7 +168,7 @@
           <div>
             <h4 class="footer__heading">Connect</h4>
             <ul class="footer__links" role="list">
-              ${a}
+              ${s}
             </ul>
           </div>
         </div>
@@ -186,21 +186,21 @@
         </div>
       </div>
     </footer>
-  `}function m(){const t=document.getElementById("navbar-toggle-btn"),i=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let a=!1;function s(){a=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",i&&(i.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){a=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",i&&(i.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),a?o():s()},document.addEventListener("keydown",l=>{l.key==="Escape"&&a&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{a&&o()})}),document.addEventListener("click",l=>{a&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function f({path:t="/",content:i=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let a=document.querySelector('meta[name="description"]');return a&&a.setAttribute("content",e.description),`
+  `}function f(){const t=document.getElementById("navbar-toggle-btn"),a=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let s=!1;function i(){s=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",a&&(a.innerHTML=o.close());const l=e.querySelector("a");l&&l.focus()}function r(){s=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",a&&(a.innerHTML=o.menu())}t.onclick=l=>{l.stopPropagation(),s?r():i()},document.addEventListener("keydown",l=>{l.key==="Escape"&&s&&(r(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{s&&r()})}),document.addEventListener("click",l=>{s&&!e.contains(l.target)&&!t.contains(l.target)&&r()})}function x({path:t="/",content:a=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let s=document.querySelector('meta[name="description"]');return s&&s.setAttribute("content",e.description),`
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
       <a href="#main-content" class="sr-only" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-blue); border-radius: 4px;">
         Skip to main content
       </a>
 
-      ${g(t)}
+      ${m(t)}
 
       <main id="main-content" class="flex-1" style="flex: 1 0 auto;" role="main">
-        ${i}
+        ${a}
       </main>
 
       ${h()}
     </div>
-  `}function y(){m();const t=document.getElementById("site-navbar");if(t){const i=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",i),window.addEventListener("scroll",i,{passive:!0}),i()}}function x(){return`
+  `}function y(){f();const t=document.getElementById("site-navbar");if(t){const a=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",a),window.addEventListener("scroll",a,{passive:!0}),a()}}function w(){return`
     <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -228,7 +228,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${r.arrowRight("w-4 h-4")}
+                ${o.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Solutions</span>
@@ -329,7 +329,7 @@
         }
       }
     </style>
-  `}function w(){return`
+  `}function k(){return`
     <section class="section--sm bg-soft" aria-label="Why organizations trust URJIKO Labs" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         <div class="grid grid--4 gap-6">
@@ -349,7 +349,7 @@
         </div>
       </div>
     </section>
-  `}function k(){return`
+  `}function S(){return`
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
         <!-- Section Header -->
@@ -375,11 +375,11 @@
         
         <div>
           <div class="flex flex-wrap gap-2 mb-4">
-            ${e.tags.map(a=>`<span class="badge badge--navy text-xs">${a}</span>`).join("")}
+            ${e.tags.map(s=>`<span class="badge badge--navy text-xs">${s}</span>`).join("")}
           </div>
           <a href="/services" data-link class="card__link">
             <span>Learn More</span>
-            ${r.arrowRight("w-4 h-4")}
+            ${o.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
@@ -390,7 +390,7 @@
         <div class="flex justify-center mt-8">
           <a href="/services" data-link class="btn btn--secondary flex items-center gap-2">
             <span>Explore All Services</span>
-            ${r.arrowRight("w-4 h-4")}
+            ${o.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
@@ -436,7 +436,7 @@
 
                 <a href="/portfolio" data-link class="btn btn--primary flex items-center gap-2">
                   <span>View Solution Overview</span>
-                  ${r.arrowRight("w-4 h-4")}
+                  ${o.arrowRight("w-4 h-4")}
                 </a>
               </div>
 
@@ -491,7 +491,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${r.arrowRight("w-4 h-4")}
+                  ${o.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -512,7 +512,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${r.arrowRight("w-4 h-4")}
+                  ${o.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -533,7 +533,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${r.arrowRight("w-4 h-4")}
+                  ${o.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -553,7 +553,7 @@
         }
       }
     </style>
-  `}function S(){return`
+  `}function C(){return`
     <section class="section" aria-labelledby="why-heading">
       <div class="container">
         <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -606,7 +606,7 @@
         }
       }
     </style>
-  `}function C(){return`
+  `}function $(){return`
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -636,44 +636,44 @@
 
       </div>
     </section>
-  `}function c({title:t="Have a problem that technology could solve?",description:i="Let's build a practical, high-performance digital solution tailored for your organization.",primaryBtnLabel:e=n.primaryCTA.label,primaryBtnPath:a=n.primaryCTA.path,secondaryBtnLabel:s="View Our Solutions",secondaryBtnPath:o="/solutions"}={}){return`
+  `}function c({title:t="Have a problem that technology could solve?",description:a="Let's build a practical, high-performance digital solution tailored for your organization.",primaryBtnLabel:e=n.primaryCTA.label,primaryBtnPath:s=n.primaryCTA.path,secondaryBtnLabel:i="View Our Solutions",secondaryBtnPath:r="/solutions"}={}){return`
     <section class="section" aria-labelledby="cta-section-heading">
       <div class="container">
         <div class="cta-section">
           <h2 id="cta-section-heading" class="cta-section__title text-balance">${t}</h2>
-          <p class="cta-section__description text-balance">${i}</p>
+          <p class="cta-section__description text-balance">${a}</p>
           <div class="cta-section__actions">
-            <a href="${a}" data-link class="btn btn--primary btn--lg">
+            <a href="${s}" data-link class="btn btn--primary btn--lg">
               ${e}
             </a>
-            ${s?`
-              <a href="${o}" data-link class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
-                ${s}
+            ${i?`
+              <a href="${r}" data-link class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+                ${i}
               </a>
             `:""}
           </div>
         </div>
       </div>
     </section>
-  `}function $(){return`
+  `}function P(){return`
     <div class="home-page">
       <!-- 1. Hero -->
-      ${x()}
-
-      <!-- 2. Value Strip -->
       ${w()}
 
-      <!-- 3. What We Do -->
+      <!-- 2. Value Strip -->
       ${k()}
+
+      <!-- 3. What We Do -->
+      ${S()}
 
       <!-- 4. Featured Solutions -->
       ${_()}
 
       <!-- 5. Why URJIKO Labs -->
-      ${S()}
+      ${C()}
 
       <!-- 6. How We Work -->
-      ${C()}
+      ${$()}
 
       <!-- 7. Final CTA -->
       ${c({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
@@ -700,7 +700,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${r.arrowRight("w-4 h-4")}
+                ${o.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>View Our Solutions</span>
@@ -826,7 +826,7 @@
 
       </div>
     </section>
-  `}function T(){return`
+  `}function R(){return`
     <section class="section" aria-labelledby="core-services-heading">
       <div class="container">
         <!-- Section Heading -->
@@ -861,13 +861,13 @@
         <div>
           <!-- Capabilities Tags -->
           <div class="flex flex-wrap gap-2 mb-6">
-            ${e.tags.map(a=>`<span class="badge badge--outline text-xs">${a}</span>`).join("")}
+            ${e.tags.map(s=>`<span class="badge badge--outline text-xs">${s}</span>`).join("")}
           </div>
 
           <!-- Action Link -->
           <a href="${e.link}" data-link class="card__link">
             <span>Explore Service</span>
-            ${r.arrowRight("w-4 h-4")}
+            ${o.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
@@ -875,7 +875,7 @@
         </div>
       </div>
     </section>
-  `}function P(){return`
+  `}function T(){return`
     <section class="section bg-white" aria-labelledby="smartbiz-feature-title" style="background-color: var(--color-white); position: relative;">
       <div class="container">
         <div class="grid smartbiz-feature-grid items-center">
@@ -904,7 +904,7 @@
             <div>
               <a href="/portfolio" data-link class="btn btn--primary">
                 <span>View SmartBiz</span>
-                ${r.arrowRight("w-4 h-4")}
+                ${o.arrowRight("w-4 h-4")}
               </a>
             </div>
           </div>
@@ -984,13 +984,13 @@
         }
       </style>
     </section>
-  `}function R(){return`
+  `}function j(){return`
     ${A()}
     ${B()}
+    ${R()}
     ${T()}
-    ${P()}
     ${c({title:"Ready to Build Your Solution?",description:"Tell us about your project requirements. We will help you identify the right technology approach.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Solutions",secondaryBtnPath:"/solutions"})}
-  `}function j(){return`
+  `}function z(){return`
     <section class="section section--lg" aria-labelledby="solutions-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -1012,7 +1012,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Problem</span>
-                ${r.arrowRight("w-4 h-4")}
+                ${o.arrowRight("w-4 h-4")}
               </a>
               <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Work</span>
@@ -1094,7 +1094,7 @@
         }
       }
     </style>
-  `}const L=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function z(){return L.map(t=>`
+  `}const I=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function E(){return I.map(t=>`
     <section 
       id="${t.id}" 
       class="section ${t.bgClass}" 
@@ -1116,16 +1116,16 @@
 
         <!-- Compact Solution Cards Grid -->
         <div class="grid ${t.gridClass} gap-4 mb-8">
-          ${t.cards.map(i=>`
+          ${t.cards.map(a=>`
             <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-5);">
               <div class="flex items-center gap-2 mb-2">
                 <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block; flex-shrink: 0;" aria-hidden="true"></span>
                 <h4 class="text-navy font-semibold" style="margin: 0; font-size: var(--font-size-base); line-height: 1.4;">
-                  ${i.title}
+                  ${a.title}
                 </h4>
               </div>
               <p class="text-secondary text-sm mb-0" style="line-height: 1.5;">
-                ${i.description}
+                ${a.description}
               </p>
             </div>
           `).join("")}
@@ -1140,7 +1140,7 @@
             </div>
             <a href="${t.featured.link}" data-link class="card__link font-semibold flex items-center gap-1" style="margin-top: 0; font-size: var(--font-size-sm);">
               <span>View Project</span>
-              ${r.arrowRight("w-4 h-4")}
+              ${o.arrowRight("w-4 h-4")}
             </a>
           </div>
           ${t.featured.disclaimer?`
@@ -1154,14 +1154,14 @@
         <div class="flex items-center">
           <a href="${t.cta.link}" data-link class="btn btn--secondary flex items-center gap-2">
             <span>${t.cta.label}</span>
-            ${r.arrowRight("w-4 h-4")}
+            ${o.arrowRight("w-4 h-4")}
           </a>
         </div>
 
       </div>
     </section>
   `).join(`
-`)}function I(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
+`)}function L(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
     <section class="section bg-soft problem-solution-section" aria-labelledby="problem-solution-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -1175,7 +1175,7 @@
 
         <!-- Responsive Process Flow -->
         <div class="problem-solution__flow" role="list">
-          ${t.map((e,a)=>{const o=a===t.length-1?"":`
+          ${t.map((e,s)=>{const r=s===t.length-1?"":`
           <div class="problem-solution__connector" aria-hidden="true">
             <span class="problem-solution__connector-line"></span>
             <svg class="problem-solution__connector-arrow" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1187,7 +1187,7 @@
           <div class="problem-solution__node font-bold">${e.number}</div>
           <span class="problem-solution__name font-semibold text-navy">${e.name}</span>
         </div>
-        ${o}
+        ${r}
       `}).join("")}
         </div>
 
@@ -1385,7 +1385,7 @@
         }
       }
     </style>
-  `}function O(){return`
+  `}function M(){return`
     <section class="section bg-white" aria-labelledby="capabilities-heading">
       <div class="container">
         <!-- Section Header -->
@@ -1454,7 +1454,7 @@
         height: 20px;
       }
     </style>
-  `}function M(){return`
+  `}function O(){return`
     <section class="section bg-white" aria-labelledby="cross-nav-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -1475,13 +1475,13 @@
           </h3>
 
           <ul class="flex flex-col gap-2.5 mb-6" role="list" style="list-style: none; padding: 0; margin: 0;">
-            ${e.links.map(a=>`
+            ${e.links.map(s=>`
               <li>
-                <a href="${a.path}" data-link class="cross-nav-link flex items-center gap-2 text-sm text-navy">
+                <a href="${s.path}" data-link class="cross-nav-link flex items-center gap-2 text-sm text-navy">
                   <span class="cross-nav-icon" aria-hidden="true" style="color: var(--color-blue); display: inline-flex; align-items: center; flex-shrink: 0;">
-                    ${r.arrowRight("w-3.5 h-3.5")}
+                    ${o.arrowRight("w-3.5 h-3.5")}
                   </span>
-                  <span>${a.label}</span>
+                  <span>${s.label}</span>
                 </a>
               </li>
             `).join("")}
@@ -1491,7 +1491,7 @@
         <div class="mt-auto pt-4" style="border-top: 1px solid var(--color-border-subtle);">
           <a href="${e.ctaPath}" data-link class="btn btn--secondary btn--sm flex items-center justify-center gap-2" style="width: 100%;">
             <span>${e.ctaText}</span>
-            ${r.arrowRight("w-3.5 h-3.5")}
+            ${o.arrowRight("w-3.5 h-3.5")}
           </a>
         </div>
       </div>
@@ -1534,39 +1534,664 @@
         transition: transform var(--transition-fast);
       }
     </style>
-  `}function E(){return`
-    ${j()}
+  `}function F(){return`
     ${z()}
-    ${I()}
-    ${O()}
+    ${E()}
+    ${L()}
     ${M()}
+    ${O()}
     ${c({title:"Have a Problem Technology Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Work",secondaryBtnPath:"/portfolio"})}
-  `}function F({title:t="Have a project idea?",description:i="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const a=n.telegram.url;return`
+  `}function D(){return`
+    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-14); background: #FFFFFF; position: relative; overflow: hidden;">
+      <div class="container">
+        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
+
+          <!-- Left: Copy -->
+          <div class="flex flex-col items-start">
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+              PORTFOLIO
+            </div>
+
+            <h1 id="portfolio-hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
+              Software Built to Solve Real&nbsp;Problems.
+            </h1>
+
+            <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.125rem); max-width: 36rem; line-height: 1.65;">
+              Explore selected software, business systems, and digital experiences developed by URJIKO Labs for organizations across business, education, transport, and healthcare.
+            </p>
+
+            <div class="flex flex-wrap gap-4 items-center">
+              <a href="/contact" data-link class="btn btn--primary btn--lg">
+                <span>Discuss Your Project</span>
+                ${o.arrowRight("w-4 h-4")}
+              </a>
+              <a href="/solutions" data-link class="btn btn--secondary btn--lg">
+                <span>View Our Solutions</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Project Summary Visual -->
+          <div aria-hidden="true" style="width: 100%; display: flex; justify-content: center;">
+            <div style="width: 100%; max-width: 460px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-lg);">
+
+              <div class="flex items-center justify-between pb-3 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
+                <span class="text-xs font-semibold text-navy">PROJECT PORTFOLIO</span>
+                <span class="badge badge--blue text-xs">4 Core Projects</span>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between p-3" style="background: var(--color-navy); border-radius: var(--radius-sm); color: #FFF;">
+                  <div class="flex items-center gap-3">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue-light);"></span>
+                    <span class="text-sm font-semibold">SmartBiz ERP</span>
+                  </div>
+                  <span class="text-xs" style="color: rgba(255,255,255,0.7);">Business</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
+                  <div class="flex items-center gap-3">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
+                    <span class="text-sm font-semibold text-navy">Transport Management</span>
+                  </div>
+                  <span class="text-xs text-muted">Operations</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);">
+                  <div class="flex items-center gap-3">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
+                    <span class="text-sm font-semibold text-navy">EduFlow</span>
+                  </div>
+                  <span class="text-xs text-muted">Education</span>
+                </div>
+
+                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
+                  <div class="flex items-center gap-3">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
+                    <span class="text-sm font-semibold text-navy">ShegerHealth</span>
+                  </div>
+                  <span class="text-xs text-muted">Healthcare</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-4 pt-3" style="border-top: 1px solid var(--color-border-subtle);">
+                <span class="text-xs text-muted">+ 3 additional projects</span>
+                <span class="text-xs font-semibold" style="color: var(--color-blue);">5 Industries</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 1024px) {
+        section[aria-labelledby="portfolio-hero-title"] .container > .grid {
+          grid-template-columns: 1.15fr 0.85fr !important;
+        }
+      }
+    </style>
+  `}function H(){return`
+    <section class="section" aria-labelledby="portfolio-intro-heading" style="padding-top: var(--space-10); padding-bottom: var(--space-10); background: var(--color-bg-soft); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container" style="max-width: 52rem;">
+        <div class="text-center">
+          <h2 id="portfolio-intro-heading" style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-4);">
+            From Business Problems to Practical Software
+          </h2>
+          <p class="text-secondary text-balance" style="font-size: var(--font-size-md); line-height: 1.7; margin-bottom: var(--space-8);">
+            Each project below demonstrates a different set of capabilities — from business management and education to transport operations and healthcare. The common thread is our approach: understand the problem, design a practical solution, and build software that actually works for the organization.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="badge badge--navy">Business Management</span>
+            <span class="badge badge--navy">Education</span>
+            <span class="badge badge--navy">Transport</span>
+            <span class="badge badge--navy">Healthcare</span>
+            <span class="badge badge--outline">Retail</span>
+            <span class="badge badge--outline">Hospitality</span>
+            <span class="badge badge--outline">Websites</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  `}const W=[{id:"smartbiz",number:"01",name:"SmartBiz ERP",category:"Business Management",badge:"BUSINESS MANAGEMENT",statusBadge:"Active Project",tagline:"Business Management & Inventory Solution",description:"A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",problem:"Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",solution:"SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",features:["Dashboard & Analytics","Point of Sale (POS)","Inventory Management","Product Management","Customer Management","Credit & Balances","Sales Tracking","Profit & Reporting","Business Insights","Mobile-Friendly UI"],businessValue:["Centralized business information","Better organization of daily operations","Easier sales and inventory monitoring","Clearer reporting and business insights","More efficient daily workflows"],technologies:["React","Node.js","Express","PostgreSQL","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#business-solutions",solutionLabel:"Business Solutions",layout:"left"},{id:"transport",number:"02",name:"Transport Management System",category:"Transport & Operations",badge:"TRANSPORT & OPERATIONS",statusBadge:"Management System",tagline:"Transport & Operations Management Solution",description:"A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",problem:"Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",solution:"A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",features:["Authentication & Roles","Transport Requests","Vehicle Management","Driver Management","Operations Dashboard","Workflow Management","Administration Panel","Reports & Data"],businessValue:["Centralized operations management","Better visibility into transport activities","Structured request and approval workflows","Easier administration and reporting","Improved coordination across teams"],technologies:["JavaScript","Node.js","Express","MySQL","REST API","Role-Based Access","Responsive UI"],solutionLink:"/solutions#transport-solutions",solutionLabel:"Transport Solutions",layout:"right"},{id:"eduflow",number:"03",name:"EduFlow",category:"Education",badge:"EDUCATION",statusBadge:"MVP / Prototype",tagline:"School Management Solution",description:"An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",problem:"Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",solution:"A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",features:["Student Management","Teacher Management","Class Organization","Attendance Tracking","Grade Management","Timetable & Scheduling","Administration Dashboard","Role-Based Access"],businessValue:["Organized school information","Centralized administration","Easier student and teacher monitoring","Structured academic workflows","Improved visibility for school leaders"],technologies:["React","JavaScript","Node.js","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#education-solutions",solutionLabel:"Education Solutions",layout:"left"},{id:"shegerhealth",number:"04",name:"ShegerHealth",category:"Healthcare",badge:"HEALTHCARE",statusBadge:"Demo / Concept",tagline:"Digital Healthcare Platform Demo",description:"A digital healthcare platform concept focused on structured workflows, management dashboards, and administrative tools for healthcare organizations.",problem:"Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",solution:"A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",features:["Digital Records","Patient Workflows","Management Dashboard","Forms & Data Entry","Navigation & Routing","Responsive Interface","Administrative Tools"],businessValue:["Organized digital information","Structured healthcare workflows","Easier administrative management","Digital accessibility for staff","Clearer management interfaces"],technologies:["JavaScript","React","REST API","Responsive UI"],solutionLink:"/solutions#healthcare-solutions",solutionLabel:"Healthcare Solutions",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows. It is not a certified medical system.",layout:"right"}],N=[{id:"ethiobrew",name:"EthioBrew",category:"Business / Hospitality",description:"A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",capabilities:["UX/UI Design","Responsive Design","Product Presentation","Business Workflows"]},{id:"haramaya-gym",name:"Haramaya Gym",category:"Business Website",description:"A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",capabilities:["Professional Web Design","Responsive Layout","Service Presentation","CTAs"]},{id:"abebe-bookstore",name:"Abebe Book Store",category:"Retail / E-commerce",description:"A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",capabilities:["Product Presentation","Retail Experience","Responsive Interface","Customer Workflows"]}],U=["Business Management Systems","Inventory Management","Point of Sale","Dashboards & Analytics","Reporting","Authentication","Role-Based Access","Workflow Automation","Data Management","Administration","Responsive Web Applications","API Integration"],V=[{name:"Business",description:"Business management, inventory, POS, customer workflows, and operational reporting.",project:"SmartBiz ERP"},{name:"Education",description:"Student, teacher, attendance, grades, timetable, and school administration.",project:"EduFlow"},{name:"Transport",description:"Operations, vehicles, drivers, requests, workflows, and reporting.",project:"Transport Management"},{name:"Healthcare",description:"Digital workflows, records, dashboards, and administrative tools.",project:"ShegerHealth"},{name:"Retail & Hospitality",description:"Customer-facing websites, product presentation, and digital experiences.",project:"EthioBrew, Abebe Book Store"}];function b(){return`
+    <div class="card card--lg" role="region" aria-label="SmartBiz ERP Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
+      <!-- Header Bar -->
+      <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="flex items-center gap-2">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+          <span class="text-sm font-semibold text-navy">SmartBiz Control Panel</span>
+        </div>
+        <span class="badge badge--blue text-xs font-semibold">Active Session</span>
+      </div>
+
+      <!-- 2x2 Stats Grid -->
+      <div class="grid grid--2 gap-3 mb-5" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-bottom: var(--space-5);">
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+          <div class="text-xs text-muted mb-1 font-medium">Today's Sales</div>
+          <div class="text-xl font-bold text-navy">47 Orders</div>
+          <div class="text-xs font-medium mt-1" style="color: var(--color-blue);">Updated live</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
+          <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Inventory</div>
+          <div class="text-xl font-bold" style="color: var(--color-blue);">Stocked</div>
+          <div class="text-xs text-muted mt-1">Zero stockouts</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
+          <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Customers</div>
+          <div class="text-xl font-bold text-navy">1,243</div>
+          <div class="text-xs text-muted mt-1">Accounts synced</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+          <div class="text-xs text-muted mb-1 font-medium">Revenue</div>
+          <div class="text-xl font-bold text-navy">Growing</div>
+          <div class="text-xs font-medium mt-1" style="color: var(--color-blue);">+18.4% MoM</div>
+        </div>
+      </div>
+
+      <!-- Progress Bars -->
+      <div class="p-4 flex flex-col gap-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-semibold text-navy">Daily Target Fulfillment</span>
+            <span class="text-xs font-bold" style="color: var(--color-blue);">92%</span>
+          </div>
+          <div style="width: 100%; height: 7px; background-color: var(--color-border); border-radius: var(--radius-full); overflow: hidden;">
+            <div style="width: 92%; height: 100%; background-color: var(--color-blue); border-radius: var(--radius-full);" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Daily Target Fulfillment"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-semibold text-navy">Inventory Replenishment</span>
+            <span class="text-xs font-bold" style="color: var(--color-navy);">86%</span>
+          </div>
+          <div style="width: 100%; height: 7px; background-color: var(--color-border); border-radius: var(--radius-full); overflow: hidden;">
+            <div style="width: 86%; height: 100%; background-color: var(--color-navy); border-radius: var(--radius-full);" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" aria-label="Inventory Replenishment"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `}function G(){return`
+    <div class="card card--lg" role="region" aria-label="Transport Operations Panel Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
+      <!-- Header Bar -->
+      <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="flex items-center gap-2">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+          <span class="text-sm font-semibold text-navy">Transport Operations Panel</span>
+        </div>
+        <span class="badge badge--blue text-xs font-semibold">Fleet Live</span>
+      </div>
+
+      <!-- 3 Stats Grid -->
+      <div class="grid gap-3 mb-5" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-5);">
+        <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Vehicle Fleet</div>
+          <div class="text-2xl font-bold text-navy">24</div>
+          <div class="text-xs text-muted mt-1">Vehicles Total</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Active Drivers</div>
+          <div class="text-2xl font-bold text-navy">18</div>
+          <div class="text-xs text-muted mt-1">On Schedule</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Pending Requests</div>
+          <div class="text-2xl font-bold" style="color: var(--color-blue);">7</div>
+          <div class="text-xs text-muted mt-1">Awaiting Action</div>
+        </div>
+      </div>
+
+      <!-- Status Indicators Section -->
+      <div class="p-4 mb-4" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+        <div class="text-xs font-semibold text-navy mb-3">Fleet Status Indicators</div>
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+              <span class="font-medium text-navy">In Transit (Active Routes)</span>
+            </div>
+            <span class="font-bold text-navy">14 Vehicles</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-navy); display: inline-block;"></span>
+              <span class="font-medium text-navy">Ready for Assignment</span>
+            </div>
+            <span class="font-bold text-navy">8 Vehicles</span>
+          </div>
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #64748B; display: inline-block;"></span>
+              <span class="font-medium text-muted">Scheduled Maintenance</span>
+            </div>
+            <span class="font-bold text-muted">2 Vehicles</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dispatch Indicator -->
+      <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
+        <div class="flex items-center gap-2">
+          <span class="badge badge--navy text-xs">DISPATCH #842</span>
+          <span class="text-xs font-medium text-navy">Route Central &bull; Driver Assigned</span>
+        </div>
+        <span class="text-xs font-bold" style="color: var(--color-blue);">In Progress</span>
+      </div>
+    </div>
+  `}function q(){return`
+    <div class="card card--lg" role="region" aria-label="EduFlow School Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
+      <!-- Header Bar -->
+      <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="flex items-center gap-2">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+          <span class="text-sm font-semibold text-navy">EduFlow School Dashboard</span>
+        </div>
+        <span class="badge badge--blue text-xs font-semibold">Semester Active</span>
+      </div>
+
+      <!-- 3 Stats Grid -->
+      <div class="grid gap-3 mb-5" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-5);">
+        <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Students</div>
+          <div class="text-2xl font-bold text-navy">845</div>
+          <div class="text-xs text-muted mt-1">Enrolled</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Teachers</div>
+          <div class="text-2xl font-bold text-navy">32</div>
+          <div class="text-xs text-muted mt-1">Faculty Staff</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Classes</div>
+          <div class="text-2xl font-bold text-navy">28</div>
+          <div class="text-xs text-muted mt-1">Active Sections</div>
+        </div>
+      </div>
+
+      <!-- Attendance Bar Section -->
+      <div class="p-4 mb-4" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-navy">Daily Student Attendance</span>
+          <span class="text-xs font-bold" style="color: var(--color-blue);">96.4%</span>
+        </div>
+        <div style="width: 100%; height: 8px; background-color: var(--color-border); border-radius: var(--radius-full); overflow: hidden; margin-bottom: var(--space-2);">
+          <div style="width: 96.4%; height: 100%; background-color: var(--color-blue); border-radius: var(--radius-full);" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" aria-label="Daily Student Attendance"></div>
+        </div>
+        <div class="flex justify-between text-xs text-muted">
+          <span>815 Present</span>
+          <span>30 Absent / Leave</span>
+        </div>
+      </div>
+
+      <!-- Timetable & Grading Module -->
+      <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
+        <div class="flex items-center gap-2">
+          <span class="badge badge--navy text-xs">TERM 2</span>
+          <span class="text-xs font-medium text-navy">Timetable &amp; Grade Records Synced</span>
+        </div>
+        <span class="text-xs font-bold" style="color: var(--color-blue);">Updated</span>
+      </div>
+    </div>
+  `}function J(){return`
+    <div class="card card--lg" role="region" aria-label="ShegerHealth Healthcare Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
+      <!-- Header Bar -->
+      <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
+        <div class="flex items-center gap-2">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+          <span class="text-sm font-semibold text-navy">ShegerHealth Platform Demo</span>
+        </div>
+        <span class="badge badge--blue text-xs font-semibold">Workflow Concept</span>
+      </div>
+
+      <!-- 3 Stats Grid -->
+      <div class="grid gap-3 mb-5" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-5);">
+        <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Patients</div>
+          <div class="text-2xl font-bold text-navy">Active</div>
+          <div class="text-xs text-muted mt-1">Care Profiles</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Records</div>
+          <div class="text-2xl font-bold text-navy">Digital</div>
+          <div class="text-xs text-muted mt-1">Centralized EHR</div>
+        </div>
+        <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); text-align: center;">
+          <div class="text-xs text-muted mb-1 font-medium">Workflows</div>
+          <div class="text-2xl font-bold" style="color: var(--color-blue);">Structured</div>
+          <div class="text-xs text-muted mt-1">Multi-Role</div>
+        </div>
+      </div>
+
+      <!-- Structured Clinical Modules -->
+      <div class="p-4 mb-4 flex flex-col gap-2" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
+        <div class="text-xs font-semibold text-navy mb-1">Clinical &amp; Departmental Modules</div>
+        <div class="flex items-center justify-between text-xs py-1" style="border-bottom: 1px solid var(--color-border-subtle);">
+          <span class="text-navy font-medium">Patient Intake &amp; Triage</span>
+          <span class="badge badge--navy text-xs">Standardized</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1" style="border-bottom: 1px solid var(--color-border-subtle);">
+          <span class="text-navy font-medium">Diagnostic &amp; Lab Requests</span>
+          <span class="badge badge--navy text-xs">Connected</span>
+        </div>
+        <div class="flex items-center justify-between text-xs py-1">
+          <span class="text-navy font-medium">Prescription &amp; Pharmacy Logs</span>
+          <span class="badge badge--navy text-xs">Structured</span>
+        </div>
+      </div>
+
+      <!-- Security & Privacy Status -->
+      <div class="p-3 flex items-center justify-between" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
+        <div class="flex items-center gap-2">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
+          <span class="text-xs font-medium text-navy">Role-Based Access &amp; Data Security</span>
+        </div>
+        <span class="text-xs font-bold" style="color: var(--color-blue);">Enforced</span>
+      </div>
+    </div>
+  `}function K(t){switch(t.id){case"smartbiz":return b();case"transport":return G();case"eduflow":return q();case"shegerhealth":return J();default:return b()}}function Y(){const t=`
+    <style>
+      @media (min-width: 1024px) {
+        .project-layout { grid-template-columns: 1fr 1fr !important; }
+        .project-layout--left .project-visual { order: 1; }
+        .project-layout--left .project-content { order: 2; }
+        .project-layout--right .project-visual { order: 2; }
+        .project-layout--right .project-content { order: 1; }
+      }
+    </style>
+  `,a=W.map((e,s)=>{const i=s%2===0?"var(--color-white)":"var(--color-bg-soft)";return`
+        <section class="section" id="project-${e.id}" aria-labelledby="project-${e.id}-title" style="border-top: 1px solid var(--color-border-subtle); background: ${i};">
+          <div class="container">
+            <!-- Project Header -->
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-2xl); font-family: monospace;">${e.number}</span>
+              <span class="badge badge--navy">${e.badge}</span>
+              <span class="badge badge--blue">${e.statusBadge}</span>
+            </div>
+            <h2 id="project-${e.id}-title" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-2);">${e.name}</h2>
+            <p class="text-secondary mb-2" style="font-size: var(--font-size-md);">${e.tagline}</p>
+            
+            <!-- Two Column Layout: Content + Visual (alternating based on layout field) -->
+            <div class="grid items-start project-layout project-layout--${e.layout}" style="grid-template-columns: 1fr; gap: var(--space-10); margin-top: var(--space-8);">
+              
+              <!-- Content Column (always first in DOM for mobile, use CSS order for desktop) -->
+              <div class="project-content">
+                <p class="text-secondary mb-6" style="line-height: 1.65;">${e.description}</p>
+                
+                <!-- The Problem -->
+                <div class="mb-6">
+                  <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">The Problem</h3>
+                  <p class="text-secondary text-sm" style="line-height: 1.6;">${e.problem}</p>
+                </div>
+                
+                <!-- The Solution -->
+                <div class="mb-6">
+                  <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">The Solution</h3>
+                  <p class="text-secondary text-sm" style="line-height: 1.6;">${e.solution}</p>
+                </div>
+                
+                <!-- Business Value -->
+                <div class="mb-6">
+                  <h3 class="text-navy font-semibold mb-3" style="font-size: var(--font-size-lg);">Business Value</h3>
+                  <ul style="list-style: none; padding: 0; margin: 0;" class="flex flex-col gap-2">
+                    ${e.businessValue.map(r=>`<li class="flex items-start gap-2 text-sm text-secondary"><span style="color: var(--color-blue); margin-top: 2px;">✓</span><span>${r}</span></li>`).join("")}
+                  </ul>
+                </div>
+
+                <!-- Disclaimer if exists -->
+                ${e.disclaimer?`<p class="text-xs text-muted mb-4" style="font-style: italic;">${e.disclaimer}</p>`:""}
+
+                <!-- CTAs -->
+                <div class="flex flex-wrap gap-3 items-center">
+                  <a href="/contact" data-link class="btn btn--primary">
+                    <span>Explore Project</span>
+                    ${o.arrowRight("w-4 h-4")}
+                  </a>
+                  <a href="${e.solutionLink}" data-link class="btn btn--secondary text-sm">View ${e.solutionLabel} &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Visual Column: CSS-only project dashboard mockup -->
+              <div class="project-visual">
+                ${K(e)}
+              </div>
+            </div>
+
+            <!-- Key Features Grid -->
+            <div class="mt-8">
+              <h3 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-lg);">Key Features</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-3);">
+                ${e.features.map(r=>`<div class="flex items-center gap-2 p-3" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-blue); flex-shrink: 0;"></span><span class="text-sm font-medium text-navy">${r}</span></div>`).join("")}
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="mt-6 flex flex-wrap gap-2">
+              ${e.technologies.map(r=>`<span class="badge badge--outline text-xs">${r}</span>`).join("")}
+            </div>
+          </div>
+        </section>
+      `}).join("");return`
+    ${t}
+    ${a}
+  `}function Q(){return`
+    <section class="section bg-white" aria-labelledby="secondary-projects-heading" style="border-top: 1px solid var(--color-border);">
+      <div class="container">
+        
+        <!-- Section Heading -->
+        <div class="section-heading">
+          <span class="section-heading__label">ADDITIONAL WORK</span>
+          <h2 id="secondary-projects-heading" class="section-heading__title">More Projects & Digital Experiences</h2>
+          <p class="section-heading__subtitle text-balance">
+            Additional websites and digital solutions developed by URJIKO Labs.
+          </p>
+        </div>
+
+        <!-- Secondary Projects Grid -->
+        <div class="grid grid--3">
+          ${N.map(t=>`
+            <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
+              
+              <!-- Placeholder Visual Area -->
+              <div class="flex items-center justify-center mb-4" style="height: 120px; background-color: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);" aria-hidden="true">
+                <span class="font-semibold text-navy text-sm">${t.name}</span>
+              </div>
+
+              <!-- Category Badge -->
+              <div class="mb-3">
+                <span class="badge badge--outline">${t.category}</span>
+              </div>
+
+              <!-- Project Title -->
+              <h3 class="text-navy font-bold mb-2" style="font-size: var(--font-size-lg); line-height: var(--line-height-snug);">
+                ${t.name}
+              </h3>
+
+              <!-- Project Description -->
+              <p class="text-secondary text-sm mb-4 flex-1" style="line-height: var(--line-height-normal);">
+                ${t.description}
+              </p>
+
+              <!-- Capabilities -->
+              <div class="flex flex-wrap gap-2 mt-auto">
+                ${t.capabilities.map(a=>`
+                  <span class="badge badge--outline text-xs">${a}</span>
+                `).join("")}
+              </div>
+
+            </article>
+          `).join("")}
+        </div>
+
+      </div>
+    </section>
+  `}function Z(t=U){return`
+    <section class="section bg-soft" aria-labelledby="portfolio-capabilities-heading" style="border-top: 1px solid var(--color-border-subtle);">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-heading section-heading--center">
+          <span class="section-heading__label">WHAT WE DELIVER</span>
+          <h2 id="portfolio-capabilities-heading" class="section-heading__title">Capabilities Demonstrated</h2>
+          <p class="section-heading__subtitle text-balance">
+            Technical capabilities and system features demonstrated across our project portfolio.
+          </p>
+        </div>
+
+        <!-- Capabilities Grid -->
+        <div class="portfolio-capabilities-grid">
+          ${t.map(e=>`
+        <div class="portfolio-capability-item">
+          <span class="portfolio-capability-dot" aria-hidden="true"></span>
+          <span class="text-sm font-medium text-navy">${e}</span>
+        </div>
+      `).join("")}
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .portfolio-capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: var(--space-3);
+      }
+
+      .portfolio-capability-item {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border-subtle);
+        border-radius: var(--radius-sm);
+        padding: var(--space-3);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        transition: box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      }
+
+      .portfolio-capability-item:hover {
+        box-shadow: var(--shadow-sm);
+        border-color: var(--color-border);
+        transform: translateY(-1px);
+      }
+
+      .portfolio-capability-dot {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        border-radius: var(--radius-full);
+        background-color: var(--color-blue);
+        flex-shrink: 0;
+      }
+    </style>
+  `}function X(){return`
+    <section class="section bg-white" aria-labelledby="industry-coverage-heading" style="border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <!-- Section Heading (Centered) -->
+        <div class="section-heading section-heading--center">
+          <span class="section-heading__label">INDUSTRIES WE SERVE</span>
+          <h2 id="industry-coverage-heading" class="section-heading__title">Software for Your Industry</h2>
+          <p class="section-heading__subtitle text-balance">
+            We build practical solutions for organizations across multiple sectors.
+          </p>
+        </div>
+
+        <!-- Industry Grid -->
+        <div class="industry-grid">
+          ${V.map(a=>`
+        <div class="industry-card">
+          <div>
+            <h3 class="text-navy font-semibold text-lg mb-2">${a.name}</h3>
+            <p class="text-secondary text-sm mb-4">${a.description}</p>
+          </div>
+          <div class="industry-card__featured flex items-center gap-2 text-xs text-muted">
+            <span class="industry-card__dot" aria-hidden="true"></span>
+            <span>Featured: ${a.project}</span>
+          </div>
+        </div>
+      `).join("")}
+        </div>
+
+        <!-- Centered Actions CTA -->
+        <div class="flex flex-wrap items-center justify-center gap-4" style="margin-top: var(--space-12);">
+          <a href="/contact" data-link class="btn btn--primary">
+            <span>Discuss Your Industry</span>
+            ${o.arrowRight("w-4 h-4")}
+          </a>
+          <a href="/solutions" data-link class="btn btn--secondary">
+            <span>View All Solutions</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--space-5);
+      }
+
+      .industry-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-left: 3px solid var(--color-blue);
+        border-radius: var(--radius-lg);
+        padding: var(--space-5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+      }
+
+      .industry-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+        border-color: var(--color-border);
+        border-left-color: var(--color-blue);
+      }
+
+      .industry-card__dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: var(--radius-full);
+        background-color: var(--color-blue);
+        flex-shrink: 0;
+      }
+    </style>
+  `}function ee(){return`
+    ${D()}
+    ${H()}
+    ${Y()}
+    ${Q()}
+    ${Z()}
+    ${X()}
+    ${c({title:"Have a Problem That Software Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
+  `}function te({title:t="Have a project idea?",description:a="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const s=n.telegram.url;return`
     <div class="card card--lg flex flex-col items-start gap-4" style="border-left: 4px solid var(--color-blue); background-color: var(--color-bg-soft);">
       <div class="flex items-center gap-3">
         <div class="card__icon" style="margin-bottom: 0; color: var(--color-blue); background-color: var(--color-bg-light-blue);">
-          ${r.telegram("w-6 h-6")}
+          ${o.telegram("w-6 h-6")}
         </div>
         <div>
           <h3 style="font-size: var(--font-size-xl); margin-bottom: 0.25rem; color: var(--color-navy);">${t}</h3>
           <span class="text-xs text-muted">Primary Direct Messaging Channel</span>
         </div>
       </div>
-      <p style="margin-bottom: var(--space-2);">${i}</p>
+      <p style="margin-bottom: var(--space-2);">${a}</p>
       <a 
-        href="${a}" 
+        href="${s}" 
         target="_blank" 
         rel="noopener noreferrer" 
         class="btn btn--primary flex items-center gap-2"
       >
-        ${r.telegram("w-5 h-5")}
+        ${o.telegram("w-5 h-5")}
         <span>${e}</span>
       </a>
     </div>
-  `}function u(t=[]){return!t||t.length<=1?"":`
+  `}function v(t=[]){return!t||t.length<=1?"":`
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center text-sm" style="list-style: none; padding: 0;" role="list">
-        ${t.map((e,a)=>a===t.length-1?`
+        ${t.map((e,s)=>s===t.length-1?`
           <li aria-current="page">
             <span class="text-secondary font-medium">${e.label}</span>
           </li>
@@ -1578,45 +2203,9 @@
       `).join("")}
       </ol>
     </nav>
-  `}const v={"/":()=>$(),"/services":()=>R(),"/solutions":()=>E(),"/portfolio":()=>`
+  `}const u={"/":()=>P(),"/services":()=>j(),"/solutions":()=>F(),"/portfolio":()=>ee(),"/about":()=>`
     <div class="container section">
-      ${u([{label:"Home",path:"/"},{label:"Portfolio"}])}
-      <div class="section-heading">
-        <span class="section-heading__label">Case Studies</span>
-        <h1 class="section-heading__title">Selected Works & Systems</h1>
-        <p class="section-heading__subtitle">
-          Real-world products and software platforms built and deployed by URJIKO Labs.
-        </p>
-      </div>
-
-      <div class="grid grid--2 mb-12">
-        <div class="card card--project">
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="badge badge--navy">Full-Stack ERP</span>
-              <span class="badge badge--blue">Active Client</span>
-            </div>
-            <h3 class="card__title">SmartBiz Management Suite</h3>
-            <p class="card__description">Automating point-of-sale, inventory, and supply chain tracking for retail businesses.</p>
-          </div>
-        </div>
-
-        <div class="card card--project">
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="badge badge--navy">Logistics</span>
-              <span class="badge badge--blue">Real-Time</span>
-            </div>
-            <h3 class="card__title">Transport & Fleet Management</h3>
-            <p class="card__description">Live vehicle tracking, driver scheduling, and automated dispatch operations.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    ${c()}
-  `,"/about":()=>`
-    <div class="container section">
-      ${u([{label:"Home",path:"/"},{label:"About"}])}
+      ${v([{label:"Home",path:"/"},{label:"About"}])}
       <div class="section-heading">
         <span class="section-heading__label">Company</span>
         <h1 class="section-heading__title">About URJIKO Labs</h1>
@@ -1635,7 +2224,7 @@
     ${c()}
   `,"/contact":()=>`
     <div class="container section">
-      ${u([{label:"Home",path:"/"},{label:"Contact"}])}
+      ${v([{label:"Home",path:"/"},{label:"Contact"}])}
       <div class="section-heading">
         <span class="section-heading__label">Get in Touch</span>
         <h1 class="section-heading__title">Discuss Your Project</h1>
@@ -1647,7 +2236,7 @@
       <div class="grid grid--2 mb-12">
         <!-- Direct Telegram CTA Component -->
         <div>
-          ${F({title:"Quickest Response via Telegram",description:"Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates."})}
+          ${te({title:"Quickest Response via Telegram",description:"Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates."})}
 
           <div class="card mt-6" style="margin-top: var(--space-6);">
             <h4 class="card__title mb-2">Email Inquiries</h4>
@@ -1703,4 +2292,4 @@
         </div>
       </div>
     </div>
-  `};class H{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",i=>{const e=i.target.closest("a[data-link]");if(e){const a=e.getAttribute("href");a&&!a.startsWith("http")&&!a.startsWith("mailto:")&&(i.preventDefault(),this.navigateTo(a))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(i){window.location.pathname!==i&&window.history.pushState(null,null,i),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const a=v[e]||v["/404"]||v["/"],s=a?a():"";this.appContainer&&(this.appContainer.innerHTML=f({path:e,content:s}),y())}}function b(){window.urjikoRouter||(window.urjikoRouter=new H)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",b):b();
+  `};class ae{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",a=>{const e=a.target.closest("a[data-link]");if(e){const s=e.getAttribute("href");s&&!s.startsWith("http")&&!s.startsWith("mailto:")&&(a.preventDefault(),this.navigateTo(s))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(a){window.location.pathname!==a&&window.history.pushState(null,null,a),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const s=u[e]||u["/404"]||u["/"],i=s?s():"";this.appContainer&&(this.appContainer.innerHTML=x({path:e,content:i}),y())}}function g(){window.urjikoRouter||(window.urjikoRouter=new ae)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",g):g();

@@ -112,10 +112,10 @@ export const seoConfig = {
       heading: "Practical Software for Real-World Problems",
     },
     "/portfolio": {
-      title: "Portfolio — URJIKO Labs",
+      title: "Portfolio | URJIKO Labs",
       description:
-        "Selected case studies and digital systems engineered by URJIKO Labs for real-world impact.",
-      heading: "Selected Works & Case Studies",
+        "Explore software solutions, business systems, and digital experiences developed by URJIKO Labs.",
+      heading: "Software Built to Solve Real Problems.",
     },
     "/about": {
       title: "About URJIKO Labs",

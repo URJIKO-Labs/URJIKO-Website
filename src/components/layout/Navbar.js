@@ -31,7 +31,7 @@ export function renderNavbar(activePath = "/") {
             width="120" 
             height="40" 
             loading="eager"
-            style="height: 2.5rem; width: auto; object-fit: contain;"
+            style="height: 1.75rem; width: auto; object-fit: contain;"
           />
         </a>
 

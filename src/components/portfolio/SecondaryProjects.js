@@ -1,0 +1,60 @@
+import { secondaryProjects } from '../../config/projects.js';
+
+/**
+ * URJIKO Labs — Secondary Projects Component
+ * Renders additional projects and digital experiences in a compact, secondary visual hierarchy.
+ */
+export function renderSecondaryProjects() {
+  return `
+    <section class="section bg-white" aria-labelledby="secondary-projects-heading" style="border-top: 1px solid var(--color-border);">
+      <div class="container">
+        
+        <!-- Section Heading -->
+        <div class="section-heading">
+          <span class="section-heading__label">ADDITIONAL WORK</span>
+          <h2 id="secondary-projects-heading" class="section-heading__title">More Projects & Digital Experiences</h2>
+          <p class="section-heading__subtitle text-balance">
+            Additional websites and digital solutions developed by URJIKO Labs.
+          </p>
+        </div>
+
+        <!-- Secondary Projects Grid -->
+        <div class="grid grid--3">
+          ${secondaryProjects.map(project => `
+            <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
+              
+              <!-- Placeholder Visual Area -->
+              <div class="flex items-center justify-center mb-4" style="height: 120px; background-color: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);" aria-hidden="true">
+                <span class="font-semibold text-navy text-sm">${project.name}</span>
+              </div>
+
+              <!-- Category Badge -->
+              <div class="mb-3">
+                <span class="badge badge--outline">${project.category}</span>
+              </div>
+
+              <!-- Project Title -->
+              <h3 class="text-navy font-bold mb-2" style="font-size: var(--font-size-lg); line-height: var(--line-height-snug);">
+                ${project.name}
+              </h3>
+
+              <!-- Project Description -->
+              <p class="text-secondary text-sm mb-4 flex-1" style="line-height: var(--line-height-normal);">
+                ${project.description}
+              </p>
+
+              <!-- Capabilities -->
+              <div class="flex flex-wrap gap-2 mt-auto">
+                ${project.capabilities.map(capability => `
+                  <span class="badge badge--outline text-xs">${capability}</span>
+                `).join('')}
+              </div>
+
+            </article>
+          `).join('')}
+        </div>
+
+      </div>
+    </section>
+  `;
+}

@@ -1,6 +1,7 @@
 import { renderHomePage } from "./home/HomePage.js";
 import { renderServicesPage } from "./services/ServicesPage.js";
 import { renderSolutionsPage } from "./solutions/SolutionsPage.js";
+import { renderPortfolioPage } from "./portfolio/PortfolioPage.js";
 import { renderGlobalCTA } from "../components/common/CTA.js";
 import { renderTelegramCTA } from "../components/contact/TelegramCTA.js";
 import { renderBreadcrumbs } from "../components/navigation/Breadcrumbs.js";
@@ -13,43 +14,8 @@ export const routes = {
 
   "/solutions": () => renderSolutionsPage(),
 
-  "/portfolio": () => `
-    <div class="container section">
-      ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "Portfolio" }])}
-      <div class="section-heading">
-        <span class="section-heading__label">Case Studies</span>
-        <h1 class="section-heading__title">Selected Works & Systems</h1>
-        <p class="section-heading__subtitle">
-          Real-world products and software platforms built and deployed by URJIKO Labs.
-        </p>
-      </div>
+  "/portfolio": () => renderPortfolioPage(),
 
-      <div class="grid grid--2 mb-12">
-        <div class="card card--project">
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="badge badge--navy">Full-Stack ERP</span>
-              <span class="badge badge--blue">Active Client</span>
-            </div>
-            <h3 class="card__title">SmartBiz Management Suite</h3>
-            <p class="card__description">Automating point-of-sale, inventory, and supply chain tracking for retail businesses.</p>
-          </div>
-        </div>
-
-        <div class="card card--project">
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="badge badge--navy">Logistics</span>
-              <span class="badge badge--blue">Real-Time</span>
-            </div>
-            <h3 class="card__title">Transport & Fleet Management</h3>
-            <p class="card__description">Live vehicle tracking, driver scheduling, and automated dispatch operations.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    ${renderGlobalCTA()}
-  `,
 
   "/about": () => `
     <div class="container section">
