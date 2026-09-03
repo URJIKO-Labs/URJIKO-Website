@@ -46,7 +46,7 @@ export function renderHero() {
 
           <!-- Right Column: Abstract Technology & Software Ecosystem Visual -->
           <div class="hero-visual-wrapper" aria-hidden="true" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
-            <div style="width: 100%; max-width: 520px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl); position: relative;">
+            <div style="width: 100%; max-width: 520px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: clamp(var(--space-4), 4vw, var(--space-6)); box-shadow: var(--shadow-xl); position: relative;">
               
               <!-- Subtle top bar -->
               <div class="flex items-center justify-between pb-4 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
