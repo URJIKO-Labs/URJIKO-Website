@@ -71,9 +71,9 @@ export function renderFooter() {
           </div>
 
           <!-- Connect Channels -->
-          <div>
+          <div class="footer__connect">
             <h4 class="footer__heading">Connect</h4>
-            <ul class="footer__links" role="list">
+            <ul class="footer__links footer__links--horizontal" role="list">
               ${connectLinksHtml}
             </ul>
           </div>
