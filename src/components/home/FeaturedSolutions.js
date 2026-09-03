@@ -47,7 +47,7 @@ export function renderFeaturedSolutions() {
               </div>
 
               <!-- Product Preview Visual -->
-              <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
+              <div class="smartbiz-visual" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
                 <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid rgba(7, 87, 184, 0.15);">
                   <div class="flex items-center gap-2">
                     <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
@@ -151,11 +151,25 @@ export function renderFeaturedSolutions() {
       </div>
     </section>
 
-    <!-- Desktop Grid Overrides -->
+    <!-- Desktop Grid Overrides & Mobile Fixes -->
     <style>
       @media (min-width: 1024px) {
         .card--lg > .grid {
           grid-template-columns: 1.2fr 0.8fr !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .card--lg {
+          padding: var(--space-5) !important;
+        }
+        .card--lg > .grid {
+          gap: var(--space-6) !important;
+        }
+        .smartbiz-visual {
+          display: none !important;
+        }
+        [aria-labelledby="solutions-heading"] .grid--3 > .card:nth-child(n+3) {
+          display: none !important;
         }
       }
     </style>

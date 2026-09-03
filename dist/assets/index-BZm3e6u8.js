@@ -97,7 +97,6 @@
         </div>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
       <div 
         class="navbar__mobile" 
         id="mobile-nav-panel" 
@@ -106,7 +105,7 @@
         aria-label="Mobile Navigation Menu"
         hidden
       >
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" style="min-height: 100%;">
           <nav aria-label="Mobile Navigation">
             <ul class="flex flex-col gap-2" role="list">
               ${n.navLinks.map(e=>{const s=t===e.path;return`
@@ -333,6 +332,9 @@
         .section--lg .container > .grid {
           gap: var(--space-8) !important;
         }
+        .hero-visual-wrapper {
+          display: none !important;
+        }
       }
     </style>
   `}function C(){return`
@@ -355,6 +357,14 @@
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .grid--4 > div:nth-child(n+3) {
+          display: none !important;
+        }
+      }
+    </style>
   `}function _(){return`
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
@@ -401,6 +411,14 @@
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .grid--2 > .card:nth-child(n+3) {
+          display: none !important;
+        }
+      }
+    </style>
   `}function P(){return`
     <section class="section bg-soft" aria-labelledby="solutions-heading" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
@@ -447,7 +465,7 @@
               </div>
 
               <!-- Product Preview Visual -->
-              <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
+              <div class="smartbiz-visual" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
                 <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid rgba(7, 87, 184, 0.15);">
                   <div class="flex items-center gap-2">
                     <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
@@ -551,11 +569,25 @@
       </div>
     </section>
 
-    <!-- Desktop Grid Overrides -->
+    <!-- Desktop Grid Overrides & Mobile Fixes -->
     <style>
       @media (min-width: 1024px) {
         .card--lg > .grid {
           grid-template-columns: 1.2fr 0.8fr !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .card--lg {
+          padding: var(--space-5) !important;
+        }
+        .card--lg > .grid {
+          gap: var(--space-6) !important;
+        }
+        .smartbiz-visual {
+          display: none !important;
+        }
+        [aria-labelledby="solutions-heading"] .grid--3 > .card:nth-child(n+3) {
+          display: none !important;
         }
       }
     </style>
@@ -611,6 +643,11 @@
           grid-template-columns: 0.9fr 1.1fr !important;
         }
       }
+      @media (max-width: 768px) {
+        section[aria-labelledby="why-heading"] .flex.flex-col.gap-6 > div:nth-child(n+4) {
+          display: none !important;
+        }
+      }
     </style>
   `}function A(){return`
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
@@ -642,6 +679,14 @@
 
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        #process-heading ~ .grid--3 > .card:nth-child(n+4) {
+          display: none !important;
+        }
+      }
+    </style>
   `}function d({title:t="Have a problem that technology could solve?",description:a="Let's build a practical, high-performance digital solution tailored for your organization.",primaryBtnLabel:e=n.primaryCTA.label,primaryBtnPath:s=n.primaryCTA.path,secondaryBtnLabel:i="View Our Solutions",secondaryBtnPath:o="/solutions"}={}){return`
     <section class="section" aria-labelledby="cta-section-heading">
       <div class="container">

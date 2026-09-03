@@ -51,5 +51,13 @@ export function renderValueStrip() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .grid--4 > div:nth-child(n+3) {
+          display: none !important;
+        }
+      }
+    </style>
   `;
 }

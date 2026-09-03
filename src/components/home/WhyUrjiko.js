@@ -85,6 +85,11 @@ export function renderWhyUrjiko() {
           grid-template-columns: 0.9fr 1.1fr !important;
         }
       }
+      @media (max-width: 768px) {
+        section[aria-labelledby="why-heading"] .flex.flex-col.gap-6 > div:nth-child(n+4) {
+          display: none !important;
+        }
+      }
     </style>
   `;
 }

@@ -64,7 +64,6 @@ export function renderNavbar(activePath = "/") {
         </div>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
       <div 
         class="navbar__mobile" 
         id="mobile-nav-panel" 
@@ -73,7 +72,7 @@ export function renderNavbar(activePath = "/") {
         aria-label="Mobile Navigation Menu"
         hidden
       >
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4" style="min-height: 100%;">
           <nav aria-label="Mobile Navigation">
             <ul class="flex flex-col gap-2" role="list">
               ${companyConfig.navLinks

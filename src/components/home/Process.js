@@ -68,5 +68,13 @@ export function renderProcess() {
 
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        #process-heading ~ .grid--3 > .card:nth-child(n+4) {
+          display: none !important;
+        }
+      }
+    </style>
   `;
 }

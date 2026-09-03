@@ -139,6 +139,9 @@ export function renderHero() {
         .section--lg .container > .grid {
           gap: var(--space-8) !important;
         }
+        .hero-visual-wrapper {
+          display: none !important;
+        }
       }
     </style>
   `;

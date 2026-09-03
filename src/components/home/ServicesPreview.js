@@ -80,5 +80,13 @@ export function renderServicesPreview() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .grid--2 > .card:nth-child(n+3) {
+          display: none !important;
+        }
+      }
+    </style>
   `;
 }

@@ -591,7 +591,7 @@
   inset: 0;
   top: 4.5rem;
   background-color: var(--color-white);
-  z-index: var(--z-fixed);
+  z-index: 9999;
   padding: var(--space-6) var(--padding-page-mobile);
   overflow-y: auto;
   opacity: 0;
