@@ -1,9 +1,9 @@
-import { renderContactHero } from '../../components/contact/ContactHero.js';
-import { renderContactInfo } from '../../components/contact/ContactInfo.js';
-import { renderContactForm } from '../../components/contact/ContactForm.js';
-import { renderContactProcess } from '../../components/contact/ContactProcess.js';
-import { renderContactFAQ } from '../../components/contact/ContactFAQ.js';
-import { renderGlobalCTA } from '../../components/common/CTA.js';
+import { renderContactHero } from "../../components/contact/ContactHero.js";
+import { renderContactInfo } from "../../components/contact/ContactInfo.js";
+import { renderContactForm } from "../../components/contact/ContactForm.js";
+import { renderContactProcess } from "../../components/contact/ContactProcess.js";
+import { renderContactFAQ } from "../../components/contact/ContactFAQ.js";
+import { renderGlobalCTA } from "../../components/common/CTA.js";
 
 /**
  * URJIKO Labs — Contact Page
@@ -31,7 +31,8 @@ export function renderContactPage() {
     
     ${renderGlobalCTA({
       title: "Have a Problem Worth Solving?",
-      description: "Start with the problem. We'll help you figure out the right technology and the right first step.",
+      description:
+        "Start with the problem. We'll help you figure out the right technology and the right first step.",
       primaryBtnLabel: "Start a Conversation",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "Explore Our Portfolio",

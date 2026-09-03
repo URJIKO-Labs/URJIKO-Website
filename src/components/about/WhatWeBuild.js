@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 export function renderWhatWeBuild() {
   return `
@@ -17,7 +17,7 @@ export function renderWhatWeBuild() {
           
           <a href="/services" data-link class="card card--project" style="text-decoration: none; padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #FFF; transition: transform 0.2s, box-shadow 0.2s;">
             <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue);">
-              ${icons.arrowRight('w-6 h-6')} <!-- Placeholder for a generic icon, arrow is fine -->
+              ${icons.arrowRight("w-6 h-6")} <!-- Placeholder for a generic icon, arrow is fine -->
             </div>
             <div>
               <h3 class="text-navy font-semibold text-xl mb-2">Websites</h3>

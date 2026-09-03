@@ -1,5 +1,5 @@
-import { companyConfig } from '../../config/company.js';
-import { icons } from '../common/Icons.js';
+import { companyConfig } from "../../config/company.js";
+import { icons } from "../common/Icons.js";
 
 export function renderContactInfo() {
   return `
@@ -15,7 +15,7 @@ export function renderContactInfo() {
           
           <a href="mailto:${companyConfig.contact.email}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
-              ${icons.mail('w-5 h-5')}
+              ${icons.mail("w-5 h-5")}
             </div>
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Email Us</div>
@@ -25,7 +25,7 @@ export function renderContactInfo() {
 
           <a href="${companyConfig.telegram.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
-              ${icons.telegram('w-5 h-5')}
+              ${icons.telegram("w-5 h-5")}
             </div>
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Direct Message</div>

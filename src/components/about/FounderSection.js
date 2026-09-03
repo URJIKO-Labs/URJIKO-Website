@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 export function renderFounderSection() {
   return `

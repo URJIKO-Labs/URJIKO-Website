@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 export function renderAboutHero() {
   return `
@@ -12,7 +12,7 @@ export function renderAboutHero() {
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="/contact" data-link class="btn btn--primary btn--lg">
-            Discuss Your Project ${icons.arrowRight('w-4 h-4')}
+            Discuss Your Project ${icons.arrowRight("w-4 h-4")}
           </a>
           <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
             Explore Our Work
