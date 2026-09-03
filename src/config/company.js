@@ -98,16 +98,16 @@ export const seoConfig = {
       heading: "Building Practical Digital Products & Software Solutions",
     },
     "/services": {
-      title: "Services — URJIKO Labs",
+      title: "Services — Website Development, Business Systems & Custom Software | URJIKO Labs",
       description:
-        "Explore our technology services: Web Development, Business Management Systems, Custom Software, and AI Intelligent Solutions.",
-      heading: "Engineering Capabilities & Services",
+        "Professional software development services in Ethiopia — website development, business management systems, custom software, AI solutions, and ongoing technical support for organizations.",
+      heading: "Technology Built Around Your Business",
     },
     "/solutions": {
-      title: "Solutions — URJIKO Labs",
+      title: "Solutions — Business, Education, Transport & Healthcare Software | URJIKO Labs",
       description:
-        "Specialized digital solutions engineered for businesses, schools, clinics, hotels, and growing organizations.",
-      heading: "Specialized Industry Solutions",
+        "Practical digital solutions for real-world problems — business operations, education management, transport systems, and healthcare platforms built by URJIKO Labs in Ethiopia.",
+      heading: "Practical Software for Real-World Problems",
     },
     "/portfolio": {
       title: "Portfolio — URJIKO Labs",

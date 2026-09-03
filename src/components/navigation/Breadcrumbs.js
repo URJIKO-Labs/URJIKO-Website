@@ -13,7 +13,7 @@ export function renderBreadcrumbs(items = []) {
       }
       return `
         <li>
-          <a href="${item.path || "#"}" data-link class="text-muted hover:text-teal">${item.label}</a>
+          <a href="${item.path || "#"}" data-link class="text-muted" style="transition: color 0.2s;">${item.label}</a>
           <span class="mx-2 text-muted" aria-hidden="true" style="margin: 0 var(--space-2);">/</span>
         </li>
       `;

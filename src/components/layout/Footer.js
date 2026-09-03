@@ -21,7 +21,7 @@ export function renderFooter() {
   const connectLinksHtml = companyConfig.footerNav.connect
     .map((item) => {
       let icon = "";
-      if (item.type === "telegram") icon = icons.telegram("w-4 h-4 text-teal");
+      if (item.type === "telegram") icon = icons.telegram("w-4 h-4");
       if (item.type === "github") icon = icons.github("w-4 h-4");
       if (item.type === "linkedin") icon = icons.linkedin("w-4 h-4");
       if (item.type === "email") icon = icons.mail("w-4 h-4");
