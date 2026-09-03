@@ -37,7 +37,7 @@ export function renderContactPage() {
     ${renderContactFAQ()}
     
     ${renderGlobalCTA({
-      title: "Have a Problem Worth Solving?",
+      title: "Have a problem worth solving?",
       description:
         "Start with the problem. We'll help you figure out the right technology and the right first step.",
       primaryBtnLabel: "Start a Conversation",
