@@ -8,6 +8,7 @@ export function initMobileMenu() {
   const toggleBtn = document.getElementById("navbar-toggle-btn");
   const toggleIcon = document.getElementById("navbar-toggle-icon");
   const mobilePanel = document.getElementById("mobile-nav-panel");
+  const closeBtn = document.getElementById("mobile-nav-close-btn");
 
   if (!toggleBtn || !mobilePanel) return;
 
@@ -27,11 +28,11 @@ export function initMobileMenu() {
     toggleBtn.setAttribute("aria-label", "Close Navigation Menu");
     mobilePanel.removeAttribute("hidden");
     
-    // Slight delay to allow CSS display to apply before adding class for transition
     setTimeout(() => {
       mobilePanel.classList.add("is-open");
     }, 10);
     
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     if (toggleIcon) toggleIcon.innerHTML = icons.close();
 
@@ -45,10 +46,10 @@ export function initMobileMenu() {
     toggleBtn.setAttribute("aria-label", "Open Navigation Menu");
     
     mobilePanel.classList.remove("is-open");
+    document.documentElement.style.overflow = "";
     document.body.style.overflow = "";
     if (toggleIcon) toggleIcon.innerHTML = icons.menu();
 
-    // Wait for CSS transition to finish before hiding
     setTimeout(() => {
       if (!isOpen) {
         mobilePanel.setAttribute("hidden", "");
@@ -64,6 +65,13 @@ export function initMobileMenu() {
       openMenu();
     }
   };
+
+  if (closeBtn) {
+    closeBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (isOpen) closeMenu();
+    };
+  }
 
   currentKeydownHandler = (e) => {
     if (e.key === "Escape" && isOpen) {
@@ -84,7 +92,8 @@ export function initMobileMenu() {
     if (
       isOpen &&
       !mobilePanel.contains(e.target) &&
-      !toggleBtn.contains(e.target)
+      !toggleBtn.contains(e.target) &&
+      !closeBtn?.contains(e.target)
     ) {
       closeMenu();
     }

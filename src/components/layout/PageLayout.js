@@ -23,7 +23,7 @@ export function renderPageLayout({ path = "/", content = "" }) {
 
       ${renderNavbar(path)}
 
-      <main id="main-content" class="flex-1" style="flex: 1 0 auto;" role="main">
+      <main id="main-content" class="flex-1" style="flex: 1 0 auto; padding-top: 4.5rem;" role="main">
         ${content}
       </main>
 
