@@ -1,10 +1,10 @@
-import { renderPortfolioHero } from '../../components/portfolio/PortfolioHero.js';
-import { renderPortfolioIntro } from '../../components/portfolio/PortfolioIntro.js';
-import { renderFeaturedProjects } from '../../components/portfolio/FeaturedProjects.js';
-import { renderSecondaryProjects } from '../../components/portfolio/SecondaryProjects.js';
-import { renderPortfolioCapabilities } from '../../components/portfolio/PortfolioCapabilities.js';
-import { renderIndustryCoverage } from '../../components/portfolio/IndustryCoverage.js';
-import { renderGlobalCTA } from '../../components/common/CTA.js';
+import { renderPortfolioHero } from "../../components/portfolio/PortfolioHero.js";
+import { renderPortfolioIntro } from "../../components/portfolio/PortfolioIntro.js";
+import { renderFeaturedProjects } from "../../components/portfolio/FeaturedProjects.js";
+import { renderSecondaryProjects } from "../../components/portfolio/SecondaryProjects.js";
+import { renderPortfolioCapabilities } from "../../components/portfolio/PortfolioCapabilities.js";
+import { renderIndustryCoverage } from "../../components/portfolio/IndustryCoverage.js";
+import { renderGlobalCTA } from "../../components/common/CTA.js";
 
 /**
  * URJIKO Labs — Portfolio Page
@@ -21,12 +21,13 @@ export function renderPortfolioPage() {
     ${renderPortfolioCapabilities()}
     ${renderIndustryCoverage()}
     ${renderGlobalCTA({
-      title: 'Have a Problem That Software Could Solve?',
-      description: 'Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.',
-      primaryBtnLabel: 'Discuss Your Project',
-      primaryBtnPath: '/contact',
-      secondaryBtnLabel: 'View Our Services',
-      secondaryBtnPath: '/services',
+      title: "Have a Problem That Software Could Solve?",
+      description:
+        "Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",
+      primaryBtnLabel: "Discuss Your Project",
+      primaryBtnPath: "/contact",
+      secondaryBtnLabel: "View Our Services",
+      secondaryBtnPath: "/services",
     })}
   `;
 }

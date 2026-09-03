@@ -16,7 +16,6 @@ export const routes = {
 
   "/portfolio": () => renderPortfolioPage(),
 
-
   "/about": () => `
     <div class="container section">
       ${renderBreadcrumbs([{ label: "Home", path: "/" }, { label: "About" }])}

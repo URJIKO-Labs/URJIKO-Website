@@ -61,10 +61,10 @@
           <img 
             src="/src/assets/images/urjiko-logo.jpg" 
             alt="${n.name} Logo" 
-            width="120" 
-            height="40" 
+            width="48" 
+            height="48" 
             loading="eager"
-            style="height: 1.75rem; width: auto; object-fit: contain;"
+            style="height: 3rem; width: 3rem; object-fit: contain; border-radius: 4px;"
           />
         </a>
 

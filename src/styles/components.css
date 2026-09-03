@@ -507,8 +507,10 @@
 }
 
 .navbar__logo img {
-  height: 1.75rem;
-  width: auto;
+  height: 2.25rem;
+  width: 2.25rem;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .navbar__links {
