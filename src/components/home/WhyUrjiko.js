@@ -3,42 +3,42 @@ export function renderWhyUrjiko() {
     {
       number: '01',
       title: 'Understand the Problem',
-      description: 'We focus on the underlying business challenge and operational workflow before choosing the technology stack.',
+      description: 'We focus on the business challenge before choosing technology.',
     },
     {
       number: '02',
       title: 'Practical Technology',
-      description: 'We prioritize useful features, high usability, and measurable value over unnecessary complexity.',
+      description: 'Useful features and measurable value over complexity.',
     },
     {
       number: '03',
       title: 'Modern Engineering',
-      description: 'Solutions are built with clean code, standard conventions, and maintainable software architecture.',
+      description: 'Clean code, standard conventions, maintainable architecture.',
     },
     {
       number: '04',
       title: 'Designed to Grow',
-      description: 'Systems are structured modularly so they can expand seamlessly as your organization scales.',
+      description: 'Modular systems that expand as your organization scales.',
     },
     {
       number: '05',
       title: 'Continued Support',
-      description: 'We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch.',
+      description: 'Long-term partnership for maintenance and upgrades.',
     },
   ];
 
   const principlesHtml = principles
     .map(
       (p) => `
-      <div class="flex items-start gap-4 pb-6" style="border-bottom: 1px solid var(--color-border-subtle);">
-        <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-xl); font-family: monospace; min-width: 2.5rem;">
+      <div class="flex items-start gap-3 pb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
+        <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-lg); font-family: monospace; min-width: 2rem;">
           ${p.number}
         </span>
         <div>
-          <h3 style="font-size: var(--font-size-lg); color: var(--color-navy); margin-bottom: 0.25rem; font-weight: 600;">
+          <h3 style="font-size: var(--font-size-base); color: var(--color-navy); margin-bottom: 0.15rem; font-weight: 600;">
             ${p.title}
           </h3>
-          <p class="text-secondary text-sm" style="margin-bottom: 0; line-height: 1.55;">
+          <p class="text-secondary" style="font-size: var(--font-size-sm); margin-bottom: 0; line-height: 1.45;">
             ${p.description}
           </p>
         </div>
@@ -50,11 +50,11 @@ export function renderWhyUrjiko() {
   return `
     <section class="section" aria-labelledby="why-heading">
       <div class="container">
-        <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-12);">
+        <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-8);">
           
           <!-- Left Column: Context -->
           <div class="flex flex-col items-start">
-            <div class="section-heading mb-6" style="margin-bottom: var(--space-6);">
+            <div class="section-heading mb-4" style="margin-bottom: var(--space-4);">
               <span class="section-heading__label">Our Engineering Philosophy</span>
               <h2 id="why-heading" class="section-heading__title">Why Work With URJIKO Labs?</h2>
               <p class="section-heading__subtitle text-balance">
@@ -62,16 +62,16 @@ export function renderWhyUrjiko() {
               </p>
             </div>
 
-            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-6);">
-              <h4 class="text-navy font-semibold mb-2">No Over-Engineering</h4>
-              <p class="text-sm text-secondary mb-0">
-                You get dependable, performant software engineered to solve real business pain points without bloat or vendor lock-in.
+            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-4);">
+              <h4 class="text-navy font-semibold mb-1" style="font-size: var(--font-size-sm);">No Over-Engineering</h4>
+              <p class="text-secondary mb-0" style="font-size: var(--font-size-xs); line-height: 1.45;">
+                Dependable software without bloat or vendor lock-in.
               </p>
             </div>
           </div>
 
           <!-- Right Column: 5 Numbered Principles -->
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
             ${principlesHtml}
           </div>
 
@@ -86,8 +86,16 @@ export function renderWhyUrjiko() {
         }
       }
       @media (max-width: 768px) {
-        section[aria-labelledby="why-heading"] .flex.flex-col.gap-6 > div:nth-child(n+4) {
-          display: none !important;
+        section[aria-labelledby="why-heading"] .container > .grid {
+          gap: var(--space-6) !important;
+        }
+        section[aria-labelledby="why-heading"] .flex.flex-col.gap-4 {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr !important;
+          gap: var(--space-3) !important;
+        }
+        section[aria-labelledby="why-heading"] .flex.flex-col.gap-4 > div:nth-child(5) {
+          grid-column: span 2;
         }
       }
     </style>

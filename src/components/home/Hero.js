@@ -34,7 +34,7 @@ export function renderHero() {
             <!-- Actions -->
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Discuss Your Project</span>
+                <span>Get a Free Consultation</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
@@ -116,7 +116,7 @@ export function renderHero() {
               <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); background: var(--color-bg-soft); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                 <div class="flex items-center gap-2">
                   <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-turquoise);"></span>
-                  <span class="text-xs font-medium text-secondary">Custom Systems Ready for Deployment</span>
+                  <span class="text-xs font-medium text-secondary">Systems Ready for Deployment</span>
                 </div>
                 <span class="text-xs font-semibold text-navy">Enterprise Ready</span>
               </div>
@@ -140,7 +140,7 @@ export function renderHero() {
           gap: var(--space-8) !important;
         }
         .hero-visual-wrapper {
-          display: none !important;
+          display: block !important;
         }
       }
     </style>

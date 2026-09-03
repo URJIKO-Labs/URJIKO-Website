@@ -71,8 +71,23 @@ export function renderProcess() {
 
     <style>
       @media (max-width: 768px) {
-        #process-heading ~ .grid--3 > .card:nth-child(n+4) {
-          display: none !important;
+        #process-heading ~ .grid--3 {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: var(--space-3) !important;
+        }
+        #process-heading ~ .grid--3 > .card {
+          padding: var(--space-4) !important;
+        }
+        #process-heading ~ .grid--3 > .card .card__title {
+          font-size: var(--font-size-sm) !important;
+        }
+        #process-heading ~ .grid--3 > .card p {
+          font-size: var(--font-size-xs) !important;
+          line-height: 1.4 !important;
+        }
+        #process-heading ~ .grid--3 > .card:nth-child(5),
+        #process-heading ~ .grid--3 > .card:nth-child(6) {
+          grid-column: span 1;
         }
       }
     </style>

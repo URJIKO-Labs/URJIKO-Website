@@ -54,8 +54,8 @@ export function renderValueStrip() {
 
     <style>
       @media (max-width: 768px) {
-        .grid--4 > div:nth-child(n+3) {
-          display: none !important;
+        .grid--4 {
+          grid-template-columns: repeat(2, 1fr) !important;
         }
       }
     </style>
