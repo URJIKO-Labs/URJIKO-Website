@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))s(i);new MutationObserver(i=>{for(const r of i)if(r.type==="childList")for(const d of r.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&s(d)}).observe(document,{childList:!0,subtree:!0});function e(i){const r={};return i.integrity&&(r.integrity=i.integrity),i.referrerPolicy&&(r.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?r.credentials="include":i.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function s(i){if(i.ep)return;i.ep=!0;const r=e(i);fetch(i.href,r)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com"},telegram:{url:"https://t.me/urjikolabs",ctaText:"Message Us on Telegram"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},p={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — Website Development, Business Systems & Custom Software | URJIKO Labs",description:"Professional software development services in Ethiopia — website development, business management systems, custom software, AI solutions, and ongoing technical support for organizations.",heading:"Technology Built Around Your Business"},"/solutions":{title:"Solutions — Business, Education, Transport & Healthcare Software | URJIKO Labs",description:"Practical digital solutions for real-world problems — business operations, education management, transport systems, and healthcare platforms built by URJIKO Labs in Ethiopia.",heading:"Practical Software for Real-World Problems"},"/portfolio":{title:"Portfolio | URJIKO Labs",description:"Explore software solutions, business systems, and digital experiences developed by URJIKO Labs.",heading:"Software Built to Solve Real Problems."},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},o={telegram:(t="w-5 h-5")=>`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))s(i);new MutationObserver(i=>{for(const o of i)if(o.type==="childList")for(const c of o.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&s(c)}).observe(document,{childList:!0,subtree:!0});function e(i){const o={};return i.integrity&&(o.integrity=i.integrity),i.referrerPolicy&&(o.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?o.credentials="include":i.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function s(i){if(i.ep)return;i.ep=!0;const o=e(i);fetch(i.href,o)}})();const n={name:"URJIKO Labs",tagline:"Practical digital solutions for modern businesses and organizations.",shortDescription:"URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",contact:{email:"urjikolabs@gmail.com",location:"Addis Ababa, Ethiopia"},telegram:{url:"https://t.me/urjikolabs",username:"@urjikolabs"},navLinks:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],footerNav:{company:[{label:"Home",path:"/"},{label:"Services",path:"/services"},{label:"Solutions",path:"/solutions"},{label:"Portfolio",path:"/portfolio"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}],services:[{label:"Web Development",path:"/services"},{label:"Business Systems",path:"/services"},{label:"Custom Software",path:"/services"},{label:"AI Solutions",path:"/services"}],connect:[{label:"Email",type:"email",href:"mailto:urjikolabs@gmail.com"},{label:"Telegram",type:"telegram",href:"https://t.me/urjikolabs"},{label:"GitHub",type:"github",href:"https://github.com/URJIKO-Labs"},{label:"LinkedIn",type:"linkedin",href:"#"}]},primaryCTA:{label:"Discuss Your Project",path:"/contact"}},p={defaultTitle:"URJIKO Labs — Building Practical Digital Solutions",defaultDescription:"URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",routes:{"/":{title:"URJIKO Labs — Digital Solutions for Modern Businesses",description:"Practical digital products, web development, business management systems, and custom software engineering.",heading:"Building Practical Digital Products & Software Solutions"},"/services":{title:"Services — Website Development, Business Systems & Custom Software | URJIKO Labs",description:"Professional software development services in Ethiopia — website development, business management systems, custom software, AI solutions, and ongoing technical support for organizations.",heading:"Technology Built Around Your Business"},"/solutions":{title:"Solutions — Business, Education, Transport & Healthcare Software | URJIKO Labs",description:"Practical digital solutions for real-world problems — business operations, education management, transport systems, and healthcare platforms built by URJIKO Labs in Ethiopia.",heading:"Practical Software for Real-World Problems"},"/portfolio":{title:"Portfolio | URJIKO Labs",description:"Explore software solutions, business systems, and digital experiences developed by URJIKO Labs.",heading:"Software Built to Solve Real Problems."},"/about":{title:"About URJIKO Labs",description:"Our mission, engineering philosophy, and commitment to practical, reliable digital transformation.",heading:"About URJIKO Labs"},"/contact":{title:"Contact URJIKO Labs",description:"Get in touch with URJIKO Labs to discuss your project, request a consultation, or connect via Telegram.",heading:"Discuss Your Project"},"/404":{title:"404 — Page Not Found | URJIKO Labs",description:"The requested page could not be found.",heading:"Page Not Found"}}},r={telegram:(t="w-5 h-5")=>`
     <svg class="${t}" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .34z"/>
     </svg>
@@ -42,7 +42,7 @@
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
       <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
     </svg>
-  `};function m(t="/"){const a=n.navLinks.map(e=>{const s=t===e.path;return`
+  `};function g(t="/"){const a=n.navLinks.map(e=>{const s=t===e.path;return`
         <li>
           <a 
             href="${e.path}" 
@@ -90,7 +90,7 @@
             aria-label="Open Navigation Menu"
           >
             <span class="navbar__toggle-icon" id="navbar-toggle-icon">
-              ${o.menu()}
+              ${r.menu()}
             </span>
           </button>
         </div>
@@ -131,10 +131,10 @@
         </div>
       </div>
     </header>
-  `}function h(){const t=new Date().getFullYear()||2026,a=n.footerNav.company.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),e=n.footerNav.services.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),s=n.footerNav.connect.map(i=>{let r="";i.type==="telegram"&&(r=o.telegram("w-4 h-4")),i.type==="github"&&(r=o.github("w-4 h-4")),i.type==="linkedin"&&(r=o.linkedin("w-4 h-4")),i.type==="email"&&(r=o.mail("w-4 h-4"));const l=(i.href.startsWith("http")||i.href.startsWith("mailto:"))&&!i.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
+  `}function m(){const t=new Date().getFullYear()||2026,a=n.footerNav.company.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),e=n.footerNav.services.map(i=>`<li><a href="${i.path}" data-link class="footer__link">${i.label}</a></li>`).join(""),s=n.footerNav.connect.map(i=>{let o="";i.type==="telegram"&&(o=r.telegram("w-4 h-4")),i.type==="github"&&(o=r.github("w-4 h-4")),i.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),i.type==="email"&&(o=r.mail("w-4 h-4"));const l=(i.href.startsWith("http")||i.href.startsWith("mailto:"))&&!i.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
         <li>
           <a href="${i.href}" class="footer__link flex items-center gap-2" ${l}>
-            ${r}
+            ${o}
             <span>${i.label}</span>
           </a>
         </li>
@@ -186,21 +186,21 @@
         </div>
       </div>
     </footer>
-  `}function f(){const t=document.getElementById("navbar-toggle-btn"),a=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let s=!1;function i(){s=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",a&&(a.innerHTML=o.close());const l=e.querySelector("a");l&&l.focus()}function r(){s=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",a&&(a.innerHTML=o.menu())}t.onclick=l=>{l.stopPropagation(),s?r():i()},document.addEventListener("keydown",l=>{l.key==="Escape"&&s&&(r(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{s&&r()})}),document.addEventListener("click",l=>{s&&!e.contains(l.target)&&!t.contains(l.target)&&r()})}function x({path:t="/",content:a=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let s=document.querySelector('meta[name="description"]');return s&&s.setAttribute("content",e.description),`
+  `}function h(){const t=document.getElementById("navbar-toggle-btn"),a=document.getElementById("navbar-toggle-icon"),e=document.getElementById("mobile-nav-panel");if(!t||!e)return;let s=!1;function i(){s=!0,t.setAttribute("aria-expanded","true"),t.setAttribute("aria-label","Close Navigation Menu"),e.removeAttribute("hidden"),e.classList.add("is-open"),document.body.style.overflow="hidden",a&&(a.innerHTML=r.close());const l=e.querySelector("a");l&&l.focus()}function o(){s=!1,t.setAttribute("aria-expanded","false"),t.setAttribute("aria-label","Open Navigation Menu"),e.setAttribute("hidden",""),e.classList.remove("is-open"),document.body.style.overflow="",a&&(a.innerHTML=r.menu())}t.onclick=l=>{l.stopPropagation(),s?o():i()},document.addEventListener("keydown",l=>{l.key==="Escape"&&s&&(o(),t.focus())}),e.querySelectorAll("a").forEach(l=>{l.addEventListener("click",()=>{s&&o()})}),document.addEventListener("click",l=>{s&&!e.contains(l.target)&&!t.contains(l.target)&&o()})}function x({path:t="/",content:a=""}){const e=p.routes[t]||{title:p.defaultTitle,description:p.defaultDescription};document.title=e.title;let s=document.querySelector('meta[name="description"]');return s&&s.setAttribute("content",e.description),`
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
       <a href="#main-content" class="sr-only" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-blue); border-radius: 4px;">
         Skip to main content
       </a>
 
-      ${m(t)}
+      ${g(t)}
 
       <main id="main-content" class="flex-1" style="flex: 1 0 auto;" role="main">
         ${a}
       </main>
 
-      ${h()}
+      ${m()}
     </div>
-  `}function y(){f();const t=document.getElementById("site-navbar");if(t){const a=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",a),window.addEventListener("scroll",a,{passive:!0}),a()}}function w(){return`
+  `}function f(){h();const t=document.getElementById("site-navbar");if(t){const a=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",a),window.addEventListener("scroll",a,{passive:!0}),a()}}function y(){return`
     <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -228,7 +228,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${o.arrowRight("w-4 h-4")}
+                ${r.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Solutions</span>
@@ -329,7 +329,7 @@
         }
       }
     </style>
-  `}function k(){return`
+  `}function w(){return`
     <section class="section--sm bg-soft" aria-label="Why organizations trust URJIKO Labs" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         <div class="grid grid--4 gap-6">
@@ -349,7 +349,7 @@
         </div>
       </div>
     </section>
-  `}function S(){return`
+  `}function k(){return`
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
         <!-- Section Header -->
@@ -379,7 +379,7 @@
           </div>
           <a href="/services" data-link class="card__link">
             <span>Learn More</span>
-            ${o.arrowRight("w-4 h-4")}
+            ${r.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
@@ -390,12 +390,12 @@
         <div class="flex justify-center mt-8">
           <a href="/services" data-link class="btn btn--secondary flex items-center gap-2">
             <span>Explore All Services</span>
-            ${o.arrowRight("w-4 h-4")}
+            ${r.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
     </section>
-  `}function _(){return`
+  `}function S(){return`
     <section class="section bg-soft" aria-labelledby="solutions-heading" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -436,7 +436,7 @@
 
                 <a href="/portfolio" data-link class="btn btn--primary flex items-center gap-2">
                   <span>View Solution Overview</span>
-                  ${o.arrowRight("w-4 h-4")}
+                  ${r.arrowRight("w-4 h-4")}
                 </a>
               </div>
 
@@ -491,7 +491,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${o.arrowRight("w-4 h-4")}
+                  ${r.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -512,7 +512,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${o.arrowRight("w-4 h-4")}
+                  ${r.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -533,7 +533,7 @@
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${o.arrowRight("w-4 h-4")}
+                  ${r.arrowRight("w-4 h-4")}
                 </a>
               </div>
             </div>
@@ -606,7 +606,7 @@
         }
       }
     </style>
-  `}function $(){return`
+  `}function _(){return`
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -636,7 +636,7 @@
 
       </div>
     </section>
-  `}function c({title:t="Have a problem that technology could solve?",description:a="Let's build a practical, high-performance digital solution tailored for your organization.",primaryBtnLabel:e=n.primaryCTA.label,primaryBtnPath:s=n.primaryCTA.path,secondaryBtnLabel:i="View Our Solutions",secondaryBtnPath:r="/solutions"}={}){return`
+  `}function d({title:t="Have a problem that technology could solve?",description:a="Let's build a practical, high-performance digital solution tailored for your organization.",primaryBtnLabel:e=n.primaryCTA.label,primaryBtnPath:s=n.primaryCTA.path,secondaryBtnLabel:i="View Our Solutions",secondaryBtnPath:o="/solutions"}={}){return`
     <section class="section" aria-labelledby="cta-section-heading">
       <div class="container">
         <div class="cta-section">
@@ -647,7 +647,7 @@
               ${e}
             </a>
             ${i?`
-              <a href="${r}" data-link class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+              <a href="${o}" data-link class="btn btn--secondary btn--lg" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
                 ${i}
               </a>
             `:""}
@@ -658,27 +658,27 @@
   `}function P(){return`
     <div class="home-page">
       <!-- 1. Hero -->
-      ${w()}
+      ${y()}
 
       <!-- 2. Value Strip -->
-      ${k()}
+      ${w()}
 
       <!-- 3. What We Do -->
-      ${S()}
+      ${k()}
 
       <!-- 4. Featured Solutions -->
-      ${_()}
+      ${S()}
 
       <!-- 5. Why URJIKO Labs -->
       ${C()}
 
       <!-- 6. How We Work -->
-      ${$()}
+      ${_()}
 
       <!-- 7. Final CTA -->
-      ${c({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
+      ${d({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
     </div>
-  `}function A(){return`
+  `}function $(){return`
     <section class="section section--lg" aria-labelledby="services-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -700,7 +700,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${o.arrowRight("w-4 h-4")}
+                ${r.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>View Our Solutions</span>
@@ -774,7 +774,7 @@
         }
       }
     </style>
-  `}function B(){return`
+  `}function A(){return`
     <section class="section bg-soft" aria-labelledby="services-approach-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -826,7 +826,7 @@
 
       </div>
     </section>
-  `}function R(){return`
+  `}function j(){return`
     <section class="section" aria-labelledby="core-services-heading">
       <div class="container">
         <!-- Section Heading -->
@@ -867,7 +867,7 @@
           <!-- Action Link -->
           <a href="${e.link}" data-link class="card__link">
             <span>Explore Service</span>
-            ${o.arrowRight("w-4 h-4")}
+            ${r.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
@@ -875,7 +875,7 @@
         </div>
       </div>
     </section>
-  `}function T(){return`
+  `}function B(){return`
     <section class="section bg-white" aria-labelledby="smartbiz-feature-title" style="background-color: var(--color-white); position: relative;">
       <div class="container">
         <div class="grid smartbiz-feature-grid items-center">
@@ -904,7 +904,7 @@
             <div>
               <a href="/portfolio" data-link class="btn btn--primary">
                 <span>View SmartBiz</span>
-                ${o.arrowRight("w-4 h-4")}
+                ${r.arrowRight("w-4 h-4")}
               </a>
             </div>
           </div>
@@ -984,13 +984,13 @@
         }
       </style>
     </section>
-  `}function j(){return`
-    ${A()}
-    ${B()}
-    ${R()}
-    ${T()}
-    ${c({title:"Ready to Build Your Solution?",description:"Tell us about your project requirements. We will help you identify the right technology approach.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Solutions",secondaryBtnPath:"/solutions"})}
   `}function z(){return`
+    ${$()}
+    ${A()}
+    ${j()}
+    ${B()}
+    ${d({title:"Ready to Build Your Solution?",description:"Tell us about your project requirements. We will help you identify the right technology approach.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Solutions",secondaryBtnPath:"/solutions"})}
+  `}function R(){return`
     <section class="section section--lg" aria-labelledby="solutions-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
@@ -1012,7 +1012,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Problem</span>
-                ${o.arrowRight("w-4 h-4")}
+                ${r.arrowRight("w-4 h-4")}
               </a>
               <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
                 <span>Explore Our Work</span>
@@ -1094,7 +1094,7 @@
         }
       }
     </style>
-  `}const I=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function E(){return I.map(t=>`
+  `}const T=[{id:"business-solutions",badge:"BUSINESS SOLUTIONS",title:"Business Solutions",description:"Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Inventory Management",description:"Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync."},{title:"Point of Sale",description:"Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support."},{title:"Customer Management",description:"Centralized customer directory with transaction histories, preferences, and credit monitoring."},{title:"Sales Management",description:"Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics."},{title:"Business Analytics",description:"Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards."}],featured:{name:"SmartBiz ERP",badgeClass:"badge--blue",badgeText:"Core Product",link:"/portfolio"},cta:{label:"Explore Business Solutions",link:"/portfolio"}},{id:"education-solutions",badge:"EDUCATION SOLUTIONS",title:"Education Solutions",description:"Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.",bgClass:"bg-soft",gridClass:"grid--3",cards:[{title:"Student Management",description:"Complete student profiles, enrollment tracking, demographic records, and academic history."},{title:"Teacher Management",description:"Faculty directories, subject assignments, department allocations, and teaching schedules."},{title:"Attendance",description:"Digital daily attendance recording for students and staff with automated absence notifications."},{title:"Grades",description:"Comprehensive gradebook management, automated report card generation, and exam assessments."},{title:"Timetable",description:"Automated class and room scheduling with conflict resolution and teacher availability tracking."}],featured:{name:"EduFlow",badgeClass:"badge--navy",badgeText:"Education Platform",link:"/portfolio"},cta:{label:"Explore Education Solutions",link:"/portfolio"}},{id:"transport-solutions",badge:"TRANSPORT SOLUTIONS",title:"Transport Solutions",description:"Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.",bgClass:"bg-white",gridClass:"grid--3",cards:[{title:"Vehicle Management",description:"Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health."},{title:"Driver Management",description:"Driver rosters, license compliance, shift assignments, and trip performance histories."},{title:"Transport Requests",description:"Digital dispatch workflows, trip approvals, passenger allocations, and request tracking."},{title:"Operations",description:"Live operational control, daily trip execution monitoring, and incident management workflows."},{title:"Reports",description:"Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics."}],featured:{name:"Transport Management",badgeClass:"badge--navy",badgeText:"Operations System",link:"/portfolio"},cta:{label:"Explore Transport Solutions",link:"/portfolio"}},{id:"healthcare-solutions",badge:"HEALTHCARE SOLUTIONS",title:"Healthcare Solutions",description:"Digital platforms designed to support healthcare workflows, records, management, and operational visibility.",bgClass:"bg-soft",gridClass:"grid--2",cards:[{title:"Digital Records",description:"Secure digital patient charts, medical history archives, treatment notes, and lab records."},{title:"Patient Workflows",description:"Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in."},{title:"Management Dashboards",description:"Facility occupancy rates, department performance, staff coverage, and service analytics."}],featured:{name:"ShegerHealth",badgeClass:"badge--blue",badgeText:"Project Concept",link:"/portfolio",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows."},cta:{label:"Explore Healthcare Solutions",link:"/portfolio"}}];function I(){return T.map(t=>`
     <section 
       id="${t.id}" 
       class="section ${t.bgClass}" 
@@ -1140,7 +1140,7 @@
             </div>
             <a href="${t.featured.link}" data-link class="card__link font-semibold flex items-center gap-1" style="margin-top: 0; font-size: var(--font-size-sm);">
               <span>View Project</span>
-              ${o.arrowRight("w-4 h-4")}
+              ${r.arrowRight("w-4 h-4")}
             </a>
           </div>
           ${t.featured.disclaimer?`
@@ -1154,14 +1154,14 @@
         <div class="flex items-center">
           <a href="${t.cta.link}" data-link class="btn btn--secondary flex items-center gap-2">
             <span>${t.cta.label}</span>
-            ${o.arrowRight("w-4 h-4")}
+            ${r.arrowRight("w-4 h-4")}
           </a>
         </div>
 
       </div>
     </section>
   `).join(`
-`)}function L(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
+`)}function E(){const t=[{number:"01",name:"Problem"},{number:"02",name:"Understand"},{number:"03",name:"Design"},{number:"04",name:"Build"},{number:"05",name:"Deploy"},{number:"06",name:"Improve"}];return`
     <section class="section bg-soft problem-solution-section" aria-labelledby="problem-solution-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -1175,7 +1175,7 @@
 
         <!-- Responsive Process Flow -->
         <div class="problem-solution__flow" role="list">
-          ${t.map((e,s)=>{const r=s===t.length-1?"":`
+          ${t.map((e,s)=>{const o=s===t.length-1?"":`
           <div class="problem-solution__connector" aria-hidden="true">
             <span class="problem-solution__connector-line"></span>
             <svg class="problem-solution__connector-arrow" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1187,7 +1187,7 @@
           <div class="problem-solution__node font-bold">${e.number}</div>
           <span class="problem-solution__name font-semibold text-navy">${e.name}</span>
         </div>
-        ${r}
+        ${o}
       `}).join("")}
         </div>
 
@@ -1385,7 +1385,7 @@
         }
       }
     </style>
-  `}function M(){return`
+  `}function F(){return`
     <section class="section bg-white" aria-labelledby="capabilities-heading">
       <div class="container">
         <!-- Section Header -->
@@ -1479,7 +1479,7 @@
               <li>
                 <a href="${s.path}" data-link class="cross-nav-link flex items-center gap-2 text-sm text-navy">
                   <span class="cross-nav-icon" aria-hidden="true" style="color: var(--color-blue); display: inline-flex; align-items: center; flex-shrink: 0;">
-                    ${o.arrowRight("w-3.5 h-3.5")}
+                    ${r.arrowRight("w-3.5 h-3.5")}
                   </span>
                   <span>${s.label}</span>
                 </a>
@@ -1491,7 +1491,7 @@
         <div class="mt-auto pt-4" style="border-top: 1px solid var(--color-border-subtle);">
           <a href="${e.ctaPath}" data-link class="btn btn--secondary btn--sm flex items-center justify-center gap-2" style="width: 100%;">
             <span>${e.ctaText}</span>
-            ${o.arrowRight("w-3.5 h-3.5")}
+            ${r.arrowRight("w-3.5 h-3.5")}
           </a>
         </div>
       </div>
@@ -1534,14 +1534,14 @@
         transition: transform var(--transition-fast);
       }
     </style>
-  `}function F(){return`
-    ${z()}
+  `}function L(){return`
+    ${R()}
+    ${I()}
     ${E()}
-    ${L()}
-    ${M()}
+    ${F()}
     ${O()}
-    ${c({title:"Have a Problem Technology Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Work",secondaryBtnPath:"/portfolio"})}
-  `}function D(){return`
+    ${d({title:"Have a Problem Technology Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Work",secondaryBtnPath:"/portfolio"})}
+  `}function M(){return`
     <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-14); background: #FFFFFF; position: relative; overflow: hidden;">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
@@ -1563,7 +1563,7 @@
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${o.arrowRight("w-4 h-4")}
+                ${r.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>View Our Solutions</span>
@@ -1632,7 +1632,7 @@
         }
       }
     </style>
-  `}function H(){return`
+  `}function D(){return`
     <section class="section" aria-labelledby="portfolio-intro-heading" style="padding-top: var(--space-10); padding-bottom: var(--space-10); background: var(--color-bg-soft); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container" style="max-width: 52rem;">
         <div class="text-center">
@@ -1655,7 +1655,7 @@
         </div>
       </div>
     </section>
-  `}const W=[{id:"smartbiz",number:"01",name:"SmartBiz ERP",category:"Business Management",badge:"BUSINESS MANAGEMENT",statusBadge:"Active Project",tagline:"Business Management & Inventory Solution",description:"A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",problem:"Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",solution:"SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",features:["Dashboard & Analytics","Point of Sale (POS)","Inventory Management","Product Management","Customer Management","Credit & Balances","Sales Tracking","Profit & Reporting","Business Insights","Mobile-Friendly UI"],businessValue:["Centralized business information","Better organization of daily operations","Easier sales and inventory monitoring","Clearer reporting and business insights","More efficient daily workflows"],technologies:["React","Node.js","Express","PostgreSQL","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#business-solutions",solutionLabel:"Business Solutions",layout:"left"},{id:"transport",number:"02",name:"Transport Management System",category:"Transport & Operations",badge:"TRANSPORT & OPERATIONS",statusBadge:"Management System",tagline:"Transport & Operations Management Solution",description:"A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",problem:"Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",solution:"A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",features:["Authentication & Roles","Transport Requests","Vehicle Management","Driver Management","Operations Dashboard","Workflow Management","Administration Panel","Reports & Data"],businessValue:["Centralized operations management","Better visibility into transport activities","Structured request and approval workflows","Easier administration and reporting","Improved coordination across teams"],technologies:["JavaScript","Node.js","Express","MySQL","REST API","Role-Based Access","Responsive UI"],solutionLink:"/solutions#transport-solutions",solutionLabel:"Transport Solutions",layout:"right"},{id:"eduflow",number:"03",name:"EduFlow",category:"Education",badge:"EDUCATION",statusBadge:"MVP / Prototype",tagline:"School Management Solution",description:"An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",problem:"Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",solution:"A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",features:["Student Management","Teacher Management","Class Organization","Attendance Tracking","Grade Management","Timetable & Scheduling","Administration Dashboard","Role-Based Access"],businessValue:["Organized school information","Centralized administration","Easier student and teacher monitoring","Structured academic workflows","Improved visibility for school leaders"],technologies:["React","JavaScript","Node.js","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#education-solutions",solutionLabel:"Education Solutions",layout:"left"},{id:"shegerhealth",number:"04",name:"ShegerHealth",category:"Healthcare",badge:"HEALTHCARE",statusBadge:"Demo / Concept",tagline:"Digital Healthcare Platform Demo",description:"A digital healthcare platform concept focused on structured workflows, management dashboards, and administrative tools for healthcare organizations.",problem:"Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",solution:"A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",features:["Digital Records","Patient Workflows","Management Dashboard","Forms & Data Entry","Navigation & Routing","Responsive Interface","Administrative Tools"],businessValue:["Organized digital information","Structured healthcare workflows","Easier administrative management","Digital accessibility for staff","Clearer management interfaces"],technologies:["JavaScript","React","REST API","Responsive UI"],solutionLink:"/solutions#healthcare-solutions",solutionLabel:"Healthcare Solutions",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows. It is not a certified medical system.",layout:"right"}],N=[{id:"ethiobrew",name:"EthioBrew",category:"Business / Hospitality",description:"A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",capabilities:["UX/UI Design","Responsive Design","Product Presentation","Business Workflows"]},{id:"haramaya-gym",name:"Haramaya Gym",category:"Business Website",description:"A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",capabilities:["Professional Web Design","Responsive Layout","Service Presentation","CTAs"]},{id:"abebe-bookstore",name:"Abebe Book Store",category:"Retail / E-commerce",description:"A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",capabilities:["Product Presentation","Retail Experience","Responsive Interface","Customer Workflows"]}],U=["Business Management Systems","Inventory Management","Point of Sale","Dashboards & Analytics","Reporting","Authentication","Role-Based Access","Workflow Automation","Data Management","Administration","Responsive Web Applications","API Integration"],V=[{name:"Business",description:"Business management, inventory, POS, customer workflows, and operational reporting.",project:"SmartBiz ERP"},{name:"Education",description:"Student, teacher, attendance, grades, timetable, and school administration.",project:"EduFlow"},{name:"Transport",description:"Operations, vehicles, drivers, requests, workflows, and reporting.",project:"Transport Management"},{name:"Healthcare",description:"Digital workflows, records, dashboards, and administrative tools.",project:"ShegerHealth"},{name:"Retail & Hospitality",description:"Customer-facing websites, product presentation, and digital experiences.",project:"EthioBrew, Abebe Book Store"}];function b(){return`
+  `}const H=[{id:"smartbiz",number:"01",name:"SmartBiz ERP",category:"Business Management",badge:"BUSINESS MANAGEMENT",statusBadge:"Active Project",tagline:"Business Management & Inventory Solution",description:"A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",problem:"Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",solution:"SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",features:["Dashboard & Analytics","Point of Sale (POS)","Inventory Management","Product Management","Customer Management","Credit & Balances","Sales Tracking","Profit & Reporting","Business Insights","Mobile-Friendly UI"],businessValue:["Centralized business information","Better organization of daily operations","Easier sales and inventory monitoring","Clearer reporting and business insights","More efficient daily workflows"],technologies:["React","Node.js","Express","PostgreSQL","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#business-solutions",solutionLabel:"Business Solutions",layout:"left"},{id:"transport",number:"02",name:"Transport Management System",category:"Transport & Operations",badge:"TRANSPORT & OPERATIONS",statusBadge:"Management System",tagline:"Transport & Operations Management Solution",description:"A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",problem:"Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",solution:"A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",features:["Authentication & Roles","Transport Requests","Vehicle Management","Driver Management","Operations Dashboard","Workflow Management","Administration Panel","Reports & Data"],businessValue:["Centralized operations management","Better visibility into transport activities","Structured request and approval workflows","Easier administration and reporting","Improved coordination across teams"],technologies:["JavaScript","Node.js","Express","MySQL","REST API","Role-Based Access","Responsive UI"],solutionLink:"/solutions#transport-solutions",solutionLabel:"Transport Solutions",layout:"right"},{id:"eduflow",number:"03",name:"EduFlow",category:"Education",badge:"EDUCATION",statusBadge:"MVP / Prototype",tagline:"School Management Solution",description:"An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",problem:"Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",solution:"A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",features:["Student Management","Teacher Management","Class Organization","Attendance Tracking","Grade Management","Timetable & Scheduling","Administration Dashboard","Role-Based Access"],businessValue:["Organized school information","Centralized administration","Easier student and teacher monitoring","Structured academic workflows","Improved visibility for school leaders"],technologies:["React","JavaScript","Node.js","REST API","Authentication","Responsive UI"],solutionLink:"/solutions#education-solutions",solutionLabel:"Education Solutions",layout:"left"},{id:"shegerhealth",number:"04",name:"ShegerHealth",category:"Healthcare",badge:"HEALTHCARE",statusBadge:"Demo / Concept",tagline:"Digital Healthcare Platform Demo",description:"A digital healthcare platform concept focused on structured workflows, management dashboards, and administrative tools for healthcare organizations.",problem:"Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",solution:"A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",features:["Digital Records","Patient Workflows","Management Dashboard","Forms & Data Entry","Navigation & Routing","Responsive Interface","Administrative Tools"],businessValue:["Organized digital information","Structured healthcare workflows","Easier administrative management","Digital accessibility for staff","Clearer management interfaces"],technologies:["JavaScript","React","REST API","Responsive UI"],solutionLink:"/solutions#healthcare-solutions",solutionLabel:"Healthcare Solutions",disclaimer:"ShegerHealth is a demonstration project exploring digital healthcare workflows. It is not a certified medical system.",layout:"right"}],W=[{id:"ethiobrew",name:"EthioBrew",category:"Business / Hospitality",description:"A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",capabilities:["UX/UI Design","Responsive Design","Product Presentation","Business Workflows"]},{id:"haramaya-gym",name:"Haramaya Gym",category:"Business Website",description:"A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",capabilities:["Professional Web Design","Responsive Layout","Service Presentation","CTAs"]},{id:"abebe-bookstore",name:"Abebe Book Store",category:"Retail / E-commerce",description:"A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",capabilities:["Product Presentation","Retail Experience","Responsive Interface","Customer Workflows"]}],N=["Business Management Systems","Inventory Management","Point of Sale","Dashboards & Analytics","Reporting","Authentication","Role-Based Access","Workflow Automation","Data Management","Administration","Responsive Web Applications","API Integration"],U=[{name:"Business",description:"Business management, inventory, POS, customer workflows, and operational reporting.",project:"SmartBiz ERP"},{name:"Education",description:"Student, teacher, attendance, grades, timetable, and school administration.",project:"EduFlow"},{name:"Transport",description:"Operations, vehicles, drivers, requests, workflows, and reporting.",project:"Transport Management"},{name:"Healthcare",description:"Digital workflows, records, dashboards, and administrative tools.",project:"ShegerHealth"},{name:"Retail & Hospitality",description:"Customer-facing websites, product presentation, and digital experiences.",project:"EthioBrew, Abebe Book Store"}];function b(){return`
     <div class="card card--lg" role="region" aria-label="SmartBiz ERP Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1712,7 +1712,7 @@
         </div>
       </div>
     </div>
-  `}function G(){return`
+  `}function V(){return`
     <div class="card card--lg" role="region" aria-label="Transport Operations Panel Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1779,7 +1779,7 @@
         <span class="text-xs font-bold" style="color: var(--color-blue);">In Progress</span>
       </div>
     </div>
-  `}function q(){return`
+  `}function G(){return`
     <div class="card card--lg" role="region" aria-label="EduFlow School Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1833,7 +1833,7 @@
         <span class="text-xs font-bold" style="color: var(--color-blue);">Updated</span>
       </div>
     </div>
-  `}function J(){return`
+  `}function q(){return`
     <div class="card card--lg" role="region" aria-label="ShegerHealth Healthcare Dashboard Preview" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-xl); padding: var(--space-6);">
       <!-- Header Bar -->
       <div class="flex items-center justify-between pb-4 mb-5" style="border-bottom: 1px solid var(--color-border-subtle);">
@@ -1889,7 +1889,7 @@
         <span class="text-xs font-bold" style="color: var(--color-blue);">Enforced</span>
       </div>
     </div>
-  `}function K(t){switch(t.id){case"smartbiz":return b();case"transport":return G();case"eduflow":return q();case"shegerhealth":return J();default:return b()}}function Y(){const t=`
+  `}function K(t){switch(t.id){case"smartbiz":return b();case"transport":return V();case"eduflow":return G();case"shegerhealth":return q();default:return b()}}function Y(){const t=`
     <style>
       @media (min-width: 1024px) {
         .project-layout { grid-template-columns: 1fr 1fr !important; }
@@ -1899,7 +1899,7 @@
         .project-layout--right .project-content { order: 1; }
       }
     </style>
-  `,a=W.map((e,s)=>{const i=s%2===0?"var(--color-white)":"var(--color-bg-soft)";return`
+  `,a=H.map((e,s)=>{const i=s%2===0?"var(--color-white)":"var(--color-bg-soft)";return`
         <section class="section" id="project-${e.id}" aria-labelledby="project-${e.id}-title" style="border-top: 1px solid var(--color-border-subtle); background: ${i};">
           <div class="container">
             <!-- Project Header -->
@@ -1934,7 +1934,7 @@
                 <div class="mb-6">
                   <h3 class="text-navy font-semibold mb-3" style="font-size: var(--font-size-lg);">Business Value</h3>
                   <ul style="list-style: none; padding: 0; margin: 0;" class="flex flex-col gap-2">
-                    ${e.businessValue.map(r=>`<li class="flex items-start gap-2 text-sm text-secondary"><span style="color: var(--color-blue); margin-top: 2px;">✓</span><span>${r}</span></li>`).join("")}
+                    ${e.businessValue.map(o=>`<li class="flex items-start gap-2 text-sm text-secondary"><span style="color: var(--color-blue); margin-top: 2px;">✓</span><span>${o}</span></li>`).join("")}
                   </ul>
                 </div>
 
@@ -1945,7 +1945,7 @@
                 <div class="flex flex-wrap gap-3 items-center">
                   <a href="/contact" data-link class="btn btn--primary">
                     <span>Explore Project</span>
-                    ${o.arrowRight("w-4 h-4")}
+                    ${r.arrowRight("w-4 h-4")}
                   </a>
                   <a href="${e.solutionLink}" data-link class="btn btn--secondary text-sm">View ${e.solutionLabel} &rarr;</a>
                 </div>
@@ -1961,20 +1961,20 @@
             <div class="mt-8">
               <h3 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-lg);">Key Features</h3>
               <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-3);">
-                ${e.features.map(r=>`<div class="flex items-center gap-2 p-3" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-blue); flex-shrink: 0;"></span><span class="text-sm font-medium text-navy">${r}</span></div>`).join("")}
+                ${e.features.map(o=>`<div class="flex items-center gap-2 p-3" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-blue); flex-shrink: 0;"></span><span class="text-sm font-medium text-navy">${o}</span></div>`).join("")}
               </div>
             </div>
 
             <!-- Technologies -->
             <div class="mt-6 flex flex-wrap gap-2">
-              ${e.technologies.map(r=>`<span class="badge badge--outline text-xs">${r}</span>`).join("")}
+              ${e.technologies.map(o=>`<span class="badge badge--outline text-xs">${o}</span>`).join("")}
             </div>
           </div>
         </section>
       `}).join("");return`
     ${t}
     ${a}
-  `}function Q(){return`
+  `}function J(){return`
     <section class="section bg-white" aria-labelledby="secondary-projects-heading" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         
@@ -1989,7 +1989,7 @@
 
         <!-- Secondary Projects Grid -->
         <div class="grid grid--3">
-          ${N.map(t=>`
+          ${W.map(t=>`
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
               <!-- Placeholder Visual Area -->
@@ -2025,7 +2025,7 @@
 
       </div>
     </section>
-  `}function Z(t=U){return`
+  `}function Q(t=N){return`
     <section class="section bg-soft" aria-labelledby="portfolio-capabilities-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         <!-- Section Header -->
@@ -2082,7 +2082,7 @@
         flex-shrink: 0;
       }
     </style>
-  `}function X(){return`
+  `}function Z(){return`
     <section class="section bg-white" aria-labelledby="industry-coverage-heading" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         <!-- Section Heading (Centered) -->
@@ -2096,7 +2096,7 @@
 
         <!-- Industry Grid -->
         <div class="industry-grid">
-          ${V.map(a=>`
+          ${U.map(a=>`
         <div class="industry-card">
           <div>
             <h3 class="text-navy font-semibold text-lg mb-2">${a.name}</h3>
@@ -2114,7 +2114,7 @@
         <div class="flex flex-wrap items-center justify-center gap-4" style="margin-top: var(--space-12);">
           <a href="/contact" data-link class="btn btn--primary">
             <span>Discuss Your Industry</span>
-            ${o.arrowRight("w-4 h-4")}
+            ${r.arrowRight("w-4 h-4")}
           </a>
           <a href="/solutions" data-link class="btn btn--secondary">
             <span>View All Solutions</span>
@@ -2158,126 +2158,513 @@
         flex-shrink: 0;
       }
     </style>
-  `}function ee(){return`
+  `}function X(){return`
+    ${M()}
     ${D()}
-    ${H()}
     ${Y()}
+    ${J()}
     ${Q()}
     ${Z()}
-    ${X()}
-    ${c({title:"Have a Problem That Software Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
-  `}function te({title:t="Have a project idea?",description:a="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const s=n.telegram.url;return`
-    <div class="card card--lg flex flex-col items-start gap-4" style="border-left: 4px solid var(--color-blue); background-color: var(--color-bg-soft);">
-      <div class="flex items-center gap-3">
-        <div class="card__icon" style="margin-bottom: 0; color: var(--color-blue); background-color: var(--color-bg-light-blue);">
-          ${o.telegram("w-6 h-6")}
+    ${d({title:"Have a Problem That Software Could Solve?",description:"Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
+  `}function ee(){return`
+    <section class="section bg-white" aria-labelledby="about-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
+      <div class="container text-center" style="max-width: 56rem;">
+        <h1 id="about-hero-title" class="text-balance mb-6" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;">
+          Technology With a Purpose.
+        </h1>
+        <p class="text-secondary text-balance mb-8 mx-auto" style="font-size: clamp(1.125rem, 2.5vw, 1.25rem); line-height: 1.6; max-width: 48rem;">
+          URJIKO Labs builds practical software and digital solutions designed around real business and organizational needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/contact" data-link class="btn btn--primary btn--lg">
+            Discuss Your Project ${r.arrowRight("w-4 h-4")}
+          </a>
+          <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
+            Explore Our Work
+          </a>
         </div>
-        <div>
-          <h3 style="font-size: var(--font-size-xl); margin-bottom: 0.25rem; color: var(--color-navy);">${t}</h3>
-          <span class="text-xs text-muted">Primary Direct Messaging Channel</span>
+      </div>
+    </section>
+  `}function te(){return`
+    <section class="section bg-soft" aria-labelledby="company-intro-title" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container">
+        <div class="grid items-start" style="grid-template-columns: 1fr; gap: var(--space-10);">
+          <div style="max-width: 48rem; margin: 0 auto;">
+            <h2 id="company-intro-title" class="mb-6" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--color-navy); line-height: 1.2;">
+              Building Practical Digital Solutions
+            </h2>
+            
+            <p class="text-secondary mb-6 text-lg" style="line-height: 1.7;">
+              URJIKO Labs is a software and technology company focused on building useful digital products and systems for organizations. We don't build software simply because technology is available. We build it when technology can make a real process better.
+            </p>
+
+            <div class="grid mt-8" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6);">
+              
+              <!-- Point 1 -->
+              <div>
+                <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">Understand First</h3>
+                <p class="text-secondary text-sm" style="line-height: 1.6;">We start by learning how your organization currently works before writing any code.</p>
+              </div>
+
+              <!-- Point 2 -->
+              <div>
+                <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">Build Around the Problem</h3>
+                <p class="text-secondary text-sm" style="line-height: 1.6;">Our software is designed around your actual workflows and operational bottlenecks.</p>
+              </div>
+
+              <!-- Point 3 -->
+              <div>
+                <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">Keep It Practical</h3>
+                <p class="text-secondary text-sm" style="line-height: 1.6;">We focus on the most important functionality first to deliver immediate value.</p>
+              </div>
+
+              <!-- Point 4 -->
+              <div>
+                <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-lg);">Improve Over Time</h3>
+                <p class="text-secondary text-sm" style="line-height: 1.6;">We build systems in phases, allowing them to evolve rather than forcing everything into version one.</p>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
-      <p style="margin-bottom: var(--space-2);">${a}</p>
-      <a 
-        href="${s}" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="btn btn--primary flex items-center gap-2"
-      >
-        ${o.telegram("w-5 h-5")}
-        <span>${e}</span>
-      </a>
+    </section>
+  `}function ae(){return`
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--2 gap-8">
+          <div>
+            <h2 class="text-navy font-bold mb-4">Our Mission</h2>
+            <p class="text-secondary">To help businesses and organizations solve real operational problems through practical, accessible, and well-designed technology.</p>
+          </div>
+          <div>
+            <h2 class="text-navy font-bold mb-4">Our Vision</h2>
+            <p class="text-secondary">To become a trusted technology partner for organizations that want to use software to work smarter, operate better, and grow sustainably.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `}function se(){return`
+    <section class="section bg-soft py-12">
+      <div class="container">
+        <h2 class="text-navy font-bold mb-8 text-center text-3xl">What We Believe</h2>
+        <div class="grid grid--3 gap-6">
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Practicality</h3>
+            <p class="text-secondary text-sm">Build what solves the problem.</p>
+          </div>
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Clarity</h3>
+            <p class="text-secondary text-sm">Keep systems understandable and usable.</p>
+          </div>
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Quality</h3>
+            <p class="text-secondary text-sm">Pay attention to reliability, security, and user experience.</p>
+          </div>
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Continuous Improvement</h3>
+            <p class="text-secondary text-sm">Software should evolve as needs change.</p>
+          </div>
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Partnership</h3>
+            <p class="text-secondary text-sm">Work with clients rather than simply delivering software to them.</p>
+          </div>
+          <div class="card p-6 bg-white border border-subtle shadow-sm rounded-lg">
+            <div class="w-8 h-1 bg-blue mb-4 rounded"></div>
+            <h3 class="text-navy font-semibold mb-2 text-lg">Responsibility</h3>
+            <p class="text-secondary text-sm">Be honest about capabilities, timelines, limitations, and costs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `}function ie(){return`
+    <section class="section" style="background-color: var(--color-bg-soft);">
+      <div class="container">
+        <div class="card card--lg" style="border-top: 4px solid var(--color-blue);">
+          <div class="grid grid--2 items-center gap-8">
+            
+            <!-- Left Column: Intro -->
+            <div class="founder-info">
+              <div class="badge badge--navy mb-4">Founder</div>
+              <h2 class="text-navy mb-2" style="font-size: 2.25rem; font-weight: 800; line-height: 1.1;">GEMACHIS TESFAYE</h2>
+              <p class="text-blue font-bold mb-4" style="font-size: 1.125rem;">Software Engineer</p>
+              
+              <p class="text-muted" style="line-height: 1.7; font-size: 1.05rem;">
+                A software engineer focused on building practical systems, solving real-world problems, and creating useful digital solutions.
+              </p>
+            </div>
+
+            <!-- Right Column: Skills -->
+            <div class="founder-skills bg-white p-6" style="border: 1px solid var(--color-border); border-radius: 8px;">
+              <h3 class="text-navy font-bold mb-4" style="font-size: 1.25rem;">Core Focus Areas</h3>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px;">
+                <li class="flex items-center gap-3">
+                  <div class="flex items-center justify-center" style="color: var(--color-blue); width: 28px; height: 28px; border-radius: 50%; background-color: var(--color-bg-light-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="text-secondary font-semibold">Software Engineering</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="flex items-center justify-center" style="color: var(--color-blue); width: 28px; height: 28px; border-radius: 50%; background-color: var(--color-bg-light-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="text-secondary font-semibold">AI & Intelligent Systems</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="flex items-center justify-center" style="color: var(--color-blue); width: 28px; height: 28px; border-radius: 50%; background-color: var(--color-bg-light-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="text-secondary font-semibold">Business Applications</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="flex items-center justify-center" style="color: var(--color-blue); width: 28px; height: 28px; border-radius: 50%; background-color: var(--color-bg-light-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="text-secondary font-semibold">Digital Solutions</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  `}function oe(){return`
+    <section class="section" style="background-color: var(--color-bg-soft);">
+      <div class="container">
+        <div class="mb-12">
+          <h2 class="text-navy font-bold" style="font-size: 2rem;">How We Work</h2>
+        </div>
+        
+        <div class="grid grid--3 gap-6">
+          ${[{num:"01",title:"Discover",desc:"Understand the organization, users, workflow, and problem."},{num:"02",title:"Plan",desc:"Define priorities, scope, features, and the MVP."},{num:"03",title:"Design",desc:"Create a clear user experience and system structure."},{num:"04",title:"Develop",desc:"Build the software using appropriate technologies."},{num:"05",title:"Test",desc:"Test functionality, usability, responsiveness, security, and data handling."},{num:"06",title:"Deploy",desc:"Deploy the solution and prepare the client for use."},{num:"07",title:"Support",desc:"Provide maintenance, improvements, and technical support where required."}].map(a=>`
+            <div class="card flex flex-col gap-3">
+              <div class="font-bold" style="color: var(--color-blue); font-size: 1.5rem;">
+                ${a.num}
+              </div>
+              <h3 class="text-navy font-semibold">
+                ${a.title}
+              </h3>
+              <p class="text-secondary text-sm">
+                ${a.desc}
+              </p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    </section>
+  `}function re(){return`
+    <section class="section bg-soft" aria-labelledby="what-we-build-title">
+      <div class="container">
+        
+        <div class="section-heading section-heading--center">
+          <span class="section-heading__label">Capabilities</span>
+          <h2 id="what-we-build-title" class="section-heading__title">What We Build</h2>
+          <p class="section-heading__subtitle text-balance">
+            We focus on core digital solutions that improve how organizations operate and present themselves online.
+          </p>
+        </div>
+
+        <div class="grid grid--2" style="gap: var(--space-6);">
+          
+          <a href="/services" data-link class="card card--project" style="text-decoration: none; padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #FFF; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue);">
+              ${r.arrowRight("w-6 h-6")} <!-- Placeholder for a generic icon, arrow is fine -->
+            </div>
+            <div>
+              <h3 class="text-navy font-semibold text-xl mb-2">Websites</h3>
+              <p class="text-secondary text-sm" style="line-height: 1.6;">Professional websites and digital experiences designed for performance and credibility.</p>
+            </div>
+          </a>
+
+          <a href="/solutions#business-solutions" data-link class="card card--project" style="text-decoration: none; padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #FFF; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue);">
+              <span style="font-size: 24px;">📊</span>
+            </div>
+            <div>
+              <h3 class="text-navy font-semibold text-xl mb-2">Business Systems</h3>
+              <p class="text-secondary text-sm" style="line-height: 1.6;">Inventory, POS, customer management, reporting, and operational systems.</p>
+            </div>
+          </a>
+
+          <a href="/services" data-link class="card card--project" style="text-decoration: none; padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #FFF; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue);">
+              <span style="font-size: 24px;">⚙️</span>
+            </div>
+            <div>
+              <h3 class="text-navy font-semibold text-xl mb-2">Custom Software</h3>
+              <p class="text-secondary text-sm" style="line-height: 1.6;">Software designed around specific organizational workflows and bottlenecks.</p>
+            </div>
+          </a>
+
+          <a href="/solutions" data-link class="card card--project" style="text-decoration: none; padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: #FFF; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue);">
+              <span style="font-size: 24px;">🏢</span>
+            </div>
+            <div>
+              <h3 class="text-navy font-semibold text-xl mb-2">Digital Platforms</h3>
+              <p class="text-secondary text-sm" style="line-height: 1.6;">Solutions for education, transport, healthcare, retail, hospitality, and other organizational needs.</p>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="/solutions" data-link class="btn btn--secondary">
+            View All Solutions
+          </a>
+        </div>
+      </div>
+    </section>
+  `}function ne(){return`
+    ${ee()}
+    ${te()}
+    ${ae()}
+    ${se()}
+    ${ie()}
+    ${oe()}
+    ${re()}
+    ${d({title:"Let's Build Something Useful.",description:"Have a business process that could work better with technology? Let's discuss the problem and find a practical place to start.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"View Our Services",secondaryBtnPath:"/services"})}
+  `}function le(){return`
+    <section class="section bg-white" aria-labelledby="contact-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+      <div class="container text-center" style="max-width: 48rem;">
+        <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+          GET IN TOUCH
+        </div>
+        <h1 id="contact-hero-title" class="text-balance mb-4" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); line-height: 1.1;">
+          Let's Talk About Your Project.
+        </h1>
+        <p class="text-secondary text-balance mx-auto" style="font-size: clamp(1rem, 2vw, 1.125rem); line-height: 1.6; max-width: 42rem;">
+          Tell us what you're trying to build, improve, or solve. We'll help you identify a practical next step.
+        </p>
+      </div>
+    </section>
+  `}function de(){return`
+    <div class="flex flex-col gap-6" style="height: 100%;">
+      
+      <div style="background: var(--color-bg-soft); padding: var(--space-6); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg);">
+        <h2 class="text-navy font-semibold text-xl mb-4">Contact Information</h2>
+        <p class="text-secondary text-sm mb-6" style="line-height: 1.6;">
+          Reach out to us directly through email or Telegram. We aim to respond to all inquiries within one business day.
+        </p>
+
+        <div class="flex flex-col gap-4">
+          
+          <a href="mailto:${n.contact.email}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
+              ${r.mail("w-5 h-5")}
+            </div>
+            <div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Email Us</div>
+              <div class="font-medium" style="word-break: break-all;">${n.contact.email}</div>
+            </div>
+          </a>
+
+          <a href="${n.telegram.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
+              ${r.telegram("w-5 h-5")}
+            </div>
+            <div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Direct Message</div>
+              <div class="font-medium">Telegram (${n.telegram.username})</div>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-3" style="padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border);">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; color: var(--color-muted); flex-shrink: 0;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Location</div>
+              <div class="font-medium text-navy">${n.contact.location}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
     </div>
-  `}function v(t=[]){return!t||t.length<=1?"":`
-    <nav aria-label="Breadcrumb" class="mb-6">
-      <ol class="flex items-center text-sm" style="list-style: none; padding: 0;" role="list">
-        ${t.map((e,s)=>s===t.length-1?`
-          <li aria-current="page">
-            <span class="text-secondary font-medium">${e.label}</span>
-          </li>
-        `:`
-        <li>
-          <a href="${e.path||"#"}" data-link class="text-muted" style="transition: color 0.2s;">${e.label}</a>
-          <span class="mx-2 text-muted" aria-hidden="true" style="margin: 0 var(--space-2);">/</span>
-        </li>
-      `).join("")}
-      </ol>
-    </nav>
-  `}const u={"/":()=>P(),"/services":()=>j(),"/solutions":()=>F(),"/portfolio":()=>ee(),"/about":()=>`
-    <div class="container section">
-      ${v([{label:"Home",path:"/"},{label:"About"}])}
-      <div class="section-heading">
-        <span class="section-heading__label">Company</span>
-        <h1 class="section-heading__title">About URJIKO Labs</h1>
-        <p class="section-heading__subtitle">
-          We are a team of dedicated software engineers, product thinkers, and problem solvers building software for the real world.
-        </p>
-      </div>
-
-      <div class="card card--lg mb-12">
-        <h3 class="card__title mb-4">Our Engineering Philosophy</h3>
-        <p>
-          URJIKO Labs was founded on the principle that digital tools should be reliable, intuitive, and directly aligned with business value. We do not build technology for technology's sake; we solve actual operational bottlenecks.
-        </p>
-      </div>
-    </div>
-    ${c()}
-  `,"/contact":()=>`
-    <div class="container section">
-      ${v([{label:"Home",path:"/"},{label:"Contact"}])}
-      <div class="section-heading">
-        <span class="section-heading__label">Get in Touch</span>
-        <h1 class="section-heading__title">Discuss Your Project</h1>
-        <p class="section-heading__subtitle">
-          Have an upcoming software project, technical challenge, or need a custom solution? Reach out directly.
-        </p>
-      </div>
-
-      <div class="grid grid--2 mb-12">
-        <!-- Direct Telegram CTA Component -->
-        <div>
-          ${te({title:"Quickest Response via Telegram",description:"Directly message our engineering lead on Telegram to discuss requirements, feasibility, and project estimates."})}
-
-          <div class="card mt-6" style="margin-top: var(--space-6);">
-            <h4 class="card__title mb-2">Email Inquiries</h4>
-            <p class="text-sm text-secondary mb-2">For formal RFPs, partnerships, and detailed specifications:</p>
-            <a href="mailto:${n.contact.email}" class="font-semibold" style="color: var(--color-blue);">${n.contact.email}</a>
+  `}function ce(){return`
+    <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border-subtle);">
+      <h3 class="text-navy font-bold mb-4" style="font-size: 1.5rem;">Project Inquiry</h3>
+      <p class="text-secondary mb-6">Fill out the form below and our team will get back to you within 24 hours.</p>
+      
+      <form id="urjiko-contact-form" class="flex flex-col gap-4">
+        <div class="grid grid--2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="text-navy font-semibold text-sm">Full Name <span class="text-blue">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="organization" class="text-navy font-semibold text-sm">Organization / Company</label>
+            <input type="text" id="organization" name="organization" placeholder="Your Company Ltd" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
           </div>
         </div>
 
-        <!-- Contact Form Placeholder / Foundation -->
-        <div class="card card--lg">
-          <h3 class="card__title mb-4">Send a Message</h3>
-          <form onsubmit="event.preventDefault(); alert('Form submitted!');" novalidate>
-            <div class="form-group">
-              <label for="contact-name" class="form-label form-label--required">Full Name</label>
-              <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required />
-            </div>
-            <div class="form-group">
-              <label for="contact-email" class="form-label form-label--required">Email Address</label>
-              <input type="email" id="contact-email" class="form-input" placeholder="name@company.com" required />
-            </div>
-            <div class="form-group">
-              <label for="contact-service" class="form-label">Service Area</label>
-              <select id="contact-service" class="form-select">
-                <option value="web">Web Development</option>
-                <option value="business">Business Management System</option>
-                <option value="custom">Custom Software Development</option>
-                <option value="ai">AI & Intelligent Solutions</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="contact-message" class="form-label form-label--required">Project Details</label>
-              <textarea id="contact-message" class="form-textarea" placeholder="Tell us about what you want to build..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary" style="width: 100%;">
-              Send Message
-            </button>
-          </form>
+        <div class="grid grid--2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-navy font-semibold text-sm">Email Address <span class="text-blue">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="phone" class="text-navy font-semibold text-sm">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+          </div>
+        </div>
+
+        <div class="grid grid--2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="service" class="text-navy font-semibold text-sm">Service Needed</label>
+            <select id="service" name="service" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+              <option value="">Select a service...</option>
+              <option value="web-dev">Web Development</option>
+              <option value="mobile-app">Mobile App Development</option>
+              <option value="data-ai">Data & AI Solutions</option>
+              <option value="cloud">Cloud Infrastructure</option>
+              <option value="consulting">IT Consulting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="budget" class="text-navy font-semibold text-sm">Budget Range</label>
+            <select id="budget" name="budget" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+              <option value="">Select budget range...</option>
+              <option value="under-5k">Under $5,000</option>
+              <option value="5k-10k">$5,000 - $10,000</option>
+              <option value="10k-25k">$10,000 - $25,000</option>
+              <option value="25k-50k">$25,000 - $50,000</option>
+              <option value="over-50k">$50,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="contact-method" class="text-navy font-semibold text-sm">Preferred Contact Method</label>
+          <select id="contact-method" name="contact-method" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+            <option value="email">Email</option>
+            <option value="phone">Phone Call</option>
+            <option value="whatsapp">WhatsApp</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="description" class="text-navy font-semibold text-sm">Project Description <span class="text-blue">*</span></label>
+          <textarea id="description" name="description" required rows="5" placeholder="Tell us about your project goals, timeline, and any specific requirements..." style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; resize: vertical;"></textarea>
+        </div>
+
+        <div class="mt-4">
+          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.5rem; font-size: 1rem;">
+            Send Project Inquiry
+          </button>
+        </div>
+      </form>
+      
+      <script>
+        (function() {
+          const form = document.getElementById('urjiko-contact-form');
+          if (form) {
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              alert("This is a frontend demonstration. No backend service is currently configured to receive this inquiry.");
+              form.reset();
+            });
+          }
+        })();
+      <\/script>
+    </div>
+  `}function pe(){return`
+    <section class="section" style="background-color: var(--color-bg-soft);">
+      <div class="container">
+        <div class="mb-8" style="text-align: center;">
+          <h2 class="text-navy">What Happens Next?</h2>
+        </div>
+        
+        <div class="flex flex-col gap-4" style="flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
+          <div class="card p-4" style="flex: 1 1 200px;">
+            <div class="text-blue font-bold mb-2">01 &mdash; We Listen</div>
+            <p class="text-sm text-secondary">You explain your current situation and problem.</p>
+          </div>
+          
+          <div class="card p-4" style="flex: 1 1 200px;">
+            <div class="text-blue font-bold mb-2">02 &mdash; We Understand</div>
+            <p class="text-sm text-secondary">We ask questions about your workflow, users, and requirements.</p>
+          </div>
+          
+          <div class="card p-4" style="flex: 1 1 200px;">
+            <div class="text-blue font-bold mb-2">03 &mdash; We Recommend</div>
+            <p class="text-sm text-secondary">We suggest a practical solution and prioritize the MVP.</p>
+          </div>
+          
+          <div class="card p-4" style="flex: 1 1 200px;">
+            <div class="text-blue font-bold mb-2">04 &mdash; We Estimate</div>
+            <p class="text-sm text-secondary">We provide scope, timeline, pricing, and responsibilities.</p>
+          </div>
+          
+          <div class="card p-4" style="flex: 1 1 200px;">
+            <div class="text-blue font-bold mb-2">05 &mdash; We Start</div>
+            <p class="text-sm text-secondary">Once the agreement, deposit, and requirements are ready, development begins.</p>
+          </div>
         </div>
       </div>
-    </div>
-  `,"/404":()=>`
+    </section>
+  `}function ue(){return`
+    <section class="section">
+      <div class="container">
+        <h2 class="text-navy font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="grid grid--2 gap-6">
+          <div class="card card--service">
+            <h3 class="text-navy font-semibold mb-3">What kinds of projects do you build?</h3>
+            <p class="text-secondary">Websites, business systems, custom software, AI solutions, and digital platforms.</p>
+          </div>
+
+          <div class="card card--service">
+            <h3 class="text-navy font-semibold mb-3">Do you work with small businesses?</h3>
+            <p class="text-secondary">Yes. Solutions can start with a focused MVP and grow over time.</p>
+          </div>
+
+          <div class="card card--service">
+            <h3 class="text-navy font-semibold mb-3">Do you build everything at once?</h3>
+            <p class="text-secondary">No. URJIKO recommends prioritizing the most important problem first.</p>
+          </div>
+
+          <div class="card card--service">
+            <h3 class="text-navy font-semibold mb-3">Who pays for hosting and infrastructure?</h3>
+            <p class="text-secondary">Production infrastructure is normally owned and paid for by the client. URJIKO can recommend, configure, deploy, and maintain it.</p>
+          </div>
+
+          <div class="card card--service">
+            <h3 class="text-navy font-semibold mb-3">How does a project start?</h3>
+            <p class="text-secondary">First understand the requirements, then agree on scope, pricing, timeline, and responsibilities before development begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `}function be(){return`
+    ${le()}
+    
+    <section class="section" aria-label="Contact Methods" style="background: var(--color-white); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container" style="max-width: 64rem;">
+        <div class="grid items-start" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+          <div style="flex: 1;">
+            ${de()}
+          </div>
+          <div style="flex: 1.5;">
+            ${ce()}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    ${pe()}
+    ${ue()}
+    
+    ${d({title:"Have a Problem Worth Solving?",description:"Start with the problem. We'll help you figure out the right technology and the right first step.",primaryBtnLabel:"Start a Conversation",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Portfolio",secondaryBtnPath:"/portfolio"})}
+  `}const u={"/":()=>P(),"/services":()=>z(),"/solutions":()=>L(),"/portfolio":()=>X(),"/about":()=>ne(),"/contact":()=>be(),"/404":()=>`
     <div class="container section text-center">
       <div style="max-width: 32rem; margin: 0 auto; padding: var(--space-12) 0;">
         <span class="badge badge--navy mb-4">404 Error</span>
@@ -2292,4 +2679,4 @@
         </div>
       </div>
     </div>
-  `};class ae{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",a=>{const e=a.target.closest("a[data-link]");if(e){const s=e.getAttribute("href");s&&!s.startsWith("http")&&!s.startsWith("mailto:")&&(a.preventDefault(),this.navigateTo(s))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(a){window.location.pathname!==a&&window.history.pushState(null,null,a),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const s=u[e]||u["/404"]||u["/"],i=s?s():"";this.appContainer&&(this.appContainer.innerHTML=x({path:e,content:i}),y())}}function g(){window.urjikoRouter||(window.urjikoRouter=new ae)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",g):g();
+  `};class ve{constructor(){this.appContainer=document.getElementById("app"),this.init()}init(){document.addEventListener("click",a=>{const e=a.target.closest("a[data-link]");if(e){const s=e.getAttribute("href");s&&!s.startsWith("http")&&!s.startsWith("mailto:")&&(a.preventDefault(),this.navigateTo(s))}}),window.addEventListener("popstate",()=>{this.renderCurrentRoute()}),this.renderCurrentRoute()}navigateTo(a){window.location.pathname!==a&&window.history.pushState(null,null,a),this.renderCurrentRoute(),window.scrollTo({top:0,behavior:"smooth"})}renderCurrentRoute(){let e=(window.location.pathname||"/").replace(/\/$/,"")||"/";window.location.hash.startsWith("#/")&&(e=window.location.hash.slice(1));const s=u[e]||u["/404"]||u["/"],i=s?s():"";this.appContainer&&(this.appContainer.innerHTML=x({path:e,content:i}),f())}}function v(){window.urjikoRouter||(window.urjikoRouter=new ve)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",v):v();
