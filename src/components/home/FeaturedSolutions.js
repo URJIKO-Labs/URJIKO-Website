@@ -23,22 +23,15 @@ export function renderFeaturedSolutions() {
               <!-- Content -->
               <div class="flex flex-col items-start">
                 <div class="flex items-center gap-2 mb-3">
-                  <span class="badge badge--blue font-semibold">BUSINESS MANAGEMENT</span>
+                  <span class="badge badge--blue font-semibold">BUSINESS</span>
                   <span class="badge badge--navy font-semibold">Core Product</span>
                 </div>
                 <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-navy); margin-bottom: var(--space-3); font-weight: 700;">
                   SmartBiz Suite
                 </h3>
                 <p class="text-secondary mb-6 text-balance" style="font-size: var(--font-size-md); line-height: 1.6;">
-                  A business management solution designed to help businesses manage sales, inventory, customers, credit, reporting, and daily operations from one unified platform.
+                  A business management solution for sales, inventory, customers, credit, and daily operations.
                 </p>
-                
-                <div class="flex flex-wrap gap-3 mb-6">
-                  <span class="badge badge--outline text-xs">Point of Sale (POS)</span>
-                  <span class="badge badge--outline text-xs">Inventory Sync</span>
-                  <span class="badge badge--outline text-xs">Credit & Ledger</span>
-                  <span class="badge badge--outline text-xs">Real-Time Reports</span>
-                </div>
 
                 <a href="/portfolio" data-link class="btn btn--primary flex items-center gap-2">
                   <span>View Solution Overview</span>
@@ -84,17 +77,13 @@ export function renderFeaturedSolutions() {
             <!-- 2. TRANSPORT MANAGEMENT -->
             <div class="card flex flex-col justify-between">
               <div>
-                <span class="badge badge--navy mb-3">TRANSPORT & OPERATIONS</span>
+                <span class="badge badge--navy mb-3">TRANSPORT</span>
                 <h3 class="card__title">Transport Management</h3>
                 <p class="card__description mb-4">
-                  A digital platform for managing transport requests, vehicles, drivers, operations, workflows, and automated reporting.
+                  A platform for managing transport requests, vehicles, drivers, and reporting.
                 </p>
               </div>
               <div>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="badge badge--outline text-xs">Fleet Tracking</span>
-                  <span class="badge badge--outline text-xs">Driver Schedules</span>
-                </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
                   ${icons.arrowRight('w-4 h-4')}
@@ -108,14 +97,10 @@ export function renderFeaturedSolutions() {
                 <span class="badge badge--blue mb-3">EDUCATION</span>
                 <h3 class="card__title">EduFlow</h3>
                 <p class="card__description mb-4">
-                  A school management solution designed to organize students, teachers, classes, attendance, grades, timetables, and administration.
+                  A school management solution for students, teachers, attendance, grades, and administration.
                 </p>
               </div>
               <div>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="badge badge--outline text-xs">Student Records</span>
-                  <span class="badge badge--outline text-xs">Attendance & Grades</span>
-                </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
                   ${icons.arrowRight('w-4 h-4')}
@@ -129,14 +114,10 @@ export function renderFeaturedSolutions() {
                 <span class="badge badge--navy mb-3">HEALTHCARE</span>
                 <h3 class="card__title">ShegerHealth</h3>
                 <p class="card__description mb-4">
-                  A digital healthcare platform concept focused on improving healthcare workflows, appointment records, and clinical management.
+                  A healthcare platform concept for workflows, patient records, and clinical management.
                 </p>
               </div>
               <div>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="badge badge--outline text-xs">Patient Queue</span>
-                  <span class="badge badge--outline text-xs">Project Concept</span>
-                </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
                   ${icons.arrowRight('w-4 h-4')}
@@ -168,8 +149,8 @@ export function renderFeaturedSolutions() {
         .smartbiz-visual {
           display: none !important;
         }
-        [aria-labelledby="solutions-heading"] .grid--3 > .card:nth-child(n+3) {
-          display: none !important;
+        [aria-labelledby="solutions-heading"] .grid--3 {
+          grid-template-columns: 1fr !important;
         }
       }
     </style>
