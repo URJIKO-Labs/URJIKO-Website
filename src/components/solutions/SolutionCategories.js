@@ -41,7 +41,7 @@ const SOLUTION_CATEGORIES = [
       link: '/portfolio'
     },
     cta: {
-      label: 'Explore Business Solutions',
+      label: 'Explore Business',
       link: '/portfolio'
     }
   },
@@ -81,7 +81,7 @@ const SOLUTION_CATEGORIES = [
       link: '/portfolio'
     },
     cta: {
-      label: 'Explore Education Solutions',
+      label: 'Explore Education',
       link: '/portfolio'
     }
   },
@@ -121,7 +121,7 @@ const SOLUTION_CATEGORIES = [
       link: '/portfolio'
     },
     cta: {
-      label: 'Explore Transport Solutions',
+      label: 'Explore Transport',
       link: '/portfolio'
     }
   },
@@ -154,7 +154,7 @@ const SOLUTION_CATEGORIES = [
       disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.'
     },
     cta: {
-      label: 'Explore Healthcare Solutions',
+      label: 'Explore Healthcare',
       link: '/portfolio'
     }
   }

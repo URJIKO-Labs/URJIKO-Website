@@ -103,7 +103,7 @@ export function renderCapabilityGrid() {
     <style>
       .capability-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
         gap: var(--space-4);
       }
 
