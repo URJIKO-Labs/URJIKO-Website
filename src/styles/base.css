@@ -232,6 +232,10 @@ img, picture, video, canvas, svg {
   .card--project {
     flex-direction: column !important;
   }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Subtle Motion System */

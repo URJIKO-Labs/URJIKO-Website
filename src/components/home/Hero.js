@@ -16,7 +16,7 @@ export function renderHero() {
           <div class="flex flex-col items-start">
             
             <!-- Eyebrow -->
-            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue); white-space: normal; text-align: center;">
               DIGITAL SOLUTIONS FOR MODERN ORGANIZATIONS
             </div>
 
@@ -128,11 +128,16 @@ export function renderHero() {
       </div>
     </section>
 
-    <!-- Desktop Grid Override -->
+    <!-- Desktop Grid Override & Mobile Fixes -->
     <style>
       @media (min-width: 1024px) {
         .section--lg .container > .grid {
           grid-template-columns: 1.15fr 0.85fr !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .section--lg .container > .grid {
+          gap: var(--space-8) !important;
         }
       }
     </style>
