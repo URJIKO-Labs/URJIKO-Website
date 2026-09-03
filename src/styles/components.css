@@ -1,8 +1,9 @@
 /* ==========================================================================
    URJIKO Labs — Component Styles
    ==========================================================================
-   Reusable UI components: buttons, cards, badges, section headings, forms,
-   navbar, footer, CTA sections, loading/empty/error states.
+   Reusable UI components:
+   - Palette: White + Deep Navy + Royal/Technology Blue
+   - Zero teal in UI elements
    ========================================================================== */
 
 /* =======================================================================
@@ -29,20 +30,20 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
 
-/* Primary — teal bg, white text */
+/* Primary — Royal Blue bg, white text */
 .btn--primary {
-  background-color: var(--color-teal);
+  background-color: var(--color-blue);
   color: var(--color-text-inverse);
-  border-color: var(--color-teal);
+  border-color: var(--color-blue);
 }
 
 .btn--primary:hover {
-  background-color: var(--color-teal-hover);
-  border-color: var(--color-teal-hover);
+  background-color: var(--color-blue-dark);
+  border-color: var(--color-blue-dark);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
@@ -60,12 +61,12 @@
 }
 
 .btn--secondary:hover {
-  border-color: var(--color-teal);
-  color: var(--color-teal);
-  background-color: var(--color-teal-subtle);
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+  background-color: var(--color-blue-subtle);
 }
 
-/* Dark — navy bg, white text */
+/* Dark — Navy bg, white text */
 .btn--dark {
   background-color: var(--color-navy);
   color: var(--color-text-inverse);
@@ -83,18 +84,18 @@
   transform: translateY(0);
 }
 
-/* Ghost — no border, text only */
+/* Ghost */
 .btn--ghost {
   background-color: transparent;
-  color: var(--color-teal);
+  color: var(--color-blue);
   border-color: transparent;
   padding-left: var(--space-2);
   padding-right: var(--space-2);
 }
 
 .btn--ghost:hover {
-  color: var(--color-teal-dark);
-  background-color: var(--color-teal-subtle);
+  color: var(--color-blue-dark);
+  background-color: var(--color-blue-subtle);
 }
 
 /* Sizes */
@@ -116,7 +117,6 @@
   pointer-events: none;
 }
 
-/* Icon within button */
 .btn .btn-icon {
   width: 1.125em;
   height: 1.125em;
@@ -146,17 +146,11 @@
   border-radius: var(--radius-lg);
 }
 
-/* No hover effect variant */
-.card--static {
-  cursor: default;
-}
-
 .card--static:hover {
   box-shadow: var(--shadow-card);
   transform: none;
 }
 
-/* Card internal elements */
 .card__icon {
   width: 3rem;
   height: 3rem;
@@ -164,8 +158,8 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-sm);
-  background-color: var(--color-teal-subtle);
-  color: var(--color-teal);
+  background-color: var(--color-bg-light-blue);
+  color: var(--color-blue);
   margin-bottom: var(--space-4);
   flex-shrink: 0;
 }
@@ -197,38 +191,27 @@
   margin-top: var(--space-4);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-teal);
+  color: var(--color-blue);
   transition: gap var(--transition-fast), color var(--transition-fast);
 }
 
 .card__link:hover {
   gap: var(--space-2);
-  color: var(--color-teal-dark);
+  color: var(--color-blue-dark);
 }
 
-/* Service card — icon-heavy variation */
+/* Service card */
 .card--service {
   display: flex;
   flex-direction: column;
 }
 
-.card--service .card__icon {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-/* Solution card — wider with potential image */
+/* Solution card */
 .card--solution {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 0;
-}
-
-.card--solution .card__image {
-  width: 100%;
-  height: 12rem;
-  object-fit: cover;
 }
 
 .card--solution .card__body {
@@ -238,16 +221,10 @@
   flex: 1;
 }
 
-/* Project card — portfolio piece */
+/* Project card */
 .card--project {
   overflow: hidden;
   padding: 0;
-}
-
-.card--project .card__image {
-  width: 100%;
-  height: 14rem;
-  object-fit: cover;
 }
 
 .card--project .card__body {
@@ -261,10 +238,7 @@
   margin-bottom: var(--space-3);
 }
 
-/* -----------------------------------------------------------------------
-   Featured card — dark navy variant (use sparingly)
-   ----------------------------------------------------------------------- */
-
+/* Featured Dark Navy Card */
 .card--featured {
   background-color: var(--color-navy);
   border-color: var(--color-navy);
@@ -282,43 +256,16 @@
 }
 
 .card--featured .card__icon {
-  background-color: rgba(0, 166, 178, 0.15);
-  color: var(--color-teal-light);
+  background-color: rgba(7, 87, 184, 0.25);
+  color: var(--color-blue-light);
 }
 
 .card--featured .card__link {
-  color: var(--color-teal-light);
-}
-
-/* Subtle geometric decoration for featured cards */
-.card--featured::before {
-  content: '';
-  position: absolute;
-  top: -2rem;
-  right: -2rem;
-  width: 8rem;
-  height: 8rem;
-  background: rgba(0, 166, 178, 0.06);
-  border-radius: var(--radius-md);
-  transform: rotate(15deg);
-  pointer-events: none;
-}
-
-.card--featured::after {
-  content: '';
-  position: absolute;
-  bottom: -1.5rem;
-  right: 3rem;
-  width: 4rem;
-  height: 4rem;
-  background: rgba(0, 166, 178, 0.04);
-  border-radius: var(--radius-sm);
-  transform: rotate(-10deg);
-  pointer-events: none;
+  color: var(--color-blue-light);
 }
 
 /* =======================================================================
-   3. BADGE / LABEL
+   3. BADGES
    ======================================================================= */
 
 .badge {
@@ -333,14 +280,25 @@
   white-space: nowrap;
 }
 
-.badge--teal {
-  background-color: var(--color-teal-subtle);
-  color: var(--color-teal-dark);
+.badge--blue {
+  background-color: var(--color-bg-light-blue);
+  color: var(--color-blue);
 }
 
 .badge--navy {
-  background-color: rgba(0, 29, 78, 0.08);
+  background-color: rgba(6, 36, 92, 0.08);
   color: var(--color-navy);
+}
+
+.badge--teal {
+  background-color: var(--color-bg-light-blue);
+  color: var(--color-blue);
+}
+
+.badge--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
 }
 
 .badge--success {
@@ -356,12 +314,6 @@
 .badge--error {
   background-color: var(--color-error-bg);
   color: var(--color-error);
-}
-
-/* Outlined variant */
-.badge--outline {
-  background-color: transparent;
-  border: 1px solid currentColor;
 }
 
 /* =======================================================================
@@ -382,7 +334,7 @@
   gap: var(--space-2);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-teal);
+  color: var(--color-blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
   margin-bottom: var(--space-3);
@@ -393,12 +345,13 @@
   display: inline-block;
   width: 1.5rem;
   height: 2px;
-  background-color: var(--color-teal);
+  background-color: var(--color-blue);
   border-radius: 1px;
 }
 
 .section-heading__title {
   margin-bottom: var(--space-4);
+  color: var(--color-navy);
 }
 
 .section-heading__subtitle {
@@ -418,7 +371,7 @@
    ======================================================================= */
 
 .cta-section {
-  background-color: var(--color-navy);
+  background: var(--gradient-tech);
   color: var(--color-text-inverse);
   border-radius: var(--radius-xl);
   padding: var(--space-12) var(--space-8);
@@ -439,7 +392,7 @@
 }
 
 .cta-section__description {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
   font-size: var(--font-size-md);
   max-width: 36rem;
   margin-left: auto;
@@ -454,35 +407,8 @@
   justify-content: center;
 }
 
-/* Subtle decorative geometry */
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: -3rem;
-  left: -3rem;
-  width: 10rem;
-  height: 10rem;
-  background: rgba(0, 166, 178, 0.06);
-  border-radius: var(--radius-lg);
-  transform: rotate(20deg);
-  pointer-events: none;
-}
-
-.cta-section::after {
-  content: '';
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
-  width: 8rem;
-  height: 8rem;
-  background: rgba(0, 166, 178, 0.04);
-  border-radius: var(--radius-md);
-  transform: rotate(-15deg);
-  pointer-events: none;
-}
-
 /* =======================================================================
-   6. FORM CONTROLS
+   6. FORMS
    ======================================================================= */
 
 .form-group {
@@ -513,8 +439,7 @@
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   appearance: none;
   -webkit-appearance: none;
 }
@@ -534,8 +459,8 @@
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--color-teal);
-  box-shadow: 0 0 0 3px var(--color-teal-subtle);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px var(--color-blue-subtle);
 }
 
 .form-textarea {
@@ -551,41 +476,15 @@
   padding-right: 2.5rem;
 }
 
-/* Validation states */
-.form-input--error,
-.form-textarea--error {
-  border-color: var(--color-error);
-}
-
-.form-input--error:focus,
-.form-textarea--error:focus {
-  box-shadow: 0 0 0 3px var(--color-error-bg);
-}
-
-.form-error {
-  font-size: var(--font-size-sm);
-  color: var(--color-error);
-  margin-top: var(--space-1);
-}
-
-/* Disabled */
-.form-input:disabled,
-.form-textarea:disabled,
-.form-select:disabled {
-  background-color: var(--color-bg-muted);
-  color: var(--color-text-muted);
-  cursor: not-allowed;
-}
-
 /* =======================================================================
-   7. NAVBAR (structure — to be composed in page)
+   7. NAVBAR
    ======================================================================= */
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border-subtle);
@@ -634,9 +533,13 @@
   position: relative;
 }
 
-.navbar__link:hover,
+.navbar__link:hover {
+  color: var(--color-blue);
+}
+
 .navbar__link--active {
   color: var(--color-navy);
+  font-weight: var(--font-weight-semibold);
 }
 
 .navbar__link--active::after {
@@ -646,7 +549,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--color-teal);
+  background-color: var(--color-blue);
   border-radius: 1px;
 }
 
@@ -656,7 +559,6 @@
   gap: var(--space-4);
 }
 
-/* Mobile menu toggle */
 .navbar__toggle {
   display: flex;
   align-items: center;
@@ -678,7 +580,6 @@
   }
 }
 
-/* Mobile nav panel */
 .navbar__mobile {
   display: none;
   position: fixed;
@@ -713,7 +614,7 @@
 
 .navbar__mobile-link:hover,
 .navbar__mobile-link--active {
-  color: var(--color-teal);
+  color: var(--color-blue);
 }
 
 /* =======================================================================
@@ -740,7 +641,7 @@
 }
 
 .footer__brand p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-normal);
   margin-top: var(--space-4);
@@ -765,13 +666,13 @@
 
 .footer__link {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .footer__link:hover {
-  color: var(--color-teal-light);
+  color: var(--color-blue-light);
 }
 
 .footer__bottom {
@@ -781,7 +682,7 @@
   padding-top: var(--space-8);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -798,19 +699,18 @@
 }
 
 .footer__social a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   transition: color var(--transition-fast);
 }
 
 .footer__social a:hover {
-  color: var(--color-teal-light);
+  color: var(--color-blue-light);
 }
 
 /* =======================================================================
-   9. LOADING / EMPTY / ERROR STATES
+   9. FEEDBACK STATES
    ======================================================================= */
 
-/* Loading spinner */
 .loading {
   display: flex;
   flex-direction: column;
@@ -825,7 +725,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border: 3px solid var(--color-border);
-  border-top-color: var(--color-teal);
+  border-top-color: var(--color-blue);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -839,8 +739,8 @@
   color: var(--color-text-muted);
 }
 
-/* Empty state */
-.empty-state {
+.empty-state,
+.error-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -849,45 +749,23 @@
   text-align: center;
 }
 
-.empty-state__icon {
-  width: 4rem;
-  height: 4rem;
-  color: var(--color-text-muted);
+.empty-state__icon,
+.error-state__icon {
+  width: 3.5rem;
+  height: 3.5rem;
   margin-bottom: var(--space-4);
-  opacity: 0.5;
-}
-
-.empty-state__title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-navy);
-  margin-bottom: var(--space-2);
-}
-
-.empty-state__description {
-  font-size: var(--font-size-base);
-  color: var(--color-text-muted);
-  max-width: 24rem;
-  margin-bottom: var(--space-6);
-}
-
-/* Error state */
-.error-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-12) var(--space-8);
-  text-align: center;
 }
 
 .error-state__icon {
-  width: 3rem;
-  height: 3rem;
   color: var(--color-error);
-  margin-bottom: var(--space-4);
 }
 
+.empty-state__icon {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.empty-state__title,
 .error-state__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
@@ -895,24 +773,10 @@
   margin-bottom: var(--space-2);
 }
 
+.empty-state__description,
 .error-state__description {
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   max-width: 24rem;
   margin-bottom: var(--space-6);
-}
-
-/* =======================================================================
-   10. DIVIDER
-   ======================================================================= */
-
-.divider {
-  border: none;
-  height: 1px;
-  background-color: var(--color-border);
-  margin: var(--space-8) 0;
-}
-
-.divider--subtle {
-  background-color: var(--color-border-subtle);
 }

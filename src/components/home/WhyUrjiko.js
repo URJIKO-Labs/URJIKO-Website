@@ -1,41 +1,29 @@
-/**
- * Why URJIKO Labs Section
- *
- * Clean split layout:
- * Left: Headline & engineering ethos
- * Right: 5 numbered principles with teal accents
- */
 export function renderWhyUrjiko() {
   const principles = [
     {
-      number: "01",
-      title: "Understand the Problem",
-      description:
-        "We focus on the underlying business challenge and operational workflow before choosing the technology stack.",
+      number: '01',
+      title: 'Understand the Problem',
+      description: 'We focus on the underlying business challenge and operational workflow before choosing the technology stack.',
     },
     {
-      number: "02",
-      title: "Practical Technology",
-      description:
-        "We prioritize useful features, high usability, and measurable value over unnecessary complexity.",
+      number: '02',
+      title: 'Practical Technology',
+      description: 'We prioritize useful features, high usability, and measurable value over unnecessary complexity.',
     },
     {
-      number: "03",
-      title: "Modern Engineering",
-      description:
-        "Solutions are built with clean code, standard conventions, and maintainable software architecture.",
+      number: '03',
+      title: 'Modern Engineering',
+      description: 'Solutions are built with clean code, standard conventions, and maintainable software architecture.',
     },
     {
-      number: "04",
-      title: "Designed to Grow",
-      description:
-        "Systems are structured modularly so they can expand seamlessly as your organization scales.",
+      number: '04',
+      title: 'Designed to Grow',
+      description: 'Systems are structured modularly so they can expand seamlessly as your organization scales.',
     },
     {
-      number: "05",
-      title: "Continued Support",
-      description:
-        "We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch.",
+      number: '05',
+      title: 'Continued Support',
+      description: 'We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch.',
     },
   ];
 
@@ -43,7 +31,7 @@ export function renderWhyUrjiko() {
     .map(
       (p) => `
       <div class="flex items-start gap-4 pb-6" style="border-bottom: 1px solid var(--color-border-subtle);">
-        <span class="font-bold text-teal" style="font-size: var(--font-size-xl); font-family: monospace; min-width: 2.5rem;">
+        <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-xl); font-family: monospace; min-width: 2.5rem;">
           ${p.number}
         </span>
         <div>
@@ -55,9 +43,9 @@ export function renderWhyUrjiko() {
           </p>
         </div>
       </div>
-    `,
+    `
     )
-    .join("");
+    .join('');
 
   return `
     <section class="section" aria-labelledby="why-heading">
@@ -74,7 +62,7 @@ export function renderWhyUrjiko() {
               </p>
             </div>
 
-            <div class="card bg-soft" style="border-left: 3px solid var(--color-teal); padding: var(--space-6);">
+            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-6);">
               <h4 class="text-navy font-semibold mb-2">No Over-Engineering</h4>
               <p class="text-sm text-secondary mb-0">
                 You get dependable, performant software engineered to solve real business pain points without bloat or vendor lock-in.
@@ -91,7 +79,6 @@ export function renderWhyUrjiko() {
       </div>
     </section>
 
-    <!-- Desktop Grid Overrides -->
     <style>
       @media (min-width: 1024px) {
         section[aria-labelledby="why-heading"] .container > .grid {

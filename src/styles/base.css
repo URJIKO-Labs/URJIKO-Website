@@ -1,13 +1,7 @@
 /* ==========================================================================
    URJIKO Labs — Base Styles
-   ==========================================================================
-   Modern CSS reset + base element styling.
-   Imports after tokens.css.
    ========================================================================== */
 
-/* -----------------------------------------------------------------------
-   1. MODERN RESET
-   ----------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -77,13 +71,13 @@ ol[role="list"] {
 }
 
 a {
-  color: var(--color-teal);
+  color: var(--color-blue);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-teal-dark);
+  color: var(--color-blue-dark);
 }
 
 strong,
@@ -92,10 +86,8 @@ b {
 }
 
 /* -----------------------------------------------------------------------
-   2. TYPOGRAPHY — Headings
+   TYPOGRAPHY
    ----------------------------------------------------------------------- */
-
-/* Mobile-first sizes, scaled up at lg breakpoint */
 
 h1 {
   font-size: var(--font-size-5xl);
@@ -147,10 +139,6 @@ h6 {
   h3 { font-size: var(--font-size-3xl); }
 }
 
-/* -----------------------------------------------------------------------
-   3. TYPOGRAPHY — Body
-   ----------------------------------------------------------------------- */
-
 p {
   margin-bottom: var(--space-4);
   color: var(--color-text-secondary);
@@ -166,7 +154,7 @@ small {
 }
 
 /* -----------------------------------------------------------------------
-   4. FOCUS STYLES (accessible)
+   ACCESSIBLE FOCUS & SELECTION
    ----------------------------------------------------------------------- */
 
 :focus {
@@ -174,49 +162,17 @@ small {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
 
-/* -----------------------------------------------------------------------
-   5. SELECTION
-   ----------------------------------------------------------------------- */
-
 ::selection {
-  background-color: var(--color-teal-subtle);
+  background-color: var(--color-bg-light-blue);
   color: var(--color-navy);
 }
 
 /* -----------------------------------------------------------------------
-   6. CUSTOM SCROLLBAR (webkit)
-   ----------------------------------------------------------------------- */
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-soft);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
-}
-
-/* Firefox */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-border) var(--color-bg-soft);
-}
-
-/* -----------------------------------------------------------------------
-   7. REDUCED MOTION
+   REDUCED MOTION & PRINT
    ----------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -227,45 +183,5 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* -----------------------------------------------------------------------
-   8. PRINT STYLES
-   ----------------------------------------------------------------------- */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
   }
 }

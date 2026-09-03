@@ -2,8 +2,10 @@
    URJIKO Labs — Design System Tokens
    ========================================================================== 
    Single source of truth for all visual design values.
-   Derived directly from the URJIKO brand artwork:
-   White canvas -> Deep Navy structure -> Royal Blue depth -> Turquoise accent.
+   Palette Rule:
+   - Premium White + Deep Navy + Royal/Technology Blue
+   - NO teal/turquoise anywhere in the UI.
+   - Preserves original brand colors exclusively inside the official logo mark.
    ========================================================================== */
 
 :root {
@@ -14,30 +16,24 @@
   --color-white:         #FFFFFF;
   --color-bg:            #FFFFFF;
 
-  /* Deep Navy — Primary headings, structure, navigation, authority */
+  /* Deep Navy — Headings, navigation, authority, dark sections */
   --color-navy:          #06245C;
   --color-navy-dark:     #03163B;
-  --color-navy-light:    #0A347F;
+  --color-navy-light:    #0B327A;
 
-  /* Royal / Technology Blue — Technology depth, subtle gradients, secondary accents */
+  /* Royal / Technology Blue — Primary CTAs, active states, links, interactions */
   --color-blue:          #0757B8;
-  --color-blue-dark:     #054491;
+  --color-blue-dark:     #054391;
   --color-blue-light:    #2575DC;
+  --color-blue-hover:    #05499F;
   --color-blue-subtle:   rgba(7, 87, 184, 0.08);
 
-  /* URJIKO Turquoise / Cyan — Restrained accents, primary CTAs, focal points */
-  --color-turquoise:       #00A6B5;
-  --color-turquoise-dark:  #008996;
-  --color-turquoise-light: #20C2D2;
-  --color-turquoise-subtle:rgba(0, 166, 181, 0.08);
-  --color-turquoise-hover: #008F9C;
-
-  /* Legacy aliases for backwards compatibility */
-  --color-teal:          var(--color-turquoise);
-  --color-teal-dark:     var(--color-turquoise-dark);
-  --color-teal-light:    var(--color-turquoise-light);
-  --color-teal-subtle:   var(--color-turquoise-subtle);
-  --color-teal-hover:    var(--color-turquoise-hover);
+  /* Aliases to cleanly replace any legacy references with Technology Blue */
+  --color-teal:          var(--color-blue);
+  --color-teal-dark:     var(--color-blue-dark);
+  --color-teal-light:    var(--color-blue-light);
+  --color-teal-subtle:   var(--color-blue-subtle);
+  --color-teal-hover:    var(--color-blue-hover);
 
   /* Supporting Backgrounds */
   --color-bg-light-blue: #EAF5FA;
@@ -45,11 +41,11 @@
   --color-bg-muted:      #EEF2F6;
 
   /* -----------------------------------------------------------------------
-     2. TEXT COLORS (Navy & neutral hierarchy)
+     2. TEXT COLORS
      ----------------------------------------------------------------------- */
-  --color-text-primary:  #06245C;    /* Strong Navy for main text/headings */
-  --color-text-secondary:#475569;    /* Clean slate for body readability */
-  --color-text-muted:    #64748B;    /* Muted labels and microcopy */
+  --color-text-primary:  #06245C;    /* Deep Navy */
+  --color-text-secondary:#475569;    /* Clean Slate */
+  --color-text-muted:    #64748B;    /* Muted Slate */
   --color-text-inverse:  #FFFFFF;
 
   /* -----------------------------------------------------------------------
@@ -57,7 +53,7 @@
      ----------------------------------------------------------------------- */
   --color-border:        #E2E8F0;
   --color-border-subtle: #EEF2F7;
-  --color-border-blue:   rgba(7, 87, 184, 0.15);
+  --color-border-blue:   rgba(7, 87, 184, 0.16);
 
   /* -----------------------------------------------------------------------
      4. STATUS COLORS
@@ -70,12 +66,12 @@
   --color-error-bg:      #FEF2F2;
 
   /* -----------------------------------------------------------------------
-     5. OVERLAY & GRADIENTS
+     5. OVERLAYS & GRADIENTS
      ----------------------------------------------------------------------- */
   --color-overlay:       rgba(6, 36, 92, 0.6);
   --gradient-tech:       linear-gradient(135deg, #06245C 0%, #0757B8 100%);
+  --gradient-blue:       linear-gradient(135deg, #0757B8 0%, #2575DC 100%);
   --gradient-surface:    linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
-  --gradient-accent:     linear-gradient(135deg, #0757B8 0%, #00A6B5 100%);
 
   /* -----------------------------------------------------------------------
      6. TYPOGRAPHY
@@ -139,7 +135,7 @@
   --radius-full: 9999px;
 
   /* -----------------------------------------------------------------------
-     9. SHADOWS (Subtle navy depth)
+     9. SHADOWS (Navy depth)
      ----------------------------------------------------------------------- */
   --shadow-xs:         0 1px 2px rgba(6, 36, 92, 0.04);
   --shadow-sm:         0 1px 3px rgba(6, 36, 92, 0.06),

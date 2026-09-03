@@ -1,13 +1,5 @@
-import { icons } from "../common/Icons.js";
+import { icons } from '../common/Icons.js';
 
-/**
- * Featured Solutions Section
- * Displays selected case studies with visual hierarchy:
- * - SmartBiz (Primary large feature with abstract UI visual)
- * - Transport Management
- * - EduFlow
- * - ShegerHealth (Concept / Healthcare demonstration)
- */
 export function renderFeaturedSolutions() {
   return `
     <section class="section bg-soft" aria-labelledby="solutions-heading" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
@@ -22,17 +14,16 @@ export function renderFeaturedSolutions() {
           </p>
         </div>
 
-        <!-- Solutions Grid: SmartBiz Main Hero Card + 3 Supporting Cards -->
         <div class="flex flex-col gap-8 mb-12">
           
-          <!-- 1. SMARTBIZ (Large Prominent Featured Card) -->
+          <!-- 1. SMARTBIZ (Prominent Hero Card) -->
           <div class="card card--lg" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
             <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-8);">
               
               <!-- Content -->
               <div class="flex flex-col items-start">
                 <div class="flex items-center gap-2 mb-3">
-                  <span class="badge badge--teal font-semibold">BUSINESS MANAGEMENT</span>
+                  <span class="badge badge--blue font-semibold">BUSINESS MANAGEMENT</span>
                   <span class="badge badge--navy font-semibold">Core Product</span>
                 </div>
                 <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-navy); margin-bottom: var(--space-3); font-weight: 700;">
@@ -51,18 +42,18 @@ export function renderFeaturedSolutions() {
 
                 <a href="/portfolio" data-link class="btn btn--primary flex items-center gap-2">
                   <span>View Solution Overview</span>
-                  ${icons.arrowRight("w-4 h-4")}
+                  ${icons.arrowRight('w-4 h-4')}
                 </a>
               </div>
 
-              <!-- Product Preview Visual Fragment (Pure CSS) -->
-              <div style="background: var(--color-bg-soft); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
-                <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid var(--color-border-subtle);">
+              <!-- Product Preview Visual -->
+              <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
+                <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid rgba(7, 87, 184, 0.15);">
                   <div class="flex items-center gap-2">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-teal);"></span>
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
                     <span class="text-xs font-bold text-navy">SmartBiz Control Terminal</span>
                   </div>
-                  <span class="badge badge--teal text-xs">Live System</span>
+                  <span class="badge badge--blue text-xs">Live System</span>
                 </div>
 
                 <div class="grid grid--2 gap-3 mb-3">
@@ -72,14 +63,14 @@ export function renderFeaturedSolutions() {
                   </div>
                   <div style="background: var(--color-white); padding: var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                     <div class="text-xs text-muted">Inventory Alerts</div>
-                    <div class="font-bold text-teal" style="font-size: var(--font-size-lg);">All Stocked</div>
+                    <div class="font-bold text-navy" style="font-size: var(--font-size-lg); color: var(--color-blue);">All Stocked</div>
                   </div>
                 </div>
 
                 <div style="background: var(--color-white); padding: var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                   <div class="text-xs font-semibold text-navy mb-2">Automated Ledger & Credit Tracking</div>
                   <div style="width: 100%; height: 6px; background: var(--color-bg-muted); border-radius: 3px; overflow: hidden;">
-                    <div style="width: 78%; height: 100%; background: var(--color-navy); border-radius: 3px;"></div>
+                    <div style="width: 84%; height: 100%; background: var(--color-blue); border-radius: 3px;"></div>
                   </div>
                 </div>
               </div>
@@ -106,7 +97,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight("w-4 h-4")}
+                  ${icons.arrowRight('w-4 h-4')}
                 </a>
               </div>
             </div>
@@ -114,7 +105,7 @@ export function renderFeaturedSolutions() {
             <!-- 3. EDUFLOW -->
             <div class="card flex flex-col justify-between">
               <div>
-                <span class="badge badge--teal mb-3">EDUCATION</span>
+                <span class="badge badge--blue mb-3">EDUCATION</span>
                 <h3 class="card__title">EduFlow</h3>
                 <p class="card__description mb-4">
                   A school management solution designed to organize students, teachers, classes, attendance, grades, timetables, and administration.
@@ -127,7 +118,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight("w-4 h-4")}
+                  ${icons.arrowRight('w-4 h-4')}
                 </a>
               </div>
             </div>
@@ -148,7 +139,7 @@ export function renderFeaturedSolutions() {
                 </div>
                 <a href="/portfolio" data-link class="card__link">
                   <span>View Solution</span>
-                  ${icons.arrowRight("w-4 h-4")}
+                  ${icons.arrowRight('w-4 h-4')}
                 </a>
               </div>
             </div>

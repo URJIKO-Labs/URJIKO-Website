@@ -42,7 +42,7 @@
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
       <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
     </svg>
-  `};function h(t="/"){const s=n.navLinks.map(e=>{const i=t===e.path;return`
+  `};function b(t="/"){const s=n.navLinks.map(e=>{const i=t===e.path;return`
         <li>
           <a 
             href="${e.path}" 
@@ -131,7 +131,7 @@
         </div>
       </div>
     </header>
-  `}function b(){const t=new Date().getFullYear()||2026,s=n.footerNav.company.map(a=>`<li><a href="${a.path}" data-link class="footer__link">${a.label}</a></li>`).join(""),e=n.footerNav.services.map(a=>`<li><a href="${a.path}" data-link class="footer__link">${a.label}</a></li>`).join(""),i=n.footerNav.connect.map(a=>{let o="";a.type==="telegram"&&(o=r.telegram("w-4 h-4 text-teal")),a.type==="github"&&(o=r.github("w-4 h-4")),a.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),a.type==="email"&&(o=r.mail("w-4 h-4"));const l=(a.href.startsWith("http")||a.href.startsWith("mailto:"))&&!a.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
+  `}function h(){const t=new Date().getFullYear()||2026,s=n.footerNav.company.map(a=>`<li><a href="${a.path}" data-link class="footer__link">${a.label}</a></li>`).join(""),e=n.footerNav.services.map(a=>`<li><a href="${a.path}" data-link class="footer__link">${a.label}</a></li>`).join(""),i=n.footerNav.connect.map(a=>{let o="";a.type==="telegram"&&(o=r.telegram("w-4 h-4 text-teal")),a.type==="github"&&(o=r.github("w-4 h-4")),a.type==="linkedin"&&(o=r.linkedin("w-4 h-4")),a.type==="email"&&(o=r.mail("w-4 h-4"));const l=(a.href.startsWith("http")||a.href.startsWith("mailto:"))&&!a.href.startsWith("mailto:")?'target="_blank" rel="noopener noreferrer"':"";return`
         <li>
           <a href="${a.href}" class="footer__link flex items-center gap-2" ${l}>
             ${o}
@@ -192,13 +192,13 @@
         Skip to main content
       </a>
 
-      ${h(t)}
+      ${b(t)}
 
       <main id="main-content" class="flex-1" style="flex: 1 0 auto;" role="main">
         ${s}
       </main>
 
-      ${b()}
+      ${h()}
     </div>
   `}function y(){m();const t=document.getElementById("site-navbar");if(t){const s=()=>{window.scrollY>20?t.classList.add("navbar--scrolled"):t.classList.remove("navbar--scrolled")};window.removeEventListener("scroll",s),window.addEventListener("scroll",s,{passive:!0}),s()}}function x(){return`
     <section class="section section--lg" aria-labelledby="hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); position: relative; overflow: hidden; background: #FFFFFF;">
@@ -335,7 +335,7 @@
         <div class="grid grid--4 gap-6">
           ${[{title:"Practical Solutions",description:"Technology designed around real business problems and operational bottlenecks.",icon:'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'},{title:"Mobile-Friendly",description:"Responsive, cross-platform experiences engineered for smooth use on any device.",icon:'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>'},{title:"Secure & Reliable",description:"Built with security, high availability, and maintainable software architecture in mind.",icon:'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>'},{title:"Long-Term Support",description:"Continuous improvements, dependable maintenance, and technical assistance.",icon:'<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>'}].map(e=>`
       <div class="flex flex-col items-start gap-2 p-4" style="border-left: 2px solid var(--color-border-subtle); padding-left: var(--space-4);">
-        <div class="text-teal mb-1 flex items-center justify-center" style="width: 2.25rem; height: 2.25rem; border-radius: var(--radius-sm); background: var(--color-teal-subtle);">
+        <div class="mb-1 flex items-center justify-center" style="width: 2.25rem; height: 2.25rem; border-radius: var(--radius-sm); background: var(--color-bg-light-blue); color: var(--color-blue);">
           ${e.icon}
         </div>
         <h3 style="font-size: var(--font-size-md); font-weight: 600; color: var(--color-navy); margin-bottom: 0.25rem;">
@@ -408,17 +408,16 @@
           </p>
         </div>
 
-        <!-- Solutions Grid: SmartBiz Main Hero Card + 3 Supporting Cards -->
         <div class="flex flex-col gap-8 mb-12">
           
-          <!-- 1. SMARTBIZ (Large Prominent Featured Card) -->
+          <!-- 1. SMARTBIZ (Prominent Hero Card) -->
           <div class="card card--lg" style="background: var(--color-white); border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
             <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-8);">
               
               <!-- Content -->
               <div class="flex flex-col items-start">
                 <div class="flex items-center gap-2 mb-3">
-                  <span class="badge badge--teal font-semibold">BUSINESS MANAGEMENT</span>
+                  <span class="badge badge--blue font-semibold">BUSINESS MANAGEMENT</span>
                   <span class="badge badge--navy font-semibold">Core Product</span>
                 </div>
                 <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-navy); margin-bottom: var(--space-3); font-weight: 700;">
@@ -441,14 +440,14 @@
                 </a>
               </div>
 
-              <!-- Product Preview Visual Fragment (Pure CSS) -->
-              <div style="background: var(--color-bg-soft); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
-                <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid var(--color-border-subtle);">
+              <!-- Product Preview Visual -->
+              <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);">
+                <div class="flex justify-between items-center pb-3 mb-3" style="border-bottom: 1px solid rgba(7, 87, 184, 0.15);">
                   <div class="flex items-center gap-2">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-teal);"></span>
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
                     <span class="text-xs font-bold text-navy">SmartBiz Control Terminal</span>
                   </div>
-                  <span class="badge badge--teal text-xs">Live System</span>
+                  <span class="badge badge--blue text-xs">Live System</span>
                 </div>
 
                 <div class="grid grid--2 gap-3 mb-3">
@@ -458,14 +457,14 @@
                   </div>
                   <div style="background: var(--color-white); padding: var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                     <div class="text-xs text-muted">Inventory Alerts</div>
-                    <div class="font-bold text-teal" style="font-size: var(--font-size-lg);">All Stocked</div>
+                    <div class="font-bold text-navy" style="font-size: var(--font-size-lg); color: var(--color-blue);">All Stocked</div>
                   </div>
                 </div>
 
                 <div style="background: var(--color-white); padding: var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--color-border-subtle);">
                   <div class="text-xs font-semibold text-navy mb-2">Automated Ledger & Credit Tracking</div>
                   <div style="width: 100%; height: 6px; background: var(--color-bg-muted); border-radius: 3px; overflow: hidden;">
-                    <div style="width: 78%; height: 100%; background: var(--color-navy); border-radius: 3px;"></div>
+                    <div style="width: 84%; height: 100%; background: var(--color-blue); border-radius: 3px;"></div>
                   </div>
                 </div>
               </div>
@@ -500,7 +499,7 @@
             <!-- 3. EDUFLOW -->
             <div class="card flex flex-col justify-between">
               <div>
-                <span class="badge badge--teal mb-3">EDUCATION</span>
+                <span class="badge badge--blue mb-3">EDUCATION</span>
                 <h3 class="card__title">EduFlow</h3>
                 <p class="card__description mb-4">
                   A school management solution designed to organize students, teachers, classes, attendance, grades, timetables, and administration.
@@ -569,7 +568,7 @@
               </p>
             </div>
 
-            <div class="card bg-soft" style="border-left: 3px solid var(--color-teal); padding: var(--space-6);">
+            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-6);">
               <h4 class="text-navy font-semibold mb-2">No Over-Engineering</h4>
               <p class="text-sm text-secondary mb-0">
                 You get dependable, performant software engineered to solve real business pain points without bloat or vendor lock-in.
@@ -581,7 +580,7 @@
           <div class="flex flex-col gap-6">
             ${[{number:"01",title:"Understand the Problem",description:"We focus on the underlying business challenge and operational workflow before choosing the technology stack."},{number:"02",title:"Practical Technology",description:"We prioritize useful features, high usability, and measurable value over unnecessary complexity."},{number:"03",title:"Modern Engineering",description:"Solutions are built with clean code, standard conventions, and maintainable software architecture."},{number:"04",title:"Designed to Grow",description:"Systems are structured modularly so they can expand seamlessly as your organization scales."},{number:"05",title:"Continued Support",description:"We partner for the long term, helping you maintain, upgrade, and monitor your solution after launch."}].map(e=>`
       <div class="flex items-start gap-4 pb-6" style="border-bottom: 1px solid var(--color-border-subtle);">
-        <span class="font-bold text-teal" style="font-size: var(--font-size-xl); font-family: monospace; min-width: 2.5rem;">
+        <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-xl); font-family: monospace; min-width: 2.5rem;">
           ${e.number}
         </span>
         <div>
@@ -600,7 +599,6 @@
       </div>
     </section>
 
-    <!-- Desktop Grid Overrides -->
     <style>
       @media (min-width: 1024px) {
         section[aria-labelledby="why-heading"] .container > .grid {
@@ -608,7 +606,7 @@
         }
       }
     </style>
-  `}function C(){return`
+  `}function $(){return`
     <section class="section bg-soft" aria-labelledby="process-heading" style="border-top: 1px solid var(--color-border-subtle);">
       <div class="container">
         
@@ -621,13 +619,12 @@
           </p>
         </div>
 
-        <!-- 6 Steps Grid (Responsive: 1 col on mobile, 2 col on tablet, 3 col on desktop) -->
         <div class="grid grid--3 gap-6">
           ${[{number:"01",title:"Discover",description:"Understand your business goals, users, pain points, and existing operational workflow."},{number:"02",title:"Plan",description:"Define scope, technical priorities, system architecture, deliverables, and core MVP."},{number:"03",title:"Design",description:"Create clean, intuitive user experiences, component layouts, and database models."},{number:"04",title:"Develop",description:"Build your solution using modern engineering practices, clean code, and robust APIs."},{number:"05",title:"Test",description:"Verify functionality, performance, security, mobile responsiveness, and data integrity."},{number:"06",title:"Deploy & Support",description:"Launch the system reliably, onboard your team, and provide continuous technical support."}].map(e=>`
-      <div class="card flex flex-col justify-between" style="background: var(--color-white); border-top: 3px solid var(--color-teal);">
+      <div class="card flex flex-col justify-between" style="background: var(--color-white); border-top: 3px solid var(--color-blue);">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="font-bold text-teal" style="font-size: var(--font-size-2xl); font-family: monospace;">${e.number}</span>
+            <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-2xl); font-family: monospace;">${e.number}</span>
             <span class="text-xs font-semibold text-muted uppercase">Stage</span>
           </div>
           <h3 class="card__title mb-2">${e.title}</h3>
@@ -658,7 +655,7 @@
         </div>
       </div>
     </section>
-  `}function $(){return`
+  `}function C(){return`
     <div class="home-page">
       <!-- 1. Hero -->
       ${x()}
@@ -676,19 +673,19 @@
       ${S()}
 
       <!-- 6. How We Work -->
-      ${C()}
+      ${$()}
 
       <!-- 7. Final CTA -->
       ${p({title:"Have a problem that technology could solve?",description:"Tell us what you're trying to improve. We'll help you explore a practical digital solution.",primaryBtnLabel:"Discuss Your Project",primaryBtnPath:"/contact",secondaryBtnLabel:"Explore Our Solutions",secondaryBtnPath:"/solutions"})}
     </div>
   `}function L({title:t="Have a project idea?",description:s="Tell us what you're trying to solve. We'll discuss how practical technology can streamline your business.",btnText:e=n.telegram.ctaText}={}){const i=n.telegram.url;return`
-    <div class="card card--lg flex flex-col items-start gap-4" style="border-left: 4px solid var(--color-teal); background-color: var(--color-bg-soft);">
+    <div class="card card--lg flex flex-col items-start gap-4" style="border-left: 4px solid var(--color-blue); background-color: var(--color-bg-soft);">
       <div class="flex items-center gap-3">
-        <div class="card__icon" style="margin-bottom: 0; color: var(--color-teal); background-color: var(--color-white);">
+        <div class="card__icon" style="margin-bottom: 0; color: var(--color-blue); background-color: var(--color-bg-light-blue);">
           ${r.telegram("w-6 h-6")}
         </div>
         <div>
-          <h3 style="font-size: var(--font-size-xl); margin-bottom: 0.25rem;">${t}</h3>
+          <h3 style="font-size: var(--font-size-xl); margin-bottom: 0.25rem; color: var(--color-navy);">${t}</h3>
           <span class="text-xs text-muted">Primary Direct Messaging Channel</span>
         </div>
       </div>
@@ -718,7 +715,7 @@
       `).join("")}
       </ol>
     </nav>
-  `}const v={"/":()=>$(),"/services":()=>`
+  `}const v={"/":()=>C(),"/services":()=>`
     <div class="container section">
       ${c([{label:"Home",path:"/"},{label:"Services"}])}
       <div class="section-heading">
