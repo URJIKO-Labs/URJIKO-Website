@@ -1,0 +1,11 @@
+/* ==========================================================================
+   URJIKO Labs — Main Stylesheet
+   ==========================================================================
+   This file serves as the main entry point, importing all design system
+   modules in the correct cascade order.
+   ========================================================================== */
+
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './components.css';

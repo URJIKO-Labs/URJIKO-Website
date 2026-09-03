@@ -1,0 +1,227 @@
+/* ==========================================================================
+   URJIKO Labs — Layout System
+   ==========================================================================
+   Containers, sections, grid, flex utilities, text helpers, spacing helpers.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   1. CONTAINER
+   ----------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding-page-mobile);
+  padding-right: var(--padding-page-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--padding-page-tablet);
+    padding-right: var(--padding-page-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--padding-page-desktop);
+    padding-right: var(--padding-page-desktop);
+  }
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.container--text {
+  max-width: var(--container-text);
+}
+
+/* -----------------------------------------------------------------------
+   2. SECTIONS
+   ----------------------------------------------------------------------- */
+
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+}
+
+.section--sm {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .section--sm {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+}
+
+.section--lg {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+@media (min-width: 1024px) {
+  .section--lg {
+    padding-top: var(--space-30);
+    padding-bottom: var(--space-30);
+  }
+}
+
+/* -----------------------------------------------------------------------
+   3. BACKGROUND VARIANTS
+   ----------------------------------------------------------------------- */
+
+.bg-white  { background-color: var(--color-white); }
+.bg-soft   { background-color: var(--color-bg-soft); }
+.bg-muted  { background-color: var(--color-bg-muted); }
+
+.bg-navy {
+  background-color: var(--color-navy);
+  color: var(--color-text-inverse);
+}
+
+.bg-navy h1,
+.bg-navy h2,
+.bg-navy h3,
+.bg-navy h4,
+.bg-navy h5,
+.bg-navy h6 {
+  color: var(--color-text-inverse);
+}
+
+.bg-navy p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* -----------------------------------------------------------------------
+   4. GRID SYSTEM
+   ----------------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.grid--gap-sm  { gap: var(--space-4); }
+.grid--gap-lg  { gap: var(--space-8); }
+.grid--gap-xl  { gap: var(--space-12); }
+
+/* -----------------------------------------------------------------------
+   5. FLEX UTILITIES
+   ----------------------------------------------------------------------- */
+
+.flex            { display: flex; }
+.flex-col        { flex-direction: column; }
+.flex-wrap       { flex-wrap: wrap; }
+.flex-1          { flex: 1; }
+.items-center    { align-items: center; }
+.items-start     { align-items: flex-start; }
+.items-end       { align-items: flex-end; }
+.items-stretch   { align-items: stretch; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end     { justify-content: flex-end; }
+
+.gap-1  { gap: var(--space-1); }
+.gap-2  { gap: var(--space-2); }
+.gap-3  { gap: var(--space-3); }
+.gap-4  { gap: var(--space-4); }
+.gap-6  { gap: var(--space-6); }
+.gap-8  { gap: var(--space-8); }
+.gap-12 { gap: var(--space-12); }
+
+/* -----------------------------------------------------------------------
+   6. TEXT UTILITIES
+   ----------------------------------------------------------------------- */
+
+.text-center    { text-align: center; }
+.text-left      { text-align: left; }
+.text-right     { text-align: right; }
+.text-navy      { color: var(--color-navy); }
+.text-teal      { color: var(--color-teal); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted     { color: var(--color-text-muted); }
+.text-white     { color: var(--color-text-inverse); }
+.text-balance   { text-wrap: balance; }
+
+.font-medium    { font-weight: var(--font-weight-medium); }
+.font-semibold  { font-weight: var(--font-weight-semibold); }
+.font-bold      { font-weight: var(--font-weight-bold); }
+
+.text-xs   { font-size: var(--font-size-xs); }
+.text-sm   { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-md   { font-size: var(--font-size-md); }
+.text-lg   { font-size: var(--font-size-lg); }
+
+/* -----------------------------------------------------------------------
+   7. SPACING UTILITIES
+   ----------------------------------------------------------------------- */
+
+.mx-auto   { margin-left: auto; margin-right: auto; }
+.mt-auto   { margin-top: auto; }
+.mb-0      { margin-bottom: 0; }
+.mb-2      { margin-bottom: var(--space-2); }
+.mb-3      { margin-bottom: var(--space-3); }
+.mb-4      { margin-bottom: var(--space-4); }
+.mb-6      { margin-bottom: var(--space-6); }
+.mb-8      { margin-bottom: var(--space-8); }
+.mb-12     { margin-bottom: var(--space-12); }
+.mb-16     { margin-bottom: var(--space-16); }
+
+/* -----------------------------------------------------------------------
+   8. VISIBILITY & ACCESSIBILITY
+   ----------------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden { display: none; }
+
+/* Responsive visibility */
+@media (max-width: 767px) {
+  .hide-mobile { display: none !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-tablet { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+  .hide-desktop { display: none !important; }
+}

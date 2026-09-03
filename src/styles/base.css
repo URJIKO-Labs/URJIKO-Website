@@ -1,0 +1,271 @@
+/* ==========================================================================
+   URJIKO Labs — Base Styles
+   ==========================================================================
+   Modern CSS reset + base element styling.
+   Imports after tokens.css.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   1. MODERN RESET
+   ----------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-teal-dark);
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* -----------------------------------------------------------------------
+   2. TYPOGRAPHY — Headings
+   ----------------------------------------------------------------------- */
+
+/* Mobile-first sizes, scaled up at lg breakpoint */
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-navy);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-navy);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-navy);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-navy);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-navy);
+}
+
+h6 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-navy);
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: var(--font-size-6xl); }
+  h2 { font-size: var(--font-size-5xl); }
+  h3 { font-size: var(--font-size-3xl); }
+}
+
+/* -----------------------------------------------------------------------
+   3. TYPOGRAPHY — Body
+   ----------------------------------------------------------------------- */
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+/* -----------------------------------------------------------------------
+   4. FOCUS STYLES (accessible)
+   ----------------------------------------------------------------------- */
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+/* -----------------------------------------------------------------------
+   5. SELECTION
+   ----------------------------------------------------------------------- */
+
+::selection {
+  background-color: var(--color-teal-subtle);
+  color: var(--color-navy);
+}
+
+/* -----------------------------------------------------------------------
+   6. CUSTOM SCROLLBAR (webkit)
+   ----------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) var(--color-bg-soft);
+}
+
+/* -----------------------------------------------------------------------
+   7. REDUCED MOTION
+   ----------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   8. PRINT STYLES
+   ----------------------------------------------------------------------- */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
