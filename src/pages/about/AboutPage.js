@@ -2,7 +2,6 @@ import { renderAboutHero } from "../../components/about/AboutHero.js";
 import { renderCompanyIntro } from "../../components/about/CompanyIntro.js";
 import { renderMissionVision } from "../../components/about/MissionVision.js";
 import { renderCompanyValues } from "../../components/about/CompanyValues.js";
-import { renderFounderSection } from "../../components/about/FounderSection.js";
 import { renderWhatWeBuild } from "../../components/about/WhatWeBuild.js";
 import { renderGlobalCTA } from "../../components/common/CTA.js";
 
@@ -16,7 +15,6 @@ export function renderAboutPage() {
     ${renderCompanyIntro()}
     ${renderMissionVision()}
     ${renderCompanyValues()}
-    ${renderFounderSection()}
     ${renderWhatWeBuild()}
     ${renderGlobalCTA({
       title: "Let's Build Something Useful.",
