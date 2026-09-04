@@ -96,7 +96,7 @@ export function renderWhyUrjiko() {
         }
         section[aria-labelledby="why-heading"] .principle-item {
           gap: var(--space-3) !important;
-          padding-bottom: var(--space-3) !important;
+          padding-bottom: var(--space-5) !important;
         }
         section[aria-labelledby="why-heading"] .principle-item:last-child {
           border-bottom: none !important;
