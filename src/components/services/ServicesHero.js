@@ -39,7 +39,7 @@ export function renderServicesHero() {
           <!-- Right Column: Services Hero Image -->
           <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
             <img 
-              src="${import.meta.env.BASE_URL}src/assets/images/services_hero.jpg" 
+              src="${import.meta.env.BASE_URL}images/services_hero.jpg" 
               alt="Ethiopian team collaboration on digital services" 
               class="hero__image"
               style="width: 100%; max-width: 500px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);"

@@ -40,7 +40,7 @@ export function renderSolutionsHero() {
           <!-- Right Column: Solutions Hero Image -->
           <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
             <img 
-              src="${import.meta.env.BASE_URL}src/assets/images/solutions_hero.jpg" 
+              src="${import.meta.env.BASE_URL}images/solutions_hero.jpg" 
               alt="Ethiopian business meeting discussing digital solutions" 
               class="hero__image"
               style="width: 100%; max-width: 500px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);"

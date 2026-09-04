@@ -7,7 +7,7 @@ import { icons } from "../common/Icons.js";
  * Full-width background image with clean transparent light overlay showing software team background photo.
  */
 export function renderHero() {
-  const bgUrl = `${import.meta.env.BASE_URL}src/assets/images/home_bg_dark.jpg`;
+  const bgUrl = `${import.meta.env.BASE_URL}images/home_bg_dark.jpg`;
 
   return `
     <section class="section home-hero-banner" aria-labelledby="hero-title" style="

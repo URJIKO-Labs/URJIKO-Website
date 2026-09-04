@@ -1,7 +1,7 @@
 import { icons } from "../common/Icons.js";
 
 export function renderAboutHero() {
-  const bgUrl = `${import.meta.env.BASE_URL}src/assets/images/home_bg_dark.jpg`;
+  const bgUrl = `${import.meta.env.BASE_URL}images/home_bg_dark.jpg`;
 
   return `
     <section class="section" aria-labelledby="about-hero-title" style="
