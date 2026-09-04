@@ -22,7 +22,7 @@ export function renderContactForm() {
             <input type="email" id="email" name="email" required placeholder="john@example.com" class="contact-input">
           </div>
           <div class="flex flex-col gap-2">
-            <label for="phone" class="text-navy font-semibold text-sm">Phone / WhatsApp</label>
+            <label for="phone" class="text-navy font-semibold text-sm">Phone / Telegram</label>
             <input type="tel" id="phone" name="phone" placeholder="+251 9XX XXX XXX" class="contact-input">
           </div>
         </div>
@@ -58,7 +58,7 @@ export function renderContactForm() {
           <select id="contact-method" name="contact-method" class="contact-input">
             <option value="email">Email</option>
             <option value="phone">Phone Call</option>
-            <option value="whatsapp">WhatsApp</option>
+            <option value="telegram">Telegram</option>
           </select>
         </div>
 
