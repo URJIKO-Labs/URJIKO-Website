@@ -220,6 +220,68 @@ function initContactForm() {
   if (!form || form.dataset.initialized) return;
   form.dataset.initialized = 'true';
 
+  // File upload
+  const fileArea = document.getElementById('file-upload-area');
+  const fileInput = document.getElementById('file-input');
+  const fileList = document.getElementById('file-list');
+  let uploadedFiles = [];
+
+  if (fileArea && fileInput) {
+    fileArea.addEventListener('click', () => fileInput.click());
+
+    fileArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      fileArea.classList.add('dragover');
+    });
+
+    fileArea.addEventListener('dragleave', () => {
+      fileArea.classList.remove('dragover');
+    });
+
+    fileArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      fileArea.classList.remove('dragover');
+      handleFiles(e.dataTransfer.files);
+    });
+
+    fileInput.addEventListener('change', () => {
+      handleFiles(fileInput.files);
+      fileInput.value = '';
+    });
+
+    function handleFiles(files) {
+      Array.from(files).forEach(file => {
+        if (file.size > 5 * 1024 * 1024) {
+          alert(file.name + ' is too large (max 5MB)');
+          return;
+        }
+        if (uploadedFiles.length >= 5) {
+          alert('Maximum 5 files allowed');
+          return;
+        }
+        uploadedFiles.push(file);
+      });
+      renderFileList();
+    }
+
+    function renderFileList() {
+      fileList.innerHTML = uploadedFiles.map((file, i) => `
+        <div class="file-upload__item">
+          <span>${file.name}</span>
+          <button type="button" data-index="${i}">&times;</button>
+        </div>
+      `).join('');
+
+      fileList.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          uploadedFiles.splice(parseInt(btn.dataset.index), 1);
+          renderFileList();
+        });
+      });
+    }
+  }
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
@@ -227,6 +289,8 @@ function initContactForm() {
     btn.innerHTML = 'Message Sent!';
     btn.disabled = true;
     btn.style.backgroundColor = '#16a34a';
+    uploadedFiles = [];
+    renderFileList();
     form.reset();
     document.querySelectorAll('.custom-select').forEach(select => {
       const hiddenInput = select.querySelector('input[type="hidden"]');
