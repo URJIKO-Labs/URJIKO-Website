@@ -206,43 +206,5 @@ export function renderPortfolioHero() {
         to { opacity: 1; transform: translateY(0); }
       }
     </style>
-
-    <script>
-      (function() {
-        const tabs = document.querySelectorAll('.portfolio-tab');
-        const panels = document.querySelectorAll('.portfolio-panel');
-
-        tabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            const target = this.getAttribute('data-tab');
-
-            // Remove active from all tabs
-            tabs.forEach(t => {
-              t.classList.remove('portfolio-tab--active');
-              t.style.background = 'rgba(255, 255, 255, 0.05)';
-              t.style.borderColor = 'rgba(255,255,255,0.1)';
-            });
-
-            // Hide all panels
-            panels.forEach(p => p.style.display = 'none');
-
-            // Activate clicked tab
-            this.classList.add('portfolio-tab--active');
-            this.style.background = 'rgba(37, 99, 235, 0.25)';
-            this.style.borderColor = 'var(--color-blue)';
-
-            // Show target panel
-            const targetPanel = document.querySelector('[data-panel="' + target + '"]');
-            if (targetPanel) {
-              targetPanel.style.display = 'block';
-              // Re-trigger animation
-              targetPanel.style.animation = 'none';
-              targetPanel.offsetHeight; // force reflow
-              targetPanel.style.animation = '';
-            }
-          });
-        });
-      })();
-    </script>
   `;
 }
