@@ -8,7 +8,6 @@ import { renderContactPage } from "./contact/ContactPage.js";
 import { renderPrivacyPage } from "./legal/PrivacyPage.js";
 import { renderTermsPage } from "./legal/TermsPage.js";
 import { renderGlobalCTA } from "../components/common/CTA.js";
-import { renderTelegramCTA } from "../components/contact/TelegramCTA.js";
 import { renderBreadcrumbs } from "../components/navigation/Breadcrumbs.js";
 import { companyConfig } from "../config/company.js";
 

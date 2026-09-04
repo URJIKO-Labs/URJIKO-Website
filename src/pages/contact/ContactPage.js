@@ -42,7 +42,7 @@ export function renderContactPage() {
         "Start with the problem. We'll help you figure out the right technology and the right first step.",
       primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
-      secondaryBtnLabel: "Explore Our Portfolio",
+      secondaryBtnLabel: "View Our Solutions",
       secondaryBtnPath: "/portfolio",
     })}
   `;

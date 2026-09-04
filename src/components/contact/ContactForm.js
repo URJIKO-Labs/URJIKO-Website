@@ -23,7 +23,7 @@ export function renderContactForm() {
           </div>
           <div class="flex flex-col gap-2">
             <label for="phone" class="text-navy font-semibold text-sm">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" class="contact-input">
+            <input type="tel" id="phone" name="phone" placeholder="+251 9XX XXX XXX" class="contact-input">
           </div>
         </div>
 
@@ -80,8 +80,17 @@ export function renderContactForm() {
           if (form) {
             form.addEventListener('submit', function(e) {
               e.preventDefault();
-              alert("This is a frontend demonstration. No backend service is currently configured to receive this inquiry.");
+              const btn = form.querySelector('button[type="submit"]');
+              const originalText = btn.innerHTML;
+              btn.innerHTML = 'Message Sent!';
+              btn.disabled = true;
+              btn.style.backgroundColor = '#16a34a';
               form.reset();
+              setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.style.backgroundColor = '';
+              }, 3000);
             });
           }
         })();
@@ -92,7 +101,7 @@ export function renderContactForm() {
       .contact-input {
         padding: 0.75rem;
         border: 1px solid var(--color-border);
-        border-radius: 4px;
+        border-radius: var(--radius-sm);
         font-family: inherit;
         width: 100%;
         box-sizing: border-box;

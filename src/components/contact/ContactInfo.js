@@ -8,7 +8,7 @@ export function renderContactInfo() {
       <div style="background: var(--color-bg-soft); padding: var(--space-6); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg);">
         <h2 class="text-navy font-semibold text-xl mb-4">Contact Information</h2>
         <p class="text-secondary mb-6" style="line-height: 1.6;">
-          Reach out through WhatsApp, phone, email, or Telegram. We aim to respond within one business day.
+          Reach out through phone, email, or Telegram. We aim to respond within one business day.
         </p>
 
         <div class="flex flex-col gap-4">
@@ -50,16 +50,6 @@ export function renderContactInfo() {
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Direct Message</div>
               <div class="font-medium">URJIKO Support</div>
-            </div>
-          </a>
-
-          <a href="${companyConfig.telegramChannel.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
-              ${icons.telegram("w-5 h-5")}
-            </div>
-            <div>
-              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Channel & Updates</div>
-              <div class="font-medium">Telegram Channel</div>
             </div>
           </a>
 
