@@ -108,6 +108,33 @@ export function renderContactForm() {
         font-family: inherit;
         width: 100%;
         box-sizing: border-box;
+        background-color: #fff;
+        color: var(--color-navy);
+        font-size: var(--font-size-sm);
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .contact-input:focus {
+        outline: none;
+        border-color: var(--color-blue);
+        box-shadow: 0 0 0 3px rgba(7, 87, 184, 0.1);
+      }
+      .contact-input option {
+        padding: 0.6rem 0.75rem;
+        font-size: var(--font-size-sm);
+        color: var(--color-navy);
+        background-color: #fff;
+      }
+      .contact-input option:hover {
+        background-color: var(--color-bg-light-blue);
+      }
+      select.contact-input {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2306245C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
       }
       @media (max-width: 768px) {
         .contact-input {
