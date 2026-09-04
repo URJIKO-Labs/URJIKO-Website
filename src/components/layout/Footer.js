@@ -2,7 +2,7 @@ import { companyConfig } from "../../config/company.js";
 import { icons } from "../common/Icons.js";
 
 export function renderFooter() {
-  const currentYear = new Date().getFullYear() || 2026;
+  const currentYear = new Date().getFullYear();
 
   const companyLinksHtml = companyConfig.footerNav.company
     .map(
@@ -24,7 +24,6 @@ export function renderFooter() {
       if (item.type === "telegram") icon = icons.telegram("w-4 h-4");
       if (item.type === "github") icon = icons.github("w-4 h-4");
       if (item.type === "linkedin") icon = icons.linkedin("w-4 h-4");
-      if (item.type === "tiktok") icon = icons.tiktok("w-4 h-4");
       if (item.type === "email") icon = icons.mail("w-4 h-4");
 
       const isExternal =
@@ -102,19 +101,23 @@ export function renderFooter() {
           <div class="footer__connect">
             <h4 class="footer__heading">Connect</h4>
             <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
-              <!-- Row 1: Email next to GitHub -->
+              <!-- Row 1: Email -->
               <div class="flex items-center gap-6 flex-wrap">
                 <a href="mailto:${companyConfig.contact.email}" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
                   ${icons.mail("w-4 h-4")}
                   <span>Email</span>
                 </a>
-                <a href="${companyConfig.socialLinks.github}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
+              </div>
+
+              <!-- Row 2: GitHub -->
+              <div class="flex items-center gap-6 flex-wrap">
+                <a href="${companyConfig.socialLinks.github}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
                   ${icons.github("w-4 h-4")}
                   <span>GitHub</span>
                 </a>
               </div>
 
-              <!-- Row 2: LinkedIn -->
+              <!-- Row 3: LinkedIn -->
               <div class="flex items-center gap-6 flex-wrap">
                 <a href="${companyConfig.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
                   ${icons.linkedin("w-4 h-4")}
@@ -123,7 +126,7 @@ export function renderFooter() {
               </div>
 
               <!-- Row 3: Telegram Channel -->
-              <div class="mt-1">
+              <div>
                 <a href="${companyConfig.telegramChannel.url}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
                   ${icons.telegram("w-4 h-4")}
                   <span>Telegram Channel</span>

@@ -78,6 +78,8 @@ export const companyConfig = {
       { label: "Business Systems", path: "/services#business-systems" },
       { label: "Custom Software", path: "/services#custom-software" },
       { label: "AI Solutions", path: "/services#ai-solutions" },
+      { label: "Mobile Apps", path: "/services#mobile-app" },
+      { label: "Maintenance & Support", path: "/services#maintenance" },
     ],
     connect: [
       { label: "Email", type: "email", href: "mailto:urjikolabs@gmail.com" },
