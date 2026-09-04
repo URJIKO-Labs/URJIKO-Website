@@ -39,10 +39,6 @@ const SOLUTION_CATEGORIES = [
       badgeClass: 'badge--blue',
       badgeText: 'Core Product',
       link: '/portfolio/smartbiz'
-    },
-    cta: {
-      label: 'Explore Business',
-      link: '/portfolio/smartbiz'
     }
   },
   {
@@ -78,10 +74,6 @@ const SOLUTION_CATEGORIES = [
       name: 'EduFlow',
       badgeClass: 'badge--navy',
       badgeText: 'Education Platform',
-      link: '/portfolio/eduflow'
-    },
-    cta: {
-      label: 'Explore Education',
       link: '/portfolio/eduflow'
     }
   },
@@ -119,10 +111,6 @@ const SOLUTION_CATEGORIES = [
       badgeClass: 'badge--navy',
       badgeText: 'Operations System',
       link: '/portfolio/transport'
-    },
-    cta: {
-      label: 'Explore Transport',
-      link: '/portfolio/transport'
     }
   },
   {
@@ -152,10 +140,6 @@ const SOLUTION_CATEGORIES = [
       badgeText: 'Project Concept',
       link: '/portfolio/shegerhealth',
       disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.'
-    },
-    cta: {
-      label: 'Explore Healthcare',
-      link: '/portfolio/shegerhealth'
     }
   }
 ];
@@ -222,13 +206,7 @@ export function renderSolutionCategories() {
           ` : ''}
         </div>
 
-        <!-- Category CTA Link -->
-        <div class="flex items-center">
-          <a href="${category.cta.link}" data-link class="btn btn--secondary btn--sm flex items-center gap-2">
-            <span>${category.cta.label}</span>
-            ${icons.arrowRight('w-4 h-4')}
-          </a>
-        </div>
+
 
       </div>
     </section>
