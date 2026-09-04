@@ -17,26 +17,26 @@ export function renderFeaturedProjects() {
           <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
               <span class="text-xs font-semibold" style="color: #60A5FA;">SmartBiz ERP — POS & Inventory</span>
-              <span class="badge badge--blue text-xs">Active POS</span>
+              <span class="badge badge--blue text-xs">Concept Preview</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Today's Revenue</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #34D399;">$42,850.00</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales Activity</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">POS Tracking</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Stock Health</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #60A5FA;">94% Optimal</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Stock Status</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Low Stock Alerts</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
               <div class="flex justify-between py-1" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                <span>Product A (Retail)</span>
-                <span class="font-bold text-white">124 pcs</span>
+                <span>Retail Inventory</span>
+                <span class="font-bold text-white">Automated</span>
               </div>
               <div class="flex justify-between py-1">
-                <span>Product B (Wholesale)</span>
-                <span class="font-bold text-white">98 pcs</span>
+                <span>Credit Ledger</span>
+                <span class="font-bold text-white">Centralized</span>
               </div>
             </div>
           </div>
@@ -45,27 +45,27 @@ export function renderFeaturedProjects() {
         mockupContent = `
           <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #38BDF8;">Transport & Fleet Dispatch</span>
-              <span class="badge badge--navy text-xs">Live Dispatch</span>
+              <span class="text-xs font-semibold" style="color: #60A5FA;">Transport & Fleet Dispatch</span>
+              <span class="badge badge--navy text-xs">System Concept</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Active Vehicles</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #38BDF8;">18 Vehicles</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Vehicle Roster</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Driver Assign</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Pending Requests</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #FBBF24;">5 Approvals</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Requests</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Approval Queue</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
               <div class="flex justify-between py-1" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                <span>Route A — Harar -> Dire Dawa</span>
-                <span class="font-bold text-emerald-400">On Time</span>
+                <span>Inter-City Transit</span>
+                <span class="font-bold text-blue-300">Scheduled</span>
               </div>
               <div class="flex justify-between py-1">
-                <span>Route B — City Transit</span>
-                <span class="font-bold text-emerald-400">Dispatched</span>
+                <span>Administrative Report</span>
+                <span class="font-bold text-blue-300">Generated</span>
               </div>
             </div>
           </div>
@@ -74,27 +74,27 @@ export function renderFeaturedProjects() {
         mockupContent = `
           <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #818CF8;">EduFlow — Academic Portal</span>
+              <span class="text-xs font-semibold" style="color: #60A5FA;">EduFlow — Academic Portal</span>
               <span class="badge badge--blue text-xs">School Suite</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Total Enrolled</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #818CF8;">1,240 Students</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Academic Records</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Centralized</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Daily Attendance</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #34D399;">98.2% Present</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Attendance</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Daily Logs</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
               <div class="flex justify-between py-1" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                <span>Grade 11-A Attendance</span>
-                <span class="font-bold text-white">Submitted</span>
+                <span>Class Rosters</span>
+                <span class="font-bold text-white">Organized</span>
               </div>
               <div class="flex justify-between py-1">
-                <span>Semester 2 Report Cards</span>
-                <span class="font-bold text-amber-400">Processing</span>
+                <span>Timetable & Schedule</span>
+                <span class="font-bold text-white">Active</span>
               </div>
             </div>
           </div>
@@ -103,23 +103,23 @@ export function renderFeaturedProjects() {
         mockupContent = `
           <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #F43F5E;">ShegerHealth Prototype</span>
+              <span class="text-xs font-semibold" style="color: #60A5FA;">ShegerHealth Prototype</span>
               <span class="badge badge--navy text-xs">Concept Demo</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
-                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Digital Triage</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #F43F5E;">Active Queue</div>
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Digital Workflow</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Triage Prototype</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Record Security</div>
-                <div style="font-size: 0.9rem; font-weight: 700; color: #34D399;">Role-Protected</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Role-Protected</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
               <div class="flex justify-between py-1">
-                <span>Workflow Automation</span>
-                <span class="font-bold text-emerald-400">Prototype Active</span>
+                <span>Healthcare Architecture</span>
+                <span class="font-bold text-blue-300">Demo Prototype</span>
               </div>
             </div>
           </div>
@@ -127,8 +127,8 @@ export function renderFeaturedProjects() {
       }
 
       return `
-        <div class="project-card-row mb-12" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-sm);">
-          <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-6); padding: var(--space-6) md:padding: var(--space-8);">
+        <div class="project-card-row" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: var(--space-8); margin-bottom: 3.5rem;">
+          <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-8);">
             
             ${
               isEven
@@ -151,14 +151,14 @@ export function renderFeaturedProjects() {
                   </p>
 
                   <!-- Business Value Highlights -->
-                  <div class="mb-4 p-3" style="background: var(--color-bg-light-blue); border-radius: var(--radius-md); border-left: 3px solid var(--color-blue);">
-                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy); text-transform: uppercase; margin-bottom: 0.25rem;">Key Business Value</div>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.2rem; margin: 0; padding: 0;">
+                  <div class="mb-4" style="background: var(--color-bg-light-blue); border-radius: var(--radius-md); border-left: 4px solid var(--color-blue); padding: 1rem 1.25rem;">
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy); text-transform: uppercase; margin-bottom: 0.35rem; letter-spacing: 0.05em;">Key Business Value</div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.35rem; margin: 0; padding: 0;">
                       ${project.businessValue
                         .slice(0, 3)
                         .map(
                           (v) =>
-                            `<li style="font-size: 0.8125rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.4rem;">${icons.check("w-3 h-3 text-blue")} <span>${v}</span></li>`,
+                            `<li style="font-size: 0.85rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem; line-height: 1.4;">${icons.check("w-4 h-4 text-blue")} <span>${v}</span></li>`,
                         )
                         .join("")}
                     </ul>
@@ -167,7 +167,7 @@ export function renderFeaturedProjects() {
                   <!-- Scannable Feature Badges -->
                   <div class="flex flex-wrap gap-2 mb-6">
                     ${project.features
-                      .slice(0, 5)
+                      .slice(0, 4)
                       .map(
                         (f) =>
                           `<span class="badge badge--outline text-xs">${f}</span>`,
@@ -181,7 +181,7 @@ export function renderFeaturedProjects() {
                     <span>Discuss Your Project</span>
                     ${icons.arrowRight("w-4 h-4")}
                   </a>
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 flex-wrap">
                     ${project.technologies
                       .slice(0, 3)
                       .map(
@@ -222,14 +222,14 @@ export function renderFeaturedProjects() {
                   </p>
 
                   <!-- Business Value Highlights -->
-                  <div class="mb-4 p-3" style="background: var(--color-bg-light-blue); border-radius: var(--radius-md); border-left: 3px solid var(--color-blue);">
-                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy); text-transform: uppercase; margin-bottom: 0.25rem;">Key Business Value</div>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.2rem; margin: 0; padding: 0;">
+                  <div class="mb-4" style="background: var(--color-bg-light-blue); border-radius: var(--radius-md); border-left: 4px solid var(--color-blue); padding: 1rem 1.25rem;">
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-navy); text-transform: uppercase; margin-bottom: 0.35rem; letter-spacing: 0.05em;">Key Business Value</div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.35rem; margin: 0; padding: 0;">
                       ${project.businessValue
                         .slice(0, 3)
                         .map(
                           (v) =>
-                            `<li style="font-size: 0.8125rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.4rem;">${icons.check("w-3 h-3 text-blue")} <span>${v}</span></li>`,
+                            `<li style="font-size: 0.85rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem; line-height: 1.4;">${icons.check("w-4 h-4 text-blue")} <span>${v}</span></li>`,
                         )
                         .join("")}
                     </ul>
@@ -238,7 +238,7 @@ export function renderFeaturedProjects() {
                   <!-- Scannable Feature Badges -->
                   <div class="flex flex-wrap gap-2 mb-6">
                     ${project.features
-                      .slice(0, 5)
+                      .slice(0, 4)
                       .map(
                         (f) =>
                           `<span class="badge badge--outline text-xs">${f}</span>`,
@@ -252,7 +252,7 @@ export function renderFeaturedProjects() {
                     <span>Discuss Your Project</span>
                     ${icons.arrowRight("w-4 h-4")}
                   </a>
-                  <div class="flex gap-2">
+                  <div class="flex gap-2 flex-wrap">
                     ${project.technologies
                       .slice(0, 3)
                       .map(

@@ -45,8 +45,8 @@ export function renderPortfolioHero() {
                   <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; display: inline-block;"></span>
                   <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
                 </div>
-                <span class="text-xs" style="color: rgba(255,255,255,0.6); font-family: monospace; font-weight: 500;">URJIKO Systems Suite v2.4</span>
-                <span class="badge badge--blue text-xs" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">LIVE SUITE</span>
+                <span class="text-xs" style="color: rgba(255,255,255,0.6); font-family: monospace; font-weight: 500;">URJIKO Software Preview</span>
+                <span class="badge badge--blue text-xs" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">SYSTEM SUITE</span>
               </div>
               
               <!-- System Tabs -->
@@ -68,32 +68,32 @@ export function renderPortfolioHero() {
               <!-- Dashboard Body Mockup -->
               <div style="background: rgba(15, 23, 42, 0.8); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid rgba(255,255,255,0.08);">
                 <div class="flex items-center justify-between mb-3">
-                  <div style="font-size: 0.85rem; font-weight: 600;">Executive Dashboard & Daily Metrics</div>
-                  <span style="font-size: 0.7rem; color: #10B981; font-weight: 600;">● System Operational</span>
+                  <div style="font-size: 0.85rem; font-weight: 600;">Centralized Operations & Analytics</div>
+                  <span style="font-size: 0.7rem; color: #60A5FA; font-weight: 600;">Product Preview</span>
                 </div>
                 <!-- Stat Cards -->
                 <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
                   <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales Today</div>
-                    <div style="font-size: 0.95rem; font-weight: 700; color: #60A5FA;">38,450 ETB</div>
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales & POS</div>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Real-time Tracker</div>
                   </div>
                   <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Active Drivers</div>
-                    <div style="font-size: 0.95rem; font-weight: 700; color: #34D399;">24 On-Route</div>
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Inventory</div>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Stock Alerts</div>
                   </div>
                   <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Attendance Rate</div>
-                    <div style="font-size: 0.95rem; font-weight: 700; color: #FBBF24;">96.8%</div>
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Workflow</div>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Role Protected</div>
                   </div>
                 </div>
                 <!-- Chart Visual Bar -->
                 <div style="height: 60px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; display: flex; align-items: flex-end; gap: 0.4rem;">
-                  <div style="flex: 1; height: 40%; background: #3B82F6; border-radius: 2px;"></div>
-                  <div style="flex: 1; height: 65%; background: #3B82F6; border-radius: 2px;"></div>
-                  <div style="flex: 1; height: 50%; background: #3B82F6; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 40%; background: #2563EB; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 65%; background: #2563EB; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 50%; background: #2563EB; border-radius: 2px;"></div>
                   <div style="flex: 1; height: 85%; background: #60A5FA; border-radius: 2px;"></div>
-                  <div style="flex: 1; height: 70%; background: #3B82F6; border-radius: 2px;"></div>
-                  <div style="flex: 1; height: 95%; background: #34D399; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 70%; background: #2563EB; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 95%; background: #3B82F6; border-radius: 2px;"></div>
                 </div>
               </div>
             </div>

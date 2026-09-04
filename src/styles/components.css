@@ -45,20 +45,20 @@
 /* Primary — Royal Blue bg, white text */
 .btn--primary {
   background-color: var(--color-blue);
-  color: var(--color-text-inverse);
+  color: #FFFFFF !important;
   border-color: var(--color-blue);
 }
 
 .btn--primary:hover {
   background-color: var(--color-blue-dark);
   border-color: var(--color-blue-dark);
+  color: #FFFFFF !important;
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 
-.btn--primary:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-xs);
+.btn--primary * {
+  color: inherit !important;
 }
 
 /* Secondary — outlined, navy text */

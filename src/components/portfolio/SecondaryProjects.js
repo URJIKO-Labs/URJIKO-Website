@@ -1,4 +1,4 @@
-import { secondaryProjects } from '../../config/projects.js';
+import { secondaryProjects } from "../../config/projects.js";
 
 /**
  * URJIKO Labs — Secondary Projects Component
@@ -20,12 +20,21 @@ export function renderSecondaryProjects() {
 
         <!-- Secondary Projects Grid -->
         <div class="grid grid--3">
-          ${secondaryProjects.map(project => `
+          ${secondaryProjects
+            .map(
+              (project) => `
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
-              <!-- Placeholder Visual Area -->
-              <div class="flex items-center justify-center mb-4 secondary-placeholder" style="height: 120px; background-color: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);" aria-hidden="true">
-                <span class="font-semibold text-navy text-sm">${project.name}</span>
+              <!-- Clean Product UI Mockup Header -->
+              <div class="mb-4 secondary-placeholder" style="height: 120px; background-color: #0F172A; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 0.65rem; color: #FFFFFF; display: flex; flex-direction: column; justify-between;" aria-hidden="true">
+                <div class="flex items-center justify-between pb-1" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-xs font-semibold" style="color: #60A5FA;">${project.name}</span>
+                  <span class="badge badge--blue text-xs" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">Preview</span>
+                </div>
+                <div class="flex items-center justify-between" style="font-size: 0.7rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
+                  <span>${project.category}</span>
+                  <span style="color: #93C5FD; font-weight: 600;">System Active</span>
+                </div>
               </div>
 
               <!-- Category Badge -->
@@ -45,13 +54,19 @@ export function renderSecondaryProjects() {
 
               <!-- Capabilities -->
               <div class="flex flex-wrap gap-2 mt-auto">
-                ${project.capabilities.map(capability => `
+                ${project.capabilities
+                  .map(
+                    (capability) => `
                   <span class="badge badge--outline text-xs">${capability}</span>
-                `).join('')}
+                `,
+                  )
+                  .join("")}
               </div>
 
             </article>
-          `).join('')}
+          `,
+            )
+            .join("")}
         </div>
 
       </div>
