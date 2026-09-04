@@ -166,6 +166,41 @@ function initCustomSelects() {
   });
 }
 
+// FAQ accordion
+function initFAQAccordion() {
+  document.querySelectorAll('.faq-item__trigger').forEach(trigger => {
+    if (trigger.dataset.initialized) return;
+    trigger.dataset.initialized = 'true';
+
+    const item = trigger.closest('.faq-item');
+    const content = item.querySelector('.faq-item__content');
+    const icon = trigger.querySelector('.faq-item__icon');
+
+    trigger.addEventListener('click', () => {
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      // Close all others
+      document.querySelectorAll('.faq-item__content').forEach(c => {
+        c.style.maxHeight = '0px';
+        c.style.paddingTop = '0';
+      });
+      document.querySelectorAll('.faq-item__icon').forEach(ic => {
+        ic.style.transform = 'rotate(0deg)';
+      });
+      document.querySelectorAll('.faq-item').forEach(fi => {
+        fi.style.boxShadow = 'none';
+      });
+
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.paddingTop = '0';
+        icon.style.transform = 'rotate(180deg)';
+        item.style.boxShadow = '0 2px 12px rgba(6, 36, 92, 0.08)';
+      }
+    });
+  });
+}
+
 // Contact form submit
 function initContactForm() {
   const form = document.getElementById('urjiko-contact-form');
@@ -205,5 +240,6 @@ Router.prototype.renderCurrentRoute = function() {
     initPortfolioTabs();
     initCustomSelects();
     initContactForm();
+    initFAQAccordion();
   }, 100);
 };
