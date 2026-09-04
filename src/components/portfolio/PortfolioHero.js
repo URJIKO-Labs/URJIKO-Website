@@ -35,14 +35,68 @@ export function renderPortfolioHero() {
             </div>
           </div>
 
-          <!-- Right: Portfolio Hero Image -->
+          <!-- Right: Software Composite UI Mockup -->
           <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
-            <img 
-              src="${import.meta.env.BASE_URL}src/assets/images/portfolio_hero.jpg" 
-              alt="URJIKO Labs project portfolio showcase" 
-              class="hero__image"
-              style="width: 100%; max-width: 460px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--color-border);"
-            />
+            <div class="portfolio-hero-mockup" style="width: 100%; max-width: 500px; background: var(--color-navy); border-radius: var(--radius-xl); padding: var(--space-4); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border-subtle); color: #FFFFFF;">
+              <!-- Window header -->
+              <div class="flex items-center justify-between pb-3 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div class="flex items-center gap-2">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+                </div>
+                <span class="text-xs" style="color: rgba(255,255,255,0.6); font-family: monospace; font-weight: 500;">URJIKO Systems Suite v2.4</span>
+                <span class="badge badge--blue text-xs" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">LIVE SUITE</span>
+              </div>
+              
+              <!-- System Tabs -->
+              <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
+                <div style="background: rgba(37, 99, 235, 0.25); border: 1px solid var(--color-blue); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center;">
+                  <div style="font-size: 0.75rem; font-weight: 700; color: #FFFFFF;">SmartBiz ERP</div>
+                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.7);">POS & Inventory</div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center;">
+                  <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">EduFlow</div>
+                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">School Management</div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center;">
+                  <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">Transport</div>
+                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Operations & Fleet</div>
+                </div>
+              </div>
+
+              <!-- Dashboard Body Mockup -->
+              <div style="background: rgba(15, 23, 42, 0.8); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid rgba(255,255,255,0.08);">
+                <div class="flex items-center justify-between mb-3">
+                  <div style="font-size: 0.85rem; font-weight: 600;">Executive Dashboard & Daily Metrics</div>
+                  <span style="font-size: 0.7rem; color: #10B981; font-weight: 600;">● System Operational</span>
+                </div>
+                <!-- Stat Cards -->
+                <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
+                  <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales Today</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: #60A5FA;">38,450 ETB</div>
+                  </div>
+                  <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Active Drivers</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: #34D399;">24 On-Route</div>
+                  </div>
+                  <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
+                    <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Attendance Rate</div>
+                    <div style="font-size: 0.95rem; font-weight: 700; color: #FBBF24;">96.8%</div>
+                  </div>
+                </div>
+                <!-- Chart Visual Bar -->
+                <div style="height: 60px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; display: flex; align-items: flex-end; gap: 0.4rem;">
+                  <div style="flex: 1; height: 40%; background: #3B82F6; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 65%; background: #3B82F6; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 50%; background: #3B82F6; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 85%; background: #60A5FA; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 70%; background: #3B82F6; border-radius: 2px;"></div>
+                  <div style="flex: 1; height: 95%; background: #34D399; border-radius: 2px;"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
