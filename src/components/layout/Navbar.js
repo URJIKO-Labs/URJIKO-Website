@@ -90,7 +90,7 @@ export function renderNavbar(activePath = "/") {
         <ul class="navbar__mobile-links" role="list">
           ${companyConfig.navLinks
             .map((link) => {
-              const isActive = activePath === link.path;
+      const isActive = activePath === link.path || (link.path !== "/" && activePath.startsWith(link.path));
               return `
                 <li>
                   <a 

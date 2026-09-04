@@ -381,7 +381,7 @@ export function renderProjectPage(projectId) {
             <!-- CTAs -->
             <div class="flex flex-wrap gap-4">
               <a href="/contact" data-link class="btn btn--primary">
-                <span>Discuss This Project</span>
+                <span>Start a Similar Project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
               <a href="/portfolio" data-link class="btn btn--secondary">Back to Portfolio</a>
@@ -406,7 +406,7 @@ export function renderProjectPage(projectId) {
           Let's discuss how we can build something similar for your business.
         </p>
         <a href="/contact" data-link class="btn btn--primary" style="background: var(--color-white); color: var(--color-navy);">
-          <span>Get in Touch</span>
+          <span>Discuss Your Project</span>
           ${icons.arrowRight('w-4 h-4')}
         </a>
       </div>
