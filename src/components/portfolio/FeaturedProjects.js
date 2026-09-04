@@ -178,7 +178,7 @@ export function renderFeaturedProjects() {
 
                 <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--color-border-subtle);">
                   <a href="/portfolio/${project.id}" data-link class="btn btn--primary btn--sm">
-                    <span>Discuss Your Project</span>
+                    <span>View Project</span>
                     ${icons.arrowRight("w-4 h-4")}
                   </a>
                   <div class="flex gap-2 flex-wrap">
@@ -249,7 +249,7 @@ export function renderFeaturedProjects() {
 
                 <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--color-border-subtle);">
                   <a href="/portfolio/${project.id}" data-link class="btn btn--primary btn--sm">
-                    <span>Discuss Your Project</span>
+                    <span>View Project</span>
                     ${icons.arrowRight("w-4 h-4")}
                   </a>
                   <div class="flex gap-2 flex-wrap">
