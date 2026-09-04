@@ -31,6 +31,7 @@ export function renderHero() {
             padding: 0.4rem 1.1rem; 
             border: 1px solid rgba(96, 165, 250, 0.35); 
             backdrop-filter: blur(8px);
+            font-size: 0.7rem;
           ">
             DIGITAL SOLUTIONS FOR MODERN ORGANIZATIONS
           </div>
@@ -76,5 +77,17 @@ export function renderHero() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .home-hero-banner .badge {
+          font-size: 0.6rem !important;
+          padding: 0.3rem 0.75rem !important;
+        }
+        .home-hero-banner h1 {
+          font-size: clamp(1.75rem, 6vw, 2.25rem) !important;
+        }
+      }
+    </style>
   `;
 }

@@ -28,11 +28,11 @@ export function renderSolutionsHero() {
 
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Get a Free Consultation</span>
+                <span>Discuss Your Project</span>
                 ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
-                <span>Explore Our Work</span>
+                <span>View Our Solutions</span>
               </a>
             </div>
           </div>
