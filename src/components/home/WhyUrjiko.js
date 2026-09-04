@@ -62,7 +62,7 @@ export function renderWhyUrjiko() {
               </p>
             </div>
 
-            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-4);">
+            <div class="card bg-soft" style="border-left: 3px solid var(--color-blue); padding: var(--space-5); margin-top: var(--space-6);">
               <h4 class="text-navy font-semibold mb-1" style="font-size: var(--font-size-sm);">No Over-Engineering</h4>
               <p class="text-secondary mb-0" style="font-size: var(--font-size-xs); line-height: 1.45;">
                 Dependable software without bloat or vendor lock-in.
