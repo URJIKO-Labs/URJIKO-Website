@@ -4,7 +4,7 @@ import { icons } from "../common/Icons.js";
 export function renderNavbar(activePath = "/") {
   const navLinksHtml = companyConfig.navLinks
     .map((link) => {
-      const isActive = activePath === link.path;
+      const isActive = activePath === link.path || (link.path !== "/" && activePath.startsWith(link.path));
       return `
         <li>
           <a 
