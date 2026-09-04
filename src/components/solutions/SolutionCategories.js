@@ -38,11 +38,11 @@ const SOLUTION_CATEGORIES = [
       name: 'SmartBiz ERP',
       badgeClass: 'badge--blue',
       badgeText: 'Core Product',
-      link: '/portfolio'
+      link: '/portfolio/smartbiz'
     },
     cta: {
       label: 'Explore Business',
-      link: '/portfolio'
+      link: '/portfolio/smartbiz'
     }
   },
   {
@@ -78,11 +78,11 @@ const SOLUTION_CATEGORIES = [
       name: 'EduFlow',
       badgeClass: 'badge--navy',
       badgeText: 'Education Platform',
-      link: '/portfolio'
+      link: '/portfolio/eduflow'
     },
     cta: {
       label: 'Explore Education',
-      link: '/portfolio'
+      link: '/portfolio/eduflow'
     }
   },
   {
@@ -118,11 +118,11 @@ const SOLUTION_CATEGORIES = [
       name: 'Transport Management',
       badgeClass: 'badge--navy',
       badgeText: 'Operations System',
-      link: '/portfolio'
+      link: '/portfolio/transport'
     },
     cta: {
       label: 'Explore Transport',
-      link: '/portfolio'
+      link: '/portfolio/transport'
     }
   },
   {
@@ -150,12 +150,12 @@ const SOLUTION_CATEGORIES = [
       name: 'ShegerHealth',
       badgeClass: 'badge--blue',
       badgeText: 'Project Concept',
-      link: '/portfolio',
+      link: '/portfolio/shegerhealth',
       disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.'
     },
     cta: {
       label: 'Explore Healthcare',
-      link: '/portfolio'
+      link: '/portfolio/shegerhealth'
     }
   }
 ];

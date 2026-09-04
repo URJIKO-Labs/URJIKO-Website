@@ -104,9 +104,13 @@ export function renderNavbar(activePath = "/") {
         </ul>
       </nav>
       
-      <div style="padding-top: var(--space-4); border-top: 1px solid var(--color-border-subtle); margin-top: auto;">
+      <div style="padding-top: var(--space-4); border-top: 1px solid var(--color-border-subtle); margin-top: auto; display: flex; flex-direction: column; gap: var(--space-2);">
         <a href="${companyConfig.primaryCTA.path}" data-link class="btn btn--primary btn--sm" style="width: 100%; text-align: center;">
           ${companyConfig.primaryCTA.label}
+        </a>
+        <a href="tel:${companyConfig.contact.phoneEthioTel}" class="btn btn--secondary btn--sm flex items-center justify-center gap-2" style="width: 100%; text-align: center;">
+          ${icons.phone("w-4 h-4")}
+          <span>Call ${companyConfig.contact.phoneEthio}</span>
         </a>
       </div>
     </div>

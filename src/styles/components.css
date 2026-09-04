@@ -694,8 +694,23 @@
 }
 
 /* =======================================================================
-   8. FOOTER
+   9. HERO IMAGES
    ======================================================================= */
+
+.hero__image {
+  object-fit: cover;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hero__image:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.hero-visual-wrapper {
+  display: none !important;
+}
+
 
 .footer {
   background-color: var(--color-navy-darker);

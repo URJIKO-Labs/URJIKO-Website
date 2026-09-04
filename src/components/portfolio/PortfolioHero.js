@@ -35,54 +35,14 @@ export function renderPortfolioHero() {
             </div>
           </div>
 
-          <!-- Right: Project Summary Visual -->
-          <div aria-hidden="true" style="width: 100%; display: flex; justify-content: center;">
-            <div style="width: 100%; max-width: 460px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-lg);">
-
-              <div class="flex items-center justify-between pb-3 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
-                <span class="text-xs font-semibold text-navy">PROJECT PORTFOLIO</span>
-                <span class="badge badge--blue text-xs">4 Core Projects</span>
-              </div>
-
-              <div class="flex flex-col gap-2">
-                <div class="flex items-center justify-between p-3" style="background: var(--color-navy); border-radius: var(--radius-sm); color: #FFF;">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue-light);"></span>
-                    <span class="text-sm font-semibold">SmartBiz ERP</span>
-                  </div>
-                  <span class="text-xs" style="color: rgba(255,255,255,0.7);">Business</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">Transport Management</span>
-                  </div>
-                  <span class="text-xs text-muted">Operations</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">EduFlow</span>
-                  </div>
-                  <span class="text-xs text-muted">Education</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">ShegerHealth</span>
-                  </div>
-                  <span class="text-xs text-muted">Healthcare</span>
-                </div>
-              </div>
-
-              <div class="flex items-center justify-between mt-4 pt-3" style="border-top: 1px solid var(--color-border-subtle);">
-                <span class="text-xs text-muted">+ 3 additional projects</span>
-                <span class="text-xs font-semibold" style="color: var(--color-blue);">5 Industries</span>
-              </div>
-            </div>
+          <!-- Right: Portfolio Hero Image -->
+          <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
+            <img 
+              src="${import.meta.env.BASE_URL}src/assets/images/portfolio_hero.jpg" 
+              alt="URJIKO Labs project portfolio showcase" 
+              class="hero__image"
+              style="width: 100%; max-width: 460px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--color-border);"
+            />
           </div>
 
         </div>

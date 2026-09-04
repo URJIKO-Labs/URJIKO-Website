@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 /**
  * Services Hero Section
@@ -28,7 +28,7 @@ export function renderServicesHero() {
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Get a Free Consultation</span>
-                ${icons.arrowRight('w-4 h-4')}
+                ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>View Our Solutions</span>
@@ -36,59 +36,14 @@ export function renderServicesHero() {
             </div>
           </div>
 
-          <!-- Right Column: Abstract Connected Architecture Visual (Navy + Blue + Light Blue) -->
-          <div class="hero-visual-wrapper" aria-hidden="true" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
-            <div style="width: 100%; max-width: 500px; background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-xl);">
-              
-              <div class="flex items-center justify-between pb-4 mb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
-                <span class="text-xs font-semibold text-navy">SYSTEM CAPABILITIES & ARCHITECTURE</span>
-                <span class="badge badge--blue text-xs">5 Core Areas</span>
-              </div>
-
-              <!-- Connected Modules Stack -->
-              <div class="flex flex-col gap-3">
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">Web & Mobile Platforms</span>
-                  </div>
-                  <span class="text-xs font-medium" style="color: var(--color-blue);">High Performance</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-navy); color: #FFFFFF; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue-light);"></span>
-                    <span class="text-sm font-semibold text-white">Business Management (ERP / POS)</span>
-                  </div>
-                  <span class="text-xs font-medium" style="color: rgba(255,255,255,0.75);">SmartBiz Ready</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">Custom Workflows & Database Systems</span>
-                  </div>
-                  <span class="text-xs text-muted">Scalable</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-blue);"></span>
-                    <span class="text-sm font-semibold text-navy">AI Automation & Data Processing</span>
-                  </div>
-                  <span class="text-xs font-medium" style="color: var(--color-blue);">Intelligent Tools</span>
-                </div>
-
-                <div class="flex items-center justify-between p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);">
-                  <div class="flex items-center gap-3">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-navy);"></span>
-                    <span class="text-sm font-semibold text-navy">Continuous Support & SLA Maintenance</span>
-                  </div>
-                  <span class="text-xs text-muted">99.9% Upkeep</span>
-                </div>
-              </div>
-
-            </div>
+          <!-- Right Column: Services Hero Image -->
+          <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
+            <img 
+              src="${import.meta.env.BASE_URL}src/assets/images/services_hero.jpg" 
+              alt="Ethiopian team collaboration on digital services" 
+              class="hero__image"
+              style="width: 100%; max-width: 500px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);"
+            />
           </div>
 
         </div>

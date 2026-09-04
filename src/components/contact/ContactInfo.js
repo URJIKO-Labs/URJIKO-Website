@@ -13,6 +13,26 @@ export function renderContactInfo() {
 
         <div class="flex flex-col gap-4">
           
+          <a href="tel:${companyConfig.contact.phoneEthioTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
+              ${icons.phone("w-5 h-5")}
+            </div>
+            <div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Phone (Ethio Telecom)</div>
+              <div class="font-medium">${companyConfig.contact.phoneEthio}</div>
+            </div>
+          </a>
+
+          <a href="tel:${companyConfig.contact.phoneSafariTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
+              ${icons.phone("w-5 h-5")}
+            </div>
+            <div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Phone (Safaricom)</div>
+              <div class="font-medium">${companyConfig.contact.phoneSafari}</div>
+            </div>
+          </a>
+
           <a href="mailto:${companyConfig.contact.email}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
               ${icons.mail("w-5 h-5")}

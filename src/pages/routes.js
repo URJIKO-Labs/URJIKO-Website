@@ -2,8 +2,11 @@ import { renderHomePage } from "./home/HomePage.js";
 import { renderServicesPage } from "./services/ServicesPage.js";
 import { renderSolutionsPage } from "./solutions/SolutionsPage.js";
 import { renderPortfolioPage } from "./portfolio/PortfolioPage.js";
+import { renderProjectPage } from "./portfolio/ProjectPage.js";
 import { renderAboutPage } from "./about/AboutPage.js";
 import { renderContactPage } from "./contact/ContactPage.js";
+import { renderPrivacyPage } from "./legal/PrivacyPage.js";
+import { renderTermsPage } from "./legal/TermsPage.js";
 import { renderGlobalCTA } from "../components/common/CTA.js";
 import { renderTelegramCTA } from "../components/contact/TelegramCTA.js";
 import { renderBreadcrumbs } from "../components/navigation/Breadcrumbs.js";
@@ -18,9 +21,18 @@ export const routes = {
 
   "/portfolio": () => renderPortfolioPage(),
 
+  "/portfolio/smartbiz": () => renderProjectPage("smartbiz"),
+  "/portfolio/transport": () => renderProjectPage("transport"),
+  "/portfolio/eduflow": () => renderProjectPage("eduflow"),
+  "/portfolio/shegerhealth": () => renderProjectPage("shegerhealth"),
+
   "/about": () => renderAboutPage(),
 
   "/contact": () => renderContactPage(),
+
+  "/privacy": () => renderPrivacyPage(),
+
+  "/terms": () => renderTermsPage(),
 
   "/404": () => `
     <div class="container section text-center">

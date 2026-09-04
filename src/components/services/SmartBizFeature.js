@@ -32,7 +32,7 @@ export function renderSmartBizFeature() {
 
             <!-- CTA Button -->
             <div>
-              <a href="/portfolio" data-link class="btn btn--primary">
+              <a href="/portfolio/smartbiz" data-link class="btn btn--primary">
                 <span>View SmartBiz</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>

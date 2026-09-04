@@ -26,8 +26,8 @@ export function renderFeaturedSolutions() {
               </p>
             </div>
             <div>
-              <a href="/portfolio" data-link class="card__link">
-                <span>View Solution</span>
+              <a href="/portfolio/smartbiz" data-link class="card__link">
+                <span>View Project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
             </div>
@@ -43,8 +43,8 @@ export function renderFeaturedSolutions() {
               </p>
             </div>
             <div>
-              <a href="/portfolio" data-link class="card__link">
-                <span>View Solution</span>
+              <a href="/portfolio/transport" data-link class="card__link">
+                <span>View Project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
             </div>
@@ -60,8 +60,8 @@ export function renderFeaturedSolutions() {
               </p>
             </div>
             <div>
-              <a href="/portfolio" data-link class="card__link">
-                <span>View Solution</span>
+              <a href="/portfolio/eduflow" data-link class="card__link">
+                <span>View Project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
             </div>
@@ -77,8 +77,8 @@ export function renderFeaturedSolutions() {
               </p>
             </div>
             <div>
-              <a href="/portfolio" data-link class="card__link">
-                <span>View Solution</span>
+              <a href="/portfolio/shegerhealth" data-link class="card__link">
+                <span>View Project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
             </div>

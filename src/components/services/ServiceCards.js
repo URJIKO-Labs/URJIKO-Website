@@ -1,4 +1,4 @@
-import { icons } from '../common/Icons.js';
+import { icons } from "../common/Icons.js";
 
 /**
  * URJIKO Labs — Core Services Cards Component
@@ -14,97 +14,110 @@ import { icons } from '../common/Icons.js';
 export function renderServiceCards() {
   const services = [
     {
-      title: 'UI/UX Design',
+      id: "ui-ux-design",
+      title: "UI/UX Design",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>`,
       description:
-        'Design intuitive, user-centered interfaces — from wireframes and prototypes to complete design systems that guide development.',
+        "Design intuitive, user-centered interfaces — from wireframes and prototypes to complete design systems that guide development.",
       tags: [
-        'User Research',
-        'Wireframing',
-        'Prototyping',
-        'Design Systems',
-        'UI Audits',
-        'Interactive Mockups',
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+        "UI Audits",
+        "Interactive Mockups",
       ],
-      link: '/contact',
+      link: "/contact",
     },
     {
-      title: 'Website Development',
+      id: "web-dev",
+      title: "Website Development",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
       description:
-        'Build modern, responsive websites — from business sites and portfolios to digital gift experiences for birthdays, anniversaries, and special occasions.',
+        "Build modern, responsive websites — from business sites and portfolios to digital gift experiences for birthdays, anniversaries, and special occasions.",
       tags: [
-        'Business Websites',
-        'Portfolio Sites',
-        'Digital Gift Sites',
-        'Landing Pages',
-        'SEO-Ready',
-        'Responsive Design',
+        "Business Websites",
+        "Portfolio Sites",
+        "Digital Gift Sites",
+        "Landing Pages",
+        "SEO-Ready",
+        "Responsive Design",
       ],
-      link: '/contact',
+      link: "/contact",
     },
     {
-      title: 'Software Solutions',
+      id: "business-systems",
+      title: "Business Management Systems & Custom Software",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
       description:
-        'Build practical business management systems and custom software — ERP, POS, inventory, booking platforms, and workflow tools built around your operations.',
-      tags: ['ERP & POS', 'Inventory', 'Custom Dashboards', 'Booking Systems', 'Role-Based Access', 'APIs'],
+        "Build practical business management systems and custom software — ERP, POS, inventory, booking platforms, and workflow tools built around your operations.",
+      tags: [
+        "ERP & POS",
+        "Inventory",
+        "Custom Dashboards",
+        "Booking Systems",
+        "Role-Based Access",
+        "APIs",
+      ],
       featured: {
-        label: 'Featured: SmartBiz ERP',
-        href: '/portfolio',
+        label: "Featured: SmartBiz ERP",
+        href: "/portfolio",
       },
-      link: '/contact',
+      link: "/contact",
     },
     {
-      title: 'Mobile App Development',
+      id: "mobile-apps",
+      title: "Mobile App Development",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
       description:
-        'Develop native and hybrid mobile applications for iOS and Android that extend your business systems and services to mobile users.',
+        "Develop native and hybrid mobile applications for iOS and Android that extend your business systems and services to mobile users.",
       tags: [
-        'iOS & Android',
-        'Hybrid Apps',
-        'Cross-Platform',
-        'Push Notifications',
-        'Offline Support',
-        'App Store Deploy',
+        "iOS & Android",
+        "Hybrid Apps",
+        "Cross-Platform",
+        "Push Notifications",
+        "Offline Support",
+        "App Store Deploy",
       ],
-      link: '/contact',
+      link: "/contact",
     },
     {
-      title: 'AI & Intelligent Solutions',
+      id: "ai-solutions",
+      title: "AI & Intelligent Solutions",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>`,
       description:
-        'Explore practical ways artificial intelligence and data-driven technology can improve business workflows, automation, decision-making, and customer experiences.',
+        "Explore practical ways artificial intelligence and data-driven technology can improve business workflows, automation, decision-making, and customer experiences.",
       tags: [
-        'AI Assistants',
-        'Workflow Automation',
-        'Data Analysis',
-        'Intelligent Search',
-        'AI Integration',
+        "AI Assistants",
+        "Workflow Automation",
+        "Data Analysis",
+        "Intelligent Search",
+        "AI Integration",
       ],
-      link: '/contact',
+      link: "/contact",
     },
     {
-      title: 'Maintenance & Technical Support',
+      id: "custom-software",
+      title: "Maintenance & Technical Support",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>`,
       description:
-        'Keep deployed software reliable, secure, updated, and continuously improving after launch.',
+        "Keep deployed software reliable, secure, updated, and continuously improving after launch.",
       tags: [
-        'Bug Fixing',
-        'Updates',
-        'Monitoring',
-        'Security',
-        'Performance',
-        'Feature Improvements',
+        "Bug Fixing",
+        "Updates",
+        "Monitoring",
+        "Security",
+        "Performance",
+        "Feature Improvements",
       ],
-      link: '/contact',
+      link: "/contact",
     },
   ];
 
   const cardsHtml = services
     .map(
       (service) => `
-      <div class="card flex flex-col justify-between" style="height: 100%;">
+      <div ${service.id ? `id="${service.id}"` : ""} class="card flex flex-col justify-between" style="height: 100%;">
         <div>
           <!-- Top Icon & Optional Featured Badge -->
           <div class="flex items-start justify-between gap-3 mb-4">
@@ -114,7 +127,7 @@ export function renderServiceCards() {
             ${
               service.featured
                 ? `<a href="${service.featured.href}" data-link class="badge badge--blue text-xs font-semibold" style="text-decoration: none;">${service.featured.label}</a>`
-                : ''
+                : ""
             }
           </div>
 
@@ -129,20 +142,23 @@ export function renderServiceCards() {
           <!-- Capabilities Tags -->
           <div class="flex flex-wrap gap-2 mb-6">
             ${service.tags
-              .map((tag) => `<span class="badge badge--outline text-xs">${tag}</span>`)
-              .join('')}
+              .map(
+                (tag) =>
+                  `<span class="badge badge--outline text-xs">${tag}</span>`,
+              )
+              .join("")}
           </div>
 
           <!-- Action Link -->
           <a href="${service.link}" data-link class="card__link">
-            <span>Explore Service</span>
-            ${icons.arrowRight('w-4 h-4')}
+            <span>Contact Us</span>
+            ${icons.arrowRight("w-4 h-4")}
           </a>
         </div>
       </div>
-    `
+    `,
     )
-    .join('');
+    .join("");
 
   return `
     <section class="section" aria-labelledby="core-services-heading">

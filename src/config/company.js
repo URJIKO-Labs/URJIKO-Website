@@ -10,13 +10,21 @@ export const companyConfig = {
   shortDescription:
     "URJIKO Labs designs and develops websites, business systems, custom software, and intelligent digital solutions that help organizations work smarter and grow.",
   foundingYear: 2026,
+  websiteUrl: "https://urjiko-website.vercel.app",
 
   // Contact Channels
   contact: {
     email: "urjikolabs@gmail.com",
-    phone: null,
-    phoneDisplay: null,
-    location: "Addis Ababa, Ethiopia",
+    phoneEthio: "0976 601 074",
+    phoneEthioRaw: "0976601074",
+    phoneEthioDisplay: "+251 976 601 074",
+    phoneEthioTel: "+251976601074",
+    phoneSafari: "0714 124 250",
+    phoneSafariRaw: "0714124250",
+    phoneSafariDisplay: "+251 714 124 250",
+    phoneSafariTel: "+251714124250",
+    phoneDisplay: "+251 976 601 074 / +251 714 124 250",
+    location: "Harar, Ethiopia",
   },
 
   // Primary Direct Messaging (Telegram only)
@@ -31,8 +39,9 @@ export const companyConfig = {
   // Social & External Links
   socialLinks: {
     telegram: "https://t.me/urjikolabs",
-    github: "https://github.com/URJIKO-Labs",
-    linkedin: null,
+    github: "https://github.com/urjiko-labs",
+    linkedin: "https://www.linkedin.com/company/urjiko-labs/",
+    tiktok: "https://www.tiktok.com/@urjiko.labs",
   },
 
   // Global Navigation Links
@@ -56,10 +65,10 @@ export const companyConfig = {
       { label: "Contact", path: "/contact" },
     ],
     services: [
-      { label: "Web Development", path: "/services" },
-      { label: "Business Systems", path: "/services" },
-      { label: "Custom Software", path: "/services" },
-      { label: "AI Solutions", path: "/services" },
+      { label: "Web Development", path: "/services#web-dev" },
+      { label: "Business Systems", path: "/services#business-systems" },
+      { label: "Custom Software", path: "/services#custom-software" },
+      { label: "AI Solutions", path: "/services#ai-solutions" },
     ],
     connect: [
       { label: "Email", type: "email", href: "mailto:urjikolabs@gmail.com" },
@@ -67,9 +76,18 @@ export const companyConfig = {
       {
         label: "GitHub",
         type: "github",
-        href: "https://github.com/URJIKO-Labs",
+        href: "https://github.com/urjiko-labs",
       },
-      { label: "LinkedIn", type: "linkedin", href: "#" },
+      {
+        label: "LinkedIn",
+        type: "linkedin",
+        href: "https://www.linkedin.com/company/urjiko-labs/",
+      },
+      {
+        label: "TikTok",
+        type: "tiktok",
+        href: "https://www.tiktok.com/@urjiko.labs",
+      },
     ],
   },
 
@@ -88,7 +106,7 @@ export const seoConfig = {
   titleTemplate: "%s | URJIKO Labs",
   defaultDescription:
     "URJIKO Labs builds high-reliability web applications, business management systems, custom software, and AI solutions.",
-  siteUrl: "https://urjikolabs.com",
+  siteUrl: "https://urjiko-website.vercel.app",
 
   routes: {
     "/": {

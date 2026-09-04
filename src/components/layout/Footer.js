@@ -24,6 +24,7 @@ export function renderFooter() {
       if (item.type === "telegram") icon = icons.telegram("w-4 h-4");
       if (item.type === "github") icon = icons.github("w-4 h-4");
       if (item.type === "linkedin") icon = icons.linkedin("w-4 h-4");
+      if (item.type === "tiktok") icon = icons.tiktok("w-4 h-4");
       if (item.type === "email") icon = icons.mail("w-4 h-4");
 
       const isExternal =
@@ -52,6 +53,25 @@ export function renderFooter() {
           <div class="footer__brand">
             <h3 class="text-white" style="font-size: var(--font-size-xl);">${companyConfig.name}</h3>
             <p>${companyConfig.tagline}</p>
+            ${
+              companyConfig.contact.location
+                ? `<p class="flex items-center gap-2 text-sm mt-3" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                    ${icons.mapPin("w-4 h-4")}
+                    <span>${companyConfig.contact.location}</span>
+                  </p>`
+                : ""
+            }
+            ${
+              companyConfig.contact.phoneEthio ||
+              companyConfig.contact.phoneSafari
+                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                    ${icons.phone("w-4 h-4")}
+                    <a href="tel:${companyConfig.contact.phoneEthioTel}" style="color: inherit; text-decoration: none;">${companyConfig.contact.phoneEthio}</a>
+                    <span>|</span>
+                    <a href="tel:${companyConfig.contact.phoneSafariTel}" style="color: inherit; text-decoration: none;">${companyConfig.contact.phoneSafari}</a>
+                  </p>`
+                : ""
+            }
           </div>
 
           <!-- Company Links -->
