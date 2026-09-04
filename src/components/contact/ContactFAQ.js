@@ -3,27 +3,27 @@ export function renderContactFAQ() {
     {
       question: "What kinds of projects do you build?",
       answer:
-        "Websites, business management systems (ERP/POS), custom software, mobile apps, AI solutions, and digital platforms.",
+        "We build websites, business management systems (POS, inventory, CRM), custom software, mobile apps, AI solutions, and digital platforms.",
     },
     {
-      question: "Do you work with small businesses?",
+      question: "Do you work with small businesses and how does the process work?",
       answer:
-        "Yes. Solutions can start with a focused MVP and scale as your business grows.",
-    },
-    {
-      question: "Do you build everything at once?",
-      answer:
-        "No. We recommend prioritizing your most critical operational problem first.",
+        "Yes. We work with businesses of all sizes. We start by understanding your problem, then recommend a practical solution. We build in phases, starting with the most important features first.",
     },
     {
       question: "Who pays for hosting infrastructure?",
       answer:
-        "Infrastructure is owned by the client. URJIKO configures, deploys, and maintains it for you.",
+        "Infrastructure costs are covered by the client. URJIKO configures, deploys, and maintains everything for you.",
     },
     {
-      question: "How does a new project start?",
+      question: "How does pricing and timeline work?",
       answer:
-        "We analyze your requirements, then agree on project scope, transparent pricing, timeline, and deliverables.",
+        "We provide a clear estimate after understanding your requirements. Pricing depends on scope and complexity. Timelines vary from a few weeks for small projects to several months for larger systems.",
+    },
+    {
+      question: "Do you provide maintenance and support after launch?",
+      answer:
+        "Yes. We offer ongoing maintenance and support to keep your system running smoothly, fix issues, and add improvements over time.",
     },
   ];
 
