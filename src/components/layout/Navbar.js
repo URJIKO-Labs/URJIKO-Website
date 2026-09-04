@@ -67,6 +67,10 @@ export function renderNavbar(activePath = "/") {
 
     <!-- Mobile Navigation Drawer — outside header to avoid fixed-inside-fixed issue -->
     <div 
+      class="navbar__mobile-backdrop" 
+      id="mobile-nav-backdrop"
+    ></div>
+    <div 
       class="navbar__mobile" 
       id="mobile-nav-panel" 
       role="dialog" 

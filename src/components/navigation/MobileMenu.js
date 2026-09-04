@@ -9,6 +9,7 @@ export function initMobileMenu() {
   const toggleIcon = document.getElementById("navbar-toggle-icon");
   const mobilePanel = document.getElementById("mobile-nav-panel");
   const closeBtn = document.getElementById("mobile-nav-close-btn");
+  const backdrop = document.getElementById("mobile-nav-backdrop");
 
   if (!toggleBtn || !mobilePanel) return;
 
@@ -30,6 +31,7 @@ export function initMobileMenu() {
     
     setTimeout(() => {
       mobilePanel.classList.add("is-open");
+      if (backdrop) backdrop.classList.add("is-open");
     }, 10);
     
     document.documentElement.style.overflow = "hidden";
@@ -46,6 +48,7 @@ export function initMobileMenu() {
     toggleBtn.setAttribute("aria-label", "Open Navigation Menu");
     
     mobilePanel.classList.remove("is-open");
+    if (backdrop) backdrop.classList.remove("is-open");
     document.documentElement.style.overflow = "";
     document.body.style.overflow = "";
     if (toggleIcon) toggleIcon.innerHTML = icons.menu();
@@ -68,6 +71,13 @@ export function initMobileMenu() {
 
   if (closeBtn) {
     closeBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (isOpen) closeMenu();
+    };
+  }
+
+  if (backdrop) {
+    backdrop.onclick = (e) => {
       e.stopPropagation();
       if (isOpen) closeMenu();
     };
