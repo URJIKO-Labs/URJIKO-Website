@@ -3,36 +3,52 @@ import { icons } from '../common/Icons.js';
 /**
  * URJIKO Labs — Core Services Cards Component
  *
- * Displays 5 core services in responsive cards:
- * 1. Website Development
- * 2. Business Management Systems (featuring SmartBiz ERP)
- * 3. Custom Software Development
- * 4. AI & Intelligent Solutions
- * 5. Maintenance & Technical Support
+ * Displays 6 core services in responsive cards:
+ * 1. UI/UX Design
+ * 2. Website Development
+ * 3. Software Solutions (Business Management + Custom Software)
+ * 4. Mobile App Development
+ * 5. AI & Intelligent Solutions
+ * 6. Maintenance & Technical Support
  */
 export function renderServiceCards() {
   const services = [
     {
-      title: 'Website Development',
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
+      title: 'UI/UX Design',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>`,
       description:
-        'Build modern, responsive websites that give businesses and organizations a professional digital presence and make it easier for customers to interact with them.',
+        'Design intuitive, user-centered interfaces — from wireframes and prototypes to complete design systems that guide development.',
       tags: [
-        'Business Websites',
-        'E-Commerce',
-        'Landing Pages',
-        'SEO-Ready',
-        'Responsive Design',
-        'CMS Integration',
+        'User Research',
+        'Wireframing',
+        'Prototyping',
+        'Design Systems',
+        'UI Audits',
+        'Interactive Mockups',
       ],
       link: '/contact',
     },
     {
-      title: 'Business Management Systems',
+      title: 'Website Development',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
+      description:
+        'Build modern, responsive websites — from business sites and portfolios to digital gift experiences for birthdays, anniversaries, and special occasions.',
+      tags: [
+        'Business Websites',
+        'Portfolio Sites',
+        'Digital Gift Sites',
+        'Landing Pages',
+        'SEO-Ready',
+        'Responsive Design',
+      ],
+      link: '/contact',
+    },
+    {
+      title: 'Software Solutions',
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
       description:
-        'Build practical software that helps businesses manage daily operations, customers, sales, inventory, reporting, and internal workflows.',
-      tags: ['POS', 'Inventory', 'Sales', 'Customers', 'Reports', 'Dashboards'],
+        'Build practical business management systems and custom software — ERP, POS, inventory, booking platforms, and workflow tools built around your operations.',
+      tags: ['ERP & POS', 'Inventory', 'Custom Dashboards', 'Booking Systems', 'Role-Based Access', 'APIs'],
       featured: {
         label: 'Featured: SmartBiz ERP',
         href: '/portfolio',
@@ -40,16 +56,17 @@ export function renderServiceCards() {
       link: '/contact',
     },
     {
-      title: 'Custom Software Development',
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`,
+      title: 'Mobile App Development',
+      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
       description:
-        'Develop software around the specific workflows, requirements, and operational problems of an organization instead of forcing the organization to adapt to generic software.',
+        'Develop native and hybrid mobile applications for iOS and Android that extend your business systems and services to mobile users.',
       tags: [
-        'Management Systems',
-        'Booking Systems',
-        'Internal Platforms',
-        'Role-Based Systems',
-        'Custom Dashboards',
+        'iOS & Android',
+        'Hybrid Apps',
+        'Cross-Platform',
+        'Push Notifications',
+        'Offline Support',
+        'App Store Deploy',
       ],
       link: '/contact',
     },
@@ -139,8 +156,8 @@ export function renderServiceCards() {
           </p>
         </div>
 
-        <!-- 5 Service Cards Grid -->
-        <div class="grid grid--2 gap-6">
+        <!-- 6 Service Cards Grid -->
+        <div class="grid grid--3 gap-6">
           ${cardsHtml}
         </div>
       </div>
