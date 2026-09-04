@@ -63,8 +63,20 @@ class Router {
       });
 
       attachPageLayoutEvents();
+      initPageComponents();
     }
   }
+}
+
+// Initialize all interactive components
+function initPageComponents() {
+  requestAnimationFrame(() => {
+    initScrollAnimations();
+    initPortfolioTabs();
+    initCustomSelects();
+    initContactForm();
+    initFAQAccordion();
+  });
 }
 
 // Start router
@@ -159,9 +171,12 @@ function initCustomSelects() {
         dropdown.classList.remove('open');
       });
     });
+  });
 
-    document.addEventListener('click', () => {
-      dropdown.classList.remove('open');
+  // Close dropdowns on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-select__dropdown').forEach(d => {
+      d.classList.remove('open');
     });
   });
 }
@@ -182,7 +197,6 @@ function initFAQAccordion() {
       // Close all others
       document.querySelectorAll('.faq-item__content').forEach(c => {
         c.style.maxHeight = '0px';
-        c.style.paddingTop = '0';
       });
       document.querySelectorAll('.faq-item__icon').forEach(ic => {
         ic.style.transform = 'rotate(0deg)';
@@ -193,7 +207,6 @@ function initFAQAccordion() {
 
       if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.paddingTop = '0';
         icon.style.transform = 'rotate(180deg)';
         item.style.boxShadow = '0 2px 12px rgba(6, 36, 92, 0.08)';
       }
@@ -230,16 +243,3 @@ function initContactForm() {
     }, 3000);
   });
 }
-
-// Intercept page renders to re-init components
-const originalRender = Router.prototype.renderCurrentRoute;
-Router.prototype.renderCurrentRoute = function() {
-  originalRender.call(this);
-  setTimeout(() => {
-    initScrollAnimations();
-    initPortfolioTabs();
-    initCustomSelects();
-    initContactForm();
-    initFAQAccordion();
-  }, 100);
-};
