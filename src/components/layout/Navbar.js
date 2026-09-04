@@ -21,19 +21,19 @@ export function renderNavbar(activePath = "/") {
     .join("");
 
   return `
-    <header class="navbar" id="site-navbar" role="banner">
-      <div class="container navbar__inner">
+    <header class="navbar" id="site-navbar" role="banner" style="min-height: 76px; display: flex; align-items: center;">
+      <div class="container navbar__inner" style="height: 100%;">
         <!-- Logo -->
-        <a href="/" data-link class="navbar__logo" aria-label="${companyConfig.name} Home" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;">
+        <a href="/" data-link class="navbar__logo" aria-label="${companyConfig.name} Home" style="text-decoration: none; display: flex; align-items: center; gap: 0.65rem; flex-shrink: 0;">
           <img 
             src="/images/urjiko-logo.jpg" 
             alt="${companyConfig.name} Logo" 
-            width="40" 
-            height="40" 
+            width="44" 
+            height="44" 
             loading="eager"
-            style="height: 2rem; width: 2rem; object-fit: contain; flex-shrink: 0;"
+            style="height: 2.25rem; width: 2.25rem; object-fit: contain; flex-shrink: 0;"
           />
-          <span class="navbar__logo-text" style="font-size: 1rem; font-weight: 700; color: var(--color-navy); letter-spacing: -0.01em; white-space: nowrap;">URJIKO Labs</span>
+          <span class="navbar__logo-text" style="font-size: 1.125rem; font-weight: 700; color: var(--color-navy); letter-spacing: -0.01em; white-space: nowrap;">URJIKO Labs</span>
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -45,7 +45,7 @@ export function renderNavbar(activePath = "/") {
 
         <!-- Right Action / Mobile Toggle -->
         <div class="navbar__actions">
-          <a href="${companyConfig.primaryCTA.path}" data-link class="btn btn--primary btn--sm hide-mobile">
+          <a href="${companyConfig.primaryCTA.path}" data-link class="btn btn--primary btn--md hide-mobile" style="padding: 0.55rem 1.25rem; font-size: 0.9375rem; font-weight: 600;">
             ${companyConfig.primaryCTA.label}
           </a>
 
