@@ -12,9 +12,8 @@
     "design-system"
   ],
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "dev": "vite",
-    "build": "npm rebuild && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
