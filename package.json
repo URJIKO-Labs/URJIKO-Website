@@ -1,15 +1,23 @@
 {
   "name": "urjiko-website",
-  "private": true,
+  "description": "Official website and design system for URJIKO Labs",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "author": "URJIKO Labs",
+  "license": "MIT",
+  "keywords": [
+    "urjiko",
+    "website",
+    "design-system"
+  ],
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm rebuild && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^5.4.2"
   }
 }
-
