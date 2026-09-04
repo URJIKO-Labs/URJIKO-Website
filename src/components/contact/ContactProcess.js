@@ -10,7 +10,7 @@ export function renderContactProcess() {
           </p>
         </div>
         
-        <div class="grid grid--5" style="gap: var(--space-4);">
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
           <div class="card" style="padding: var(--space-5); text-align: center;">
             <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-3); font-family: monospace;">01</div>
             <h3 class="text-navy font-semibold text-sm mb-2">We Listen</h3>
@@ -44,12 +44,12 @@ export function renderContactProcess() {
 
         <style>
           @media (max-width: 768px) {
-            .grid--5 {
+            section .grid[style*="grid-template-columns: repeat(3"] {
               grid-template-columns: repeat(2, 1fr) !important;
             }
           }
           @media (max-width: 480px) {
-            .grid--5 {
+            section .grid[style*="grid-template-columns: repeat(3"] {
               grid-template-columns: 1fr !important;
             }
           }

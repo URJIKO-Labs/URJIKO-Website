@@ -97,67 +97,6 @@ export function renderContactForm() {
           </button>
         </div>
       </form>
-      
-      <script>
-        (function() {
-          document.querySelectorAll('.custom-select').forEach(select => {
-            const trigger = select.querySelector('.custom-select__trigger');
-            const dropdown = select.querySelector('.custom-select__dropdown');
-            const hiddenInput = select.querySelector('input[type="hidden"]');
-            const options = select.querySelectorAll('.custom-select__option');
-            const displaySpan = trigger.querySelector('span');
-
-            trigger.addEventListener('click', (e) => {
-              e.stopPropagation();
-              document.querySelectorAll('.custom-select__dropdown').forEach(d => {
-                if (d !== dropdown) d.classList.remove('open');
-              });
-              dropdown.classList.toggle('open');
-            });
-
-            options.forEach(option => {
-              option.addEventListener('click', () => {
-                const value = option.dataset.value;
-                const text = option.textContent;
-                hiddenInput.value = value;
-                displaySpan.textContent = text;
-                displaySpan.style.color = value ? 'var(--color-navy)' : 'var(--color-muted)';
-                dropdown.classList.remove('open');
-              });
-            });
-
-            document.addEventListener('click', () => {
-              dropdown.classList.remove('open');
-            });
-          });
-
-          const form = document.getElementById('urjiko-contact-form');
-          if (form) {
-            form.addEventListener('submit', function(e) {
-              e.preventDefault();
-              const btn = form.querySelector('button[type="submit"]');
-              const originalText = btn.innerHTML;
-              btn.innerHTML = 'Message Sent!';
-              btn.disabled = true;
-              btn.style.backgroundColor = '#16a34a';
-              form.reset();
-              document.querySelectorAll('.custom-select').forEach(select => {
-                const hiddenInput = select.querySelector('input[type="hidden"]');
-                const displaySpan = select.querySelector('.custom-select__trigger span');
-                const defaultOption = select.querySelector('.custom-select__option');
-                hiddenInput.value = defaultOption.dataset.value;
-                displaySpan.textContent = defaultOption.textContent;
-                displaySpan.style.color = '';
-              });
-              setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                btn.style.backgroundColor = '';
-              }, 3000);
-            });
-          }
-        })();
-      </script>
     </div>
 
     <style>
