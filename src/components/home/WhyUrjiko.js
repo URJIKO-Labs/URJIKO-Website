@@ -30,15 +30,15 @@ export function renderWhyUrjiko() {
   const principlesHtml = principles
     .map(
       (p) => `
-      <div class="flex items-start gap-3 principle-item" style="border-bottom: 1px solid var(--color-border-subtle); padding-bottom: var(--space-4);">
-        <span class="font-bold principle-number" style="color: var(--color-blue); font-size: var(--font-size-sm); font-family: monospace; min-width: 2.25rem; background: var(--color-bg-light-blue); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); text-align: center; flex-shrink: 0;">
+      <div class="flex items-start gap-4 principle-item" style="border-bottom: 1px solid var(--color-border-subtle); padding-bottom: var(--space-5);">
+        <span class="font-bold principle-number" style="color: var(--color-blue); font-size: var(--font-size-lg); font-family: monospace; min-width: 3rem; text-align: right; flex-shrink: 0; padding-top: 0.1rem;">
           ${p.number}
         </span>
         <div>
-          <h3 class="principle-title" style="font-size: var(--font-size-base); color: var(--color-navy); margin-bottom: 0.25rem; font-weight: 600;">
+          <h3 class="principle-title" style="font-size: var(--font-size-md); color: var(--color-navy); margin-bottom: 0.35rem; font-weight: 600;">
             ${p.title}
           </h3>
-          <p class="text-secondary principle-desc" style="font-size: var(--font-size-sm); margin-bottom: 0; line-height: 1.5;">
+          <p class="text-secondary principle-desc" style="font-size: var(--font-size-base); margin-bottom: 0; line-height: 1.6;">
             ${p.description}
           </p>
         </div>
