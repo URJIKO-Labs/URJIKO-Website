@@ -33,33 +33,36 @@ export function renderContactForm() {
             <select id="service" name="service" class="contact-input">
               <option value="">Select a service...</option>
               <option value="web-dev">Website Development</option>
-              <option value="business-systems">Business Management Systems</option>
-              <option value="custom-software">Custom Software</option>
-              <option value="ai-solutions">AI & Intelligent Solutions</option>
+              <option value="business-systems">Business Management System (POS, Inventory, CRM)</option>
+              <option value="custom-software">Custom Software Development</option>
+              <option value="ai-solutions">AI & Automation Solutions</option>
+              <option value="mobile-app">Mobile App Development</option>
+              <option value="digital-platform">Digital Platform / SaaS</option>
               <option value="maintenance">Maintenance & Support</option>
-              <option value="other">Other</option>
+              <option value="consultation">Not sure yet / Need consultation</option>
             </select>
           </div>
           <div class="flex flex-col gap-2">
             <label for="budget" class="text-navy font-semibold text-sm">Budget Range</label>
             <select id="budget" name="budget" class="contact-input">
               <option value="">Select budget range...</option>
-              <option value="under-5k">Under $5,000</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="10k-25k">$10,000 - $25,000</option>
-              <option value="25k-50k">$25,000 - $50,000</option>
-              <option value="over-50k">$50,000+</option>
+              <option value="under-10k">Under 10,000 ETB</option>
+              <option value="10k-25k">10,000 - 25,000 ETB</option>
+              <option value="25k-50k">25,000 - 50,000 ETB</option>
+              <option value="50k-100k">50,000 - 100,000 ETB</option>
+              <option value="over-100k">Over 100,000 ETB</option>
+              <option value="not-sure">Not sure yet</option>
             </select>
           </div>
         </div>
 
         <div class="flex flex-col gap-2">
           <label for="contact-method" class="text-navy font-semibold text-sm">Preferred Contact Method</label>
-          <select id="contact-method" name="contact-method" class="contact-input">
-            <option value="email">Email</option>
-            <option value="phone">Phone Call</option>
-            <option value="telegram">Telegram</option>
-          </select>
+            <select id="contact-method" name="contact-method" class="contact-input">
+              <option value="telegram">Telegram</option>
+              <option value="phone">Phone Call</option>
+              <option value="email">Email</option>
+            </select>
         </div>
 
         <div class="flex flex-col gap-2">
