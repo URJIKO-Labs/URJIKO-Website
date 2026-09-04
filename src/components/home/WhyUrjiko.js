@@ -95,19 +95,24 @@ export function renderWhyUrjiko() {
           gap: 0 !important;
         }
         section[aria-labelledby="why-heading"] .principle-item {
-          padding-bottom: var(--space-4) !important;
+          gap: var(--space-3) !important;
+          padding-bottom: var(--space-3) !important;
         }
         section[aria-labelledby="why-heading"] .principle-item:last-child {
           border-bottom: none !important;
           padding-bottom: 0 !important;
         }
         section[aria-labelledby="why-heading"] .principle-number {
-          font-size: var(--font-size-xs) !important;
+          font-size: var(--font-size-sm) !important;
           min-width: 2rem !important;
-          padding: 0.2rem 0.4rem !important;
+          text-align: center !important;
+          background: var(--color-bg-light-blue) !important;
+          padding: 0.15rem 0.4rem !important;
+          border-radius: var(--radius-sm) !important;
         }
         section[aria-labelledby="why-heading"] .principle-title {
           font-size: var(--font-size-sm) !important;
+          margin-bottom: 0.15rem !important;
         }
         section[aria-labelledby="why-heading"] .principle-desc {
           font-size: var(--font-size-xs) !important;
