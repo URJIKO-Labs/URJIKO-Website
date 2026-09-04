@@ -72,6 +72,14 @@ export function renderFooter() {
                   </p>`
                 : ""
             }
+            ${
+              companyConfig.telegram.url
+                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                    ${icons.telegram("w-4 h-4")}
+                    <a href="${companyConfig.telegram.url}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">URJIKO Support</a>
+                  </p>`
+                : ""
+            }
           </div>
 
           <!-- Company Links -->
@@ -93,9 +101,39 @@ export function renderFooter() {
           <!-- Connect Channels -->
           <div class="footer__connect">
             <h4 class="footer__heading">Connect</h4>
-            <ul class="footer__links footer__links--horizontal" role="list">
-              ${connectLinksHtml}
-            </ul>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
+              <!-- Row 1: Email next to GitHub -->
+              <div class="flex items-center gap-6 flex-wrap">
+                <a href="mailto:${companyConfig.contact.email}" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
+                  ${icons.mail("w-4 h-4")}
+                  <span>Email</span>
+                </a>
+                <a href="${companyConfig.socialLinks.github}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
+                  ${icons.github("w-4 h-4")}
+                  <span>GitHub</span>
+                </a>
+              </div>
+
+              <!-- Row 2: LinkedIn next to TikTok -->
+              <div class="flex items-center gap-6 flex-wrap">
+                <a href="${companyConfig.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
+                  ${icons.linkedin("w-4 h-4")}
+                  <span>LinkedIn</span>
+                </a>
+                <a href="${companyConfig.socialLinks.tiktok}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
+                  ${icons.tiktok("w-4 h-4")}
+                  <span>TikTok</span>
+                </a>
+              </div>
+
+              <!-- Row 3: Telegram Channel -->
+              <div class="mt-1">
+                <a href="${companyConfig.telegramChannel.url}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
+                  ${icons.telegram("w-4 h-4")}
+                  <span>Telegram Channel</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
