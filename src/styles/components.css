@@ -698,7 +698,7 @@
    ======================================================================= */
 
 .footer {
-  background-color: var(--color-navy-dark);
+  background-color: var(--color-navy-darker);
   color: var(--color-text-inverse);
   padding-top: var(--space-12);
   padding-bottom: var(--space-6);
