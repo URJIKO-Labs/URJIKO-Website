@@ -30,15 +30,15 @@ export function renderWhyUrjiko() {
   const principlesHtml = principles
     .map(
       (p) => `
-      <div class="flex items-start gap-3 pb-4" style="border-bottom: 1px solid var(--color-border-subtle);">
-        <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-lg); font-family: monospace; min-width: 2rem;">
+      <div class="flex items-start gap-3 principle-item" style="border-bottom: 1px solid var(--color-border-subtle); padding-bottom: var(--space-4);">
+        <span class="font-bold principle-number" style="color: var(--color-blue); font-size: var(--font-size-sm); font-family: monospace; min-width: 2.25rem; background: var(--color-bg-light-blue); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); text-align: center; flex-shrink: 0;">
           ${p.number}
         </span>
         <div>
-          <h3 style="font-size: var(--font-size-base); color: var(--color-navy); margin-bottom: 0.15rem; font-weight: 600;">
+          <h3 class="principle-title" style="font-size: var(--font-size-base); color: var(--color-navy); margin-bottom: 0.25rem; font-weight: 600;">
             ${p.title}
           </h3>
-          <p class="text-secondary" style="font-size: var(--font-size-sm); margin-bottom: 0; line-height: 1.45;">
+          <p class="text-secondary principle-desc" style="font-size: var(--font-size-sm); margin-bottom: 0; line-height: 1.5;">
             ${p.description}
           </p>
         </div>
@@ -90,12 +90,28 @@ export function renderWhyUrjiko() {
           gap: var(--space-6) !important;
         }
         section[aria-labelledby="why-heading"] .flex.flex-col.gap-4 {
-          display: grid !important;
-          grid-template-columns: 1fr 1fr !important;
-          gap: var(--space-3) !important;
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0 !important;
         }
-        section[aria-labelledby="why-heading"] .flex.flex-col.gap-4 > div:nth-child(5) {
-          grid-column: span 2;
+        section[aria-labelledby="why-heading"] .principle-item {
+          padding-bottom: var(--space-4) !important;
+        }
+        section[aria-labelledby="why-heading"] .principle-item:last-child {
+          border-bottom: none !important;
+          padding-bottom: 0 !important;
+        }
+        section[aria-labelledby="why-heading"] .principle-number {
+          font-size: var(--font-size-xs) !important;
+          min-width: 2rem !important;
+          padding: 0.2rem 0.4rem !important;
+        }
+        section[aria-labelledby="why-heading"] .principle-title {
+          font-size: var(--font-size-sm) !important;
+        }
+        section[aria-labelledby="why-heading"] .principle-desc {
+          font-size: var(--font-size-xs) !important;
+          line-height: 1.5 !important;
         }
       }
     </style>
