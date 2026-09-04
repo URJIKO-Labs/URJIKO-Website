@@ -108,6 +108,13 @@ export function renderServicesHero() {
         section[aria-labelledby="services-hero-title"] .hero-visual-wrapper {
           display: none !important;
         }
+        section[aria-labelledby="services-hero-title"] h1 {
+          font-size: clamp(1.5rem, 6vw, 2rem) !important;
+          line-height: 1.2 !important;
+        }
+        section[aria-labelledby="services-hero-title"] p {
+          font-size: var(--font-size-sm) !important;
+        }
         section[aria-labelledby="services-hero-title"] .flex.items-center.justify-between {
           flex-wrap: wrap;
           gap: var(--space-2);

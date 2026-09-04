@@ -224,7 +224,7 @@ export function renderSolutionCategories() {
 
         <!-- Category CTA Link -->
         <div class="flex items-center">
-          <a href="${category.cta.link}" data-link class="btn btn--secondary flex items-center gap-2">
+          <a href="${category.cta.link}" data-link class="btn btn--secondary btn--sm flex items-center gap-2">
             <span>${category.cta.label}</span>
             ${icons.arrowRight('w-4 h-4')}
           </a>

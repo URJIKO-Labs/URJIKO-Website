@@ -36,14 +36,14 @@ export function renderContactFAQ() {
       @media (max-width: 768px) {
         [aria-labelledby="cta-section-heading"] ~ .section .card--service,
         .section .card--service {
-          padding: var(--space-4) !important;
+          padding: var(--space-3) var(--space-4) !important;
         }
         .section .card--service h3 {
-          font-size: var(--font-size-base) !important;
+          font-size: var(--font-size-sm) !important;
           margin-bottom: var(--space-2) !important;
         }
         .section .card--service p {
-          font-size: 0.9375rem;
+          font-size: var(--font-size-xs);
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;

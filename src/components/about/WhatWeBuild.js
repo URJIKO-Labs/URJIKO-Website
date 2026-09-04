@@ -84,6 +84,10 @@ export function renderWhatWeBuild() {
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
+        [aria-labelledby="what-we-build-title"] .btn {
+          padding: 0.5rem 1rem;
+          font-size: var(--font-size-sm);
+        }
       }
     </style>
   `;

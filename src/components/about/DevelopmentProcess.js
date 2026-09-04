@@ -37,7 +37,8 @@ export function renderDevelopmentProcess() {
     <style>
       @media (max-width: 768px) {
         [style*="background-color: var(--color-bg-soft)"] .grid {
-          gap: var(--space-3) !important;
+          grid-template-columns: 1fr !important;
+          gap: var(--space-2) !important;
         }
         [style*="background-color: var(--color-bg-soft)"] .card {
           padding: var(--space-3) var(--space-4) !important;
@@ -46,8 +47,8 @@ export function renderDevelopmentProcess() {
           gap: var(--space-3) !important;
         }
         [style*="background-color: var(--color-bg-soft)"] .card .font-bold {
-          font-size: 1rem !important;
-          min-width: 32px;
+          font-size: 0.875rem !important;
+          min-width: 36px;
           text-align: center;
           background: var(--color-bg-light-blue);
           color: var(--color-blue);
@@ -61,6 +62,10 @@ export function renderDevelopmentProcess() {
         [style*="background-color: var(--color-bg-soft)"] .card p {
           margin: 0 !important;
           font-size: var(--font-size-xs) !important;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       }
     </style>

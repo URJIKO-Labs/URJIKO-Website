@@ -117,6 +117,10 @@ export function renderSmartBizFeature() {
           .smartbiz-visual-wrapper {
             display: none !important;
           }
+          section[aria-labelledby="smartbiz-feature-title"] .btn {
+            padding: 0.625rem 1.25rem;
+            font-size: var(--font-size-sm);
+          }
         }
       </style>
     </section>

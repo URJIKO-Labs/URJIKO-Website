@@ -312,26 +312,42 @@ export function renderFeaturedProjects() {
         [id^="project-"] {
           border-top: none !important;
           border-left: 4px solid var(--color-blue);
-          margin-bottom: var(--space-8);
+          margin-bottom: var(--space-6);
           border-radius: var(--radius-md);
           background: var(--color-white) !important;
           box-shadow: var(--shadow-sm);
         }
         [id^="project-"] .container {
-          padding: var(--space-5) var(--space-4);
+          padding: var(--space-4) var(--space-4);
         }
         [id^="project-"] .flex.items-center.gap-3.mb-3 {
           flex-wrap: wrap;
           gap: var(--space-2);
         }
         [id^="project-"] h2 {
-          font-size: clamp(1.25rem, 4vw, 1.75rem) !important;
+          font-size: clamp(1.125rem, 4vw, 1.5rem) !important;
         }
         [id^="project-"] h3 {
-          font-size: var(--font-size-base) !important;
+          font-size: var(--font-size-sm) !important;
         }
         [id^="project-"] .btn {
           width: 100%;
+          padding: 0.625rem 1.25rem;
+          font-size: var(--font-size-sm);
+        }
+        [id^="project-"] .btn--secondary {
+          padding: 0.5rem 1rem;
+          font-size: var(--font-size-xs);
+        }
+        [id^="project-"] [style*="grid-template-columns: repeat(auto-fill"] {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: var(--space-2) !important;
+        }
+        [id^="project-"] [style*="grid-template-columns: repeat(auto-fill"] > div {
+          padding: var(--space-2) var(--space-3) !important;
+        }
+        [id^="project-"] [style*="grid-template-columns: repeat(auto-fill"] .text-sm {
+          font-size: var(--font-size-xs) !important;
         }
       }
     </style>

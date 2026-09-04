@@ -163,6 +163,9 @@ export function renderServiceCards() {
         #core-services-heading ~ .grid .flex.flex-wrap.gap-2 {
           display: none;
         }
+        #core-services-heading ~ .grid .card__link {
+          font-size: var(--font-size-xs);
+        }
       }
     </style>
   `;
