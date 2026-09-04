@@ -70,19 +70,39 @@ export function renderContactForm() {
           </div>
         </div>
 
-        <div class="flex flex-col gap-2">
-          <label class="text-navy font-semibold text-sm">Preferred Contact Method</label>
-          <div class="custom-select" data-name="contact-method">
-            <div class="custom-select__trigger contact-input">
-              <span>Telegram</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <div class="grid grid--2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label class="text-navy font-semibold text-sm">Preferred Contact Method</label>
+            <div class="custom-select" data-name="contact-method">
+              <div class="custom-select__trigger contact-input">
+                <span>Telegram</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="custom-select__dropdown">
+                <div class="custom-select__option" data-value="telegram">Telegram</div>
+                <div class="custom-select__option" data-value="phone">Phone Call</div>
+                <div class="custom-select__option" data-value="email">Email</div>
+              </div>
+              <input type="hidden" name="contact-method" value="telegram">
             </div>
-            <div class="custom-select__dropdown">
-              <div class="custom-select__option" data-value="telegram">Telegram</div>
-              <div class="custom-select__option" data-value="phone">Phone Call</div>
-              <div class="custom-select__option" data-value="email">Email</div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-navy font-semibold text-sm">Project Timeline</label>
+            <div class="custom-select" data-name="timeline">
+              <div class="custom-select__trigger contact-input">
+                <span>When do you need this?</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="custom-select__dropdown">
+                <div class="custom-select__option" data-value="">When do you need this?</div>
+                <div class="custom-select__option" data-value="asap">ASAP</div>
+                <div class="custom-select__option" data-value="1-week">Within 1 week</div>
+                <div class="custom-select__option" data-value="2-weeks">Within 2 weeks</div>
+                <div class="custom-select__option" data-value="1-month">Within 1 month</div>
+                <div class="custom-select__option" data-value="flexible">Flexible / Not sure</div>
+              </div>
+              <input type="hidden" name="timeline" value="">
             </div>
-            <input type="hidden" name="contact-method" value="telegram">
           </div>
         </div>
 
