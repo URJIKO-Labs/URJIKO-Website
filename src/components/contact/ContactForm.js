@@ -8,29 +8,29 @@ export function renderContactForm() {
         <div class="grid grid--2 gap-4">
           <div class="flex flex-col gap-2">
             <label for="name" class="text-navy font-semibold text-sm">Full Name <span class="text-blue">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="John Doe" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+            <input type="text" id="name" name="name" required placeholder="John Doe" class="contact-input">
           </div>
           <div class="flex flex-col gap-2">
             <label for="organization" class="text-navy font-semibold text-sm">Organization / Company</label>
-            <input type="text" id="organization" name="organization" placeholder="Your Company Ltd" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+            <input type="text" id="organization" name="organization" placeholder="Your Company Ltd" class="contact-input">
           </div>
         </div>
 
         <div class="grid grid--2 gap-4">
           <div class="flex flex-col gap-2">
             <label for="email" class="text-navy font-semibold text-sm">Email Address <span class="text-blue">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="john@example.com" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+            <input type="email" id="email" name="email" required placeholder="john@example.com" class="contact-input">
           </div>
           <div class="flex flex-col gap-2">
             <label for="phone" class="text-navy font-semibold text-sm">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit;">
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" class="contact-input">
           </div>
         </div>
 
         <div class="grid grid--2 gap-4">
           <div class="flex flex-col gap-2">
             <label for="service" class="text-navy font-semibold text-sm">Service Needed</label>
-            <select id="service" name="service" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+            <select id="service" name="service" class="contact-input">
               <option value="">Select a service...</option>
               <option value="web-dev">Web Development</option>
               <option value="mobile-app">Mobile App Development</option>
@@ -42,7 +42,7 @@ export function renderContactForm() {
           </div>
           <div class="flex flex-col gap-2">
             <label for="budget" class="text-navy font-semibold text-sm">Budget Range</label>
-            <select id="budget" name="budget" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+            <select id="budget" name="budget" class="contact-input">
               <option value="">Select budget range...</option>
               <option value="under-5k">Under $5,000</option>
               <option value="5k-10k">$5,000 - $10,000</option>
@@ -55,7 +55,7 @@ export function renderContactForm() {
 
         <div class="flex flex-col gap-2">
           <label for="contact-method" class="text-navy font-semibold text-sm">Preferred Contact Method</label>
-          <select id="contact-method" name="contact-method" style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; background-color: var(--color-white);">
+          <select id="contact-method" name="contact-method" class="contact-input">
             <option value="email">Email</option>
             <option value="phone">Phone Call</option>
             <option value="whatsapp">WhatsApp</option>
@@ -64,7 +64,7 @@ export function renderContactForm() {
 
         <div class="flex flex-col gap-2">
           <label for="description" class="text-navy font-semibold text-sm">Project Description <span class="text-blue">*</span></label>
-          <textarea id="description" name="description" required rows="5" placeholder="Tell us about your project goals, timeline, and any specific requirements..." style="padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; resize: vertical;"></textarea>
+          <textarea id="description" name="description" required rows="5" placeholder="Tell us about your project goals, timeline, and any specific requirements..." class="contact-input" style="resize: vertical;"></textarea>
         </div>
 
         <div class="mt-4">
@@ -87,5 +87,22 @@ export function renderContactForm() {
         })();
       </script>
     </div>
+
+    <style>
+      .contact-input {
+        padding: 0.75rem;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        font-family: inherit;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      @media (max-width: 768px) {
+        .contact-input {
+          padding: 14px 12px;
+          font-size: 16px;
+        }
+      }
+    </style>
   `;
 }

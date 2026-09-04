@@ -7,8 +7,8 @@ export function renderContactInfo() {
       
       <div style="background: var(--color-bg-soft); padding: var(--space-6); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg);">
         <h2 class="text-navy font-semibold text-xl mb-4">Contact Information</h2>
-        <p class="text-secondary text-sm mb-6" style="line-height: 1.6;">
-          Reach out to us directly through email or Telegram. We aim to respond to all inquiries within one business day.
+        <p class="text-secondary mb-6" style="line-height: 1.6;">
+          Reach out to us directly through email or Telegram. We aim to respond within one business day.
         </p>
 
         <div class="flex flex-col gap-4">
@@ -19,7 +19,7 @@ export function renderContactInfo() {
             </div>
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Email Us</div>
-              <div class="font-medium" style="word-break: break-all;">${companyConfig.contact.email}</div>
+              <div class="font-medium" style="overflow-wrap: break-word;">${companyConfig.contact.email}</div>
             </div>
           </a>
 
@@ -47,5 +47,13 @@ export function renderContactInfo() {
       </div>
       
     </div>
+
+    <style>
+      @media (max-width: 768px) {
+        .flex.flex-col.gap-6[style*="height: 100%"] > div {
+          padding: var(--space-4) !important;
+        }
+      }
+    </style>
   `;
 }

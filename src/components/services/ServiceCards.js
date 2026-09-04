@@ -145,5 +145,25 @@ export function renderServiceCards() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        #core-services-heading + .grid {
+          gap: var(--space-4) !important;
+        }
+        #core-services-heading ~ .grid .card {
+          padding: var(--space-4) !important;
+        }
+        #core-services-heading ~ .grid .card__description {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        #core-services-heading ~ .grid .flex.flex-wrap.gap-2 {
+          display: none;
+        }
+      }
+    </style>
   `;
 }

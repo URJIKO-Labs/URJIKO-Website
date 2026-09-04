@@ -196,7 +196,7 @@ export function renderSolutionCategories() {
                   ${card.title}
                 </h4>
               </div>
-              <p class="text-secondary text-sm mb-0" style="line-height: 1.5;">
+              <p class="text-secondary mb-0" style="line-height: 1.5; font-size: 0.9375rem;">
                 ${card.description}
               </p>
             </div>

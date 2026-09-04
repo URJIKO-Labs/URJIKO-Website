@@ -105,6 +105,9 @@ export function renderServicesHero() {
         section[aria-labelledby="services-hero-title"] .container > .grid {
           gap: var(--space-8) !important;
         }
+        section[aria-labelledby="services-hero-title"] .hero-visual-wrapper {
+          display: none !important;
+        }
         section[aria-labelledby="services-hero-title"] .flex.items-center.justify-between {
           flex-wrap: wrap;
           gap: var(--space-2);

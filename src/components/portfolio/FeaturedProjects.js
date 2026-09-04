@@ -302,6 +302,37 @@ export function renderFeaturedProjects() {
         .project-visual .grid--2 {
           grid-template-columns: repeat(2, 1fr) !important;
         }
+        .project-visual {
+          display: none !important;
+        }
+        .project-layout {
+          gap: var(--space-6) !important;
+          margin-top: var(--space-6) !important;
+        }
+        [id^="project-"] {
+          border-top: none !important;
+          border-left: 4px solid var(--color-blue);
+          margin-bottom: var(--space-8);
+          border-radius: var(--radius-md);
+          background: var(--color-white) !important;
+          box-shadow: var(--shadow-sm);
+        }
+        [id^="project-"] .container {
+          padding: var(--space-5) var(--space-4);
+        }
+        [id^="project-"] .flex.items-center.gap-3.mb-3 {
+          flex-wrap: wrap;
+          gap: var(--space-2);
+        }
+        [id^="project-"] h2 {
+          font-size: clamp(1.25rem, 4vw, 1.75rem) !important;
+        }
+        [id^="project-"] h3 {
+          font-size: var(--font-size-base) !important;
+        }
+        [id^="project-"] .btn {
+          width: 100%;
+        }
       }
     </style>
   `;

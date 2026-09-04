@@ -12,7 +12,7 @@ export function renderDevelopmentProcess() {
   return `
     <section class="section" style="background-color: var(--color-bg-soft);">
       <div class="container">
-        <div class="mb-12">
+        <div class="mb-8">
           <h2 class="text-navy font-bold" style="font-size: 2rem;">How We Work</h2>
         </div>
         
@@ -33,5 +33,36 @@ export function renderDevelopmentProcess() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        [style*="background-color: var(--color-bg-soft)"] .grid {
+          gap: var(--space-3) !important;
+        }
+        [style*="background-color: var(--color-bg-soft)"] .card {
+          padding: var(--space-3) var(--space-4) !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          gap: var(--space-3) !important;
+        }
+        [style*="background-color: var(--color-bg-soft)"] .card .font-bold {
+          font-size: 1rem !important;
+          min-width: 32px;
+          text-align: center;
+          background: var(--color-bg-light-blue);
+          color: var(--color-blue);
+          border-radius: var(--radius-sm);
+          padding: var(--space-1) var(--space-2);
+        }
+        [style*="background-color: var(--color-bg-soft)"] .card h3 {
+          font-size: var(--font-size-sm) !important;
+          margin: 0 !important;
+        }
+        [style*="background-color: var(--color-bg-soft)"] .card p {
+          margin: 0 !important;
+          font-size: var(--font-size-xs) !important;
+        }
+      }
+    </style>
   `;
 }

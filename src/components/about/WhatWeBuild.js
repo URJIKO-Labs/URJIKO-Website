@@ -64,5 +64,27 @@ export function renderWhatWeBuild() {
         </div>
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        [aria-labelledby="what-we-build-title"] .card--project {
+          padding: var(--space-4) !important;
+          gap: var(--space-3) !important;
+        }
+        [aria-labelledby="what-we-build-title"] .card--project > div:first-child {
+          width: 40px !important;
+          height: 40px !important;
+        }
+        [aria-labelledby="what-we-build-title"] .card--project h3 {
+          font-size: var(--font-size-base) !important;
+        }
+        [aria-labelledby="what-we-build-title"] .card--project p {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    </style>
   `;
 }

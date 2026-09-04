@@ -24,7 +24,7 @@ export function renderSecondaryProjects() {
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
               <!-- Placeholder Visual Area -->
-              <div class="flex items-center justify-center mb-4" style="height: 120px; background-color: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);" aria-hidden="true">
+              <div class="flex items-center justify-center mb-4 secondary-placeholder" style="height: 120px; background-color: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);" aria-hidden="true">
                 <span class="font-semibold text-navy text-sm">${project.name}</span>
               </div>
 
@@ -56,5 +56,22 @@ export function renderSecondaryProjects() {
 
       </div>
     </section>
+
+    <style>
+      @media (max-width: 768px) {
+        .secondary-placeholder {
+          height: 60px !important;
+        }
+        [aria-labelledby="secondary-projects-heading"] .card {
+          padding: var(--space-4) !important;
+        }
+        [aria-labelledby="secondary-projects-heading"] .card p {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    </style>
   `;
 }

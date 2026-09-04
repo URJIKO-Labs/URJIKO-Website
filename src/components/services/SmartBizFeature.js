@@ -114,8 +114,8 @@ export function renderSmartBizFeature() {
         }
 
         @media (max-width: 768px) {
-          .smartbiz-visual-wrapper .grid--2 {
-            grid-template-columns: repeat(2, 1fr) !important;
+          .smartbiz-visual-wrapper {
+            display: none !important;
           }
         }
       </style>
