@@ -405,9 +405,9 @@ export function renderProjectPage(projectId) {
         <p style="font-size: var(--font-size-lg); color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-6); max-width: 36rem; margin-left: auto; margin-right: auto;">
           Let's discuss how we can build something similar for your business.
         </p>
-        <a href="/contact" data-link class="btn btn--primary" style="background: var(--color-white); color: var(--color-navy); border: 1px solid var(--color-white);">
-          <span>Discuss Your Project</span>
-          ${icons.arrowRight('w-4 h-4')}
+        <a href="/contact" data-link class="btn" style="background: var(--color-white); color: var(--color-navy) !important; border: 1px solid var(--color-white); font-weight: 600;">
+          <span style="color: var(--color-navy) !important;">Discuss Your Project</span>
+          <span style="color: var(--color-navy) !important;">${icons.arrowRight('w-4 h-4')}</span>
         </a>
       </div>
     </section>
