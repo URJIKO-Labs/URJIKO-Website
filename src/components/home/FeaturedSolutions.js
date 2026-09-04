@@ -14,7 +14,7 @@ export function renderFeaturedSolutions() {
           </p>
         </div>
 
-        <div class="grid grid--3 gap-6">
+        <div class="grid grid--2 gap-6">
           
           <!-- 1. SMARTBIZ -->
           <div class="card flex flex-col justify-between">
@@ -92,7 +92,7 @@ export function renderFeaturedSolutions() {
     <!-- Mobile Fixes -->
     <style>
       @media (max-width: 768px) {
-        [aria-labelledby="solutions-heading"] .grid--3 {
+        [aria-labelledby="solutions-heading"] .grid--2 {
           grid-template-columns: 1fr !important;
           gap: var(--space-4) !important;
         }
