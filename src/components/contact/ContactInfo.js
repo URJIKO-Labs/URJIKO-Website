@@ -8,7 +8,7 @@ export function renderContactInfo() {
       <div style="background: var(--color-bg-soft); padding: var(--space-6); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg);">
         <h2 class="text-navy font-semibold text-xl mb-4">Contact Information</h2>
         <p class="text-secondary mb-6" style="line-height: 1.6;">
-          Reach out to us directly through email or Telegram. We aim to respond within one business day.
+          Reach out through WhatsApp, phone, email, or Telegram. We aim to respond within one business day.
         </p>
 
         <div class="flex flex-col gap-4">

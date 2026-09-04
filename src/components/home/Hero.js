@@ -60,7 +60,7 @@ export function renderHero() {
           <!-- Actions -->
           <div class="flex flex-wrap gap-4 items-center justify-center">
             <a href="/contact" data-link class="btn btn--primary btn--lg" style="box-shadow: 0 4px 20px rgba(7, 87, 184, 0.4);">
-              <span>Get a Free Consultation</span>
+              <span>Discuss Your Project</span>
               ${icons.arrowRight("w-4 h-4")}
             </a>
             <a href="/solutions" data-link class="btn btn--lg" style="
@@ -69,7 +69,7 @@ export function renderHero() {
               border: 1px solid rgba(255, 255, 255, 0.3);
               backdrop-filter: blur(8px);
             ">
-              <span>Explore Our Solutions</span>
+              <span>View Our Solutions</span>
             </a>
           </div>
 

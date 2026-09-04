@@ -49,14 +49,14 @@ export function renderServicesApproach() {
   const cardsHtml = principles
     .map(
       (principle) => `
-        <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-blue); display: flex; flex-direction: column;">
-          <div class="approach-icon-circle" style="width: 3.25rem; height: 3.25rem; border-radius: var(--radius-full); background-color: var(--color-bg-light-blue); color: var(--color-blue); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4); flex-shrink: 0;">
+        <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-blue); display: flex; flex-direction: column; padding: var(--space-5);">
+          <div class="approach-icon-circle" style="width: 2.75rem; height: 2.75rem; border-radius: var(--radius-full); background-color: var(--color-bg-light-blue); color: var(--color-blue); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3); flex-shrink: 0;">
             ${principle.icon}
           </div>
-          <h3 class="card__title text-navy mb-2" style="font-size: var(--font-size-xl); font-weight: 600;">
+          <h3 class="card__title text-navy mb-1" style="font-size: var(--font-size-md); font-weight: 600;">
             ${principle.title}
           </h3>
-          <p class="text-secondary mb-0" style="line-height: 1.6; font-size: var(--font-size-base);">
+          <p class="text-secondary mb-0" style="line-height: 1.5; font-size: var(--font-size-sm);">
             ${principle.description}
           </p>
         </div>
@@ -78,7 +78,7 @@ export function renderServicesApproach() {
         </div>
 
         <!-- 4 Principle Cards -->
-        <div class="grid grid--2">
+        <div class="grid grid--2 gap-4">
           ${cardsHtml}
         </div>
 

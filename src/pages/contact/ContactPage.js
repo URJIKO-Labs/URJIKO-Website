@@ -40,7 +40,7 @@ export function renderContactPage() {
       title: "Have a problem worth solving?",
       description:
         "Start with the problem. We'll help you figure out the right technology and the right first step.",
-      primaryBtnLabel: "Start a Conversation",
+      primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "Explore Our Portfolio",
       secondaryBtnPath: "/portfolio",

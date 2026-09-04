@@ -2,7 +2,7 @@ export function renderContactForm() {
   return `
     <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border-subtle);">
       <h3 class="text-navy font-bold mb-4" style="font-size: 1.5rem;">Project Inquiry</h3>
-      <p class="text-secondary mb-6">Fill out the form below and our team will get back to you within 24 hours.</p>
+      <p class="text-secondary mb-6">Fill out the form below and we'll review your message and get back to you as soon as possible.</p>
       
       <form id="urjiko-contact-form" class="flex flex-col gap-4">
         <div class="grid grid--2 gap-4">
@@ -32,11 +32,11 @@ export function renderContactForm() {
             <label for="service" class="text-navy font-semibold text-sm">Service Needed</label>
             <select id="service" name="service" class="contact-input">
               <option value="">Select a service...</option>
-              <option value="web-dev">Web Development</option>
-              <option value="mobile-app">Mobile App Development</option>
-              <option value="data-ai">Data & AI Solutions</option>
-              <option value="cloud">Cloud Infrastructure</option>
-              <option value="consulting">IT Consulting</option>
+              <option value="web-dev">Website Development</option>
+              <option value="business-systems">Business Management Systems</option>
+              <option value="custom-software">Custom Software</option>
+              <option value="ai-solutions">AI & Intelligent Solutions</option>
+              <option value="maintenance">Maintenance & Support</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -69,7 +69,7 @@ export function renderContactForm() {
 
         <div class="mt-4">
           <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.5rem; font-size: 1rem;">
-            Send Project Inquiry
+            Send Inquiry
           </button>
         </div>
       </form>

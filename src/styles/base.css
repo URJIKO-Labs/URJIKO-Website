@@ -217,7 +217,7 @@ img, picture, video, canvas, svg {
 
 /* Base Spacing Scale */
 :root {
-  --space-y-section: clamp(3rem, 8vw, 6rem);
+  --space-y-section: clamp(2.5rem, 5vw, 4.5rem);
 }
 .section {
   padding-top: var(--space-y-section);

@@ -51,7 +51,6 @@ export const companyConfig = {
     telegramChannel: "https://t.me/urjikolabs",
     github: "https://github.com/urjiko-labs",
     linkedin: "https://www.linkedin.com/company/urjiko-labs/",
-    tiktok: "https://www.tiktok.com/@urjiko.labs",
   },
 
   // Global Navigation Links
@@ -101,11 +100,6 @@ export const companyConfig = {
         label: "LinkedIn",
         type: "linkedin",
         href: "https://www.linkedin.com/company/urjiko-labs/",
-      },
-      {
-        label: "TikTok",
-        type: "tiktok",
-        href: "https://www.tiktok.com/@urjiko.labs",
       },
     ],
   },

@@ -114,15 +114,11 @@ export function renderFooter() {
                 </a>
               </div>
 
-              <!-- Row 2: LinkedIn next to TikTok -->
+              <!-- Row 2: LinkedIn -->
               <div class="flex items-center gap-6 flex-wrap">
                 <a href="${companyConfig.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2" style="min-width: 5.5rem;">
                   ${icons.linkedin("w-4 h-4")}
                   <span>LinkedIn</span>
-                </a>
-                <a href="${companyConfig.socialLinks.tiktok}" target="_blank" rel="noopener noreferrer" class="footer__link flex items-center gap-2">
-                  ${icons.tiktok("w-4 h-4")}
-                  <span>TikTok</span>
                 </a>
               </div>
 

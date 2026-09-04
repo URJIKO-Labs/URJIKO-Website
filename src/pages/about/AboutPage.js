@@ -22,7 +22,7 @@ export function renderAboutPage() {
       title: "Let's Build Something Useful.",
       description:
         "Have a business process that could work better with technology? Let's discuss the problem and find a practical place to start.",
-      primaryBtnLabel: "Start a Conversation",
+      primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Services",
       secondaryBtnPath: "/services",

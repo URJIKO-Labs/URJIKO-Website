@@ -34,11 +34,10 @@ export function renderServiceCards() {
       title: "Website Development",
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
       description:
-        "Build modern, responsive websites — from business sites and portfolios to digital gift experiences for birthdays, anniversaries, and special occasions.",
+        "Build modern, responsive websites — from business sites and portfolios to landing pages and digital platforms.",
       tags: [
         "Business Websites",
         "Portfolio Sites",
-        "Digital Gift Sites",
         "Landing Pages",
         "SEO-Ready",
         "Responsive Design",
@@ -151,7 +150,7 @@ export function renderServiceCards() {
 
           <!-- Action Link -->
           <a href="${service.link}" data-link class="card__link">
-            <span>Contact Us</span>
+            <span>Learn More</span>
             ${icons.arrowRight("w-4 h-4")}
           </a>
         </div>

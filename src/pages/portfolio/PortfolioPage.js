@@ -24,7 +24,7 @@ export function renderPortfolioPage() {
       title: "Like what you see?",
       description:
         "Tell us what you are trying to improve. We will help you identify a practical solution and the right place to start.",
-      primaryBtnLabel: "Request a Demo",
+      primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Services",
       secondaryBtnPath: "/services",

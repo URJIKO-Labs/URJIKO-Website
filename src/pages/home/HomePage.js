@@ -44,9 +44,9 @@ export function renderHomePage() {
         title: "Have a problem that technology could solve?",
         description:
           "Tell us what you're trying to improve. We'll help you explore a practical digital solution.",
-        primaryBtnLabel: "Get a Free Consultation",
+        primaryBtnLabel: "Discuss Your Project",
         primaryBtnPath: "/contact",
-        secondaryBtnLabel: "Explore Our Solutions",
+        secondaryBtnLabel: "View Our Solutions",
         secondaryBtnPath: "/solutions",
       })}
     </div>

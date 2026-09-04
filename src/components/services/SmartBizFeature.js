@@ -49,44 +49,45 @@ export function renderSmartBizFeature() {
                   <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block;"></span>
                   <span class="text-sm font-semibold text-navy">SmartBiz Control Panel</span>
                 </div>
-                <span class="badge badge--blue text-xs font-semibold">Live</span>
+                <span class="badge badge--blue text-xs font-semibold">Product Preview</span>
               </div>
 
               <!-- 2x2 Mini Stat Cards -->
               <div class="grid grid--2 gap-3 mb-5" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-bottom: var(--space-5);">
-                <!-- Stat Card 1 -->
                 <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
-                  <div class="text-xs text-muted mb-1 font-medium">Today's Sales</div>
-                  <div class="text-lg font-bold text-navy">47 Orders</div>
+                  <div class="text-xs text-muted mb-1 font-medium">Sales & POS</div>
+                  <div class="text-lg font-bold text-navy">Overview</div>
                 </div>
 
-                <!-- Stat Card 2 -->
                 <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
                   <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Inventory</div>
-                  <div class="text-lg font-bold" style="color: var(--color-blue);">All Stocked</div>
+                  <div class="text-lg font-bold" style="color: var(--color-blue);">Stock Tracking</div>
                 </div>
 
-                <!-- Stat Card 3 -->
                 <div class="p-3" style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md);">
                   <div class="text-xs font-medium mb-1" style="color: var(--color-blue);">Customers</div>
-                  <div class="text-lg font-bold text-navy">1,243</div>
+                  <div class="text-lg font-bold text-navy">CRM Module</div>
                 </div>
 
-                <!-- Stat Card 4 -->
                 <div class="p-3" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
-                  <div class="text-xs text-muted mb-1 font-medium">Revenue</div>
-                  <div class="text-lg font-bold text-navy">Growing</div>
+                  <div class="text-xs text-muted mb-1 font-medium">Reports</div>
+                  <div class="text-lg font-bold text-navy">Analytics</div>
                 </div>
               </div>
 
-              <!-- Bottom: Progress Bar -->
+              <!-- Bottom: Feature List -->
               <div class="p-4" style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
                 <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-semibold text-navy">Operations Efficiency</span>
-                  <span class="text-xs font-bold" style="color: var(--color-blue);">91%</span>
+                  <span class="text-xs font-semibold text-navy">Core Modules</span>
+                  <span class="text-xs font-bold" style="color: var(--color-blue);">6 Integrated</span>
                 </div>
-                <div style="width: 100%; height: 8px; background-color: var(--color-border); border-radius: var(--radius-full); overflow: hidden;">
-                  <div style="width: 91%; height: 100%; background-color: var(--color-blue); border-radius: var(--radius-full);" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" aria-label="Operations Efficiency"></div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge--outline text-xs">POS</span>
+                  <span class="badge badge--outline text-xs">Inventory</span>
+                  <span class="badge badge--outline text-xs">Sales</span>
+                  <span class="badge badge--outline text-xs">Customers</span>
+                  <span class="badge badge--outline text-xs">Reports</span>
+                  <span class="badge badge--outline text-xs">Dashboard</span>
                 </div>
               </div>
 

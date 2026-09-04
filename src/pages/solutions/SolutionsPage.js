@@ -26,10 +26,10 @@ export function renderSolutionsPage() {
       title: "Need a custom solution for your industry?",
       description:
         "Tell us what you are trying to improve. We will help you identify a practical digital solution.",
-      primaryBtnLabel: "Get a Free Consultation",
+      primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
-      secondaryBtnLabel: "View Our Work",
-      secondaryBtnPath: "/portfolio",
+      secondaryBtnLabel: "View Our Services",
+      secondaryBtnPath: "/services",
     })}
   `;
 }

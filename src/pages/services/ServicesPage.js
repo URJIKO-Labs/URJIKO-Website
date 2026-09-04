@@ -25,7 +25,7 @@ export function renderServicesPage() {
       title: "Ready to build your solution?",
       description:
         "Tell us about your project requirements. We will help you identify the right technology approach.",
-      primaryBtnLabel: "Get a Free Consultation",
+      primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Solutions",
       secondaryBtnPath: "/solutions",

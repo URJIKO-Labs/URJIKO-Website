@@ -26,7 +26,7 @@ export function renderPortfolioHero() {
 
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Request a Demo</span>
+                <span>Discuss Your Project</span>
                 ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
@@ -41,9 +41,9 @@ export function renderPortfolioHero() {
               <!-- Window header -->
               <div class="flex items-center justify-between pb-3 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                 <div class="flex items-center gap-2">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; display: inline-block;"></span>
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; display: inline-block;"></span>
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.25); display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); display: inline-block;"></span>
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.08); display: inline-block;"></span>
                 </div>
                 <span class="text-xs" style="color: rgba(255,255,255,0.6); font-family: monospace; font-weight: 500;">URJIKO Software Preview</span>
                 <span class="badge badge--blue text-xs" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">SYSTEM SUITE</span>

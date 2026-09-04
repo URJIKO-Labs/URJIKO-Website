@@ -33,7 +33,7 @@ export function renderSecondaryProjects() {
                 </div>
                 <div class="flex items-center justify-between" style="font-size: 0.7rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
                   <span>${project.category}</span>
-                  <span style="color: #93C5FD; font-weight: 600;">System Active</span>
+                  <span style="color: #93C5FD; font-weight: 600;">Preview</span>
                 </div>
               </div>
 

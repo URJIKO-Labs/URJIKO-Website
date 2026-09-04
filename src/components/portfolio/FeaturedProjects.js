@@ -127,8 +127,8 @@ export function renderFeaturedProjects() {
       }
 
       return `
-        <div class="project-card-row" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: var(--space-8); margin-bottom: 3.5rem;">
-          <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-8);">
+        <div class="project-card-row" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: var(--space-6); margin-bottom: 2.5rem;">
+          <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-6);">
             
             ${
               isEven
@@ -279,7 +279,7 @@ export function renderFeaturedProjects() {
           <span class="section-heading__label">FEATURED SOFTWARE</span>
           <h2 id="featured-projects-heading" class="section-heading__title">Systems We've Built</h2>
           <p class="section-heading__subtitle text-balance">
-            Real software systems, business management platforms, and operational tools designed for real business impact.
+            Selected software, business systems, and digital experiences designed and developed by URJIKO Labs.
           </p>
         </div>
 
