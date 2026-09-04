@@ -157,7 +157,7 @@ export function renderServiceCards() {
         </div>
 
         <!-- 6 Service Cards Grid -->
-        <div class="grid grid--3 gap-6">
+        <div class="grid grid--2 gap-6">
           ${cardsHtml}
         </div>
       </div>
