@@ -49,7 +49,7 @@ export function renderContactInfo() {
             </div>
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Direct Message</div>
-              <div class="font-medium">Telegram Assistant</div>
+              <div class="font-medium">URJIKO Support</div>
             </div>
           </a>
 

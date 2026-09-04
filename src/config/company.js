@@ -27,13 +27,13 @@ export const companyConfig = {
     location: "Harar, Ethiopia",
   },
 
-  // Primary Direct Messaging (Telegram Assistant for 1-on-1 client inquiries)
+  // Primary Direct Messaging (URJIKO Support for 1-on-1 client inquiries)
   telegram: {
-    url: "https://t.me/urjiko_assistant",
-    username: "@urjiko_assistant",
-    handle: "urjiko_assistant",
-    label: "Message Assistant on Telegram",
-    ctaText: "Message Assistant on Telegram",
+    url: "https://t.me/urjiko_support",
+    username: "@urjiko_support",
+    handle: "urjiko_support",
+    label: "URJIKO Support",
+    ctaText: "Message URJIKO Support",
   },
 
   // Telegram Public Channel & Community
@@ -47,7 +47,7 @@ export const companyConfig = {
 
   // Social & External Links
   socialLinks: {
-    telegramAssistant: "https://t.me/urjiko_assistant",
+    telegramSupport: "https://t.me/urjiko_support",
     telegramChannel: "https://t.me/urjikolabs",
     github: "https://github.com/urjiko-labs",
     linkedin: "https://www.linkedin.com/company/urjiko-labs/",
@@ -83,9 +83,9 @@ export const companyConfig = {
     connect: [
       { label: "Email", type: "email", href: "mailto:urjikolabs@gmail.com" },
       {
-        label: "Telegram Assistant",
+        label: "URJIKO Support",
         type: "telegram",
-        href: "https://t.me/urjiko_assistant",
+        href: "https://t.me/urjiko_support",
       },
       {
         label: "Telegram Channel",
