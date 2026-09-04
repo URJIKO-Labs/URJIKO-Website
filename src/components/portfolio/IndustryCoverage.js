@@ -43,7 +43,7 @@ export function renderIndustryCoverage() {
         <!-- Centered Actions CTA -->
         <div class="flex flex-wrap items-center justify-center gap-4" style="margin-top: var(--space-12);">
           <a href="/contact" data-link class="btn btn--primary">
-            <span>Discuss Your Industry</span>
+            <span>Discuss Your Project</span>
             ${icons.arrowRight('w-4 h-4')}
           </a>
           <a href="/solutions" data-link class="btn btn--secondary">
@@ -56,8 +56,14 @@ export function renderIndustryCoverage() {
     <style>
       .industry-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-5);
+      }
+
+      @media (min-width: 1024px) {
+        .industry-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
       }
 
       .industry-card {

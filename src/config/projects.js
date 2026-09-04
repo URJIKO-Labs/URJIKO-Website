@@ -235,33 +235,51 @@ export const portfolioCapabilities = [
 
 export const industryAreas = [
   {
-    name: "Business",
+    name: "Business & Commerce",
     description:
       "Business management, inventory, POS, customer workflows, and operational reporting.",
     project: "SmartBiz ERP",
   },
   {
+    name: "Retail & E-Commerce",
+    description:
+      "Product catalogs, online stores, customer-facing workflows, and point-of-sale systems.",
+    project: "Abebe Book Store",
+  },
+  {
     name: "Education",
     description:
-      "Student, teacher, attendance, grades, timetable, and school administration.",
+      "Student management, attendance, grades, timetables, and school administration platforms.",
     project: "EduFlow",
   },
   {
-    name: "Transport",
+    name: "Transport & Logistics",
     description:
-      "Operations, vehicles, drivers, requests, workflows, and reporting.",
+      "Fleet management, vehicle dispatch, driver coordination, requests, and operational reporting.",
     project: "Transport Management",
   },
   {
     name: "Healthcare",
     description:
-      "Digital workflows, records, dashboards, and administrative tools.",
+      "Digital workflows, patient records, management dashboards, and administrative tools.",
     project: "ShegerHealth",
   },
   {
-    name: "Retail & Hospitality",
+    name: "Hospitality & Hotels",
     description:
-      "Customer-facing websites, product presentation, and digital experiences.",
-    project: "EthioBrew, Abebe Book Store",
+      "Booking systems, service presentation, guest management, and digital experiences.",
+    project: "EthioBrew",
+  },
+  {
+    name: "Agriculture & Farming",
+    description:
+      "Inventory tracking, supply chain management, harvest logistics, and operational dashboards.",
+    project: "Custom Solutions",
+  },
+  {
+    name: "Government & NGOs",
+    description:
+      "Workflow automation, case management, reporting systems, and role-based access platforms.",
+    project: "Custom Solutions",
   },
 ];
