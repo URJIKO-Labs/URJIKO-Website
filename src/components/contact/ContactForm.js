@@ -116,9 +116,9 @@ export function renderContactForm() {
           <div class="file-upload" id="file-upload-area">
             <input type="file" id="file-input" name="files" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;">
             <div class="file-upload__trigger">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <span>Click to upload or drag files here</span>
-              <span class="text-muted" style="font-size: 0.75rem;">PDF, DOC, PNG, JPG (max 5MB each)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <span style="font-size: 0.85rem; font-weight: 500;">Click to upload or drag files</span>
+              <span class="text-muted" style="font-size: 0.7rem;">PDF, DOC, PNG, JPG (max 5MB)</span>
             </div>
             <div class="file-upload__list" id="file-list"></div>
           </div>
@@ -208,10 +208,11 @@ export function renderContactForm() {
         border-radius: 0 0 var(--radius-sm) var(--radius-sm);
       }
       .file-upload {
-        border: 2px dashed var(--color-border);
+        border: 1px dashed var(--color-border);
         border-radius: var(--radius-sm);
         transition: border-color 0.2s, background-color 0.2s;
         cursor: pointer;
+        background: #fafafa;
       }
       .file-upload:hover {
         border-color: var(--color-blue);
@@ -225,26 +226,23 @@ export function renderContactForm() {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.35rem;
-        padding: var(--space-5);
+        gap: 0.25rem;
+        padding: 1rem 0.75rem;
         text-align: center;
         color: var(--color-navy);
       }
-      .file-upload__trigger span {
-        font-size: var(--font-size-sm);
-      }
       .file-upload__list {
-        padding: 0 var(--space-4) var(--space-4);
+        padding: 0 0.5rem 0.5rem;
       }
       .file-upload__item {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0.5rem 0.75rem;
+        padding: 0.35rem 0.6rem;
         background: var(--color-bg-soft);
-        border-radius: var(--radius-sm);
-        margin-bottom: 0.35rem;
-        font-size: var(--font-size-sm);
+        border-radius: 4px;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
         color: var(--color-navy);
       }
       .file-upload__item button {
