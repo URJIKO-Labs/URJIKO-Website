@@ -15,6 +15,25 @@ export function renderPageLayout({ path = "/", content = "" }) {
     metaDescTag.setAttribute("content", routeMeta.description);
   }
 
+  const ogImages = {
+    "/": "og-default.svg",
+    "/services": "og-services.svg",
+    "/solutions": "og-solutions.svg",
+    "/portfolio": "og-portfolio.svg",
+    "/about": "og-about.svg",
+    "/contact": "og-contact.svg",
+  };
+  const ogImage = ogImages[path] || "og-default.svg";
+  const ogUrl = `https://urjiko-website.vercel.app${path === "/" ? "" : path}`;
+  const ogImageUrl = `https://urjiko-website.vercel.app/images/${ogImage}`;
+
+  const ogImageTag = document.querySelector('meta[property="og:image"]');
+  if (ogImageTag) ogImageTag.setAttribute("content", ogImageUrl);
+  const ogUrlTag = document.querySelector('meta[property="og:url"]');
+  if (ogUrlTag) ogUrlTag.setAttribute("content", ogUrl);
+  const twitterImageTag = document.querySelector('meta[name="twitter:image"]');
+  if (twitterImageTag) twitterImageTag.setAttribute("content", ogImageUrl);
+
   return `
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
       <a href="#main-content" class="sr-only" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-blue); border-radius: 4px;">

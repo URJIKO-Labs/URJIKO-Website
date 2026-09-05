@@ -17,8 +17,9 @@ export function renderFeaturedSolutions() {
         <div class="grid grid--2 gap-6">
           
           <!-- 1. SMARTBIZ -->
-          <div class="card flex flex-col justify-between">
+          <div class="card card--project flex flex-col justify-between">
             <div>
+              <img src="/images/project-smartbiz.svg" alt="SmartBiz Suite dashboard showing sales, inventory, and revenue metrics" width="800" height="500" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: var(--space-4); border: 1px solid var(--color-border-subtle);">
               <span class="badge badge--blue mb-3">BUSINESS</span>
               <h3 class="card__title">SmartBiz Suite</h3>
               <p class="card__description mb-4">
@@ -34,8 +35,9 @@ export function renderFeaturedSolutions() {
           </div>
 
           <!-- 2. TRANSPORT MANAGEMENT -->
-          <div class="card flex flex-col justify-between">
+          <div class="card card--project flex flex-col justify-between">
             <div>
+              <img src="/images/project-transport.svg" alt="Transport Management System dashboard showing fleet status and dispatch tracking" width="800" height="500" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: var(--space-4); border: 1px solid var(--color-border-subtle);">
               <span class="badge badge--navy mb-3">TRANSPORT</span>
               <h3 class="card__title">Transport Management</h3>
               <p class="card__description mb-4">
@@ -51,8 +53,9 @@ export function renderFeaturedSolutions() {
           </div>
 
           <!-- 3. EDUFLOW -->
-          <div class="card flex flex-col justify-between">
+          <div class="card card--project flex flex-col justify-between">
             <div>
+              <img src="/images/project-eduflow.svg" alt="EduFlow school management dashboard showing student enrollment and attendance rates" width="800" height="500" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: var(--space-4); border: 1px solid var(--color-border-subtle);">
               <span class="badge badge--blue mb-3">EDUCATION</span>
               <h3 class="card__title">EduFlow</h3>
               <p class="card__description mb-4">
@@ -68,8 +71,9 @@ export function renderFeaturedSolutions() {
           </div>
 
           <!-- 4. SHEGERHEALTH -->
-          <div class="card flex flex-col justify-between">
+          <div class="card card--project flex flex-col justify-between">
             <div>
+              <img src="/images/project-shegerhealth.svg" alt="ShegerHealth healthcare platform showing patient records and clinical workflow modules" width="800" height="500" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: var(--space-4); border: 1px solid var(--color-border-subtle);">
               <span class="badge badge--navy mb-3">HEALTHCARE</span>
               <h3 class="card__title">ShegerHealth</h3>
               <p class="card__description mb-4">
