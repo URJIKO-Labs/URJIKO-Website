@@ -1,5 +1,3 @@
-import { escapeHTML } from "../app.js";
-
 const WEB3FORMS_KEY = "c7bd18aa-761c-490c-8d78-5b21095d6b88";
 const TELEGRAM_TOKEN = "8723180161:AAEaI_KVNISGvc35f66FH94p6SNO8kgn3ls";
 const TELEGRAM_CHAT_ID = "7212861487";
@@ -33,22 +31,25 @@ function sendToTelegram(data) {
     flexible: "Flexible",
   };
 
-  const name = escapeHTML(data.get("name") || "");
-  const org = escapeHTML(data.get("organization") || "Not specified");
-  const email = escapeHTML(data.get("email") || "");
-  const phone = escapeHTML(data.get("phone") || "Not specified");
+  const name = data.get("name") || "";
+  const org = data.get("organization") || "Not specified";
+  const email = data.get("email") || "";
+  const phone = data.get("phone") || "Not specified";
   const service = serviceLabels[data.get("service")] || "Not specified";
   const budget = budgetLabels[data.get("budget")] || "Not specified";
   const contactMethod = data.get("contact-method") || "Telegram";
   const timeline = timelineLabels[data.get("timeline")] || "Not specified";
-  const description = escapeHTML(data.get("description") || "");
+  const description = data.get("description") || "";
+
+  const esc = (str) =>
+    str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
   const message = `📩 <b>New Project Inquiry</b>
 
-👤 <b>Name:</b> ${name}
-🏢 <b>Organization:</b> ${org}
-📧 <b>Email:</b> ${email}
-📱 <b>Phone:</b> ${phone}
+👤 <b>Name:</b> ${esc(name)}
+🏢 <b>Organization:</b> ${esc(org)}
+📧 <b>Email:</b> ${esc(email)}
+📱 <b>Phone:</b> ${esc(phone)}
 
 💼 <b>Service:</b> ${service}
 💰 <b>Budget:</b> ${budget}
@@ -56,7 +57,7 @@ function sendToTelegram(data) {
 ⏰ <b>Timeline:</b> ${timeline}
 
 📝 <b>Project Description:</b>
-${description}`;
+${esc(description)}`;
 
   return fetch(
     `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
