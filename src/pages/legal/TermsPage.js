@@ -1,4 +1,5 @@
 import { companyConfig } from "../../config/company.js";
+import { renderLegalPageLayout } from "../../components/layout/LegalPageLayout.js";
 
 /**
  * URJIKO Labs — Terms of Service Page
@@ -19,6 +20,10 @@ export function renderTermsPage() {
         <!-- Content -->
         <div style="display: flex; flex-direction: column; gap: var(--space-8, 2rem); font-size: 1rem; line-height: 1.75; color: var(--color-slate-700, #334155);">
           
+  return renderLegalPageLayout({
+    title: "Terms of Service",
+    lastUpdated: "September 2026",
+    contentSections: `
           <section>
             <h2 class="text-navy font-semibold" style="font-size: 1.25rem; margin-bottom: 0.75rem;">1. Acceptance & Services Scope</h2>
             <p>
@@ -137,4 +142,6 @@ export function renderTermsPage() {
       </div>
     </div>
   `;
+    `
+  });
 }

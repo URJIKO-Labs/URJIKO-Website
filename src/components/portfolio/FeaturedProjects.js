@@ -135,6 +135,8 @@ export function renderFeaturedProjects() {
                 ? `
               <!-- Left Text Content -->
               <div class="flex flex-col justify-between">
+              <!-- Text Content -->
+              <div class="flex flex-col justify-between ${isEven ? '' : 'order-1 md:order-2'}">
                 <div>
                   <!-- Subdued Project Number Badge -->
                   <div class="flex items-center gap-3 mb-3">
@@ -195,6 +197,8 @@ export function renderFeaturedProjects() {
 
               <!-- Right Software UI Mockup -->
               <div class="flex items-center justify-center p-2" style="background: var(--color-bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);">
+              <!-- Software UI Mockup -->
+              <div class="flex items-center justify-center p-2 ${isEven ? '' : 'order-2 md:order-1'}" style="background: var(--color-bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);">
                 ${mockupContent}
               </div>
             `
