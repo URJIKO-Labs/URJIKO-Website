@@ -33,20 +33,30 @@ function sendToTelegram(data) {
     flexible: "Flexible",
   };
 
-  const message = `📩 *New Project Inquiry*
+  const name = escapeHTML(data.get("name") || "");
+  const org = escapeHTML(data.get("organization") || "Not specified");
+  const email = escapeHTML(data.get("email") || "");
+  const phone = escapeHTML(data.get("phone") || "Not specified");
+  const service = serviceLabels[data.get("service")] || "Not specified";
+  const budget = budgetLabels[data.get("budget")] || "Not specified";
+  const contactMethod = data.get("contact-method") || "Telegram";
+  const timeline = timelineLabels[data.get("timeline")] || "Not specified";
+  const description = escapeHTML(data.get("description") || "");
 
-👤 *Name:* ${escapeHTML(data.get("name"))}
-🏢 *Organization:* ${escapeHTML(data.get("organization") || "Not specified")}
-📧 *Email:* ${escapeHTML(data.get("email"))}
-📱 *Phone:* ${escapeHTML(data.get("phone") || "Not specified")}
+  const message = `📩 <b>New Project Inquiry</b>
 
-💼 *Service:* ${serviceLabels[data.get("service")] || "Not specified"}
-💰 *Budget:* ${budgetLabels[data.get("budget")] || "Not specified"}
-📞 *Preferred Contact:* ${data.get("contact-method") || "Telegram"}
-⏰ *Timeline:* ${timelineLabels[data.get("timeline")] || "Not specified"}
+👤 <b>Name:</b> ${name}
+🏢 <b>Organization:</b> ${org}
+📧 <b>Email:</b> ${email}
+📱 <b>Phone:</b> ${phone}
 
-📝 *Project Description:*
-${escapeHTML(data.get("description"))}`;
+💼 <b>Service:</b> ${service}
+💰 <b>Budget:</b> ${budget}
+📞 <b>Preferred Contact:</b> ${contactMethod}
+⏰ <b>Timeline:</b> ${timeline}
+
+📝 <b>Project Description:</b>
+${description}`;
 
   return fetch(
     `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
@@ -56,7 +66,7 @@ ${escapeHTML(data.get("description"))}`;
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
         text: message,
-        parse_mode: "Markdown",
+        parse_mode: "HTML",
       }),
     }
   );
