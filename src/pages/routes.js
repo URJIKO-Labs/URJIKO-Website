@@ -7,9 +7,6 @@ import { renderAboutPage } from "./about/AboutPage.js";
 import { renderContactPage } from "./contact/ContactPage.js";
 import { renderPrivacyPage } from "./legal/PrivacyPage.js";
 import { renderTermsPage } from "./legal/TermsPage.js";
-import { renderGlobalCTA } from "../components/common/CTA.js";
-import { renderBreadcrumbs } from "../components/navigation/Breadcrumbs.js";
-import { companyConfig } from "../config/company.js";
 
 export const routes = {
   "/": () => renderHomePage(),
