@@ -128,7 +128,7 @@ export function initContactForm() {
         .map(
           (file, i) => `
         <div class="file-upload__item">
-          <span>${escapeHTML(file.name)}</span>
+          <span>${file.name}</span>
           <button type="button" data-index="${i}">&times;</button>
         </div>
       `

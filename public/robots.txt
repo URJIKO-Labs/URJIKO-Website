@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+
+Sitemap: https://urjiko-website.vercel.app/sitemap.xml
