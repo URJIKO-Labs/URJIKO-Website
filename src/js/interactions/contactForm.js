@@ -21,13 +21,13 @@ export function initContactForm() {
     });
 
     fileArea.addEventListener("dragleave", () => {
-      fileArea.style.borderColor = "var(--color-gray-300)";
+      fileArea.style.borderColor = "var(--color-border)";
       fileArea.style.background = "transparent";
     });
 
     fileArea.addEventListener("drop", (e) => {
       e.preventDefault();
-      fileArea.style.borderColor = "var(--color-gray-300)";
+      fileArea.style.borderColor = "var(--color-border)";
       fileArea.style.background = "transparent";
       handleFiles(e.dataTransfer.files);
     });
