@@ -13,7 +13,7 @@ export function renderContactInfo() {
 
         <div class="flex flex-col gap-4">
           
-          <a href="tel:${companyConfig.contact.phoneEthioTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+          <a href="tel:${companyConfig.contact.phoneEthioTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
               ${icons.phone("w-5 h-5")}
             </div>
@@ -23,7 +23,7 @@ export function renderContactInfo() {
             </div>
           </a>
 
-          <a href="tel:${companyConfig.contact.phoneSafariTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+          <a href="tel:${companyConfig.contact.phoneSafariTel}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
               ${icons.phone("w-5 h-5")}
             </div>
@@ -33,7 +33,7 @@ export function renderContactInfo() {
             </div>
           </a>
 
-          <a href="mailto:${companyConfig.contact.email}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+          <a href="mailto:${companyConfig.contact.email}" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
               ${icons.mail("w-5 h-5")}
             </div>
@@ -43,7 +43,7 @@ export function renderContactInfo() {
             </div>
           </a>
 
-          <a href="${companyConfig.telegram.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border); transition: border-color 0.2s;">
+          <a href="${companyConfig.telegram.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3" style="text-decoration: none; color: var(--color-navy); padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border); transition: border-color 0.2s;">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; color: var(--color-blue); flex-shrink: 0;">
               ${icons.telegram("w-5 h-5")}
             </div>
@@ -53,7 +53,7 @@ export function renderContactInfo() {
             </div>
           </a>
 
-          <div class="flex items-center gap-3" style="padding: var(--space-3); border-radius: var(--radius-md); background: #FFF; border: 1px solid var(--color-border);">
+          <div class="flex items-center gap-3" style="padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border);">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; color: var(--color-muted); flex-shrink: 0;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>

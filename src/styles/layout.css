@@ -40,20 +40,10 @@
 }
 
 /* -----------------------------------------------------------------------
-   2. SECTIONS
+   2. SECTIONS — generous but intentional whitespace
    ----------------------------------------------------------------------- */
 
-.section {
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
-}
-
-@media (min-width: 1024px) {
-  .section {
-    padding-top: var(--space-24);
-    padding-bottom: var(--space-24);
-  }
-}
+/* .section is defined in base.css for cascade control */
 
 .section--sm {
   padding-top: var(--space-12);
@@ -74,8 +64,8 @@
 
 @media (min-width: 1024px) {
   .section--lg {
-    padding-top: var(--space-30);
-    padding-bottom: var(--space-30);
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
   }
 }
 
@@ -369,7 +359,6 @@
   display: none;
 }
 
-/* Responsive visibility */
 @media (max-width: 767px) {
   .hide-mobile {
     display: none !important;

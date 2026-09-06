@@ -41,7 +41,7 @@ export function renderPortfolioCapabilities() {
   const itemsHtml = capabilitiesList
     .map(
       (item) => `
-        <div class="capability-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+        <div class="capability-card" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
           <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
             ${item.icon}
           </div>

@@ -140,7 +140,7 @@ export function renderContactForm() {
         font-family: inherit;
         width: 100%;
         box-sizing: border-box;
-        background-color: #fff;
+        background-color: var(--color-white);
         color: var(--color-navy);
         font-size: var(--font-size-sm);
         transition: border-color 0.2s, box-shadow 0.2s;
@@ -174,7 +174,7 @@ export function renderContactForm() {
         top: calc(100% + 4px);
         left: 0;
         right: 0;
-        background: #fff;
+        background: var(--color-white);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-sm);
         box-shadow: 0 8px 24px rgba(6, 36, 92, 0.12);
@@ -212,7 +212,7 @@ export function renderContactForm() {
         border-radius: var(--radius-sm);
         transition: border-color 0.2s, background-color 0.2s;
         cursor: pointer;
-        background: #fafafa;
+        background: var(--color-bg-soft);
       }
       .file-upload:hover {
         border-color: var(--color-blue);
@@ -255,7 +255,7 @@ export function renderContactForm() {
         line-height: 1;
       }
       .file-upload__item button:hover {
-        color: #dc2626;
+        color: var(--color-error);
       }
       @media (max-width: 768px) {
         .contact-input {

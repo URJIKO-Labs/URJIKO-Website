@@ -26,14 +26,14 @@ export function renderSecondaryProjects() {
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
               <!-- Clean Product UI Mockup Header -->
-              <div class="mb-4 secondary-placeholder" style="height: 120px; background-color: #0F172A; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 0.65rem; color: #FFFFFF; display: flex; flex-direction: column; justify-between;" aria-hidden="true">
+              <div class="mb-4 secondary-placeholder" style="height: 120px; background-color: #000F2B; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 0.65rem; color: #FFFFFF; display: flex; flex-direction: column; justify-between;" aria-hidden="true">
                 <div class="flex items-center justify-between pb-1" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                  <span class="text-xs font-semibold" style="color: #60A5FA;">${project.name}</span>
+                  <span class="text-xs font-semibold" style="color: #2878DC;">${project.name}</span>
                   <span class="badge badge--blue text-xs" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">Preview</span>
                 </div>
                 <div class="flex items-center justify-between" style="font-size: 0.7rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
                   <span>${project.category}</span>
-                  <span style="color: #93C5FD; font-weight: 600;">Preview</span>
+                  <span style="color: #5A9AE6; font-weight: 600;">Preview</span>
                 </div>
               </div>
 

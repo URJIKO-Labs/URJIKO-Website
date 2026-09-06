@@ -24,12 +24,12 @@ export function renderHero() {
           <!-- Eyebrow -->
           <div class="badge mb-4" style="
             background-color: rgba(255, 255, 255, 0.12); 
-            color: #60A5FA; 
+            color: #2878DC; 
             font-weight: 600; 
             text-transform: uppercase; 
             letter-spacing: var(--letter-spacing-wider); 
             padding: 0.4rem 1.1rem; 
-            border: 1px solid rgba(96, 165, 250, 0.35); 
+            border: 1px solid rgba(40, 120, 220, 0.3); 
             backdrop-filter: blur(8px);
             font-size: 0.7rem;
           ">
@@ -45,7 +45,7 @@ export function renderHero() {
             letter-spacing: var(--letter-spacing-tight);
           ">
             Build Smarter. <br/>
-            <span style="color: #60A5FA;">Grow With Better Technology.</span>
+            <span style="color: #2878DC;">Grow With Better Technology.</span>
           </h1>
 
           <!-- Description -->

@@ -2,8 +2,9 @@
    URJIKO Labs — Component Styles
    ==========================================================================
    Reusable UI components:
-   - Palette: White + Deep Navy + Royal/Technology Blue
-   - Zero teal in UI elements
+   - Palette: White + Deep Navy + Technology Blue
+   - Zero teal/turquoise anywhere in the UI
+   - Clean, serious, professional, premium
    ========================================================================== */
 
 /* =======================================================================
@@ -15,11 +16,11 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: 0.75rem 1.75rem;
-  font-size: var(--font-size-base);
+  padding: 0.6875rem 1.5rem;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   line-height: 1;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
@@ -36,13 +37,13 @@
 
 .btn:disabled,
 .btn[aria-disabled="true"] {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
   transform: none !important;
   box-shadow: none !important;
 }
 
-/* Primary — Royal Blue bg, white text */
+/* Primary — Technology Blue bg, white text */
 .btn--primary {
   background-color: var(--color-blue);
   color: #FFFFFF !important;
@@ -54,16 +55,21 @@
   border-color: var(--color-blue-dark);
   color: #FFFFFF !important;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(7, 93, 184, 0.3);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn--primary * {
   color: inherit !important;
 }
 
-/* Secondary — outlined, navy text */
+/* Secondary — outlined, navy text, subtle border */
 .btn--secondary {
-  background-color: transparent;
+  background-color: var(--color-white);
   color: var(--color-navy);
   border-color: var(--color-border);
 }
@@ -85,7 +91,7 @@
   background-color: var(--color-navy-light);
   border-color: var(--color-navy-light);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(0, 29, 78, 0.3);
 }
 
 .btn--dark:active {
@@ -108,21 +114,13 @@
 
 /* Sizes */
 .btn--sm {
-  padding: 0.5rem 1.25rem;
-  font-size: var(--font-size-sm);
+  padding: 0.5rem 1.125rem;
+  font-size: var(--font-size-xs);
 }
 
 .btn--lg {
-  padding: 1rem 2.25rem;
-  font-size: var(--font-size-md);
-}
-
-/* Disabled */
-.btn:disabled,
-.btn--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  pointer-events: none;
+  padding: 0.875rem 2rem;
+  font-size: var(--font-size-base);
 }
 
 .btn .btn-icon {
@@ -132,26 +130,26 @@
 }
 
 /* =======================================================================
-   2. CARDS
+   2. CARDS — clean, minimal, professional
    ======================================================================= */
 
 .card {
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-6);
   box-shadow: var(--shadow-card);
-  transition: all var(--transition-base);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .card--lg {
   padding: var(--space-8);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
 }
 
 .card--static:hover {
@@ -160,12 +158,12 @@
 }
 
 .card__icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   background-color: var(--color-bg-light-blue);
   color: var(--color-blue);
   margin-bottom: var(--space-4);
@@ -173,8 +171,8 @@
 }
 
 .card__icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 
 .card__title {
@@ -260,11 +258,11 @@
 }
 
 .card--featured .card__description {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .card--featured .card__icon {
-  background-color: rgba(7, 87, 184, 0.25);
+  background-color: rgba(7, 93, 184, 0.25);
   color: var(--color-blue-light);
 }
 
@@ -273,14 +271,14 @@
 }
 
 /* =======================================================================
-   3. BADGES
+   3. BADGES — small, clean, informative
    ======================================================================= */
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.65rem;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   line-height: 1.4;
@@ -294,10 +292,9 @@
 }
 
 .badge--navy {
-  background-color: rgba(6, 36, 92, 0.08);
+  background-color: rgba(0, 29, 78, 0.06);
   color: var(--color-navy);
 }
-
 
 .badge--outline {
   background-color: transparent;
@@ -321,7 +318,7 @@
 }
 
 /* =======================================================================
-   4. SECTION HEADING
+   4. SECTION HEADING — consistent across all pages
    ======================================================================= */
 
 .section-heading {
@@ -336,7 +333,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-blue);
   text-transform: uppercase;
@@ -347,7 +344,7 @@
 .section-heading__label::before {
   content: '';
   display: inline-block;
-  width: 1.5rem;
+  width: 1.25rem;
   height: 2px;
   background-color: var(--color-blue);
   border-radius: 1px;
@@ -361,7 +358,7 @@
 .section-heading__subtitle {
   font-size: var(--font-size-md);
   color: var(--color-text-secondary);
-  max-width: 40rem;
+  max-width: 38rem;
   line-height: var(--line-height-normal);
 }
 
@@ -371,7 +368,7 @@
 }
 
 /* =======================================================================
-   5. CTA SECTION
+   5. CTA SECTION — navy-to-blue gradient
    ======================================================================= */
 
 .cta-section {
@@ -412,7 +409,7 @@
 }
 
 /* =======================================================================
-   6. FORMS
+   6. FORMS — clean, minimal, accessible
    ======================================================================= */
 
 .form-group {
@@ -437,12 +434,12 @@
 .form-select {
   display: block;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.6875rem 0.875rem;
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   appearance: none;
   -webkit-appearance: none;
@@ -481,7 +478,7 @@
 }
 
 /* =======================================================================
-   7. NAVBAR
+   7. NAVBAR — fixed, clean, minimal
    ======================================================================= */
 
 .navbar {
@@ -490,7 +487,7 @@
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border-subtle);
@@ -505,7 +502,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.5rem;
+  height: 4rem;
 }
 
 .navbar__logo-text {
@@ -514,8 +511,8 @@
 }
 
 .navbar__logo img {
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2rem;
+  width: 2rem;
   object-fit: cover;
   object-position: left center;
 }
@@ -543,7 +540,7 @@
 }
 
 .navbar__link:hover {
-  color: var(--color-blue);
+  color: var(--color-navy);
 }
 
 .navbar__link--active {
@@ -574,7 +571,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   color: var(--color-navy);
   transition: background-color var(--transition-fast);
   border: none;
@@ -597,6 +594,7 @@
   }
 }
 
+/* Mobile drawer */
 .navbar__mobile {
   display: none;
   position: fixed;
@@ -607,11 +605,11 @@
   max-width: 300px;
   background-color: var(--color-white);
   z-index: var(--z-modal);
-  padding: calc(4.5rem + var(--space-5)) var(--space-4) var(--space-5);
+  padding: calc(4rem + var(--space-5)) var(--space-4) var(--space-5);
   overflow-y: auto;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s var(--ease-out);
 }
 
 .navbar__mobile.is-open {
@@ -629,7 +627,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 29, 78, 0.3);
   z-index: calc(var(--z-modal) - 1);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -686,10 +684,9 @@
   background: var(--color-white);
   color: var(--color-navy);
   cursor: pointer;
-  border-radius: var(--radius-sm);
-  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar__mobile-close:hover {
@@ -697,23 +694,8 @@
 }
 
 /* =======================================================================
-   9. HERO IMAGES
+   8. FOOTER — deep navy, clean hierarchy
    ======================================================================= */
-
-.hero__image {
-  object-fit: cover;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.hero__image:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2xl);
-}
-
-.hero-visual-wrapper {
-  display: none !important;
-}
-
 
 .footer {
   background-color: var(--color-navy-darker);
@@ -741,7 +723,7 @@
     gap: var(--space-6);
   }
 
-  .footer__grid>.footer__brand {
+  .footer__grid > .footer__brand {
     grid-column: span 2;
   }
 }
@@ -753,7 +735,7 @@
 }
 
 .footer__brand p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.6);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-normal);
   margin-top: var(--space-4);
@@ -761,7 +743,7 @@
 }
 
 .footer__heading {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-inverse);
   text-transform: uppercase;
@@ -801,7 +783,7 @@
 
 .footer__link {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -815,9 +797,9 @@
   flex-direction: column;
   gap: var(--space-4);
   padding-top: var(--space-8);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -834,7 +816,7 @@
 }
 
 .footer__social a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   transition: color var(--transition-fast);
 }
 

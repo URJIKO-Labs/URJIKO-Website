@@ -1,59 +1,60 @@
 /* ==========================================================================
    URJIKO Labs — Design System Tokens
-   ========================================================================== 
+   ==========================================================================
    Single source of truth for all visual design values.
-   Palette Rule:
-   - Premium White + Deep Navy + Royal/Technology Blue
-   - NO teal/turquoise anywhere in the UI.
-   - Preserves original brand colors exclusively inside the official logo mark.
+
+   Brand Palette:
+   - White: #FFFFFF (dominant canvas)
+   - Deep Navy: #001D4E (headings, authority, dark sections)
+   - Technology Blue: #075DB8 (CTAs, links, interactive states)
+   - Light Blue: #EDF4FC (subtle backgrounds)
+   - Neutral Gray: borders, muted text
+
+   RULE: Zero teal/turquoise anywhere in the UI.
+   The logo mark is the only place teal may appear.
    ========================================================================== */
 
 :root {
   /* -----------------------------------------------------------------------
-     1. BRAND COLOR SYSTEM
+     1. BRAND COLORS
      ----------------------------------------------------------------------- */
-  /* Main Canvas */
+
+  /* Canvas — 70-80% of the page */
   --color-white: #FFFFFF;
   --color-bg: #FFFFFF;
 
   /* Deep Navy — Headings, navigation, authority, dark sections */
-  --color-navy: #06245C;
-  --color-navy-dark: #03163B;
-  --color-navy-light: #0B327A;
-  --color-navy-darker: #010B1A;
+  --color-navy: #001D4E;
+  --color-navy-dark: #001538;
+  --color-navy-light: #003078;
+  --color-navy-darker: #000F2B;
 
-  /* Royal / Technology Blue — Primary CTAs, active states, links, interactions */
-  --color-blue: #0757B8;
-  --color-blue-dark: #054391;
-  --color-blue-light: #2575DC;
-  --color-blue-hover: #05499F;
-  --color-blue-subtle: rgba(7, 87, 184, 0.08);
+  /* Technology Blue — Primary CTAs, active states, links, interactive */
+  --color-blue: #075DB8;
+  --color-blue-dark: #054A94;
+  --color-blue-light: #2878DC;
+  --color-blue-hover: #054F9E;
+  --color-blue-subtle: rgba(7, 93, 184, 0.08);
 
-  /* Aliases to cleanly replace any legacy references with Technology Blue */
-
-
-  /* Supporting Backgrounds */
-  --color-bg-light-blue: #EAF5FA;
-  --color-bg-soft: #F5F7FA;
+  /* Supporting backgrounds — light, airy, minimal */
+  --color-bg-light-blue: #EDF4FC;
+  --color-bg-soft: #F6F8FB;
   --color-bg-muted: #EEF2F6;
 
   /* -----------------------------------------------------------------------
      2. TEXT COLORS
      ----------------------------------------------------------------------- */
-  --color-text-primary: #06245C;
-  /* Deep Navy */
+  --color-text-primary: #001D4E;
   --color-text-secondary: #475569;
-  /* Clean Slate */
   --color-text-muted: #64748B;
-  /* Muted Slate */
   --color-text-inverse: #FFFFFF;
 
   /* -----------------------------------------------------------------------
      3. BORDER COLORS
      ----------------------------------------------------------------------- */
   --color-border: #E2E8F0;
-  --color-border-subtle: #EEF2F7;
-  --color-border-blue: rgba(7, 87, 184, 0.16);
+  --color-border-subtle: #EDF1F6;
+  --color-border-blue: rgba(7, 93, 184, 0.16);
 
   /* -----------------------------------------------------------------------
      4. STATUS COLORS
@@ -68,10 +69,10 @@
   /* -----------------------------------------------------------------------
      5. OVERLAYS & GRADIENTS
      ----------------------------------------------------------------------- */
-  --color-overlay: rgba(6, 36, 92, 0.6);
-  --gradient-tech: linear-gradient(135deg, #06245C 0%, #0757B8 100%);
-  --gradient-blue: linear-gradient(135deg, #0757B8 0%, #2575DC 100%);
-  --gradient-surface: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
+  --color-overlay: rgba(0, 29, 78, 0.6);
+  --gradient-tech: linear-gradient(135deg, #001D4E 0%, #075DB8 100%);
+  --gradient-blue: linear-gradient(135deg, #075DB8 0%, #2878DC 100%);
+  --gradient-surface: linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
 
   /* -----------------------------------------------------------------------
      6. TYPOGRAPHY
@@ -84,6 +85,7 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  /* Scaled type system — clear hierarchy, no decorative sizes */
   --font-size-xs: 0.8125rem;
   /* 13px */
   --font-size-sm: 0.875rem;
@@ -106,8 +108,6 @@
   /* 44px */
   --font-size-6xl: 3.5rem;
   /* 56px */
-  --font-size-7xl: 4.5rem;
-  /* 72px */
 
   --line-height-tight: 1.15;
   --line-height-snug: 1.3;
@@ -152,46 +152,44 @@
   /* -----------------------------------------------------------------------
      8. BORDER RADIUS
      ----------------------------------------------------------------------- */
-  --radius-sm: 0.5rem;
+  --radius-sm: 0.375rem;
+  /*  6px */
+  --radius-md: 0.5rem;
   /*  8px */
-  --radius-md: 0.75rem;
+  --radius-lg: 0.75rem;
   /* 12px */
-  --radius-lg: 1rem;
+  --radius-xl: 1rem;
   /* 16px */
-  --radius-xl: 1.25rem;
-  /* 20px */
-  --radius-2xl: 1.5rem;
-  /* 24px */
   --radius-full: 9999px;
 
   /* -----------------------------------------------------------------------
-     9. SHADOWS (Navy depth)
+     9. SHADOWS — subtle, navy-based depth
      ----------------------------------------------------------------------- */
-  --shadow-xs: 0 1px 2px rgba(6, 36, 92, 0.04);
-  --shadow-sm: 0 1px 3px rgba(6, 36, 92, 0.06),
-    0 1px 2px rgba(6, 36, 92, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(6, 36, 92, 0.06),
-    0 2px 4px -2px rgba(6, 36, 92, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(6, 36, 92, 0.06),
-    0 4px 6px -4px rgba(6, 36, 92, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(6, 36, 92, 0.08),
-    0 8px 10px -6px rgba(6, 36, 92, 0.04);
-  --shadow-card: 0 1px 3px rgba(6, 36, 92, 0.05),
-    0 1px 2px rgba(6, 36, 92, 0.03);
-  --shadow-card-hover: 0 10px 20px -5px rgba(6, 36, 92, 0.08),
-    0 4px 6px -2px rgba(6, 36, 92, 0.03);
+  --shadow-xs: 0 1px 2px rgba(0, 29, 78, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 29, 78, 0.06),
+    0 1px 2px rgba(0, 29, 78, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 29, 78, 0.06),
+    0 2px 4px -2px rgba(0, 29, 78, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 29, 78, 0.06),
+    0 4px 6px -4px rgba(0, 29, 78, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 29, 78, 0.08),
+    0 8px 10px -6px rgba(0, 29, 78, 0.04);
+  --shadow-card: 0 1px 3px rgba(0, 29, 78, 0.04),
+    0 1px 2px rgba(0, 29, 78, 0.02);
+  --shadow-card-hover: 0 8px 16px -4px rgba(0, 29, 78, 0.08),
+    0 2px 4px -2px rgba(0, 29, 78, 0.02);
 
   /* -----------------------------------------------------------------------
      10. LAYOUT
      ----------------------------------------------------------------------- */
-  --container-max: 80rem;
-  /* 1280px */
-  --container-narrow: 64rem;
-  /* 1024px */
-  --container-text: 45rem;
-  /*  720px */
-  --padding-page-desktop: 3rem;
-  /*   48px */
+  --container-max: 75rem;
+  /* 1200px */
+  --container-narrow: 60rem;
+  /* 960px */
+  --container-text: 42rem;
+  /* 672px */
+  --padding-page-desktop: 2.5rem;
+  /*   40px */
   --padding-page-tablet: 1.5rem;
   /*   24px */
   --padding-page-mobile: 1.25rem;
@@ -201,11 +199,9 @@
      11. TRANSITIONS
      ----------------------------------------------------------------------- */
   --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
-  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-base: 200ms ease;
+  --transition-slow: 350ms ease;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
   /* -----------------------------------------------------------------------
      12. Z-INDEX SCALE

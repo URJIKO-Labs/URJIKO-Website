@@ -14,19 +14,19 @@ export function renderFeaturedProjects() {
       let mockupContent = "";
       if (project.id === "smartbiz") {
         mockupContent = `
-          <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
+          <div style="background: #000F2B; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #60A5FA;">SmartBiz ERP — POS & Inventory</span>
+              <span class="text-xs font-semibold" style="color: #2878DC;">SmartBiz ERP — POS & Inventory</span>
               <span class="badge badge--blue text-xs">Concept Preview</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales Activity</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">POS Tracking</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">POS Tracking</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Stock Status</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Low Stock Alerts</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Low Stock Alerts</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
@@ -43,19 +43,19 @@ export function renderFeaturedProjects() {
         `;
       } else if (project.id === "transport") {
         mockupContent = `
-          <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
+          <div style="background: #000F2B; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #60A5FA;">Transport & Fleet Dispatch</span>
+              <span class="text-xs font-semibold" style="color: #2878DC;">Transport & Fleet Dispatch</span>
               <span class="badge badge--navy text-xs">System Concept</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Vehicle Roster</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Driver Assign</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Driver Assign</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Requests</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Approval Queue</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Approval Queue</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
@@ -72,19 +72,19 @@ export function renderFeaturedProjects() {
         `;
       } else if (project.id === "eduflow") {
         mockupContent = `
-          <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
+          <div style="background: #000F2B; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #60A5FA;">EduFlow — Academic Portal</span>
+              <span class="text-xs font-semibold" style="color: #2878DC;">EduFlow — Academic Portal</span>
               <span class="badge badge--blue text-xs">School Suite</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Academic Records</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Centralized</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Centralized</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Attendance</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Daily Logs</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Daily Logs</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">
@@ -101,19 +101,19 @@ export function renderFeaturedProjects() {
         `;
       } else {
         mockupContent = `
-          <div style="background: #0F172A; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
+          <div style="background: #000F2B; border-radius: var(--radius-lg); padding: var(--space-4); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-shadow: var(--shadow-lg);">
             <div class="flex items-center justify-between pb-2 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="text-xs font-semibold" style="color: #60A5FA;">ShegerHealth Prototype</span>
+              <span class="text-xs font-semibold" style="color: #2878DC;">ShegerHealth Prototype</span>
               <span class="badge badge--navy text-xs">Concept Demo</span>
             </div>
             <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 0.75rem;">
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Digital Workflow</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #60A5FA;">Triage Prototype</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Triage Prototype</div>
               </div>
               <div style="background: rgba(255,255,255,0.05); padding: 0.5rem; border-radius: var(--radius-sm);">
                 <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Record Security</div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: #93C5FD;">Role-Protected</div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Role-Protected</div>
               </div>
             </div>
             <div style="background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; font-size: 0.75rem;">

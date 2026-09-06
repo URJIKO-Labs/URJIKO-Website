@@ -16,7 +16,7 @@ export function initPortfolioTabs() {
       panels.forEach((p) => (p.style.display = "none"));
 
       this.classList.add("portfolio-tab--active");
-      this.style.background = "rgba(37, 99, 235, 0.25)";
+      this.style.background = "rgba(7, 93, 184, 0.25)";
       this.style.borderColor = "var(--color-blue)";
 
       const targetPanel = document.querySelector(

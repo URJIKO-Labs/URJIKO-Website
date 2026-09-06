@@ -155,7 +155,7 @@ export function initContactForm() {
       bottom: '20px',
       left: '50%',
       transform: 'translateX(-50%) translateY(100px)', // Start below screen
-      backgroundColor: type === 'success' ? '#16a34a' : '#dc2626',
+      backgroundColor: type === 'success' ? 'var(--color-success)' : 'var(--color-error)',
       color: '#ffffff',
       padding: '12px 24px',
       borderRadius: '8px',
