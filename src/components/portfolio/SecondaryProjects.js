@@ -2,7 +2,7 @@ import { secondaryProjects } from "../../config/projects.js";
 
 /**
  * URJIKO Labs — Secondary Projects Component
- * Renders additional projects and digital experiences in a compact, secondary visual hierarchy.
+ * Renders additional projects with clean, compact cards.
  */
 export function renderSecondaryProjects() {
   return `
@@ -19,42 +19,43 @@ export function renderSecondaryProjects() {
         </div>
 
         <!-- Secondary Projects Grid -->
-        <div class="grid grid--3">
+        <div class="grid grid--3 gap-5">
           ${secondaryProjects
             .map(
               (project) => `
             <article class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5);">
               
-              <!-- Clean Product UI Mockup Header -->
-              <div class="mb-4 secondary-placeholder" style="height: 120px; background-color: #000F2B; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 0.65rem; color: #FFFFFF; display: flex; flex-direction: column; justify-between;" aria-hidden="true">
-                <div class="flex items-center justify-between pb-1" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                  <span class="text-xs font-semibold" style="color: #2878DC;">${project.name}</span>
-                  <span class="badge badge--blue text-xs" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">Preview</span>
+              <!-- Clean Preview Header -->
+              <div class="mb-4" style="height: 100px; background-color: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.75rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-navy">${project.name}</span>
+                  <span class="badge badge--outline text-xs" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">Preview</span>
                 </div>
-                <div class="flex items-center justify-between" style="font-size: 0.7rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
-                  <span>${project.category}</span>
-                  <span style="color: #5A9AE6; font-weight: 600;">Preview</span>
+                <div class="flex items-center justify-between" style="font-size: 0.7rem;">
+                  <span class="text-muted">${project.category}</span>
+                  <span class="text-xs font-semibold" style="color: var(--color-blue);">Website</span>
                 </div>
               </div>
 
               <!-- Category Badge -->
-              <div class="mb-3">
-                <span class="badge badge--outline">${project.category}</span>
+              <div class="mb-2">
+                <span class="badge badge--outline text-xs">${project.category}</span>
               </div>
 
               <!-- Project Title -->
-              <h3 class="text-navy font-bold mb-2" style="font-size: var(--font-size-lg); line-height: var(--line-height-snug);">
+              <h3 class="text-navy font-bold mb-2" style="font-size: var(--font-size-md); line-height: 1.3;">
                 ${project.name}
               </h3>
 
               <!-- Project Description -->
-              <p class="text-secondary text-sm mb-4 flex-1" style="line-height: var(--line-height-normal);">
+              <p class="text-secondary text-sm mb-4 flex-1" style="line-height: 1.5;">
                 ${project.description}
               </p>
 
               <!-- Capabilities -->
-              <div class="flex flex-wrap gap-2 mt-auto">
+              <div class="flex flex-wrap gap-1.5 mt-auto">
                 ${project.capabilities
+                  .slice(0, 4)
                   .map(
                     (capability) => `
                   <span class="badge badge--outline text-xs">${capability}</span>
@@ -74,17 +75,12 @@ export function renderSecondaryProjects() {
 
     <style>
       @media (max-width: 768px) {
-        .secondary-placeholder {
-          height: 60px !important;
+        [aria-labelledby="secondary-projects-heading"] .grid--3 {
+          grid-template-columns: 1fr !important;
+          gap: var(--space-4) !important;
         }
         [aria-labelledby="secondary-projects-heading"] .card {
           padding: var(--space-4) !important;
-        }
-        [aria-labelledby="secondary-projects-heading"] .card p {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
         }
       }
     </style>

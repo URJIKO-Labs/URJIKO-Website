@@ -2,26 +2,26 @@ import { icons } from "../common/Icons.js";
 
 /**
  * Portfolio Hero Section
- * Interactive mockup with clickable tabs for SmartBiz, EduFlow, and Transport.
+ * Uses real product SVG visuals instead of fake metrics.
  */
 export function renderPortfolioHero() {
   return `
-    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-12); background: var(--color-white); position: relative; overflow: hidden;">
+    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-10); padding-bottom: var(--space-10); background: var(--color-white);">
       <div class="container">
         <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
 
           <!-- Left: Copy -->
           <div class="flex flex-col items-start">
-            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue); font-size: 0.7rem;">
               PORTFOLIO
             </div>
 
-            <h1 id="portfolio-hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
-              Software Built to Solve Real&nbsp;Problems.
+            <h1 id="portfolio-hero-title" class="text-balance mb-4" style="font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); margin-bottom: var(--space-4);">
+              Software Built to Solve Real Problems
             </h1>
 
-            <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.125rem); max-width: 36rem; line-height: 1.65;">
-              Explore selected software, business systems, and digital experiences developed by URJIKO Labs for organizations across business, education, transport, and healthcare.
+            <p class="text-secondary mb-6 text-balance" style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); max-width: 36rem; line-height: 1.65;">
+              Explore selected software, business systems, and digital experiences developed by URJIKO Labs across business, education, transport, and healthcare.
             </p>
 
             <div class="flex flex-wrap gap-4 items-center">
@@ -35,129 +35,19 @@ export function renderPortfolioHero() {
             </div>
           </div>
 
-          <!-- Right: Interactive Software Composite UI Mockup -->
-          <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
-            <div class="portfolio-hero-mockup" style="width: 100%; max-width: 500px; background: var(--color-navy); border-radius: var(--radius-xl); padding: var(--space-4); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border-subtle); color: var(--color-white);">
-              <!-- Window header -->
-              <div class="flex items-center justify-between pb-3 mb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <div class="flex items-center gap-2">
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.25); display: inline-block;"></span>
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); display: inline-block;"></span>
-                  <span style="width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.08); display: inline-block;"></span>
-                </div>
-                <span class="text-xs" style="color: rgba(255,255,255,0.6); font-family: monospace; font-weight: 500;">URJIKO Software Preview</span>
-                <span class="badge badge--blue text-xs" style="font-size: 0.65rem; padding: 0.15rem 0.4rem;">SYSTEM SUITE</span>
-              </div>
-              
-              <!-- Clickable System Tabs -->
-              <div class="portfolio-tabs" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
-                <button type="button" class="portfolio-tab portfolio-tab--active" data-tab="smartbiz" style="background: rgba(7, 93, 184, 0.25); border: 1px solid var(--color-blue); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
-                  <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-white);">SmartBiz ERP</div>
-                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.7);">POS & Inventory</div>
-                </button>
-                <button type="button" class="portfolio-tab" data-tab="eduflow" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
-                  <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">EduFlow</div>
-                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">School Management</div>
-                </button>
-                <button type="button" class="portfolio-tab" data-tab="transport" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
-                  <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">Transport</div>
-                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Operations & Fleet</div>
-                </button>
-              </div>
-
-              <!-- Dashboard Panels -->
-              <div style="background: rgba(0, 15, 43, 0.8); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid rgba(255,255,255,0.08); min-height: 200px;">
-
-                <!-- SmartBiz Panel -->
-                <div class="portfolio-panel portfolio-panel--active" data-panel="smartbiz">
-                  <div class="flex items-center justify-between mb-3">
-                    <div style="font-size: 0.85rem; font-weight: 600;">POS & Inventory Overview</div>
-                    <span style="font-size: 0.7rem; color: #2878DC; font-weight: 600;">Product Preview</span>
-                  </div>
-                  <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Sales & POS</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Real-time Tracker</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Inventory</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Stock Alerts</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Customers</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">CRM Module</div>
-                    </div>
-                  </div>
-                  <div style="height: 60px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; display: flex; align-items: flex-end; gap: 0.4rem;">
-                    <div style="flex: 1; height: 40%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 65%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 50%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 85%; background: #2878DC; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 70%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 95%; background: #075DB8; border-radius: 2px;"></div>
-                  </div>
-                </div>
-
-                <!-- EduFlow Panel -->
-                <div class="portfolio-panel" data-panel="eduflow" style="display: none;">
-                  <div class="flex items-center justify-between mb-3">
-                    <div style="font-size: 0.85rem; font-weight: 600;">Academic Management Portal</div>
-                    <span style="font-size: 0.7rem; color: #2878DC; font-weight: 600;">Product Preview</span>
-                  </div>
-                  <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Students</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Enrollment</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Attendance</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Daily Logs</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Grades</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Report Cards</div>
-                    </div>
-                  </div>
-                  <div style="height: 60px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; display: flex; align-items: flex-end; gap: 0.4rem;">
-                    <div style="flex: 1; height: 70%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 55%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 80%; background: #2878DC; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 45%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 90%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 60%; background: #075DB8; border-radius: 2px;"></div>
-                  </div>
-                </div>
-
-                <!-- Transport Panel -->
-                <div class="portfolio-panel" data-panel="transport" style="display: none;">
-                  <div class="flex items-center justify-between mb-3">
-                    <div style="font-size: 0.85rem; font-weight: 600;">Fleet & Dispatch Operations</div>
-                    <span style="font-size: 0.7rem; color: #2878DC; font-weight: 600;">Product Preview</span>
-                  </div>
-                  <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Vehicles</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Roster</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Dispatch</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #5A9AE6;">Route Assign</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.04); padding: 0.5rem; border-radius: var(--radius-sm);">
-                      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Requests</div>
-                      <div style="font-size: 0.85rem; font-weight: 700; color: #2878DC;">Approval Queue</div>
-                    </div>
-                  </div>
-                  <div style="height: 60px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 0.5rem; display: flex; align-items: flex-end; gap: 0.4rem;">
-                    <div style="flex: 1; height: 55%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 75%; background: #2878DC; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 40%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 90%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 60%; background: #075DB8; border-radius: 2px;"></div>
-                    <div style="flex: 1; height: 80%; background: #075DB8; border-radius: 2px;"></div>
-                  </div>
-                </div>
-
+          <!-- Right: Product Visual -->
+          <div class="flex justify-center items-center" style="width: 100%;">
+            <div style="width: 100%; max-width: 500px;">
+              <img 
+                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
+                alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer modules" 
+                width="800" 
+                height="500" 
+                loading="eager"
+                style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-lg);"
+              >
+              <div style="text-align: center; margin-top: var(--space-3);">
+                <span class="text-xs text-muted" style="font-size: 0.75rem;">SmartBiz Suite — Product Preview</span>
               </div>
             </div>
           </div>
@@ -169,41 +59,16 @@ export function renderPortfolioHero() {
     <style>
       @media (min-width: 1024px) {
         section[aria-labelledby="portfolio-hero-title"] .container > .grid {
-          grid-template-columns: 1.15fr 0.85fr !important;
+          grid-template-columns: 1.1fr 0.9fr !important;
         }
       }
       @media (max-width: 768px) {
         section[aria-labelledby="portfolio-hero-title"] .container > .grid {
-          gap: var(--space-8) !important;
+          gap: var(--space-6) !important;
         }
-      }
-
-      /* Tab active state */
-      .portfolio-tab--active {
-        background: rgba(7, 93, 184, 0.25) !important;
-        border-color: var(--color-blue) !important;
-      }
-      .portfolio-tab--active div:first-child {
-        color: var(--color-white) !important;
-      }
-
-      /* Tab hover */
-      .portfolio-tab:hover {
-        background: rgba(255, 255, 255, 0.08) !important;
-        border-color: rgba(255,255,255,0.2) !important;
-      }
-      .portfolio-tab--active:hover {
-        background: rgba(7, 93, 184, 0.35) !important;
-        border-color: var(--color-blue) !important;
-      }
-
-      /* Panel transitions */
-      .portfolio-panel {
-        animation: panelFadeIn 0.3s ease;
-      }
-      @keyframes panelFadeIn {
-        from { opacity: 0; transform: translateY(4px); }
-        to { opacity: 1; transform: translateY(0); }
+        section[aria-labelledby="portfolio-hero-title"] h1 {
+          font-size: clamp(1.5rem, 6vw, 2rem) !important;
+        }
       }
     </style>
   `;
