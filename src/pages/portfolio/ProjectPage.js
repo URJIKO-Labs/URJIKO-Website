@@ -1,6 +1,7 @@
 import { icons } from '../../components/common/Icons.js';
 import { featuredProjects } from '../../config/projects.js';
 import { renderProjectCover } from '../../components/portfolio/ProjectCover.js';
+import { renderInteractiveGallery } from '../../components/portfolio/InteractiveGallery.js';
 
 /**
  * Render a dedicated project detail page (Case Study Format)
@@ -41,18 +42,7 @@ export function renderProjectPage(projectId) {
           <p class="text-secondary mx-auto mt-4" style="max-width: 42rem; font-size: 1.1rem;">A closer look at the interfaces and workflows that make this system work.</p>
         </div>
         <div class="container" style="max-width: 64rem;">
-          <div class="flex flex-col gap-8">
-            ${project.gallery
-              .map(
-                (item) => `
-              <figure style="margin: 0; background: var(--color-bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--color-border); padding: var(--space-4); box-shadow: var(--shadow-sm);">
-                <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;">
-                ${item.caption ? `<figcaption style="margin-top: var(--space-4); text-align: center; color: var(--color-secondary); font-size: 0.95rem;">${item.caption}</figcaption>` : ''}
-              </figure>
-            `,
-              )
-              .join('')}
-          </div>
+          ${renderInteractiveGallery(project.gallery)}
         </div>
       </section>
     `

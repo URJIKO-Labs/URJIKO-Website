@@ -8,6 +8,7 @@ import { initPortfolioTabs } from "./interactions/portfolioTabs.js";
 import { initCustomSelects } from "./interactions/customSelects.js";
 import { initFAQAccordion } from "./interactions/faqAccordion.js";
 import { initContactForm } from "./interactions/contactForm.js";
+import { initInteractiveGallery } from "./interactions/interactiveGallery.js";
 
 /**
  * Escapes HTML characters to prevent XSS.
@@ -99,6 +100,7 @@ function initPageComponents() {
     initCustomSelects();
     initContactForm();
     initFAQAccordion();
+    initInteractiveGallery();
   });
 }
 
