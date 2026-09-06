@@ -24,22 +24,22 @@ export function renderFeaturedSolutions() {
           ${featuredProjects
             .map(
               (project) => `
-            <div class="card card--project flex flex-col" style="overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 10px 25px rgba(6, 36, 92, 0.05); transition: transform 0.2s, box-shadow 0.2s; border-radius: var(--radius-xl);">
-              <div style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-subtle);">
-                ${renderProjectCover(project, { isSmall: true })}
+            <div class="card card--project flex flex-col" style="overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 4px 15px rgba(6, 36, 92, 0.05); transition: transform 0.2s, box-shadow 0.2s; border-radius: var(--radius-lg);">
+              <div style="border-bottom: 1px solid var(--color-border-subtle); height: 180px;">
+                ${renderProjectCover(project, { isSmall: true, isFlush: true })}
               </div>
-              <div style="padding: var(--space-6); flex: 1; display: flex; flex-direction: column;">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="badge badge--blue">${project.category.toUpperCase()}</span>
+              <div style="padding: var(--space-5); flex: 1; display: flex; flex-direction: column;">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge--blue text-xs">${project.category.toUpperCase()}</span>
                   <span class="badge badge--outline text-xs">${project.statusBadge || 'Preview'}</span>
                 </div>
-                <h3 class="card__title text-navy font-bold" style="font-size: 1.35rem; margin-bottom: var(--space-2);">${project.name}</h3>
-                <p class="card__description text-secondary mb-5" style="font-size: 1rem; line-height: 1.6; flex: 1;">
+                <h3 class="card__title text-navy font-bold" style="font-size: 1.2rem; margin-bottom: var(--space-2);">${project.name}</h3>
+                <p class="card__description text-secondary mb-4" style="font-size: 0.95rem; line-height: 1.5; flex: 1;">
                   ${project.tagline}
                 </p>
-                <a href="/portfolio/${project.id}" data-link class="card__link btn btn--outline btn--sm" style="align-self: flex-start;">
+                <a href="/portfolio/${project.id}" data-link class="card__link btn btn--outline btn--sm" style="align-self: flex-start; padding: 0.4rem 0.75rem; font-size: 0.85rem;">
                   <span>View Project</span>
-                  ${icons.arrowRight('w-4 h-4')}
+                  ${icons.arrowRight('w-3 h-3')}
                 </a>
               </div>
             </div>

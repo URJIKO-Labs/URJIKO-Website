@@ -86,26 +86,26 @@ export function renderPortfolioPage() {
           ${otherProjects
             .map(
               (project) => `
-            <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;">
-              <div style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-subtle);">
-                ${renderProjectCover(project, { isSmall: true })}
+            <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 15px rgba(6, 36, 92, 0.05); transition: transform 0.2s, box-shadow 0.2s;">
+              <div style="border-bottom: 1px solid var(--color-border-subtle); height: 180px;">
+                ${renderProjectCover(project, { isSmall: true, isFlush: true })}
               </div>
-              <div style="padding: var(--space-6); flex: 1; display: flex; flex-direction: column;">
-                <div class="flex items-center gap-2 mb-3">
+              <div style="padding: var(--space-5); flex: 1; display: flex; flex-direction: column;">
+                <div class="flex items-center gap-2 mb-2">
                   <span class="badge badge--outline text-xs">${project.category.toUpperCase()}</span>
                 </div>
-                <h3 class="text-navy font-bold" style="font-size: 1.35rem; margin-bottom: var(--space-2);">${project.name}</h3>
-                <p class="text-secondary mb-5" style="font-size: 0.95rem; line-height: 1.6; flex: 1;">${project.tagline}</p>
-                <div class="flex flex-wrap gap-1.5 mb-5">
+                <h3 class="text-navy font-bold" style="font-size: 1.2rem; margin-bottom: var(--space-2);">${project.name}</h3>
+                <p class="text-secondary mb-4" style="font-size: 0.95rem; line-height: 1.5; flex: 1;">${project.tagline}</p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
                   ${project.features
                     .slice(0, 3)
                     .map(
                       (f) =>
-                        `<span class="badge badge--outline text-xs">${f}</span>`,
+                        `<span class="badge badge--outline text-xs" style="font-size: 0.75rem; padding: 0.2rem 0.5rem;">${f}</span>`,
                     )
                     .join('')}
                 </div>
-                <a href="/portfolio/${project.id}" data-link class="btn btn--outline btn--sm" style="align-self: flex-start;">
+                <a href="/portfolio/${project.id}" data-link class="btn btn--outline btn--sm" style="align-self: flex-start; padding: 0.4rem 0.75rem; font-size: 0.85rem;">
                   View case study
                 </a>
               </div>

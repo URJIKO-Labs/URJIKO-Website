@@ -7,13 +7,16 @@
 
 function renderRealCoverImage(project, options = {}) {
   const isSmall = options.isSmall || false;
+  const isFlush = options.isFlush || false;
+  const borderStyle = isFlush ? 'border-radius: 0; box-shadow: none;' : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
   return `
-    <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+    <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; ${borderStyle}">
   `;
 }
 
 function renderTypographyCover(project, options = {}) {
   const isSmall = options.isSmall || false;
+  const isFlush = options.isFlush || false;
 
   let accentStyle = 'border-left: 6px solid var(--color-blue);';
   if (project.id === 'transport')
@@ -24,11 +27,13 @@ function renderTypographyCover(project, options = {}) {
   if (project.id === 'shegerhealth')
     accentStyle = 'border-left: 6px solid #20B2AA;'; // teal
 
-  const minHeight = isSmall ? '200px' : '360px';
+  const minHeight = isSmall ? '180px' : '360px';
   const numberSize = isSmall ? '4rem' : '8rem';
+  
+  const borderStyle = isFlush ? 'border: none; border-radius: 0;' : `border: 1px solid var(--color-border); border-radius: ${isSmall ? 'var(--radius-md)' : 'var(--radius-xl)'};`;
 
   return `
-    <div style="background: var(--color-bg-soft); border-radius: ${isSmall ? 'var(--radius-sm)' : 'var(--radius-md)'}; border: 1px solid var(--color-border); height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); ${accentStyle}">
+    <div style="background: var(--color-bg-soft); ${borderStyle} height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); ${accentStyle}">
       <!-- Abstract Number Motif -->
       <div style="font-size: ${numberSize}; font-weight: 900; color: rgba(0,0,0,0.04); line-height: 1; font-family: monospace; user-select: none;">
         ${project.number}

@@ -7,8 +7,10 @@ export function renderInteractiveGallery(galleryItems) {
   if (!galleryItems || galleryItems.length === 0) return '';
 
   const mainItem = galleryItems[0];
-  
-  const thumbnailsHtml = galleryItems.map((item, index) => `
+
+  const thumbnailsHtml = galleryItems
+    .map(
+      (item, index) => `
     <button 
       class="gallery-thumbnail ${index === 0 ? 'active' : ''}" 
       data-src="${item.src}" 
@@ -31,7 +33,9 @@ export function renderInteractiveGallery(galleryItems) {
     >
       <img src="${item.src}" alt="Thumbnail ${index + 1}" style="width: 100%; height: 100%; object-fit: cover;">
     </button>
-  `).join('');
+  `,
+    )
+    .join('');
 
   return `
     <div class="interactive-gallery" style="display: flex; flex-direction: column; gap: var(--space-6);">
@@ -46,7 +50,7 @@ export function renderInteractiveGallery(galleryItems) {
         transition: max-width 0.3s ease;
         margin: 0 auto;
         width: 100%;
-        max-width: ${mainItem.type === 'mobile' ? '375px' : (mainItem.type === 'tablet' ? '768px' : '100%')};
+        max-width: ${mainItem.type === 'mobile' ? '375px' : mainItem.type === 'tablet' ? '768px' : '100%'};
       ">
         <!-- Browser Top Bar -->
         <div class="browser-header" style="
