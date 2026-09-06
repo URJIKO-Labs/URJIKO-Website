@@ -109,7 +109,7 @@ function renderTransportVisual() {
           </div>
           <div class="flex items-center justify-between text-xs">
             <div class="flex items-center gap-2">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #64748B; display: inline-block;"></span>
+              <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-text-muted); display: inline-block;"></span>
               <span class="font-medium text-muted">Scheduled Maintenance</span>
             </div>
             <span class="font-bold text-muted">2 Vehicles</span>
@@ -285,7 +285,7 @@ export function renderProjectPage(projectId) {
         .project-detail-layout .project-detail-content { order: 1; }
       }
       @media (max-width: 768px) {
-        .project-detail-visual { display: none !important; }
+        .project-detail-visual { order: 1; }
         .project-detail-layout { gap: var(--space-6) !important; }
         .project-detail-layout [style*="grid-template-columns: repeat(auto-fill"] {
           grid-template-columns: repeat(2, 1fr) !important;

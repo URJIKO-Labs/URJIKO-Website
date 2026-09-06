@@ -43,7 +43,7 @@ export function renderContactPage() {
       primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Solutions",
-      secondaryBtnPath: "/portfolio",
+      secondaryBtnPath: "/solutions",
     })}
   `;
 }

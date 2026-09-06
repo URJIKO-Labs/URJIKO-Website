@@ -34,8 +34,8 @@ export const routes = {
     <div class="container section text-center">
       <div style="max-width: 32rem; margin: 0 auto; padding: var(--space-12) 0;">
         <span class="badge badge--navy mb-4">404 Error</span>
-        <h1 style="font-size: var(--font-size-6xl); color: var(--color-navy); margin-bottom: var(--space-2);">404</h1>
-        <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">Page not found</h2>
+        <h1>404</h1>
+        <h2 style="margin-bottom: var(--space-4);">Page not found</h2>
         <p class="text-secondary mb-8">
           The page you're looking for doesn't exist or may have been moved.
         </p>

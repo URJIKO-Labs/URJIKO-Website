@@ -32,9 +32,9 @@ export function renderValueStrip() {
         <div class="mb-1 flex items-center justify-center" style="width: 2.25rem; height: 2.25rem; border-radius: var(--radius-sm); background: var(--color-bg-light-blue); color: var(--color-blue);">
           ${item.icon}
         </div>
-        <h3 style="font-size: var(--font-size-md); font-weight: 600; color: var(--color-navy); margin-bottom: 0.25rem;">
+        <h2 style="font-size: var(--font-size-md); font-weight: 600; color: var(--color-navy); margin-bottom: 0.25rem;">
           ${item.title}
-        </h3>
+        </h2>
         <p class="text-sm text-secondary" style="margin-bottom: 0; line-height: 1.5;">
           ${item.description}
         </p>

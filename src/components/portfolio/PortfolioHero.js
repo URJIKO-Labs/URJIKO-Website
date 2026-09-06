@@ -51,15 +51,15 @@ export function renderPortfolioHero() {
               
               <!-- Clickable System Tabs -->
               <div class="portfolio-tabs" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.85rem;">
-                <button class="portfolio-tab portfolio-tab--active" data-tab="smartbiz" style="background: rgba(7, 93, 184, 0.25); border: 1px solid var(--color-blue); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
+                <button type="button" class="portfolio-tab portfolio-tab--active" data-tab="smartbiz" style="background: rgba(7, 93, 184, 0.25); border: 1px solid var(--color-blue); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
                   <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-white);">SmartBiz ERP</div>
                   <div style="font-size: 0.65rem; color: rgba(255,255,255,0.7);">POS & Inventory</div>
                 </button>
-                <button class="portfolio-tab" data-tab="eduflow" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
+                <button type="button" class="portfolio-tab" data-tab="eduflow" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
                   <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">EduFlow</div>
                   <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">School Management</div>
                 </button>
-                <button class="portfolio-tab" data-tab="transport" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
+                <button type="button" class="portfolio-tab" data-tab="transport" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 0.4rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; width: 100%;">
                   <div style="font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.9);">Transport</div>
                   <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6);">Operations & Fleet</div>
                 </button>

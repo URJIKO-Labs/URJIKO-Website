@@ -176,9 +176,9 @@ export function renderSolutionCategories() {
             <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-5);">
               <div class="flex items-center gap-2 mb-2">
                 <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block; flex-shrink: 0;" aria-hidden="true"></span>
-                <h4 class="text-navy font-semibold" style="margin: 0; font-size: var(--font-size-base); line-height: 1.4;">
+                <h3 class="text-navy font-semibold" style="margin: 0; font-size: var(--font-size-base); line-height: 1.4;">
                   ${card.title}
-                </h4>
+                </h3>
               </div>
               <p class="text-secondary mb-0" style="line-height: 1.5; font-size: 0.9375rem;">
                 ${card.description}

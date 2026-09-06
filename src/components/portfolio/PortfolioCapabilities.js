@@ -45,7 +45,7 @@ export function renderPortfolioCapabilities() {
           <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: var(--color-bg-light-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
             ${item.icon}
           </div>
-          <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin: 0;">${item.title}</h4>
+          <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-navy); margin: 0;">${item.title}</h3>
           <p style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5; margin: 0;">${item.desc}</p>
         </div>
       `,

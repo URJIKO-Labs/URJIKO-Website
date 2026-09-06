@@ -31,7 +31,7 @@ export function renderContactFAQ() {
     .map(
       (item, i) => `
       <div class="faq-item" style="border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-white); overflow: hidden; transition: box-shadow 0.2s;">
-        <button class="faq-item__trigger" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: var(--space-5); background: none; border: none; cursor: pointer; text-align: left; gap: var(--space-3);">
+        <button type="button" class="faq-item__trigger" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: var(--space-5); background: none; border: none; cursor: pointer; text-align: left; gap: var(--space-3);">
           <h3 style="font-size: var(--font-size-base); font-weight: 600; color: var(--color-navy); margin: 0; line-height: 1.4;">${item.question}</h3>
           <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; transition: transform 0.3s;">
             <polyline points="6 9 12 15 18 9"></polyline>

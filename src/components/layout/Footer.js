@@ -45,7 +45,7 @@ export function renderFooter() {
     .join("");
 
   return `
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="container">
         <div class="footer__grid">
           <!-- Brand Info -->
@@ -54,7 +54,7 @@ export function renderFooter() {
             <p>${companyConfig.tagline}</p>
             ${
               companyConfig.contact.location
-                ? `<p class="flex items-center gap-2 text-sm mt-3" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                ? `<p class="flex items-center gap-2 text-sm mt-3" style="color: rgba(255,255,255,0.6);">
                     ${icons.mapPin("w-4 h-4")}
                     <span>${companyConfig.contact.location}</span>
                   </p>`
@@ -63,7 +63,7 @@ export function renderFooter() {
             ${
               companyConfig.contact.phoneEthio ||
               companyConfig.contact.phoneSafari
-                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: rgba(255,255,255,0.6);">
                     ${icons.phone("w-4 h-4")}
                     <a href="tel:${companyConfig.contact.phoneEthioTel}" style="color: inherit; text-decoration: none;">${companyConfig.contact.phoneEthio}</a>
                     <span>|</span>
@@ -73,7 +73,7 @@ export function renderFooter() {
             }
             ${
               companyConfig.telegram.url
-                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: var(--color-slate-400, rgba(255,255,255,0.7));">
+                ? `<p class="flex items-center gap-2 text-sm mt-2" style="color: rgba(255,255,255,0.6);">
                     ${icons.telegram("w-4 h-4")}
                     <a href="${companyConfig.telegram.url}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">URJIKO Support</a>
                   </p>`

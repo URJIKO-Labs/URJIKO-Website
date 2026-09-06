@@ -55,7 +55,7 @@ export function renderContactInfo() {
 
           <div class="flex items-center gap-3" style="padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-white); border: 1px solid var(--color-border);">
             <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; color: var(--color-muted); flex-shrink: 0;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
             <div>
               <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Location</div>

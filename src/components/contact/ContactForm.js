@@ -29,9 +29,9 @@ export function renderContactForm() {
 
         <div class="grid grid--2 gap-4">
           <div class="flex flex-col gap-2">
-            <label class="text-navy font-semibold text-sm">Service Needed</label>
+            <label for="service-select" class="text-navy font-semibold text-sm">Service Needed</label>
             <div class="custom-select" data-name="service">
-              <div class="custom-select__trigger contact-input">
+              <div class="custom-select__trigger contact-input" id="service-select" role="combobox" aria-expanded="false" aria-haspopup="listbox">
                 <span>Select a service...</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </div>
@@ -50,9 +50,9 @@ export function renderContactForm() {
             </div>
           </div>
           <div class="flex flex-col gap-2">
-            <label class="text-navy font-semibold text-sm">Budget Range</label>
+            <label for="budget-select" class="text-navy font-semibold text-sm">Budget Range</label>
             <div class="custom-select" data-name="budget">
-              <div class="custom-select__trigger contact-input">
+              <div class="custom-select__trigger contact-input" id="budget-select" role="combobox" aria-expanded="false" aria-haspopup="listbox">
                 <span>Select budget range...</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </div>
@@ -72,9 +72,9 @@ export function renderContactForm() {
 
         <div class="grid grid--2 gap-4">
           <div class="flex flex-col gap-2">
-            <label class="text-navy font-semibold text-sm">Preferred Contact Method</label>
+            <label for="contact-method-select" class="text-navy font-semibold text-sm">Preferred Contact Method</label>
             <div class="custom-select" data-name="contact-method">
-              <div class="custom-select__trigger contact-input">
+              <div class="custom-select__trigger contact-input" id="contact-method-select" role="combobox" aria-expanded="false" aria-haspopup="listbox">
                 <span>Telegram</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </div>
@@ -87,9 +87,9 @@ export function renderContactForm() {
             </div>
           </div>
           <div class="flex flex-col gap-2">
-            <label class="text-navy font-semibold text-sm">Project Timeline</label>
+            <label for="timeline-select" class="text-navy font-semibold text-sm">Project Timeline</label>
             <div class="custom-select" data-name="timeline">
-              <div class="custom-select__trigger contact-input">
+              <div class="custom-select__trigger contact-input" id="timeline-select" role="combobox" aria-expanded="false" aria-haspopup="listbox">
                 <span>When do you need this?</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </div>
@@ -112,8 +112,8 @@ export function renderContactForm() {
         </div>
 
         <div class="flex flex-col gap-2">
-          <label class="text-navy font-semibold text-sm">Attachments <span class="text-muted" style="font-weight: 400;">(optional)</span></label>
-          <div class="file-upload" id="file-upload-area">
+          <label for="file-input" class="text-navy font-semibold text-sm">Attachments <span class="text-muted" style="font-weight: 400;">(optional)</span></label>
+          <div class="file-upload" id="file-upload-area" role="button" tabindex="0" aria-label="Upload files">
             <input type="file" id="file-input" name="files" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;">
             <div class="file-upload__trigger">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>

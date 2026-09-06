@@ -127,7 +127,7 @@ export function renderFeaturedProjects() {
       }
 
       return `
-        <div class="project-card-row" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: var(--space-6); margin-bottom: 2.5rem;">
+        <article class="project-card-row" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); padding: var(--space-6); margin-bottom: 2.5rem;">
           <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-6);">
             
             ${
@@ -270,9 +270,9 @@ export function renderFeaturedProjects() {
             `
             }
 
-          </div>
-        </div>
-      `;
+        </article>
+      </div>
+    `;
     })
     .join("");
 

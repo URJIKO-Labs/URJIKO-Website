@@ -21,12 +21,12 @@ export function renderNavbar(activePath = "/") {
     .join("");
 
   return `
-    <header class="navbar" id="site-navbar" role="banner" style="min-height: 76px; display: flex; align-items: center;">
+    <header class="navbar" id="site-navbar" style="min-height: 4rem; display: flex; align-items: center;">
       <div class="container navbar__inner" style="height: 100%;">
         <!-- Logo -->
         <a href="/" data-link class="navbar__logo" aria-label="${companyConfig.name} Home" style="text-decoration: none; display: flex; align-items: center; gap: 0.65rem; flex-shrink: 0;">
           <img 
-            src="/images/urjiko-logo.jpg" 
+            src="${import.meta.env.BASE_URL}images/urjiko-logo.jpg" 
             alt="${companyConfig.name} Logo" 
             width="44" 
             height="44" 

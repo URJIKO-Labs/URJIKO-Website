@@ -376,3 +376,24 @@
     display: none !important;
   }
 }
+
+/* Skip-to-content link — visible only on focus */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 1000;
+  background: var(--color-white);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-blue);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
