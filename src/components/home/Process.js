@@ -1,48 +1,65 @@
+/**
+ * How We Work Section
+ * Compact 6-step process with clean layout.
+ */
 export function renderProcess() {
   const steps = [
     {
       number: '01',
       title: 'Discover',
-      description: 'Understand your business goals, users, pain points, and existing operational workflow.',
+      description: 'Understand goals, workflows, and problems.',
     },
     {
       number: '02',
       title: 'Plan',
-      description: 'Define scope, technical priorities, system architecture, deliverables, and core MVP.',
+      description: 'Define scope, priorities, and MVP.',
     },
     {
       number: '03',
       title: 'Design',
-      description: 'Create clean, intuitive user experiences, component layouts, and database models.',
+      description: 'Create the user experience and system structure.',
     },
     {
       number: '04',
       title: 'Develop',
-      description: 'Build your solution using modern engineering practices, clean code, and robust APIs.',
+      description: 'Build and integrate the solution.',
     },
     {
       number: '05',
       title: 'Test',
-      description: 'Verify functionality, performance, security, mobile responsiveness, and data integrity.',
+      description: 'Validate functionality, responsiveness, and reliability.',
     },
     {
       number: '06',
-      title: 'Deploy & Support',
-      description: 'Launch the system reliably, onboard your team, and provide continuous technical support.',
+      title: 'Deploy',
+      description: 'Launch, train users, and support the system.',
     },
   ];
 
   const stepsHtml = steps
     .map(
       (s) => `
-      <div class="card flex flex-col justify-between" style="background: var(--color-white); border-top: 3px solid var(--color-blue);">
+      <div class="process-step" style="
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+        padding: var(--space-3) 0;
+        border-bottom: 1px solid var(--color-border-subtle);
+      ">
+        <span class="font-bold" style="
+          color: var(--color-blue);
+          font-size: var(--font-size-sm);
+          font-family: monospace;
+          min-width: 1.75rem;
+          flex-shrink: 0;
+          background: var(--color-bg-light-blue);
+          padding: 0.15rem 0.4rem;
+          border-radius: var(--radius-sm);
+          text-align: center;
+        ">${s.number}</span>
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="font-bold" style="color: var(--color-blue); font-size: var(--font-size-2xl); font-family: monospace;">${s.number}</span>
-            <span class="text-xs font-semibold text-muted uppercase">Stage</span>
-          </div>
-          <h3 class="card__title mb-2">${s.title}</h3>
-          <p class="text-sm text-secondary mb-0" style="line-height: 1.55;">${s.description}</p>
+          <h3 style="font-size: var(--font-size-sm); color: var(--color-navy); margin-bottom: 0.1rem; font-weight: 600;">${s.title}</h3>
+          <p class="text-secondary" style="font-size: var(--font-size-xs); margin-bottom: 0; line-height: 1.45;">${s.description}</p>
         </div>
       </div>
     `
@@ -55,10 +72,10 @@ export function renderProcess() {
         
         <!-- Section Header -->
         <div class="section-heading section-heading--center">
-          <span class="section-heading__label">Clear Delivery Cycle</span>
+          <span class="section-heading__label">Our Process</span>
           <h2 id="process-heading" class="section-heading__title">How We Work</h2>
           <p class="section-heading__subtitle text-balance">
-            A transparent, milestone-driven process keeps projects on schedule, within scope, and aligned with your organizational goals.
+            A clear, milestone-driven process that keeps projects on schedule, within scope, and aligned with your goals.
           </p>
         </div>
 
@@ -75,19 +92,15 @@ export function renderProcess() {
           grid-template-columns: repeat(2, 1fr) !important;
           gap: var(--space-3) !important;
         }
-        #process-heading ~ .grid--3 > .card {
-          padding: var(--space-4) !important;
+        #process-heading ~ .grid--3 > .process-step {
+          padding: var(--space-3) 0 !important;
         }
-        #process-heading ~ .grid--3 > .card .card__title {
-          font-size: var(--font-size-sm) !important;
-        }
-        #process-heading ~ .grid--3 > .card p {
+        #process-heading ~ .grid--3 > .process-step h3 {
           font-size: var(--font-size-xs) !important;
-          line-height: 1.4 !important;
         }
-        #process-heading ~ .grid--3 > .card:nth-child(5),
-        #process-heading ~ .grid--3 > .card:nth-child(6) {
-          grid-column: span 1;
+        #process-heading ~ .grid--3 > .process-step p {
+          font-size: 0.7rem !important;
+          line-height: 1.4 !important;
         }
       }
     </style>
