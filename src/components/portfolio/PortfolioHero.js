@@ -1,4 +1,4 @@
-import { icons } from "../common/Icons.js";
+import { icons } from '../common/Icons.js';
 
 /**
  * Portfolio Hero Section
@@ -6,70 +6,45 @@ import { icons } from "../common/Icons.js";
  */
 export function renderPortfolioHero() {
   return `
-    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-10); padding-bottom: var(--space-10); background: var(--color-white);">
-      <div class="container">
-        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
+    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-8); background: var(--color-white); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container text-center" style="max-width: 48rem; margin: 0 auto;">
+        
+        <h1 id="portfolio-hero-title" class="text-balance mb-4" style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
+          Selected Work
+        </h1>
 
-          <!-- Left: Copy -->
-          <div class="flex flex-col items-start">
-            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue); font-size: 0.7rem;">
-              PORTFOLIO
-            </div>
+        <p class="text-secondary mb-8 text-balance mx-auto" style="font-size: clamp(1rem, 2vw, 1.15rem); max-width: 38rem; line-height: 1.65;">
+          Practical software and digital products built around real workflows for business operations, education, transport, and customer-facing websites.
+        </p>
 
-            <h1 id="portfolio-hero-title" class="text-balance mb-4" style="font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); margin-bottom: var(--space-4);">
-              Software Built to Solve Real Problems
-            </h1>
+        <div class="flex flex-wrap gap-4 items-center justify-center mb-10">
+          <a href="/contact" data-link class="btn btn--primary btn--lg">
+            <span>Discuss a similar project</span>
+            ${icons.arrowRight('w-4 h-4')}
+          </a>
+          <a href="/services" data-link class="btn btn--secondary btn--lg">
+            <span>View services</span>
+          </a>
+        </div>
 
-            <p class="text-secondary mb-6 text-balance" style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); max-width: 36rem; line-height: 1.65;">
-              Explore selected software, business systems, and digital experiences developed by URJIKO Labs across business, education, transport, and healthcare.
-            </p>
-
-            <div class="flex flex-wrap gap-4 items-center">
-              <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Discuss Your Project</span>
-                ${icons.arrowRight("w-4 h-4")}
-              </a>
-              <a href="/solutions" data-link class="btn btn--secondary btn--lg">
-                <span>View Our Solutions</span>
-              </a>
-            </div>
+        <!-- Project Collage -->
+        <div class="portfolio-collage" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); align-items: center; justify-content: center; position: relative;">
+          
+          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(10px) rotate(-2deg); background: var(--color-bg-soft);">
+            <img src="${import.meta.env.BASE_URL}images/project-transport.svg" alt="Transport Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
           </div>
-
-          <!-- Right: Product Visual -->
-          <div class="flex justify-center items-center" style="width: 100%;">
-            <div style="width: 100%; max-width: 500px;">
-              <img 
-                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
-                alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer modules" 
-                width="800" 
-                height="500" 
-                loading="eager"
-                style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-lg);"
-              >
-              <div style="text-align: center; margin-top: var(--space-3);">
-                <span class="text-xs text-muted" style="font-size: 0.75rem;">SmartBiz Suite — Product Preview</span>
-              </div>
-            </div>
+          
+          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-md); transform: scale(1.05); z-index: 2; background: var(--color-white);">
+            <img src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" alt="SmartBiz Preview" style="width: 100%; height: auto; display: block;">
+          </div>
+          
+          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(10px) rotate(2deg); background: var(--color-bg-soft);">
+            <img src="${import.meta.env.BASE_URL}images/project-eduflow.svg" alt="EduFlow Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
           </div>
 
         </div>
+
       </div>
     </section>
-
-    <style>
-      @media (min-width: 1024px) {
-        section[aria-labelledby="portfolio-hero-title"] .container > .grid {
-          grid-template-columns: 1.1fr 0.9fr !important;
-        }
-      }
-      @media (max-width: 768px) {
-        section[aria-labelledby="portfolio-hero-title"] .container > .grid {
-          gap: var(--space-6) !important;
-        }
-        section[aria-labelledby="portfolio-hero-title"] h1 {
-          font-size: clamp(1.5rem, 6vw, 2rem) !important;
-        }
-      }
-    </style>
   `;
 }

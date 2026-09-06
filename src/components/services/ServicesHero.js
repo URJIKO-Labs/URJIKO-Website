@@ -1,4 +1,4 @@
-import { icons } from "../common/Icons.js";
+import { icons } from '../common/Icons.js';
 
 /**
  * Services Hero Section
@@ -25,30 +25,69 @@ export function renderServicesHero() {
             </p>
 
             <div class="flex flex-wrap gap-4 items-center">
-              <a href="/contact" data-link class="btn btn--primary btn--lg">
-                <span>Discuss Your Project</span>
-                ${icons.arrowRight("w-4 h-4")}
+              <a href="/portfolio" data-link class="btn btn--primary btn--lg">
+                <span>See how we work</span>
+                ${icons.arrowRight('w-4 h-4')}
               </a>
-              <a href="/solutions" data-link class="btn btn--secondary btn--lg">
-                <span>View Our Solutions</span>
+              <a href="/contact" data-link class="btn btn--secondary btn--lg">
+                <span>Discuss your project</span>
               </a>
             </div>
           </div>
 
-          <!-- Right Column: Product Visual -->
+          <!-- Right Column: CSS Workflow Diagram -->
           <div class="flex justify-center items-center" style="width: 100%;">
-            <div style="width: 100%; max-width: 480px;">
-              <img 
-                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
-                alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer metrics" 
-                width="800" 
-                height="500" 
-                loading="eager"
-                style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);"
-              >
-              <div style="text-align: center; margin-top: var(--space-3);">
-                <span class="text-xs text-muted" style="font-size: 0.75rem;">SmartBiz Suite — Product Preview</span>
+            <div class="workflow-diagram" style="width: 100%; max-width: 440px; background: var(--color-bg-soft); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-sm);">
+              
+              <!-- Step 1 -->
+              <div class="workflow-step">
+                <div class="workflow-icon">${icons.search('w-5 h-5')}</div>
+                <div class="workflow-content">
+                  <span class="workflow-label">Phase 1</span>
+                  <h4 class="workflow-title">Problem Discovery</h4>
+                  <p class="workflow-desc">Understanding your workflow, users, and technical constraints.</p>
+                </div>
               </div>
+              
+              <!-- Connector -->
+              <div class="workflow-connector"></div>
+
+              <!-- Step 2 -->
+              <div class="workflow-step">
+                <div class="workflow-icon">${icons.code('w-5 h-5')}</div>
+                <div class="workflow-content">
+                  <span class="workflow-label">Phase 2</span>
+                  <h4 class="workflow-title">System Design</h4>
+                  <p class="workflow-desc">Information architecture, wireframes, and database planning.</p>
+                </div>
+              </div>
+              
+              <!-- Connector -->
+              <div class="workflow-connector"></div>
+
+              <!-- Step 3 -->
+              <div class="workflow-step">
+                <div class="workflow-icon">${icons.check('w-5 h-5')}</div>
+                <div class="workflow-content">
+                  <span class="workflow-label">Phase 3</span>
+                  <h4 class="workflow-title">Agile Build</h4>
+                  <p class="workflow-desc">Frontend, backend, API integration, and rigorous testing.</p>
+                </div>
+              </div>
+              
+              <!-- Connector -->
+              <div class="workflow-connector"></div>
+
+              <!-- Step 4 -->
+              <div class="workflow-step">
+                <div class="workflow-icon">${icons.arrowRight('w-5 h-5')}</div>
+                <div class="workflow-content">
+                  <span class="workflow-label">Phase 4</span>
+                  <h4 class="workflow-title">Launch & Support</h4>
+                  <p class="workflow-desc">Deployment, monitoring, training, and continuous updates.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -57,6 +96,55 @@ export function renderServicesHero() {
     </section>
 
     <style>
+      /* Workflow Diagram Styles */
+      .workflow-step {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-4);
+      }
+      .workflow-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--color-bg-light-blue);
+        color: var(--color-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid var(--color-border-blue);
+      }
+      .workflow-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .workflow-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wider);
+        color: var(--color-blue);
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+      .workflow-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--color-navy);
+        margin-bottom: 0.25rem;
+      }
+      .workflow-desc {
+        font-size: 0.85rem;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+        margin: 0;
+      }
+      .workflow-connector {
+        width: 2px;
+        height: 24px;
+        background-color: var(--color-border);
+        margin: var(--space-2) 0 var(--space-2) 19px;
+      }
+
       @media (min-width: 1024px) {
         section[aria-labelledby="services-hero-title"] .container > .grid {
           grid-template-columns: 1.1fr 0.9fr !important;
@@ -64,7 +152,7 @@ export function renderServicesHero() {
       }
       @media (max-width: 768px) {
         section[aria-labelledby="services-hero-title"] .container > .grid {
-          gap: var(--space-6) !important;
+          gap: var(--space-8) !important;
         }
         section[aria-labelledby="services-hero-title"] h1 {
           font-size: clamp(1.5rem, 6vw, 2rem) !important;
