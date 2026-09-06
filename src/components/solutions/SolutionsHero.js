@@ -2,28 +2,26 @@ import { icons } from "../common/Icons.js";
 
 /**
  * Solutions Hero Section
- * Eyebrow: SOLUTIONS
- * Headline: Practical Software for Real-World Problems.
- * Supporting copy: We design digital systems around the workflows, challenges, and goals of businesses and organizations.
+ * Problem-first positioning.
  */
 export function renderSolutionsHero() {
   return `
-    <section class="section section--lg" aria-labelledby="solutions-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: var(--color-white); position: relative; overflow: hidden;">
+    <section class="section section--lg" aria-labelledby="solutions-hero-title" style="padding-top: var(--space-10); padding-bottom: var(--space-12); background: var(--color-white);">
       <div class="container">
-        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
+        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
           
           <!-- Left Column: Copy & Actions -->
           <div class="flex flex-col items-start">
-            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue); font-size: 0.7rem;">
               SOLUTIONS
             </div>
 
-            <h1 id="solutions-hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
-              Practical Software for Real-World Problems.
+            <h1 id="solutions-hero-title" class="text-balance mb-4" style="font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); margin-bottom: var(--space-4);">
+              Software Solutions Built Around Real Workflows
             </h1>
 
-            <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.1875rem); max-width: 38rem; line-height: 1.65;">
-              We design digital systems around the workflows, challenges, and goals of businesses and organizations.
+            <p class="text-secondary mb-6 text-balance" style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); max-width: 36rem; line-height: 1.65;">
+              From business operations to education, hospitality and healthcare, URJIKO designs practical software around how organizations actually work.
             </p>
 
             <div class="flex flex-wrap gap-4 items-center">
@@ -32,19 +30,26 @@ export function renderSolutionsHero() {
                 ${icons.arrowRight("w-4 h-4")}
               </a>
               <a href="/portfolio" data-link class="btn btn--secondary btn--lg">
-                <span>View Our Solutions</span>
+                <span>View Our Portfolio</span>
               </a>
             </div>
           </div>
 
-          <!-- Right Column: Solutions Hero Image -->
-          <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
-            <img 
-              src="${import.meta.env.BASE_URL}images/solutions_hero.jpg" 
-              alt="Ethiopian business meeting discussing digital solutions" 
-              class="hero__image"
-              style="width: 100%; max-width: 500px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);"
-            />
+          <!-- Right Column: Product Visual -->
+          <div class="flex justify-center items-center" style="width: 100%;">
+            <div style="width: 100%; max-width: 480px;">
+              <img 
+                src="${import.meta.env.BASE_URL}images/project-transport.svg" 
+                alt="Transport Management System dashboard showing fleet status and dispatch tracking" 
+                width="800" 
+                height="500" 
+                loading="eager"
+                style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);"
+              >
+              <div style="text-align: center; margin-top: var(--space-3);">
+                <span class="text-xs text-muted" style="font-size: 0.75rem;">Transport Management — Product Preview</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -54,29 +59,15 @@ export function renderSolutionsHero() {
     <style>
       @media (min-width: 1024px) {
         section[aria-labelledby="solutions-hero-title"] .container > .grid {
-          grid-template-columns: 1.15fr 0.85fr !important;
+          grid-template-columns: 1.1fr 0.9fr !important;
         }
       }
       @media (max-width: 768px) {
         section[aria-labelledby="solutions-hero-title"] .container > .grid {
-          gap: var(--space-8) !important;
-        }
-        section[aria-labelledby="solutions-hero-title"] .hero-visual-wrapper {
-          display: none !important;
+          gap: var(--space-6) !important;
         }
         section[aria-labelledby="solutions-hero-title"] h1 {
           font-size: clamp(1.5rem, 6vw, 2rem) !important;
-          line-height: 1.2 !important;
-        }
-        section[aria-labelledby="solutions-hero-title"] p {
-          font-size: var(--font-size-sm) !important;
-        }
-        section[aria-labelledby="solutions-hero-title"] .flex.items-center.justify-between {
-          flex-wrap: wrap;
-          gap: var(--space-2);
-        }
-        section[aria-labelledby="solutions-hero-title"] .text-sm.font-semibold {
-          font-size: var(--font-size-xs);
         }
       }
     </style>

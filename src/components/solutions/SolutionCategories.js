@@ -1,214 +1,166 @@
 import { icons } from '../common/Icons.js';
 
 /**
- * Industry Solution Categories Data
- * 4 categories: Business, Education, Transport, Healthcare
+ * Solution Categories — Problem-First Structure
+ * Each category: Problem → Solution → Related Project
  */
 const SOLUTION_CATEGORIES = [
   {
     id: 'business-solutions',
-    badge: 'BUSINESS SOLUTIONS',
-    title: 'Business Solutions',
-    description: 'Tools that help businesses manage operations, sales, customers, inventory, and decision-making more efficiently.',
-    bgClass: 'bg-white',
-    gridClass: 'grid--3',
+    badge: 'BUSINESS OPERATIONS',
+    title: 'Business Management Solutions',
+    problem: 'Disconnected sales and inventory, manual reporting, scattered customer records, poor operational visibility.',
+    solution: 'ERP, POS, inventory management, customer management, dashboards, and reporting systems.',
     cards: [
-      {
-        title: 'Inventory Management',
-        description: 'Real-time stock tracking, multi-location inventory, automated reorder alerts, and supplier sync.'
-      },
-      {
-        title: 'Point of Sale',
-        description: 'Fast, intuitive checkout interface with receipt printing, payment tracking, and barcode support.'
-      },
-      {
-        title: 'Customer Management',
-        description: 'Centralized customer directory with transaction histories, preferences, and credit monitoring.'
-      },
-      {
-        title: 'Sales Management',
-        description: 'Pipeline oversight, invoice creation, recurring billing, and real-time revenue performance metrics.'
-      },
-      {
-        title: 'Business Analytics',
-        description: 'Custom financial reports, sales trends, inventory turnover analysis, and visual dashboards.'
-      }
+      { title: 'ERP & POS', description: 'Centralized point of sale and enterprise resource planning.' },
+      { title: 'Inventory Management', description: 'Real-time stock tracking and automated alerts.' },
+      { title: 'Customer Management', description: 'Centralized customer directory with transaction histories.' },
+      { title: 'Dashboards & Reports', description: 'Business intelligence and visual performance metrics.' },
     ],
-    featured: {
+    project: {
       name: 'SmartBiz ERP',
+      badge: 'BUSINESS',
       badgeClass: 'badge--blue',
-      badgeText: 'Core Product',
-      link: '/portfolio/smartbiz'
-    }
-  },
-  {
-    id: 'education-solutions',
-    badge: 'EDUCATION SOLUTIONS',
-    title: 'Education Solutions',
-    description: 'Digital systems that help schools and educational organizations manage students, teachers, classes, attendance, grades, and academic workflows.',
-    bgClass: 'bg-soft',
-    gridClass: 'grid--3',
-    cards: [
-      {
-        title: 'Student Management',
-        description: 'Complete student profiles, enrollment tracking, demographic records, and academic history.'
-      },
-      {
-        title: 'Teacher Management',
-        description: 'Faculty directories, subject assignments, department allocations, and teaching schedules.'
-      },
-      {
-        title: 'Attendance',
-        description: 'Digital daily attendance recording for students and staff with automated absence notifications.'
-      },
-      {
-        title: 'Grades',
-        description: 'Comprehensive gradebook management, automated report card generation, and exam assessments.'
-      },
-      {
-        title: 'Timetable',
-        description: 'Automated class and room scheduling with conflict resolution and teacher availability tracking.'
-      }
-    ],
-    featured: {
-      name: 'EduFlow',
-      badgeClass: 'badge--navy',
-      badgeText: 'Education Platform',
-      link: '/portfolio/eduflow'
-    }
+      link: '/portfolio/smartbiz',
+    },
   },
   {
     id: 'transport-solutions',
-    badge: 'TRANSPORT SOLUTIONS',
-    title: 'Transport Solutions',
-    description: 'Operational systems that help transport organizations coordinate vehicles, drivers, requests, workflows, and reporting.',
-    bgClass: 'bg-white',
-    gridClass: 'grid--3',
+    badge: 'TRANSPORT & OPERATIONS',
+    title: 'Transport Management Solutions',
+    problem: 'Manual requests, difficult workflow tracking, poor operational visibility, role and approval complexity.',
+    solution: 'Transport management, request workflows, vehicle and driver coordination, administrative dashboards.',
     cards: [
-      {
-        title: 'Vehicle Management',
-        description: 'Fleet registry with maintenance schedules, inspection logs, insurance records, and vehicle health.'
-      },
-      {
-        title: 'Driver Management',
-        description: 'Driver rosters, license compliance, shift assignments, and trip performance histories.'
-      },
-      {
-        title: 'Transport Requests',
-        description: 'Digital dispatch workflows, trip approvals, passenger allocations, and request tracking.'
-      },
-      {
-        title: 'Operations',
-        description: 'Live operational control, daily trip execution monitoring, and incident management workflows.'
-      },
-      {
-        title: 'Reports',
-        description: 'Automated fuel consumption tracking, mileage logs, operational cost reports, and fleet analytics.'
-      }
+      { title: 'Transport Requests', description: 'Digital dispatch workflows and trip approvals.' },
+      { title: 'Vehicle & Driver Management', description: 'Fleet registry and driver coordination.' },
+      { title: 'Operations Dashboard', description: 'Live operational control and monitoring.' },
+      { title: 'Reports & Administration', description: 'Automated reporting and administrative tools.' },
     ],
-    featured: {
+    project: {
       name: 'Transport Management',
+      badge: 'TRANSPORT',
       badgeClass: 'badge--navy',
-      badgeText: 'Operations System',
-      link: '/portfolio/transport'
-    }
+      link: '/portfolio/transport',
+    },
+  },
+  {
+    id: 'education-solutions',
+    badge: 'EDUCATION',
+    title: 'Education Management Solutions',
+    problem: 'Student records across spreadsheets, manual attendance, grade tracking complexity, timetable conflicts.',
+    solution: 'Student management, teacher management, attendance, grades, timetables, and administration systems.',
+    cards: [
+      { title: 'Student & Teacher Management', description: 'Complete profiles, enrollment, and faculty directories.' },
+      { title: 'Attendance Tracking', description: 'Digital daily attendance with notifications.' },
+      { title: 'Grade Management', description: 'Gradebook and automated report card generation.' },
+      { title: 'Timetable & Scheduling', description: 'Automated class scheduling with conflict resolution.' },
+    ],
+    project: {
+      name: 'EduFlow',
+      badge: 'EDUCATION',
+      badgeClass: 'badge--blue',
+      link: '/portfolio/eduflow',
+    },
   },
   {
     id: 'healthcare-solutions',
-    badge: 'HEALTHCARE SOLUTIONS',
-    title: 'Healthcare Solutions',
-    description: 'Digital platforms designed to support healthcare workflows, records, management, and operational visibility.',
-    bgClass: 'bg-soft',
-    gridClass: 'grid--2',
+    badge: 'HEALTHCARE',
+    title: 'Healthcare & Digital Platforms',
+    problem: 'Paper-based records, inefficient patient workflows, limited management visibility, manual administrative tasks.',
+    solution: 'Digital records, patient workflows, management dashboards, and administrative tools.',
     cards: [
-      {
-        title: 'Digital Records',
-        description: 'Secure digital patient charts, medical history archives, treatment notes, and lab records.'
-      },
-      {
-        title: 'Patient Workflows',
-        description: 'Streamlined appointment scheduling, triage queues, intake workflows, and patient check-in.'
-      },
-      {
-        title: 'Management Dashboards',
-        description: 'Facility occupancy rates, department performance, staff coverage, and service analytics.'
-      }
+      { title: 'Digital Records', description: 'Secure digital patient charts and medical history.' },
+      { title: 'Patient Workflows', description: 'Appointment scheduling and intake workflows.' },
+      { title: 'Management Dashboards', description: 'Facility performance and department analytics.' },
     ],
-    featured: {
+    project: {
       name: 'ShegerHealth',
-      badgeClass: 'badge--blue',
-      badgeText: 'Project Concept',
+      badge: 'HEALTHCARE',
+      badgeClass: 'badge--navy',
       link: '/portfolio/shegerhealth',
-      disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.'
-    }
-  }
+      disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.',
+    },
+  },
 ];
 
 /**
- * Render Industry Solution Categories
- * Renders 4 industry sections: Business, Education, Transport, Healthcare
- * with compact cards, featured project indicators, and category CTA links.
+ * Render Solution Categories
  */
 export function renderSolutionCategories() {
-  return SOLUTION_CATEGORIES.map(category => `
-    <section 
-      id="${category.id}" 
-      class="section ${category.bgClass}" 
-      aria-labelledby="${category.id}-heading"
-      style="border-top: 1px solid var(--color-border-subtle);"
-    >
-      <div class="container">
-        
-        <!-- Left-aligned Section Heading -->
-        <div class="section-heading mb-8">
-          <div class="mb-3">
-            <span class="badge badge--blue font-semibold">${category.badge}</span>
-          </div>
-          <h2 id="${category.id}-heading" class="section-heading__title">${category.title}</h2>
-          <p class="section-heading__subtitle text-balance">
-            ${category.description}
-          </p>
-        </div>
-
-        <!-- Compact Solution Cards Grid -->
-        <div class="grid ${category.gridClass} gap-4 mb-8">
-          ${category.cards.map(card => `
-            <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-5);">
-              <div class="flex items-center gap-2 mb-2">
-                <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-blue); display: inline-block; flex-shrink: 0;" aria-hidden="true"></span>
-                <h3 class="text-navy font-semibold" style="margin: 0; font-size: var(--font-size-base); line-height: 1.4;">
-                  ${card.title}
-                </h3>
+  return SOLUTION_CATEGORIES.map((category, index) => {
+    const bgClass = index % 2 === 0 ? 'bg-white' : 'bg-soft';
+    
+    return `
+      <section 
+        id="${category.id}" 
+        class="section ${bgClass}" 
+        aria-labelledby="${category.id}-heading"
+        style="border-top: 1px solid var(--color-border-subtle); padding-top: var(--space-8); padding-bottom: var(--space-8);"
+      >
+        <div class="container">
+          
+          <div class="grid solution-category-grid" style="gap: var(--space-8); align-items: start;">
+            
+            <!-- Left: Problem & Solution -->
+            <div>
+              <div class="section-heading" style="margin-bottom: var(--space-4);">
+                <span class="badge badge--blue font-semibold" style="font-size: 0.65rem;">${category.badge}</span>
+                <h2 id="${category.id}-heading" class="section-heading__title" style="font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-top: var(--space-3);">${category.title}</h2>
               </div>
-              <p class="text-secondary mb-0" style="line-height: 1.5; font-size: 0.9375rem;">
-                ${card.description}
-              </p>
-            </div>
-          `).join('')}
-        </div>
 
-        <!-- Featured Project Indicator -->
-        <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-6);">
-          <div class="flex flex-wrap items-center justify-between gap-4">
-            <div class="flex flex-wrap items-center gap-3">
-              <span class="badge ${category.featured.badgeClass} font-semibold">${category.featured.badgeText}</span>
-              <span class="font-semibold text-navy" style="font-size: var(--font-size-base);">${category.featured.name}</span>
+              <!-- Problem -->
+              <div style="margin-bottom: var(--space-4);">
+                <h3 style="font-size: var(--font-size-sm); font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-2);">Common Problems</h3>
+                <p class="text-secondary" style="font-size: var(--font-size-sm); line-height: 1.6; margin-bottom: 0;">${category.problem}</p>
+              </div>
+
+              <!-- Solution -->
+              <div style="margin-bottom: var(--space-4);">
+                <h3 style="font-size: var(--font-size-sm); font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-2);">What URJIKO Can Build</h3>
+                <p class="text-secondary" style="font-size: var(--font-size-sm); line-height: 1.6; margin-bottom: 0;">${category.solution}</p>
+              </div>
+
+              <!-- Related Project -->
+              <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4);">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="badge ${category.project.badgeClass} text-xs">${category.project.badge}</span>
+                    <span class="font-semibold text-navy" style="font-size: var(--font-size-sm);">${category.project.name}</span>
+                  </div>
+                  <a href="${category.project.link}" data-link class="flex items-center gap-1" style="font-size: var(--font-size-xs); color: var(--color-blue); text-decoration: none; font-weight: 600;">
+                    <span>View Project</span>
+                    ${icons.arrowRight('w-3 h-3')}
+                  </a>
+                </div>
+                ${category.project.disclaimer ? `
+                  <p class="text-xs text-muted mb-0 mt-2 pt-2" style="border-top: 1px solid rgba(7, 87, 184, 0.12); line-height: 1.5;">
+                    ${category.project.disclaimer}
+                  </p>
+                ` : ''}
+              </div>
             </div>
-            <a href="${category.featured.link}" data-link class="card__link font-semibold flex items-center gap-1" style="margin-top: 0; font-size: var(--font-size-sm);">
-              <span>View Project</span>
-              ${icons.arrowRight('w-4 h-4')}
-            </a>
+
+            <!-- Right: Solution Cards -->
+            <div class="flex flex-col gap-3">
+              ${category.cards.map(card => `
+                <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-4);">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-blue); display: inline-block; flex-shrink: 0;" aria-hidden="true"></span>
+                    <h3 class="text-navy font-semibold" style="margin: 0; font-size: var(--font-size-sm); line-height: 1.4;">
+                      ${card.title}
+                    </h3>
+                  </div>
+                  <p class="text-secondary mb-0" style="line-height: 1.5; font-size: var(--font-size-xs);">
+                    ${card.description}
+                  </p>
+                </div>
+              `).join('')}
+            </div>
+
           </div>
-          ${category.featured.disclaimer ? `
-            <p class="text-xs text-muted mb-0 mt-3 pt-3" style="border-top: 1px solid rgba(7, 87, 184, 0.12); line-height: 1.5;">
-              ${category.featured.disclaimer}
-            </p>
-          ` : ''}
+
         </div>
-
-
-
-      </div>
-    </section>
-  `).join('\n');
+      </section>
+    `;
+  }).join('\n');
 }

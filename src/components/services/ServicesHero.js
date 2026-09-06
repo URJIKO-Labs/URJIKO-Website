@@ -2,27 +2,26 @@ import { icons } from "../common/Icons.js";
 
 /**
  * Services Hero Section
- * Eyebrow: WHAT WE DO
- * Headline: Technology Built Around Your Business.
+ * Positioned as a software development studio.
  */
 export function renderServicesHero() {
   return `
-    <section class="section section--lg" aria-labelledby="services-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: var(--color-white); position: relative; overflow: hidden;">
+    <section class="section section--lg" aria-labelledby="services-hero-title" style="padding-top: var(--space-10); padding-bottom: var(--space-12); background: var(--color-white);">
       <div class="container">
-        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-12);">
+        <div class="grid items-center" style="grid-template-columns: 1fr; gap: var(--space-10);">
           
           <!-- Left Column -->
           <div class="flex flex-col items-start">
-            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue);">
+            <div class="badge mb-4" style="background-color: var(--color-bg-light-blue); color: var(--color-blue); font-weight: 600; text-transform: uppercase; letter-spacing: var(--letter-spacing-wider); padding: 0.35rem 0.85rem; border: 1px solid var(--color-border-blue); font-size: 0.7rem;">
               WHAT WE DO
             </div>
 
-            <h1 id="services-hero-title" class="text-balance mb-6" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
-              Technology Built Around Your Business.
+            <h1 id="services-hero-title" class="text-balance mb-4" style="font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight); margin-bottom: var(--space-4);">
+              Software Development & Digital Product Services
             </h1>
 
-            <p class="text-secondary mb-8 text-balance" style="font-size: clamp(1rem, 2vw, 1.1875rem); max-width: 38rem; line-height: 1.65;">
-              From modern websites to business systems and intelligent software, URJIKO Labs builds practical digital solutions designed around real organizational needs.
+            <p class="text-secondary mb-6 text-balance" style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); max-width: 36rem; line-height: 1.65;">
+              URJIKO Labs provides practical software development and digital product services designed around real organizational needs — from modern websites to business management systems and intelligent software.
             </p>
 
             <div class="flex flex-wrap gap-4 items-center">
@@ -36,14 +35,21 @@ export function renderServicesHero() {
             </div>
           </div>
 
-          <!-- Right Column: Services Hero Image -->
-          <div class="hero-image-wrapper flex justify-center items-center" style="width: 100%;">
-            <img 
-              src="${import.meta.env.BASE_URL}images/services_hero.jpg" 
-              alt="Ethiopian team collaboration on digital services" 
-              class="hero__image"
-              style="width: 100%; max-width: 500px; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid var(--color-border);"
-            />
+          <!-- Right Column: Product Visual -->
+          <div class="flex justify-center items-center" style="width: 100%;">
+            <div style="width: 100%; max-width: 480px;">
+              <img 
+                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
+                alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer metrics" 
+                width="800" 
+                height="500" 
+                loading="eager"
+                style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);"
+              >
+              <div style="text-align: center; margin-top: var(--space-3);">
+                <span class="text-xs text-muted" style="font-size: 0.75rem;">SmartBiz Suite — Product Preview</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -53,29 +59,15 @@ export function renderServicesHero() {
     <style>
       @media (min-width: 1024px) {
         section[aria-labelledby="services-hero-title"] .container > .grid {
-          grid-template-columns: 1.15fr 0.85fr !important;
+          grid-template-columns: 1.1fr 0.9fr !important;
         }
       }
       @media (max-width: 768px) {
         section[aria-labelledby="services-hero-title"] .container > .grid {
-          gap: var(--space-8) !important;
-        }
-        section[aria-labelledby="services-hero-title"] .hero-visual-wrapper {
-          display: none !important;
+          gap: var(--space-6) !important;
         }
         section[aria-labelledby="services-hero-title"] h1 {
           font-size: clamp(1.5rem, 6vw, 2rem) !important;
-          line-height: 1.2 !important;
-        }
-        section[aria-labelledby="services-hero-title"] p {
-          font-size: var(--font-size-sm) !important;
-        }
-        section[aria-labelledby="services-hero-title"] .flex.items-center.justify-between {
-          flex-wrap: wrap;
-          gap: var(--space-2);
-        }
-        section[aria-labelledby="services-hero-title"] .text-sm.font-semibold {
-          font-size: var(--font-size-xs);
         }
       }
     </style>

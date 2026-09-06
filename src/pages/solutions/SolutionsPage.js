@@ -1,6 +1,5 @@
 import { renderSolutionsHero } from "../../components/solutions/SolutionsHero.js";
 import { renderSolutionCategories } from "../../components/solutions/SolutionCategories.js";
-import { renderProblemSolution } from "../../components/solutions/ProblemSolution.js";
 import { renderCapabilityGrid } from "../../components/solutions/CapabilityGrid.js";
 import { renderCrossNavigation } from "../../components/solutions/CrossNavigation.js";
 import { renderGlobalCTA } from "../../components/common/CTA.js";
@@ -9,23 +8,22 @@ import { renderGlobalCTA } from "../../components/common/CTA.js";
  * URJIKO Labs — Solutions Page
  * Route: /solutions
  *
- * Organized around industries, workflows, and operational needs:
- * - Business Solutions (SmartBiz ERP)
- * - Education Solutions (EduFlow)
- * - Transport Solutions (Transport Management)
- * - Healthcare Solutions (ShegerHealth)
+ * Problem-first structure organized around industries:
+ * - Business Operations (SmartBiz)
+ * - Transport & Operations (Transport Management)
+ * - Education (EduFlow)
+ * - Healthcare (ShegerHealth)
  */
 export function renderSolutionsPage() {
   return `
     ${renderSolutionsHero()}
     ${renderSolutionCategories()}
-    ${renderProblemSolution()}
     ${renderCapabilityGrid()}
     ${renderCrossNavigation()}
     ${renderGlobalCTA({
-      title: "Need a custom solution for your industry?",
+      title: "Have a business process that could work better with software?",
       description:
-        "Tell us what you are trying to improve. We will help you identify a practical digital solution.",
+        "Tell us what you need. We'll help you explore a practical digital solution.",
       primaryBtnLabel: "Discuss Your Project",
       primaryBtnPath: "/contact",
       secondaryBtnLabel: "View Our Services",
