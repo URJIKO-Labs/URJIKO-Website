@@ -110,7 +110,7 @@ export function renderContactForm() {
           <textarea id="description" name="description" required rows="5" placeholder="Tell us about your project goals, timeline, and any specific requirements..." class="contact-input" style="resize: vertical;"></textarea>
         </div>
 
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2" style="display: none;">
           <label for="file-input" class="text-navy font-semibold text-sm">Attachments <span class="text-muted" style="font-weight: 400;">(optional)</span></label>
           <div class="file-upload" id="file-upload-area" role="button" tabindex="0" aria-label="Upload files">
             <input type="file" id="file-input" name="files" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;">
