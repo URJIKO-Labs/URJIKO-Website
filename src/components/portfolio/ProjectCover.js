@@ -24,37 +24,18 @@ function renderTypographyCover(project, options = {}) {
   if (project.id === 'shegerhealth')
     accentStyle = 'border-left: 6px solid #20B2AA;'; // teal
 
-  // Responsive padding/font sizes based on context
-  const padding = isSmall ? 'var(--space-4)' : 'var(--space-8)';
-  const minHeight = isSmall ? '240px' : '400px';
-  const numberSize = isSmall ? '2.5rem' : '4rem';
-  const titleSize = isSmall ? '1.5rem' : '2rem';
-  const taglineSize = isSmall ? '1rem' : '1.25rem';
-
-  // Hide long descriptions on small grid cards
-  const descHtml = isSmall
-    ? ''
-    : `
-    <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.6; margin-bottom: var(--space-6);">
-      ${project.description}
-    </p>
-  `;
+  const minHeight = isSmall ? '200px' : '360px';
+  const numberSize = isSmall ? '4rem' : '8rem';
 
   return `
-    <div style="background: var(--color-bg-soft); border-radius: ${isSmall ? 'var(--radius-sm)' : 'var(--radius-xl)'}; border: 1px solid var(--color-border); padding: ${padding}; height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow-sm); ${accentStyle}">
-      <div style="font-size: ${numberSize}; font-weight: 900; color: rgba(0,0,0,0.05); line-height: 1; margin-bottom: ${isSmall ? 'var(--space-2)' : 'var(--space-4)'}; font-family: monospace;">
+    <div style="background: var(--color-bg-soft); border-radius: ${isSmall ? 'var(--radius-sm)' : 'var(--radius-md)'}; border: 1px solid var(--color-border); height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); ${accentStyle}">
+      <!-- Abstract Number Motif -->
+      <div style="font-size: ${numberSize}; font-weight: 900; color: rgba(0,0,0,0.04); line-height: 1; font-family: monospace; user-select: none;">
         ${project.number}
       </div>
-      <h3 style="font-size: ${titleSize}; font-weight: 800; color: var(--color-navy); margin-bottom: var(--space-2);">
-        ${project.name}
-      </h3>
-      <p style="font-size: ${taglineSize}; font-weight: 500; color: var(--color-blue); margin-bottom: ${isSmall ? 'var(--space-4)' : 'var(--space-6)'};">
-        ${project.tagline}
-      </p>
-      ${descHtml}
-      <div class="flex gap-2 mt-auto">
-        <span class="badge badge--outline text-xs">${project.category}</span>
-        <span class="badge badge--blue text-xs">${project.statusBadge}</span>
+      <!-- Project ID Watermark -->
+      <div style="position: absolute; bottom: var(--space-4); right: var(--space-4); font-size: 0.75rem; font-weight: 700; color: var(--color-navy); opacity: 0.2; text-transform: uppercase; letter-spacing: 0.1em; user-select: none;">
+        ${project.id}
       </div>
     </div>
   `;
