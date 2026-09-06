@@ -237,7 +237,7 @@ function renderProjectVisual(projectId) {
 }
 
 /**
- * Render a dedicated project detail page
+ * Render a dedicated project detail page (Case Study Format)
  * @param {string} projectId - The project ID (smartbiz, transport, eduflow, shegerhealth)
  */
 export function renderProjectPage(projectId) {
@@ -266,39 +266,24 @@ export function renderProjectPage(projectId) {
   };
 
   const projectStatuses = {
-    smartbiz: "Product Preview",
-    transport: "Product Preview",
-    eduflow: "MVP",
-    shegerhealth: "Demo / Concept",
+    smartbiz: 'Product Preview',
+    transport: 'Product Preview',
+    eduflow: 'MVP',
+    shegerhealth: 'Demo / Concept',
   };
 
   const projectScopes = {
-    smartbiz: "UI/UX Design, Frontend Development, Backend Development, Database Integration, Responsive Design",
-    transport: "UI/UX Design, Frontend Development, Backend Development, Role-Based Access, Responsive Design",
-    eduflow: "UI/UX Design, Frontend Development, Backend Development, Authentication, Responsive Design",
-    shegerhealth: "UI/UX Design, Frontend Development, Workflow Design, Dashboard Design",
+    smartbiz: 'UX/UI, Frontend, Backend, Database',
+    transport: 'UX/UI, Frontend, Backend, Access Control',
+    eduflow: 'UX/UI, Frontend, Backend, Authentication',
+    shegerhealth: 'UX/UI, Workflow Design',
   };
 
   const visual = projectVisuals[project.id];
   const status = projectStatuses[project.id];
   const scope = projectScopes[project.id];
 
-  const styles = `
-    <style>
-      @media (min-width: 1024px) {
-        .project-detail-layout { grid-template-columns: 1fr 1fr !important; }
-        .project-detail-layout .project-detail-visual { order: 2; }
-        .project-detail-layout .project-detail-content { order: 1; }
-      }
-      @media (max-width: 768px) {
-        .project-detail-visual { order: 1; }
-        .project-detail-layout { gap: var(--space-6) !important; }
-      }
-    </style>
-  `;
-
   return `
-    ${styles}
     <!-- Breadcrumbs -->
     <div class="container" style="padding-top: var(--space-6);">
       <nav aria-label="Breadcrumb">
@@ -312,138 +297,190 @@ export function renderProjectPage(projectId) {
       </nav>
     </div>
 
-    <!-- Project Header -->
-    <section class="section" aria-labelledby="project-detail-heading" style="padding-top: var(--space-4); padding-bottom: var(--space-6);">
+    <!-- Case Study Hero -->
+    <section class="section" aria-labelledby="project-detail-heading" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
       <div class="container">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="badge badge--outline text-xs">${project.category}</span>
-          <span class="badge badge--blue text-xs">${status}</span>
-        </div>
-        <h1 id="project-detail-heading" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-3); line-height: 1.2;">
-          ${project.name}
-        </h1>
-        <p class="text-secondary" style="font-size: var(--font-size-lg); max-width: 48rem; line-height: 1.6;">
-          ${project.tagline}
-        </p>
-      </div>
-    </section>
-
-    <!-- Main Product Visual -->
-    <section style="padding-top: 0; padding-bottom: var(--space-6);">
-      <div class="container">
-        ${visual ? `
-          <div style="background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-xl); padding: var(--space-5); text-align: center;">
-            <img 
-              src="${visual}" 
-              alt="${project.name} — ${project.tagline}" 
-              width="800" 
-              height="500" 
-              loading="lazy"
-              style="width: 100%; max-width: 640px; height: auto; border-radius: var(--radius-md);"
-            >
-            <div style="margin-top: var(--space-3);">
-              <span class="text-xs text-muted">${project.name} — Product Preview</span>
+        <div class="grid" style="grid-template-columns: 1fr; gap: var(--space-10); @media(min-width: 900px) { grid-template-columns: 1.1fr 0.9fr; }">
+          
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge ${status === 'Live' ? 'badge--success' : 'badge--blue'} text-xs">${status}</span>
+              <span class="badge badge--outline text-xs">${project.category}</span>
             </div>
-          </div>
-        ` : ''}
-      </div>
-    </section>
-
-    <!-- Two Column: Content + Visual -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <div class="grid items-start project-detail-layout" style="grid-template-columns: 1fr; gap: var(--space-8);">
-          <!-- Content -->
-          <div class="project-detail-content">
-            <p class="text-secondary mb-8" style="line-height: 1.7; font-size: var(--font-size-md);">
+            
+            <h1 id="project-detail-heading" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--color-navy); margin-bottom: var(--space-4); line-height: 1.1;">
+              ${project.name}
+            </h1>
+            
+            <p class="text-secondary mb-6" style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 500; color: var(--color-navy); line-height: 1.5;">
+              ${project.tagline}
+            </p>
+            
+            <p class="text-secondary mb-8" style="font-size: 1.05rem; line-height: 1.6; max-width: 36rem;">
               ${project.description}
             </p>
-
-            <!-- The Problem -->
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-3" style="font-size: var(--font-size-xl);">The Problem</h2>
-              <p class="text-secondary" style="line-height: 1.7;">${project.problem}</p>
-            </div>
-
-            <!-- The Solution -->
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-3" style="font-size: var(--font-size-xl);">The Solution</h2>
-              <p class="text-secondary" style="line-height: 1.7;">${project.solution}</p>
-            </div>
-
-            <!-- Business Value -->
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-xl);">Intended Business Value</h2>
-              <ul style="list-style: none; padding: 0; margin: 0;" class="flex flex-col gap-2">
-                ${project.businessValue.map((v) => `<li class="flex items-start gap-3 text-secondary"><span style="color: var(--color-blue); margin-top: 4px; font-size: 1rem;">✓</span><span style="line-height: 1.6; font-size: 0.95rem;">${v}</span></li>`).join('')}
-              </ul>
-            </div>
-
-            <!-- Disclaimer -->
-            ${project.disclaimer ? `<p class="text-sm text-muted mb-6" style="font-style: italic; padding: var(--space-3); background: var(--color-bg-soft); border-radius: var(--radius-sm); border-left: 3px solid var(--color-blue);">${project.disclaimer}</p>` : ''}
-
-            <!-- Key Features -->
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-xl);">Key Features</h2>
-              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-2);">
-                ${project.features.map((f) => `<div class="flex items-center gap-2 p-2.5" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm);"><span style="width: 5px; height: 5px; border-radius: 50%; background: var(--color-blue); flex-shrink: 0;"></span><span class="text-sm text-navy">${f}</span></div>`).join('')}
+            
+            <!-- Project Facts Row -->
+            <div class="grid grid--2 gap-4" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); padding: var(--space-4) 0; margin-bottom: var(--space-8);">
+              <div>
+                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Industry</div>
+                <div class="text-sm font-medium text-navy">${project.category}</div>
+              </div>
+              <div>
+                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Scope</div>
+                <div class="text-sm font-medium text-navy">${scope}</div>
+              </div>
+              <div>
+                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Status</div>
+                <div class="text-sm font-medium text-navy">${status}</div>
+              </div>
+              <div>
+                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Platform</div>
+                <div class="text-sm font-medium text-navy">Responsive Web App</div>
               </div>
             </div>
 
-            <!-- Project Scope -->
-            ${scope ? `
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-xl);">Scope</h2>
-              <div class="flex flex-wrap gap-1.5">
-                ${scope.split(', ').map((s) => `<span class="badge badge--outline text-xs">${s}</span>`).join('')}
-              </div>
-            </div>
-            ` : ''}
-
-            <!-- Technologies -->
-            <div class="mb-8">
-              <h2 class="text-navy font-semibold mb-4" style="font-size: var(--font-size-xl);">Technologies</h2>
-              <div class="flex flex-wrap gap-1.5">
-                ${project.technologies.map((t) => `<span class="badge badge--outline text-xs">${t}</span>`).join('')}
-              </div>
-            </div>
-
-            <!-- Current Status -->
-            <div class="mb-8" style="padding: var(--space-4); background: var(--color-bg-soft); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md);">
-              <h3 class="text-navy font-semibold mb-2" style="font-size: var(--font-size-md);">Current Status</h3>
-              <span class="badge badge--blue">${status}</span>
-            </div>
-
-            <!-- CTAs -->
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary">
-                <span>Discuss Your Project</span>
+                <span>Discuss a similar project</span>
                 ${icons.arrowRight('w-4 h-4')}
               </a>
-              <a href="/portfolio" data-link class="btn btn--secondary">Back to Portfolio</a>
             </div>
           </div>
-
-          <!-- Visual -->
-          <div class="project-detail-visual">
-            ${renderProjectVisual(project.id)}
+          
+          <div class="flex items-center justify-center">
+            ${
+              visual
+                ? `
+              <div style="background: var(--color-bg-soft); border-radius: var(--radius-xl); border: 1px solid var(--color-border); padding: var(--space-4); width: 100%; box-shadow: var(--shadow-md);">
+                <img src="${visual}" alt="${project.name}" style="width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                <div class="text-center mt-3 text-xs text-muted">Primary interface overview</div>
+              </div>
+            `
+                : ''
+            }
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--color-navy); color: var(--color-white); padding-top: var(--space-10); padding-bottom: var(--space-10);">
+    <!-- The Challenge & Workflow -->
+    <section class="section" style="background: var(--color-bg-soft); padding-top: var(--space-10); padding-bottom: var(--space-10);">
+      <div class="container" style="max-width: 56rem;">
+        
+        <div class="mb-12">
+          <h2 class="text-navy" style="font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700; margin-bottom: var(--space-4);">The Challenge</h2>
+          <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.7;">
+            ${project.problem}
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-navy" style="font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700; margin-bottom: var(--space-6);">Workflow Transformation</h2>
+          
+          <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm);">
+            
+            <div class="grid" style="grid-template-columns: 1fr; gap: var(--space-4); @media(min-width: 768px) { grid-template-columns: 1fr auto 1fr; }">
+              <!-- Before -->
+              <div>
+                <div class="badge badge--outline mb-3">BEFORE</div>
+                <ul class="text-secondary text-sm flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Disconnected data sources</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Manual reporting & calculations</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Lack of real-time visibility</li>
+                </ul>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flex items-center justify-center text-blue" style="padding: var(--space-4) 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+
+              <!-- After -->
+              <div>
+                <div class="badge badge--blue mb-3">AFTER (URJIKO SOLUTION)</div>
+                <ul class="text-navy text-sm font-medium flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Single centralized database</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Automated real-time metrics</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Role-based operational dashboards</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-navy" style="font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700; margin-bottom: var(--space-4);">The Solution</h2>
+          <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.7;">
+            ${project.solution}
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Product Walkthrough / Gallery -->
+    <section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
+      <div class="container text-center mb-10">
+        <h2 class="text-navy" style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Product Walkthrough</h2>
+        <p class="text-secondary mx-auto mt-4" style="max-width: 42rem; font-size: 1.1rem;">A closer look at the interfaces and workflows that make this system work.</p>
+      </div>
+
+      <div class="container" style="max-width: 56rem;">
+        ${renderProjectVisual(project.id)}
+      </div>
+    </section>
+
+    <!-- Tech Stack & Results -->
+    <section class="section" style="background: var(--color-navy); color: var(--color-white); padding-top: var(--space-12); padding-bottom: var(--space-12);">
+      <div class="container">
+        <div class="grid grid--2 gap-10">
+          
+          <div>
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: var(--space-6); color: var(--color-white);">Technology & Scope</h2>
+            <div class="mb-6">
+              <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); margin-bottom: var(--space-3);">URJIKO's Role</h3>
+              <p style="color: rgba(255,255,255,0.9); line-height: 1.6;">Discovery, product design, frontend architecture, backend API, and database modeling.</p>
+            </div>
+            <div>
+              <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); margin-bottom: var(--space-3);">Stack</h3>
+              <div class="flex flex-wrap gap-2">
+                ${project.technologies.map((t) => `<span style="padding: 4px 10px; border-radius: 4px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem;">${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: var(--space-6); color: var(--color-white);">Current Status</h2>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-6);">
+              <div class="flex items-center gap-3 mb-4">
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: var(--color-blue); box-shadow: 0 0 10px var(--color-blue);"></span>
+                <span style="font-size: 1.1rem; font-weight: 600;">${status}</span>
+              </div>
+              <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 0.95rem;">
+                ${project.disclaimer ? project.disclaimer : 'This system has successfully completed the initial design and build phases. The core workflows have been validated, and it is currently being prepared for the next stage of user testing and production rollout.'}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-12); background: var(--color-bg-soft);">
       <div class="container text-center">
-        <h2 style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: var(--space-3); color: var(--color-white);">
-          Like What You See?
+        <h2 style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--color-navy); margin-bottom: var(--space-4);">
+          Have a similar workflow challenge?
         </h2>
-        <p style="font-size: var(--font-size-md); color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-5); max-width: 36rem; margin-left: auto; margin-right: auto; line-height: 1.6;">
-          Let's discuss how we can build a practical solution around your organization's workflow.
+        <p class="text-secondary mx-auto mb-8" style="max-width: 36rem; font-size: 1.1rem; line-height: 1.6;">
+          Tell us how your organization currently works, and we'll help you map out the right digital solution.
         </p>
-        <a href="/contact" data-link class="btn btn--lg" style="background: var(--color-white); color: var(--color-navy) !important; border: 1px solid var(--color-white); font-weight: 600;">
-          <span style="color: var(--color-navy) !important;">Discuss Your Project</span>
-          <span style="color: var(--color-navy) !important;">${icons.arrowRight('w-4 h-4')}</span>
+        <a href="/contact" data-link class="btn btn--primary btn--lg">
+          <span>Discuss your workflow</span>
+          ${icons.arrowRight('w-4 h-4')}
         </a>
       </div>
     </section>

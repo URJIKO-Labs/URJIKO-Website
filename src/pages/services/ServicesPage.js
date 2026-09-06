@@ -1,34 +1,37 @@
-import { renderServicesHero } from "../../components/services/ServicesHero.js";
-import { renderServicesApproach } from "../../components/services/ServicesApproach.js";
-import { renderServiceCards } from "../../components/services/ServiceCards.js";
-import { renderSmartBizFeature } from "../../components/services/SmartBizFeature.js";
-import { renderGlobalCTA } from "../../components/common/CTA.js";
+import { renderServicesHero } from '../../components/services/ServicesHero.js';
+import { renderServicesApproach } from '../../components/services/ServicesApproach.js';
+import { renderServiceCards } from '../../components/services/ServiceCards.js';
+import { renderGlobalCTA } from '../../components/common/CTA.js';
 
 /**
  * URJIKO Labs — Services Page
  * Route: /services
- *
- * Explains what URJIKO Labs can be hired to do:
- * 1. Website Development
- * 2. Business Management Systems
- * 3. Custom Software Development
- * 4. AI & Intelligent Solutions
- * 5. Maintenance & Technical Support
  */
 export function renderServicesPage() {
   return `
     ${renderServicesHero()}
+    
+    <!-- Engagement Model -->
+    <section class="section" style="background: var(--color-bg-soft); border-bottom: 1px solid var(--color-border-subtle); padding-top: var(--space-8); padding-bottom: var(--space-8);">
+      <div class="container text-center" style="max-width: 48rem;">
+        <h2 class="text-navy font-bold mb-4" style="font-size: 1.5rem;">How Engagement Works</h2>
+        <p class="text-secondary" style="font-size: 1.2rem; line-height: 1.6;">
+          <strong>Start with discovery. Define the workflow. Build the smallest useful version. Test it with real users. Improve it over time.</strong>
+        </p>
+      </div>
+    </section>
+
     ${renderServicesApproach()}
     ${renderServiceCards()}
-    ${renderSmartBizFeature()}
+    
     ${renderGlobalCTA({
-      title: "Ready to build your solution?",
+      title: 'Have a workflow that is difficult to manage?',
       description:
-        "Tell us about your project requirements. We will help you identify the right technology approach.",
-      primaryBtnLabel: "Discuss Your Project",
-      primaryBtnPath: "/contact",
-      secondaryBtnLabel: "View Our Solutions",
-      secondaryBtnPath: "/solutions",
+        'Tell us what currently happens, and we will help you map the right digital solution.',
+      primaryBtnLabel: 'Discuss your workflow',
+      primaryBtnPath: '/contact',
+      secondaryBtnLabel: 'View portfolio',
+      secondaryBtnPath: '/portfolio',
     })}
   `;
 }
