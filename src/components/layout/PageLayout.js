@@ -36,7 +36,7 @@ export function renderPageLayout({ path = "/", content = "" }) {
 
   return `
     <div class="app-layout flex flex-col min-h-screen" style="min-height: 100vh; display: flex; flex-direction: column;">
-      <a href="#main-content" class="skip-link" style="position: absolute; top: 1rem; left: 1rem; z-index: 1000; background: var(--color-white); padding: 0.5rem 1rem; border: 2px solid var(--color-blue); border-radius: 4px;">
+      <a href="#main-content" class="skip-link">
         Skip to main content
       </a>
 
