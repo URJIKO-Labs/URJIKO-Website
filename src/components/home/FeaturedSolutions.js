@@ -21,7 +21,9 @@ export function renderFeaturedSolutions() {
         </div>
 
         <div class="grid grid--2 gap-6">
-          ${featuredProjects.map(project => `
+          ${featuredProjects
+            .map(
+              (project) => `
             <div class="card card--project flex flex-col" style="overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 10px 25px rgba(6, 36, 92, 0.05); transition: transform 0.2s, box-shadow 0.2s; border-radius: var(--radius-xl);">
               <div style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-subtle);">
                 ${renderProjectCover(project, { isSmall: true })}
@@ -41,7 +43,9 @@ export function renderFeaturedSolutions() {
                 </a>
               </div>
             </div>
-          `).join('')}
+          `,
+            )
+            .join('')}
         </div>
 
       </div>

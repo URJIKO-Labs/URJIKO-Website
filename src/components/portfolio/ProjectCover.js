@@ -16,9 +16,13 @@ function renderTypographyCover(project, options = {}) {
   const isSmall = options.isSmall || false;
 
   let accentStyle = 'border-left: 6px solid var(--color-blue);';
-  if (project.id === 'transport') accentStyle = 'background-image: linear-gradient(135deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.02) 75%, transparent 75%, transparent); background-size: 20px 20px;';
-  if (project.id === 'eduflow') accentStyle = 'border: 2px dashed var(--color-border);';
-  if (project.id === 'shegerhealth') accentStyle = 'border-left: 6px solid #20B2AA;'; // teal
+  if (project.id === 'transport')
+    accentStyle =
+      'background-image: linear-gradient(135deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.02) 75%, transparent 75%, transparent); background-size: 20px 20px;';
+  if (project.id === 'eduflow')
+    accentStyle = 'border: 2px dashed var(--color-border);';
+  if (project.id === 'shegerhealth')
+    accentStyle = 'border-left: 6px solid #20B2AA;'; // teal
 
   // Responsive padding/font sizes based on context
   const padding = isSmall ? 'var(--space-4)' : 'var(--space-8)';
@@ -26,9 +30,11 @@ function renderTypographyCover(project, options = {}) {
   const numberSize = isSmall ? '2.5rem' : '4rem';
   const titleSize = isSmall ? '1.5rem' : '2rem';
   const taglineSize = isSmall ? '1rem' : '1.25rem';
-  
+
   // Hide long descriptions on small grid cards
-  const descHtml = isSmall ? '' : `
+  const descHtml = isSmall
+    ? ''
+    : `
     <p style="font-size: 1.05rem; color: var(--color-secondary); line-height: 1.6; margin-bottom: var(--space-6);">
       ${project.description}
     </p>

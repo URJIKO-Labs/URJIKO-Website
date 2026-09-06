@@ -1,5 +1,7 @@
 import { companyConfig } from "../../config/company.js";
 import { icons } from "../common/Icons.js";
+import { featuredProjects } from "../../config/projects.js";
+import { renderProjectCover } from "../portfolio/ProjectCover.js";
 
 /**
  * Hero Section for URJIKO Labs Home Page
@@ -7,6 +9,8 @@ import { icons } from "../common/Icons.js";
  * Clean white background with product visual and clear messaging.
  */
 export function renderHero() {
+  const smartbiz = featuredProjects.find((p) => p.id === 'smartbiz');
+  
   return `
     <section class="section home-hero" aria-labelledby="hero-title" style="
       padding-top: clamp(4rem, 7vw, 6rem);
@@ -47,6 +51,10 @@ export function renderHero() {
             ">
               We Build Practical Software Systems for Growing Organizations
             </h1>
+            
+            <p class="mb-4" style="font-size: 1.1rem; font-weight: 600; color: var(--color-blue);">
+              For transport operators, clinics, schools, and trading businesses.
+            </p>
 
             <!-- Description -->
             <p class="mb-6 text-balance" style="
@@ -73,27 +81,13 @@ export function renderHero() {
 
           <!-- Product Visual -->
           <div class="home-hero__visual" style="
-            background: var(--color-bg-soft);
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--color-border-subtle);
-            padding: var(--space-4);
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 320px;
           ">
-            <div style="width: 100%; max-width: 560px;">
-              <img 
-                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
-                alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer metrics" 
-                width="800" 
-                height="500" 
-                loading="eager"
-                style="width: 100%; height: auto; border-radius: var(--radius-md);"
-              >
-              <div style="text-align: center; margin-top: var(--space-3);">
-                <span class="text-xs text-muted" style="font-size: 0.75rem;">SmartBiz Suite — Product Preview</span>
-              </div>
+            <div style="width: 100%; max-width: 560px; height: 100%;">
+              ${renderProjectCover(smartbiz)}
             </div>
           </div>
 

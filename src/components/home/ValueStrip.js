@@ -5,24 +5,24 @@
 export function renderValueStrip() {
   const values = [
     {
-      title: 'Problem-First Approach',
-      description: 'We start by understanding your business challenge, not by selling technology.',
-      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
-    },
-    {
-      title: 'Business-Focused Solutions',
-      description: 'Software built around your actual workflows and operational needs.',
+      title: 'Focus: Practical Systems',
+      description: 'We build operational tools, not just marketing websites.',
       icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
     },
     {
-      title: 'Responsive & Mobile-Friendly',
-      description: 'Every system works smoothly on desktop, tablet, and mobile.',
-      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
+      title: 'Delivery: Full-Cycle',
+      description: 'From UX design to backend development and maintenance.',
+      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`,
     },
     {
-      title: 'Built for Real Workflows',
-      description: 'Practical features that solve actual problems, not impressive demos.',
-      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+      title: 'Location: Ethiopia',
+      description: 'Based in Addis Ababa, serving local and regional clients.',
+      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`,
+    },
+    {
+      title: 'Style: Problem-First',
+      description: 'We start by understanding the workflow, not the tech.',
+      icon: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
     },
   ];
 

@@ -25,14 +25,16 @@ export function renderProjectPage(projectId) {
   }
 
   const status = project.statusBadge || 'Preview';
-  const scope = project.technologies && project.technologies.length > 0 
-    ? 'UX/UI, Web Platform, Workflow'
-    : 'UX/UI, Concept Design';
+  const scope =
+    project.technologies && project.technologies.length > 0
+      ? 'UX/UI, Web Platform, Workflow'
+      : 'UX/UI, Concept Design';
 
   const coverHtml = renderProjectCover(project);
 
-  const galleryHtml = (project.gallery && project.gallery.length > 0)
-    ? `
+  const galleryHtml =
+    project.gallery && project.gallery.length > 0
+      ? `
       <section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
         <div class="container text-center mb-10">
           <h2 class="text-navy" style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Product Walkthrough</h2>
@@ -40,17 +42,21 @@ export function renderProjectPage(projectId) {
         </div>
         <div class="container" style="max-width: 64rem;">
           <div class="flex flex-col gap-8">
-            ${project.gallery.map(item => `
+            ${project.gallery
+              .map(
+                (item) => `
               <figure style="margin: 0; background: var(--color-bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--color-border); padding: var(--space-4); box-shadow: var(--shadow-sm);">
                 <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block;">
                 ${item.caption ? `<figcaption style="margin-top: var(--space-4); text-align: center; color: var(--color-secondary); font-size: 0.95rem;">${item.caption}</figcaption>` : ''}
               </figure>
-            `).join('')}
+            `,
+              )
+              .join('')}
           </div>
         </div>
       </section>
     `
-    : '';
+      : '';
 
   return `
     <!-- Breadcrumbs -->
