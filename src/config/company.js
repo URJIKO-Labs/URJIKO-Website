@@ -74,12 +74,12 @@ export const companyConfig = {
       { label: "Contact", path: "/contact" },
     ],
     services: [
-      { label: "Web Development", path: "/services#web-dev" },
-      { label: "Business Systems", path: "/services#business-systems" },
-      { label: "Custom Software", path: "/services#custom-software" },
-      { label: "AI Solutions", path: "/services#ai-solutions" },
-      { label: "Mobile Apps", path: "/services#mobile-app" },
-      { label: "Maintenance & Support", path: "/services#maintenance" },
+      { label: "Website Development", path: "/services#web-dev" },
+      { label: "Business Systems & Custom Software", path: "/services#business-systems" },
+      { label: "AI & Intelligent Solutions", path: "/services#ai-solutions" },
+      { label: "Mobile App Development", path: "/services#mobile-app" },
+      { label: "UI/UX Design", path: "/services#ui-ux" },
+      { label: "Maintenance & Technical Support", path: "/services#maintenance" },
     ],
     connect: [
       { label: "Email", type: "email", href: "mailto:urjikolabs@gmail.com" },

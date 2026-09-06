@@ -13,7 +13,7 @@ export function renderCompanyIntro() {
           </p>
 
           <p class="text-secondary mb-8" style="font-size: var(--font-size-md); line-height: 1.75;">
-            Founded in 2026, we work with businesses, schools, transport operators, and healthcare organizations across Ethiopia — helping them move from disconnected tools and manual processes to practical digital systems.
+            Founded in 2026, we help businesses, schools, transport operators, and healthcare organizations across Ethiopia move from disconnected tools and manual processes to practical digital systems.
           </p>
 
           <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">

@@ -38,12 +38,11 @@ export function renderContactForm() {
               <div class="custom-select__dropdown">
                 <div class="custom-select__option" data-value="">Select a service...</div>
                 <div class="custom-select__option" data-value="web-dev">Website Development</div>
-                <div class="custom-select__option" data-value="business-systems">Business Management System (POS, Inventory, CRM)</div>
-                <div class="custom-select__option" data-value="custom-software">Custom Software Development</div>
-                <div class="custom-select__option" data-value="ai-solutions">AI & Automation Solutions</div>
+                <div class="custom-select__option" data-value="business-systems">Business Systems & Custom Software</div>
+                <div class="custom-select__option" data-value="ai-solutions">AI & Intelligent Solutions</div>
                 <div class="custom-select__option" data-value="mobile-app">Mobile App Development</div>
-                <div class="custom-select__option" data-value="digital-platform">Digital Platform / SaaS</div>
-                <div class="custom-select__option" data-value="maintenance">Maintenance & Support</div>
+                <div class="custom-select__option" data-value="ui-ux">UI/UX Design</div>
+                <div class="custom-select__option" data-value="maintenance">Maintenance & Technical Support</div>
                 <div class="custom-select__option" data-value="consultation">Not sure yet / Need consultation</div>
               </div>
               <input type="hidden" name="service" value="">
