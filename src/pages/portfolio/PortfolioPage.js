@@ -2,6 +2,7 @@ import { renderPortfolioHero } from '../../components/portfolio/PortfolioHero.js
 import { featuredProjects } from '../../config/projects.js';
 import { icons } from '../../components/common/Icons.js';
 import { renderGlobalCTA } from '../../components/common/CTA.js';
+import { renderProjectCover } from '../../components/portfolio/ProjectCover.js';
 
 /**
  * URJIKO Labs — Portfolio Page
@@ -67,8 +68,10 @@ export function renderPortfolioPage() {
               </a>
             </div>
             
-            <div style="background: var(--color-bg-light-blue); padding: var(--space-6); display: flex; align-items: center; justify-content: center;">
-              <img src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" alt="SmartBiz" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+            <div style="padding: var(--space-6); display: flex; align-items: center; justify-content: center;">
+              <div style="width: 100%; height: 100%;">
+                ${renderProjectCover(smartbiz)}
+              </div>
             </div>
 
           </div>
@@ -84,8 +87,8 @@ export function renderPortfolioPage() {
             .map(
               (project) => `
             <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;">
-              <div style="background: var(--color-bg-light-blue); padding: var(--space-4); border-bottom: 1px solid var(--color-border-subtle);">
-                <img src="${import.meta.env.BASE_URL}images/project-${project.id}.svg" alt="${project.name}" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow-sm);">
+              <div style="padding: var(--space-4); border-bottom: 1px solid var(--color-border-subtle);">
+                ${renderProjectCover(project, { isSmall: true })}
               </div>
               <div style="padding: var(--space-6); flex: 1; display: flex; flex-direction: column;">
                 <div class="flex items-center gap-2 mb-3">

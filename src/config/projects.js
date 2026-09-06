@@ -10,7 +10,7 @@ export const featuredProjects = [
     name: "SmartBiz ERP",
     category: "Business Management",
     badge: "BUSINESS",
-    statusBadge: "Active",
+    statusBadge: "Product Preview",
     tagline: "Business Management & Inventory Solution",
     description:
       "A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.",
@@ -18,6 +18,11 @@ export const featuredProjects = [
       "Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.",
     solution:
       "SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     features: [
       "Dashboard & Analytics",
       "Point of Sale (POS)",
@@ -56,7 +61,7 @@ export const featuredProjects = [
     name: "Transport Management System",
     category: "Transport & Operations",
     badge: "TRANSPORT",
-    statusBadge: "Management",
+    statusBadge: "Product Preview",
     tagline: "Transport & Operations Management Solution",
     description:
       "A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.",
@@ -64,6 +69,11 @@ export const featuredProjects = [
       "Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.",
     solution:
       "A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     features: [
       "Authentication & Roles",
       "Transport Requests",
@@ -100,7 +110,7 @@ export const featuredProjects = [
     name: "EduFlow",
     category: "Education",
     badge: "EDUCATION",
-    statusBadge: "MVP / Prototype",
+    statusBadge: "MVP",
     tagline: "School Management Solution",
     description:
       "An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.",
@@ -108,6 +118,11 @@ export const featuredProjects = [
       "Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.",
     solution:
       "A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     features: [
       "Student Management",
       "Teacher Management",
@@ -151,6 +166,11 @@ export const featuredProjects = [
       "Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.",
     solution:
       "A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     features: [
       "Digital Records",
       "Patient Workflows",
@@ -183,6 +203,11 @@ export const secondaryProjects = [
     category: "Business / Hospitality",
     description:
       "A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     capabilities: [
       "UX/UI Design",
       "Responsive Design",
@@ -196,6 +221,11 @@ export const secondaryProjects = [
     category: "Business Website",
     description:
       "A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     capabilities: [
       "Professional Web Design",
       "Responsive Layout",
@@ -209,6 +239,11 @@ export const secondaryProjects = [
     category: "Retail / E-commerce",
     description:
       "A retail website focused on product presentation, browsing experience, and customer-facing workflows for a bookstore.",
+    coverImage: null,
+    gallery: [],
+    videoUrl: null,
+    workflows: [],
+    outcome: null,
     capabilities: [
       "Product Presentation",
       "Retail Experience",
