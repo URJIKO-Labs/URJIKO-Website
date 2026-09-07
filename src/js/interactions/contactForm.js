@@ -125,4 +125,17 @@ export function initContactForm() {
       btn.disabled = false;
     }
   });
+  const fileInput = document.getElementById('file-input');
+  const fileList = document.getElementById('file-list');
+  if (fileInput && fileList) {
+    fileInput.addEventListener('change', (e) => {
+      fileList.innerHTML = '';
+      Array.from(e.target.files).forEach((file) => {
+        const item = document.createElement('div');
+        item.style.cssText = 'font-size: 0.75rem; color: var(--color-navy); margin-top: 0.25rem;';
+        item.textContent = `📄 ${file.name}`;
+        fileList.appendChild(item);
+      });
+    });
+  }
 }

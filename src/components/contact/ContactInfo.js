@@ -18,7 +18,7 @@ export function renderContactInfo() {
               ${icons.phone("w-5 h-5")}
             </div>
             <div>
-              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Phone (Ethio Telecom)</div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Primary Phone</div>
               <div class="font-medium">${companyConfig.contact.phoneEthio}</div>
             </div>
           </a>
@@ -28,7 +28,7 @@ export function renderContactInfo() {
               ${icons.phone("w-5 h-5")}
             </div>
             <div>
-              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Phone (Safaricom)</div>
+              <div class="text-xs text-muted mb-1 font-semibold uppercase tracking-wider">Alternative Phone</div>
               <div class="font-medium">${companyConfig.contact.phoneSafari}</div>
             </div>
           </a>

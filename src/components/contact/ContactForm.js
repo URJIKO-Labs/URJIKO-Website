@@ -110,23 +110,26 @@ export function renderContactForm() {
           <textarea id="description" name="description" required rows="5" placeholder="Tell us about your project goals, timeline, and any specific requirements..." class="contact-input" style="resize: vertical;"></textarea>
         </div>
 
-        <div class="flex flex-col gap-2" style="display: none;">
-          <label for="file-input" class="text-navy font-semibold text-sm">Attachments <span class="text-muted" style="font-weight: 400;">(optional)</span></label>
-          <div class="file-upload" id="file-upload-area" role="button" tabindex="0" aria-label="Upload files">
+        <div class="flex flex-col gap-3 mt-2">
+          <!-- Small File Attachment Area -->
+          <label class="file-upload" id="file-upload-area" aria-label="Upload files" style="display: inline-flex; align-items: center; gap: 0.5rem; background: none; border: none; padding: 0; width: fit-content; cursor: pointer;">
             <input type="file" id="file-input" name="files" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;">
-            <div class="file-upload__trigger">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <span style="font-size: 0.85rem; font-weight: 500;">Click to upload or drag files</span>
-              <span class="text-muted" style="font-size: 0.7rem;">PDF, DOC, PNG, JPG (max 5MB)</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-blue); font-size: 0.85rem; font-weight: 500;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+              <span>Attach File (Optional)</span>
             </div>
-            <div class="file-upload__list" id="file-list"></div>
-          </div>
-        </div>
+          </label>
+          <div class="file-upload__list" id="file-list" style="padding: 0;"></div>
 
-        <div class="mt-4">
-          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.5rem; font-size: 1rem;">
-            Send Inquiry
-          </button>
+          <!-- Submit Button & Disclaimer -->
+          <div class="flex items-center gap-4 flex-wrap mt-2">
+            <button type="submit" class="btn btn--primary" style="flex: 1; justify-content: center; padding: 0.75rem 1.5rem; font-size: 1rem; min-width: 200px;">
+              Send Inquiry
+            </button>
+            <div class="text-muted" style="font-size: 0.75rem; line-height: 1.4; max-width: 250px;">
+              Your inquiry will be sent directly to our Email and Telegram support channels.
+            </div>
+          </div>
         </div>
       </form>
     </div>
