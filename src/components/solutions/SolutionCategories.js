@@ -72,6 +72,7 @@ const SOLUTION_CATEGORIES = [
       { title: 'Digital Records', description: 'Secure digital patient charts and medical history.' },
       { title: 'Patient Workflows', description: 'Appointment scheduling and intake workflows.' },
       { title: 'Management Dashboards', description: 'Facility performance and department analytics.' },
+      { title: 'Pharmacy & Inventory', description: 'Track medical supplies and prescription dispensing.' },
     ],
     project: {
       name: 'ShegerHealth',
@@ -141,7 +142,7 @@ export function renderSolutionCategories() {
             </div>
 
             <!-- Right: Solution Cards -->
-            <div class="flex flex-col gap-3">
+            <div class="grid grid--2 gap-4">
               ${category.cards.map(card => `
                 <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-4);">
                   <div class="flex items-center gap-2 mb-1">

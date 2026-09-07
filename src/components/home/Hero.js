@@ -1,5 +1,5 @@
-import { companyConfig } from "../../config/company.js";
-import { icons } from "../common/Icons.js";
+import { companyConfig } from '../../config/company.js';
+import { icons } from '../common/Icons.js';
 
 /**
  * Hero Section for URJIKO Labs Home Page
@@ -67,7 +67,7 @@ export function renderHero() {
             <div class="flex flex-wrap gap-4 items-center">
               <a href="/contact" data-link class="btn btn--primary btn--lg">
                 <span>Discuss Your Project</span>
-                ${icons.arrowRight("w-4 h-4")}
+                ${icons.arrowRight('w-4 h-4')}
               </a>
               <a href="/solutions" data-link class="btn btn--secondary btn--lg">
                 <span>View Our Solutions</span>
