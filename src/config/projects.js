@@ -18,7 +18,6 @@ export const featuredProjects = [
       'Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.',
     solution:
       'SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.',
-    coverImage: 'images/smartbiz-features.png',
     coverImage: 'images/smartbiz-login.png',
     gallery: [
       { src: 'images/smartbiz-features.png', alt: 'SmartBiz ERP Features' },
