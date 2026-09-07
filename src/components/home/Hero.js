@@ -1,7 +1,5 @@
 import { companyConfig } from "../../config/company.js";
 import { icons } from "../common/Icons.js";
-import { featuredProjects } from "../../config/projects.js";
-import { renderProjectCover } from "../portfolio/ProjectCover.js";
 
 /**
  * Hero Section for URJIKO Labs Home Page
@@ -9,8 +7,6 @@ import { renderProjectCover } from "../portfolio/ProjectCover.js";
  * Clean white background with product visual and clear messaging.
  */
 export function renderHero() {
-  const smartbiz = featuredProjects.find((p) => p.id === 'smartbiz');
-  
   return `
     <section class="section home-hero" aria-labelledby="hero-title" style="
       padding-top: clamp(4rem, 7vw, 6rem);
@@ -87,7 +83,7 @@ export function renderHero() {
             min-height: 320px;
           ">
             <div style="width: 100%; max-width: 560px; height: 100%;">
-              ${renderProjectCover(smartbiz)}
+              <img src="${import.meta.env.BASE_URL}images/eduflow-staff-login.png" alt="EduFlow Login Portal" style="width: 100%; height: auto; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
             </div>
           </div>
 
