@@ -36,7 +36,8 @@ function showToast(message, type = 'success') {
     bottom: '20px',
     left: '50%',
     transform: 'translateX(-50%) translateY(100px)',
-    backgroundColor: type === 'success' ? 'var(--color-success)' : 'var(--color-error)',
+    backgroundColor:
+      type === 'success' ? 'var(--color-success)' : 'var(--color-error)',
     color: '#ffffff',
     padding: '12px 24px',
     borderRadius: '8px',
@@ -99,7 +100,14 @@ export function initContactForm() {
         body: JSON.stringify(payload),
       });
 
-      const result = await res.json();
+      let result;
+      const contentType = res.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        result = await res.json();
+      } else {
+        // This happens during local dev if Vite intercepts the API call
+        throw new Error('API not available. Are you running with Vercel CLI (`vercel dev`)?');
+      }
 
       if (!res.ok || !result.ok) {
         throw new Error(result.error || 'Submission failed');
@@ -117,8 +125,7 @@ export function initContactForm() {
 
       showToast('Message Sent Successfully!', 'success');
     } catch (err) {
-      const msg =
-        err.message || 'Something went wrong. Please try again.';
+      const msg = err.message || 'Something went wrong. Please try again.';
       showToast(msg, 'error');
     } finally {
       btn.innerHTML = originalText;
@@ -132,7 +139,8 @@ export function initContactForm() {
       fileList.innerHTML = '';
       Array.from(e.target.files).forEach((file) => {
         const item = document.createElement('div');
-        item.style.cssText = 'font-size: 0.75rem; color: var(--color-navy); margin-top: 0.25rem;';
+        item.style.cssText =
+          'font-size: 0.75rem; color: var(--color-navy); margin-top: 0.25rem;';
         item.textContent = `📄 ${file.name}`;
         fileList.appendChild(item);
       });
