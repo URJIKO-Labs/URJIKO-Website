@@ -82,7 +82,7 @@ export function initContactForm() {
 
     try {
       const formData = new FormData(form);
-      
+
       // If you are testing locally with Vite, API_ENDPOINT won't work.
       // But we will send raw FormData so the backend can process files.
       const res = await fetch(API_ENDPOINT, {
@@ -95,7 +95,9 @@ export function initContactForm() {
       if (contentType && contentType.includes('application/json')) {
         result = await res.json();
       } else {
-        throw new Error('API not available. Please ensure the backend server is running.');
+        throw new Error(
+          'API not available. Please ensure the backend server is running.',
+        );
       }
 
       if (!res.ok || !result.ok) {
