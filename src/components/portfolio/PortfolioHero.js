@@ -6,7 +6,7 @@ import { icons } from '../common/Icons.js';
  */
 export function renderPortfolioHero() {
   return `
-    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-8); background: var(--color-white); border-bottom: 1px solid var(--color-border-subtle);">
+    <section class="section" aria-labelledby="portfolio-hero-title" style="padding-top: var(--space-12); padding-bottom: var(--space-16); background: var(--color-white); border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container text-center" style="max-width: 48rem; margin: 0 auto;">
         
         <h1 id="portfolio-hero-title" class="text-balance mb-4" style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; font-weight: 700; color: var(--color-navy); letter-spacing: var(--letter-spacing-tight);">
@@ -17,7 +17,7 @@ export function renderPortfolioHero() {
           Practical software and digital products built around real workflows for business operations, education, transport, and customer-facing websites.
         </p>
 
-        <div class="flex flex-wrap gap-4 items-center justify-center mb-10">
+        <div class="flex flex-wrap gap-4 items-center justify-center" style="margin-bottom: var(--space-12);">
           <a href="/contact" data-link class="btn btn--primary btn--lg">
             <span>Discuss a similar project</span>
             ${icons.arrowRight('w-4 h-4')}

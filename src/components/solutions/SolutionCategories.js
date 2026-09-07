@@ -142,6 +142,7 @@ export function renderSolutionCategories() {
             </div>
 
             <!-- Right: Solution Cards -->
+            <div class="flex flex-col gap-3">
             <div class="grid grid--2 gap-4">
               ${category.cards.map(card => `
                 <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-4);">

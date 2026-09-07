@@ -42,20 +42,6 @@ export function renderPortfolioPage() {
   return `
     ${renderPortfolioHero()}
     
-    <!-- Filter Section -->
-    <section class="section" style="padding-top: var(--space-6); padding-bottom: var(--space-3); background: var(--color-bg-soft);">
-      <div class="container flex justify-between items-center flex-wrap gap-4">
-        <h2 style="font-size: 1.1rem; font-weight: 600; color: var(--color-navy); margin: 0;">Explore by Category</h2>
-        <div class="flex flex-wrap gap-2">
-          <button class="btn btn--outline btn--sm" style="background: var(--color-white);">All Projects</button>
-          <button class="btn btn--outline btn--sm" style="background: var(--color-white); border-color: transparent;">Business</button>
-          <button class="btn btn--outline btn--sm" style="background: var(--color-white); border-color: transparent;">Transport</button>
-          <button class="btn btn--outline btn--sm" style="background: var(--color-white); border-color: transparent;">Education</button>
-          <button class="btn btn--outline btn--sm" style="background: var(--color-white); border-color: transparent;">Healthcare</button>
-        </div>
-      </div>
-    </section>
-
     <!-- Featured Case Study (SmartBiz) -->
     <section class="section" style="padding-top: var(--space-4); padding-bottom: var(--space-8); background: var(--color-bg-soft);">
       <div class="container">
