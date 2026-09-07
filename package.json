@@ -12,12 +12,21 @@
     "design-system"
   ],
   "scripts": {
+    "start": "node server.js",
+    "dev:server": "nodemon server.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "playwright": "^1.62.1",
     "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.3.0"
   }
 }

@@ -82,22 +82,12 @@ export function initContactForm() {
 
     try {
       const formData = new FormData(form);
-      const payload = {
-        name: formData.get('name') || '',
-        email: formData.get('email') || '',
-        organization: formData.get('organization') || '',
-        phone: formData.get('phone') || '',
-        service: formData.get('service') || '',
-        budget: formData.get('budget') || '',
-        contactMethod: formData.get('contact-method') || '',
-        timeline: formData.get('timeline') || '',
-        description: formData.get('description') || '',
-      };
-
+      
+      // If you are testing locally with Vite, API_ENDPOINT won't work.
+      // But we will send raw FormData so the backend can process files.
       const res = await fetch(API_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       let result;
@@ -105,8 +95,7 @@ export function initContactForm() {
       if (contentType && contentType.includes('application/json')) {
         result = await res.json();
       } else {
-        // This happens during local dev if Vite intercepts the API call
-        throw new Error('API not available. Are you running with Vercel CLI (`vercel dev`)?');
+        throw new Error('API not available. Please ensure the backend server is running.');
       }
 
       if (!res.ok || !result.ok) {
