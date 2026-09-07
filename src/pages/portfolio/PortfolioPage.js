@@ -10,7 +10,10 @@ function renderSecondaryCover(project) {
     'haramaya-gym': { color: '#059669', glow: 'rgba(5, 150, 105, 0.2)' },
     'abebe-bookstore': { color: '#7C3AED', glow: 'rgba(124, 58, 237, 0.2)' },
   };
-  const accent = accents[project.id] || { color: '#075DB8', glow: 'rgba(7, 93, 184, 0.2)' };
+  const accent = accents[project.id] || {
+    color: '#075DB8',
+    glow: 'rgba(7, 93, 184, 0.2)',
+  };
   const num = secondaryProjects.indexOf(project) + 1;
 
   return `
@@ -97,20 +100,24 @@ export function renderPortfolioPage() {
       <div class="container">
         <div class="portfolio-grid" style="gap: var(--space-4);">
           ${otherProjects
-            .map(
-              (project) => {
-                const projectImages = {
-                  transport: 'transport-hero.png',
-                  eduflow: 'eduflow-hero.png',
-                  shegerhealth: null,
-                };
-                const img = projectImages[project.id];
-                return `
+            .map((project) => {
+              const projectImages = {
+                transport: 'transport-hero.png',
+                eduflow: 'eduflow-hero.png',
+                shegerhealth: null,
+              };
+              const img = projectImages[project.id];
+              return `
             <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(6, 36, 92, 0.04); transition: transform 0.2s, box-shadow 0.2s;">
               <div style="height: 130px; ${img ? 'overflow: hidden;' : ''}">
-                ${img
-                  ? `<img src="${import.meta.env.BASE_URL}images/${img}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;">`
-                  : renderProjectCover(project, { isSmall: true, isFlush: true })}
+                ${
+                  img
+                    ? `<img src="${import.meta.env.BASE_URL}images/${img}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;">`
+                    : renderProjectCover(project, {
+                        isSmall: true,
+                        isFlush: true,
+                      })
+                }
               </div>
               <div style="padding: var(--space-4); flex: 1; display: flex; flex-direction: column;">
                 <span class="badge badge--outline text-xs mb-2" style="align-self: flex-start;">${project.category.toUpperCase()}</span>
@@ -131,8 +138,7 @@ export function renderPortfolioPage() {
               </div>
             </div>
           `;
-              },
-            )
+            })
             .join('')}
         </div>
       </div>
@@ -144,19 +150,20 @@ export function renderPortfolioPage() {
         <h2 style="font-size: 1.1rem; font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-4);">More Projects</h2>
         <div class="portfolio-more-grid" style="gap: var(--space-4);">
           ${secondaryProjects
-            .map(
-              (project) => {
-                const secondaryImages = {
-                  ethiobrew: 'ethiobrew-hero.png',
-                  'haramaya-gym': 'haramaya-gym-hero.png',
-                  'abebe-bookstore': 'abebe-bookstore-hero.png',
-                };
-                const img = secondaryImages[project.id];
-                return `
+            .map((project) => {
+              const secondaryImages = {
+                ethiobrew: 'ethiobrew-hero.png',
+                'haramaya-gym': 'haramaya-gym-hero.png',
+                'abebe-bookstore': 'abebe-bookstore-hero.png',
+              };
+              const img = secondaryImages[project.id];
+              return `
             <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(6, 36, 92, 0.04); transition: transform 0.2s, box-shadow 0.2s;">
-              ${img
-                ? `<div style="height: 140px; overflow: hidden;"><img src="${import.meta.env.BASE_URL}images/${img}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>`
-                : renderSecondaryCover(project)}
+              ${
+                img
+                  ? `<div style="height: 140px; overflow: hidden;"><img src="${import.meta.env.BASE_URL}images/${img}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>`
+                  : renderSecondaryCover(project)
+              }
               <div style="padding: var(--space-4); flex: 1; display: flex; flex-direction: column;">
                 <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; flex: 1;">${project.description}</p>
                 <div class="flex flex-wrap gap-1.5 mb-3">
@@ -171,8 +178,7 @@ export function renderPortfolioPage() {
               </div>
             </div>
           `;
-              },
-            )
+            })
             .join('')}
         </div>
       </div>
