@@ -42,7 +42,7 @@ export function renderValueStrip() {
           </p>
         </div>
       </div>
-    `
+    `,
     )
     .join('');
 

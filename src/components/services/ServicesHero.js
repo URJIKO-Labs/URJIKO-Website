@@ -37,57 +37,45 @@ export function renderServicesHero() {
 
           <!-- Right Column: CSS Workflow Diagram -->
           <div class="flex justify-center items-center" style="width: 100%;">
-            <div class="workflow-diagram" style="width: 100%; max-width: 440px; background: var(--color-bg-soft); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-sm);">
-              
-              <!-- Step 1 -->
-              <div class="workflow-step">
-                <div class="workflow-icon">${icons.search('w-5 h-5')}</div>
-                <div class="workflow-content">
-                  <span class="workflow-label">Phase 1</span>
-                  <h4 class="workflow-title">Problem Discovery</h4>
-                  <p class="workflow-desc">Understanding your workflow, users, and technical constraints.</p>
+            <div class="workflow-diagram" style="width: 100%; max-width: 440px; background: var(--color-bg-soft); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-sm);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                
+                <!-- Step 1 -->
+                <div class="workflow-step" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div class="workflow-icon" style="margin-bottom: var(--space-1);">${icons.search('w-5 h-5')}</div>
+                  <div class="workflow-content">
+                    <span class="workflow-label">Phase 1</span>
+                    <h4 class="workflow-title" style="font-size: 0.95rem;">Problem Discovery</h4>
+                  </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="workflow-step" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div class="workflow-icon" style="margin-bottom: var(--space-1);">${icons.code('w-5 h-5')}</div>
+                  <div class="workflow-content">
+                    <span class="workflow-label">Phase 2</span>
+                    <h4 class="workflow-title" style="font-size: 0.95rem;">System Design</h4>
+                  </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="workflow-step" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div class="workflow-icon" style="margin-bottom: var(--space-1);">${icons.check('w-5 h-5')}</div>
+                  <div class="workflow-content">
+                    <span class="workflow-label">Phase 3</span>
+                    <h4 class="workflow-title" style="font-size: 0.95rem;">Agile Build</h4>
+                  </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="workflow-step" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                  <div class="workflow-icon" style="margin-bottom: var(--space-1);">${icons.arrowRight('w-5 h-5')}</div>
+                  <div class="workflow-content">
+                    <span class="workflow-label">Phase 4</span>
+                    <h4 class="workflow-title" style="font-size: 0.95rem;">Launch & Support</h4>
+                  </div>
                 </div>
               </div>
-              
-              <!-- Connector -->
-              <div class="workflow-connector"></div>
-
-              <!-- Step 2 -->
-              <div class="workflow-step">
-                <div class="workflow-icon">${icons.code('w-5 h-5')}</div>
-                <div class="workflow-content">
-                  <span class="workflow-label">Phase 2</span>
-                  <h4 class="workflow-title">System Design</h4>
-                  <p class="workflow-desc">Information architecture, wireframes, and database planning.</p>
-                </div>
-              </div>
-              
-              <!-- Connector -->
-              <div class="workflow-connector"></div>
-
-              <!-- Step 3 -->
-              <div class="workflow-step">
-                <div class="workflow-icon">${icons.check('w-5 h-5')}</div>
-                <div class="workflow-content">
-                  <span class="workflow-label">Phase 3</span>
-                  <h4 class="workflow-title">Agile Build</h4>
-                  <p class="workflow-desc">Frontend, backend, API integration, and rigorous testing.</p>
-                </div>
-              </div>
-              
-              <!-- Connector -->
-              <div class="workflow-connector"></div>
-
-              <!-- Step 4 -->
-              <div class="workflow-step">
-                <div class="workflow-icon">${icons.arrowRight('w-5 h-5')}</div>
-                <div class="workflow-content">
-                  <span class="workflow-label">Phase 4</span>
-                  <h4 class="workflow-title">Launch & Support</h4>
-                  <p class="workflow-desc">Deployment, monitoring, training, and continuous updates.</p>
-                </div>
-              </div>
-
             </div>
           </div>
 
@@ -96,15 +84,9 @@ export function renderServicesHero() {
     </section>
 
     <style>
-      /* Workflow Diagram Styles */
-      .workflow-step {
-        display: flex;
-        align-items: flex-start;
-        gap: var(--space-4);
-      }
       .workflow-icon {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         background-color: var(--color-bg-light-blue);
         color: var(--color-blue);
@@ -114,35 +96,17 @@ export function renderServicesHero() {
         flex-shrink: 0;
         border: 1px solid var(--color-border-blue);
       }
-      .workflow-content {
-        display: flex;
-        flex-direction: column;
-      }
       .workflow-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         text-transform: uppercase;
         letter-spacing: var(--letter-spacing-wider);
         color: var(--color-blue);
         font-weight: 700;
-        margin-bottom: 0.2rem;
       }
       .workflow-title {
-        font-size: 1.05rem;
-        font-weight: 600;
         color: var(--color-navy);
-        margin-bottom: 0.25rem;
-      }
-      .workflow-desc {
-        font-size: 0.85rem;
-        color: var(--color-text-secondary);
-        line-height: 1.5;
+        font-weight: 600;
         margin: 0;
-      }
-      .workflow-connector {
-        width: 2px;
-        height: 24px;
-        background-color: var(--color-border);
-        margin: var(--space-2) 0 var(--space-2) 19px;
       }
 
       @media (min-width: 1024px) {
