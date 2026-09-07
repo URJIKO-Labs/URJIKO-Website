@@ -21,21 +21,27 @@ function renderTypographyCover(project, options = {}) {
   const isFlush = options.isFlush || false;
 
   let accentColor = 'var(--color-blue)';
-  let gradient = 'linear-gradient(135deg, rgba(6,36,92,0.03) 0%, rgba(6,36,92,0) 100%)';
-  
+  let gradient =
+    'linear-gradient(135deg, rgba(6,36,92,0.03) 0%, rgba(6,36,92,0) 100%)';
+
   if (project.id === 'transport') {
     accentColor = '#FF8C00'; // Orange
-    gradient = 'linear-gradient(135deg, rgba(255,140,0,0.05) 0%, transparent 100%)';
+    gradient =
+      'linear-gradient(135deg, rgba(255,140,0,0.05) 0%, transparent 100%)';
   } else if (project.id === 'eduflow') {
     accentColor = '#8A2BE2'; // Purple
-    gradient = 'linear-gradient(135deg, rgba(138,43,226,0.05) 0%, transparent 100%)';
+    gradient =
+      'linear-gradient(135deg, rgba(138,43,226,0.05) 0%, transparent 100%)';
   } else if (project.id === 'shegerhealth') {
     accentColor = '#20B2AA'; // Teal
-    gradient = 'linear-gradient(135deg, rgba(32,178,170,0.05) 0%, transparent 100%)';
+    gradient =
+      'linear-gradient(135deg, rgba(32,178,170,0.05) 0%, transparent 100%)';
   }
 
   const minHeight = isSmall ? '180px' : '360px';
-  const borderStyle = isFlush ? 'border: none; border-radius: 0;' : `border: 1px solid var(--color-border); border-radius: ${isSmall ? 'var(--radius-md)' : 'var(--radius-xl)'};`;
+  const borderStyle = isFlush
+    ? 'border: none; border-radius: 0;'
+    : `border: 1px solid var(--color-border); border-radius: ${isSmall ? 'var(--radius-md)' : 'var(--radius-xl)'};`;
 
   if (isSmall) {
     return `

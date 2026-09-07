@@ -1,24 +1,26 @@
-import { companyConfig } from "../../config/company.js";
-import { icons } from "../common/Icons.js";
+import { companyConfig } from '../../config/company.js';
+import { icons } from '../common/Icons.js';
 
-export function renderNavbar(activePath = "/") {
+export function renderNavbar(activePath = '/') {
   const navLinksHtml = companyConfig.navLinks
     .map((link) => {
-      const isActive = activePath === link.path || (link.path !== "/" && activePath.startsWith(link.path));
+      const isActive =
+        activePath === link.path ||
+        (link.path !== '/' && activePath.startsWith(link.path));
       return `
         <li>
           <a 
             href="${link.path}" 
             data-link 
-            class="navbar__link ${isActive ? "navbar__link--active" : ""}"
-            ${isActive ? 'aria-current="page"' : ""}
+            class="navbar__link ${isActive ? 'navbar__link--active' : ''}"
+            ${isActive ? 'aria-current="page"' : ''}
           >
             ${link.label}
           </a>
         </li>
       `;
     })
-    .join("");
+    .join('');
 
   return `
     <header class="navbar" id="site-navbar" style="min-height: 4rem; display: flex; align-items: center;">
@@ -90,21 +92,23 @@ export function renderNavbar(activePath = "/") {
         <ul class="navbar__mobile-links" role="list">
           ${companyConfig.navLinks
             .map((link) => {
-      const isActive = activePath === link.path || (link.path !== "/" && activePath.startsWith(link.path));
+              const isActive =
+                activePath === link.path ||
+                (link.path !== '/' && activePath.startsWith(link.path));
               return `
                 <li>
                   <a 
                     href="${link.path}" 
                     data-link 
-                    class="navbar__mobile-link ${isActive ? "navbar__mobile-link--active" : ""}"
-                    ${isActive ? 'aria-current="page"' : ""}
+                    class="navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}"
+                    ${isActive ? 'aria-current="page"' : ''}
                   >
                     ${link.label}
                   </a>
                 </li>
               `;
             })
-            .join("")}
+            .join('')}
         </ul>
       </nav>
       
@@ -113,7 +117,7 @@ export function renderNavbar(activePath = "/") {
           ${companyConfig.primaryCTA.label}
         </a>
         <a href="tel:${companyConfig.contact.phoneEthioTel}" class="btn btn--secondary btn--sm flex items-center justify-center gap-2" style="width: 100%; text-align: center;">
-          ${icons.phone("w-4 h-4")}
+          ${icons.phone('w-4 h-4')}
           <span>Call ${companyConfig.contact.phoneEthio}</span>
         </a>
       </div>
