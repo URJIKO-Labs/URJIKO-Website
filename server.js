@@ -38,10 +38,22 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
     const chatId = process.env.TELEGRAM_CHAT_ID;
 
     if (!token || !chatId) {
-      return res.status(500).json({ ok: false, error: 'Server configuration error' });
+      return res
+        .status(500)
+        .json({ ok: false, error: 'Server configuration error' });
     }
 
-    const { name, email, organization, phone, service, budget, contactMethod, timeline, description } = req.body;
+    const {
+      name,
+      email,
+      organization,
+      phone,
+      service,
+      budget,
+      contactMethod,
+      timeline,
+      description,
+    } = req.body;
     const files = req.files || [];
 
     if (!name || name.trim().length < 2) {
@@ -56,22 +68,36 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
 
     // If no files, just send standard message
     if (files.length === 0) {
-      const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
-      });
+      const tgRes = await fetch(
+        `https://api.telegram.org/bot${token}/sendMessage`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML',
+          }),
+        },
+      );
       if (!tgRes.ok) throw new Error('Telegram API error');
       return res.json({ ok: true });
     }
 
     // If files are attached, send them using sendDocument
     // For multiple files, we'll send the text message first, then upload documents one by one.
-    const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
-    });
+    const tgRes = await fetch(
+      `https://api.telegram.org/bot${token}/sendMessage`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'HTML',
+        }),
+      },
+    );
     if (!tgRes.ok) throw new Error('Telegram API error (Message)');
 
     // Send documents
@@ -82,27 +108,31 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
       const blob = new Blob([file.buffer], { type: file.mimetype });
       formData.append('document', blob, file.originalname);
 
-      const docRes = await fetch(`https://api.telegram.org/bot${token}/sendDocument`, {
-        method: 'POST',
-        body: formData,
-      });
-      if (!docRes.ok) console.error('Failed to send document', file.originalname);
+      const docRes = await fetch(
+        `https://api.telegram.org/bot${token}/sendDocument`,
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
+      if (!docRes.ok)
+        console.error('Failed to send document', file.originalname);
     }
 
     return res.json({ ok: true });
-
   } catch (err) {
     console.error('Submission error:', err);
-    return res.status(500).json({ ok: false, error: 'Something went wrong. Please try again.' });
+    return res
+      .status(500)
+      .json({ ok: false, error: 'Something went wrong. Please try again.' });
   }
 });
 
 // Fallback for SPA routing
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
