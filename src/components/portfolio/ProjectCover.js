@@ -9,6 +9,9 @@ function renderRealCoverImage(project, options = {}) {
   const isSmall = options.isSmall || false;
   const isFlush = options.isFlush || false;
   const borderStyle = isFlush ? 'border-radius: 0; box-shadow: none;' : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
+  const borderStyle = isFlush
+    ? 'border-radius: 0; box-shadow: none;'
+    : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
   return `
     <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; ${borderStyle}">
   `;
@@ -18,22 +21,40 @@ function renderTypographyCover(project, options = {}) {
   const isSmall = options.isSmall || false;
   const isFlush = options.isFlush || false;
 
+  let accentStyle = 'border-left: 6px solid var(--color-blue);';
+  if (project.id === 'transport')
+    accentStyle =
+      'background-image: linear-gradient(135deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.02) 75%, transparent 75%, transparent); background-size: 20px 20px;';
+  if (project.id === 'eduflow')
+    accentStyle = 'border: 2px dashed var(--color-border);';
+  if (project.id === 'shegerhealth')
+    accentStyle = 'border-left: 6px solid #20B2AA;'; // teal
   let accentColor = 'var(--color-blue)';
-  let gradient = 'linear-gradient(135deg, rgba(6,36,92,0.03) 0%, rgba(6,36,92,0) 100%)';
-  
-  if (project.id === 'transport') {
-    accentColor = '#FF8C00'; // Orange
-    gradient = 'linear-gradient(135deg, rgba(255,140,0,0.05) 0%, transparent 100%)';
-  } else if (project.id === 'eduflow') {
-    accentColor = '#8A2BE2'; // Purple
-    gradient = 'linear-gradient(135deg, rgba(138,43,226,0.05) 0%, transparent 100%)';
-  } else if (project.id === 'shegerhealth') {
-    accentColor = '#20B2AA'; // Teal
-    gradient = 'linear-gradient(135deg, rgba(32,178,170,0.05) 0%, transparent 100%)';
-  }
+  let gradient =
+    'linear-gradient(135deg, rgba(6,36,92,0.03) 0%, rgba(6,36,92,0) 100%)';
 
   const minHeight = isSmall ? '180px' : '360px';
+  const numberSize = isSmall ? '4rem' : '8rem';
+  
   const borderStyle = isFlush ? 'border: none; border-radius: 0;' : `border: 1px solid var(--color-border); border-radius: ${isSmall ? 'var(--radius-md)' : 'var(--radius-xl)'};`;
+  if (project.id === 'transport') {
+    accentColor = '#FF8C00'; // Orange
+    gradient =
+      'linear-gradient(135deg, rgba(255,140,0,0.05) 0%, transparent 100%)';
+  } else if (project.id === 'eduflow') {
+    accentColor = '#8A2BE2'; // Purple
+    gradient =
+      'linear-gradient(135deg, rgba(138,43,226,0.05) 0%, transparent 100%)';
+  } else if (project.id === 'shegerhealth') {
+    accentColor = '#20B2AA'; // Teal
+    gradient =
+      'linear-gradient(135deg, rgba(32,178,170,0.05) 0%, transparent 100%)';
+  }
+
+  const minHeight = isSmall ? '130px' : '280px';
+  const borderStyle = isFlush
+    ? 'border: none; border-radius: 0;'
+    : `border: 1px solid var(--color-border); border-radius: ${isSmall ? 'var(--radius-md)' : 'var(--radius-xl)'};`;
 
   if (isSmall) {
     return `
@@ -52,6 +73,10 @@ function renderTypographyCover(project, options = {}) {
 
   // Large Art Cover
   return `
+    <div style="background: var(--color-bg-soft); ${borderStyle} height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); ${accentStyle}">
+      <!-- Abstract Number Motif -->
+      <div style="font-size: ${numberSize}; font-weight: 900; color: rgba(0,0,0,0.04); line-height: 1; font-family: monospace; user-select: none;">
+        ${project.number}
     <div style="background: var(--color-navy); ${borderStyle} height: 100%; min-height: ${minHeight}; display: flex; flex-direction: column; position: relative; overflow: hidden; box-shadow: var(--shadow-md);">
       
       <!-- Decorative Background Elements -->
@@ -77,6 +102,10 @@ function renderTypographyCover(project, options = {}) {
             ${project.name}
           </div>
         </div>
+      </div>
+      <!-- Project ID Watermark -->
+      <div style="position: absolute; bottom: var(--space-4); right: var(--space-4); font-size: 0.75rem; font-weight: 700; color: var(--color-navy); opacity: 0.2; text-transform: uppercase; letter-spacing: 0.1em; user-select: none;">
+        ${project.id}
       </div>
     </div>
   `;

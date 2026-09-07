@@ -26,7 +26,7 @@ export function renderNavbar(activePath = "/") {
         <!-- Logo -->
         <a href="/" data-link class="navbar__logo" aria-label="${companyConfig.name} Home" style="text-decoration: none; display: flex; align-items: center; gap: 0.65rem; flex-shrink: 0;">
           <img 
-            src="${import.meta.env.BASE_URL}images/urjiko-logo.jpg" 
+            src="${import.meta.env.BASE_URL}images/image-removed.png" 
             alt="${companyConfig.name} Logo" 
             width="44" 
             height="44" 

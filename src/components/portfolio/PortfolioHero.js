@@ -31,15 +31,15 @@ export function renderPortfolioHero() {
         <div class="portfolio-collage" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); align-items: center; justify-content: center; position: relative;">
           
           <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(10px) rotate(-2deg); background: var(--color-bg-soft);">
-            <img src="${import.meta.env.BASE_URL}images/project-transport.svg" alt="Transport Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
+            <img src="${import.meta.env.BASE_URL}images/transport-hero.png" alt="Transport Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
           </div>
           
           <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-md); transform: scale(1.05); z-index: 2; background: var(--color-white);">
-            <img src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" alt="SmartBiz Preview" style="width: 100%; height: auto; display: block;">
+            <img src="${import.meta.env.BASE_URL}images/smartbiz-features.png" alt="SmartBiz Preview" style="width: 100%; height: auto; display: block;">
           </div>
           
           <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(10px) rotate(2deg); background: var(--color-bg-soft);">
-            <img src="${import.meta.env.BASE_URL}images/project-eduflow.svg" alt="EduFlow Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
+            <img src="${import.meta.env.BASE_URL}images/eduflow-hero.png" alt="EduFlow Preview" style="width: 100%; height: auto; display: block; opacity: 0.9;">
           </div>
 
         </div>

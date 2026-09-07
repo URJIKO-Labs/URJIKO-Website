@@ -18,8 +18,11 @@ export const featuredProjects = [
       'Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.',
     solution:
       'SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.',
-    coverImage: null,
-    gallery: [],
+    coverImage: 'images/smartbiz-features.png',
+    gallery: [
+      { src: 'images/smartbiz-features.png', alt: 'SmartBiz ERP Features' },
+      { src: 'images/smartbiz-login.png', alt: 'SmartBiz Login Page' },
+    ],
     videoUrl: null,
     workflows: [],
     outcome: null,
@@ -69,8 +72,11 @@ export const featuredProjects = [
       'Transport operations involve multiple requests, people, vehicles, drivers, and administrative workflows that can be difficult to coordinate manually. Lack of centralized information leads to inefficiencies and missed communication.',
     solution:
       'A structured digital platform that centralizes transport operations — from request management and vehicle tracking to driver assignments and administrative reporting.',
-    coverImage: null,
-    gallery: [],
+    coverImage: 'images/transport-hero.png',
+    gallery: [
+      { src: 'images/transport-hero.png', alt: 'Transport Management System' },
+      { src: 'images/transport-features.png', alt: 'Transport Key Features' },
+    ],
     videoUrl: null,
     workflows: [],
     outcome: null,
@@ -118,8 +124,12 @@ export const featuredProjects = [
       'Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.',
     solution:
       'A centralized school management platform that organizes key educational workflows into a clean, structured interface with role-based access for administrators and staff.',
-    coverImage: null,
-    gallery: [],
+    coverImage: 'images/eduflow-hero.png',
+    gallery: [
+      { src: 'images/eduflow-hero.png', alt: 'EduFlow Landing Page' },
+      { src: 'images/eduflow-features.png', alt: 'EduFlow Features' },
+      { src: 'images/eduflow-staff-login.png', alt: 'EduFlow Staff Portal' },
+    ],
     videoUrl: null,
     workflows: [],
     outcome: null,

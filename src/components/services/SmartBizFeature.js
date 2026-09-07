@@ -39,11 +39,11 @@ export function renderSmartBizFeature() {
             </div>
           </div>
 
-          <!-- Right Visual: SmartBiz SVG -->
+          <!-- Right Visual: SmartBiz Screenshot -->
           <div class="smartbiz-visual-wrapper" style="width: 100%; display: flex; justify-content: center;">
             <div style="width: 100%; max-width: 520px;">
               <img 
-                src="${import.meta.env.BASE_URL}images/project-smartbiz.svg" 
+                src="${import.meta.env.BASE_URL}images/smartbiz-features.png" 
                 alt="SmartBiz Suite — business management dashboard showing sales, inventory, and customer metrics" 
                 width="800" 
                 height="500" 
