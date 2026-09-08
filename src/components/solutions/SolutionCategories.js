@@ -88,6 +88,7 @@ const SOLUTION_CATEGORIES = [
  * Render Solution Categories
  */
 export function renderSolutionCategories() {
+  return SOLUTION_CATEGORIES.map((category, index) => {
   const html = SOLUTION_CATEGORIES.map((category, index) => {
     const bgClass = index % 2 === 0 ? 'bg-white' : 'bg-soft';
     
@@ -165,6 +166,8 @@ export function renderSolutionCategories() {
       </section>
     `;
   }).join('\n');
+}
+
 
   return html + `
     <style>
