@@ -82,7 +82,7 @@ export function initContactForm() {
     try {
       const formData = new FormData(form);
       formData.delete('file-input-temp');
-      
+
       selectedFiles.forEach((file) => {
         formData.append('files', file);
       });
@@ -91,7 +91,7 @@ export function initContactForm() {
       fetch(API_ENDPOINT, {
         method: 'POST',
         body: formData,
-      }).catch(err => console.error('Background submission error:', err));
+      }).catch((err) => console.error('Background submission error:', err));
 
       // Instantly reset form and show success
       form.reset();
@@ -100,7 +100,9 @@ export function initContactForm() {
         document.getElementById('file-list').innerHTML = '';
       }
 
-      const customSelects = form.querySelectorAll('.custom-select__trigger span');
+      const customSelects = form.querySelectorAll(
+        '.custom-select__trigger span',
+      );
       customSelects.forEach((span) => {
         span.textContent = 'Please select...';
         span.style.color = 'var(--color-muted)';

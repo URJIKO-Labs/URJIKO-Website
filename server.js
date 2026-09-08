@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import nodemailer from 'nodemailer';
 
 dotenv.config();
 
@@ -72,7 +73,6 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
 
     if (gmailUser && gmailPass) {
       try {
-        const nodemailer = await import('nodemailer');
         const transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
