@@ -10,7 +10,7 @@ export const featuredProjects = [
     name: 'SmartBiz ERP',
     category: 'Business Management',
     badge: 'BUSINESS',
-    statusBadge: 'Product Preview',
+    statusBadge: 'Case Study',
     tagline: 'Business Management & Inventory Solution',
     description:
       'A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.',
@@ -64,7 +64,7 @@ export const featuredProjects = [
     name: 'Transport Management System',
     category: 'Transport & Operations',
     badge: 'TRANSPORT',
-    statusBadge: 'Product Preview',
+    statusBadge: 'Case Study',
     tagline: 'Transport & Operations Management Solution',
     description:
       'A centralized digital system for organizing transport-related workflows, coordinating vehicles, drivers, requests, and administrative operations.',
