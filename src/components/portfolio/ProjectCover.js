@@ -9,7 +9,7 @@ function renderRealCoverImage(project, options = {}) {
   const isSmall = options.isSmall || false;
   const isFlush = options.isFlush || false;
   const device = options.device || 'laptop'; // 'laptop' or 'mobile'
-  
+
   const borderStyle = isFlush
     ? 'border-radius: 0; box-shadow: none;'
     : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
@@ -35,7 +35,7 @@ function renderRealCoverImage(project, options = {}) {
         </div>
       `;
     }
-    
+
     // Mini Macbook for cards (Home / Portfolio Grid)
     return `
       <div style="width: 100%; height: 100%; background: var(--color-bg-soft); display: flex; align-items: flex-end; justify-content: center; padding-top: 1.5rem; overflow: hidden; ${borderStyle}">

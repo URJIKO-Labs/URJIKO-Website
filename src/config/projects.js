@@ -1,5 +1,5 @@
 ﻿/**
- * URJIKO Labs â€” Portfolio Project Data
+ * URJIKO Labs — Portfolio Project Data
  * Structured data for all projects, separated from presentation.
  */
 
@@ -13,11 +13,11 @@ export const featuredProjects = [
     statusBadge: 'Case Study',
     tagline: 'Business Management & Inventory Solution',
     description:
-      'A practical business management system designed to help businesses manage important daily operations â€” sales, inventory, customers, and reporting â€” from one unified platform.',
+      'A practical business management system designed to help businesses manage important daily operations — sales, inventory, customers, and reporting — from one unified platform.',
     problem:
       'Businesses often lack centralized visibility into sales activity, inventory levels, customer accounts, and daily transactions. Information is scattered across spreadsheets, paper records, and disconnected tools, making it harder to track performance and make informed decisions.',
     solution:
-      'SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting â€” accessible from any device.',
+      'SmartBiz brings core business operations into one practical system, providing a unified dashboard for sales, inventory, customers, credit management, and reporting — accessible from any device.',
     coverImage: '/images/smartbiz-login.png',
     gallery: [
       { src: '/images/smartbiz-features.png', alt: 'SmartBiz ERP Features' },
@@ -119,7 +119,7 @@ export const featuredProjects = [
     statusBadge: 'MVP',
     tagline: 'School Management Solution',
     description:
-      'An education management platform designed around common school administration workflows â€” organizing students, teachers, classes, attendance, grades, and scheduling.',
+      'An education management platform designed around common school administration workflows — organizing students, teachers, classes, attendance, grades, and scheduling.',
     problem:
       'Schools manage complex information across students, teachers, classes, attendance records, grades, and schedules. Without a centralized system, administrative tasks become time-consuming and error-prone.',
     solution:
@@ -175,7 +175,7 @@ export const featuredProjects = [
     problem:
       'Healthcare organizations can benefit from better digital tools for organizing information, managing workflows, and improving administrative efficiency across departments.',
     solution:
-      'A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools â€” designed to explore how technology can support healthcare operations.',
+      'A digital healthcare platform concept that demonstrates structured workflows, management interfaces, and administrative tools — designed to explore how technology can support healthcare operations.',
     coverImage: '/images/transport-features.png', // Fallback image since there is no shegerhealth image
     gallery: [],
     videoUrl: null,
@@ -212,7 +212,7 @@ export const secondaryProjects = [
     name: 'EthioBrew',
     category: 'Business / Hospitality',
     description:
-      'A digital experience for a hospitality business â€” focused on product presentation, brand identity, and customer engagement.',
+      'A digital experience for a hospitality business — focused on product presentation, brand identity, and customer engagement.',
     coverImage: '/images/ethiobrew-hero.png',
     gallery: [],
     videoUrl: null,
@@ -230,7 +230,7 @@ export const secondaryProjects = [
     name: 'Haramaya Gym',
     category: 'Business Website',
     description:
-      'A professional web presence for a fitness business â€” service presentation, responsive layout, and clear calls to action.',
+      'A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.',
     coverImage: '/images/haramaya-gym-hero.png',
     gallery: [],
     videoUrl: null,

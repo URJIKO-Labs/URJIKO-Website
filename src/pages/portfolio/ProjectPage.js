@@ -1,4 +1,4 @@
-﻿import { icons } from '../../components/common/Icons.js';
+import { icons } from '../../components/common/Icons.js';
 import { featuredProjects } from '../../config/projects.js';
 import { renderProjectCover } from '../../components/portfolio/ProjectCover.js';
 import { renderInteractiveGallery } from '../../components/portfolio/InteractiveGallery.js';
@@ -99,19 +99,23 @@ export function renderProjectPage(projectId) {
     </section>
 
     <!-- Top Gallery (Replaces Cover) -->
-    ${project.gallery && project.gallery.length > 0 ? `
+    ${
+      project.gallery && project.gallery.length > 0
+        ? `
     <section class="section" style="padding-bottom: var(--space-10);">
       <div class="container" style="max-width: 64rem;">
         ${renderInteractiveGallery(project.gallery)}
       </div>
     </section>
-    ` : `
+    `
+        : `
     <section class="section" style="padding-bottom: var(--space-10);">
       <div class="container" style="max-width: 64rem;">
         ${coverHtml}
       </div>
     </section>
-    `}
+    `
+    }
 
     <!-- The Challenge & Workflow -->
     <section class="section" style="background: var(--color-bg-soft); padding-top: var(--space-10); padding-bottom: var(--space-10);">
@@ -134,9 +138,9 @@ export function renderProjectPage(projectId) {
               <div>
                 <div class="badge badge--outline mb-3">BEFORE</div>
                 <ul class="text-secondary text-sm flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Disconnected data sources</li>
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Manual reporting & calculations</li>
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Lack of real-time visibility</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">&#10007;</span> Disconnected data sources</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">&#10007;</span> Manual reporting & calculations</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">&#10007;</span> Lack of real-time visibility</li>
                 </ul>
               </div>
 
@@ -149,9 +153,9 @@ export function renderProjectPage(projectId) {
               <div>
                 <div class="badge badge--blue mb-3">AFTER (URJIKO SOLUTION)</div>
                 <ul class="text-navy text-sm font-medium flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Single centralized database</li>
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Automated real-time metrics</li>
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Role-based operational dashboards</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">&#10003;</span> Single centralized database</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">&#10003;</span> Automated real-time metrics</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">&#10003;</span> Role-based operational dashboards</li>
                 </ul>
               </div>
             </div>
