@@ -116,13 +116,6 @@ export function renderContactForm() {
 
         <div class="flex flex-col gap-3 mt-2">
           <!-- Small File Attachment Area -->
-          <label class="file-upload" id="file-upload-area" aria-label="Upload files" style="display: inline-flex; align-items: center; gap: 0.5rem; background: none; border: none; padding: 0; width: fit-content; cursor: pointer;">
-            <input type="file" id="file-input" name="files" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" style="display: none;">
-            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-blue); font-size: 0.85rem; font-weight: 500;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-              <span>Attach File (Optional)</span>
-            </div>
-          </label>
           <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
             <label class="file-upload" id="file-upload-area" aria-label="Upload files" style="display: inline-flex; align-items: center; gap: 0.5rem; background: none; border: none; padding: 0; width: fit-content; cursor: pointer;">
               <input type="file" id="file-input" name="file-input-temp" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.zip,.csv,.xlsx,.xls,.txt,.ppt,.pptx" style="display: none;">
