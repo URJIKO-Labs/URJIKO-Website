@@ -10,7 +10,9 @@ export function renderInteractiveGallery(galleryItems, device = 'laptop') {
       (item, index) => `
       <div class="gallery-scroll-item" style="flex-shrink: 0; width: 85%; max-width: ${device === 'mobile' ? '320px' : '850px'}; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; padding: var(--space-4) 0;">
         
-        ${device === 'mobile' ? `
+        ${
+          device === 'mobile'
+            ? `
         <!-- Mobile-only project (always iPhone) -->
         <div style="width: 100%; position: relative;">
           <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
@@ -20,7 +22,8 @@ export function renderInteractiveGallery(galleryItems, device = 'laptop') {
             </div>
           </div>
         </div>
-        ` : `
+        `
+            : `
         <!-- Responsive Laptop Cover (Macbook on Desktop, iPhone on Mobile) -->
         <style>
           .gallery-mockup-desktop { display: none !important; }
@@ -87,7 +90,8 @@ export function renderInteractiveGallery(galleryItems, device = 'laptop') {
             </div>
           </div>
         </div>
-        `}
+        `
+        }
 
         ${item.caption ? `<div style="margin-top: var(--space-6); background: var(--color-bg-soft); padding: var(--space-3) var(--space-5); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 80%;"><p class="text-center text-navy font-semibold" style="font-size: 0.9rem; margin: 0;">${item.caption}</p></div>` : ''}
       </div>
