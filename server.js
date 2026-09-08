@@ -68,21 +68,35 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
 
     // If no files, just send standard message
     if (files.length === 0) {
-      const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
-      });
+      const tgRes = await fetch(
+        `https://api.telegram.org/bot${token}/sendMessage`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML',
+          }),
+        },
+      );
       if (!tgRes.ok) throw new Error('Telegram API error');
       return res.json({ ok: true });
     }
 
     // Send the text message first
-    const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
-    });
+    const tgRes = await fetch(
+      `https://api.telegram.org/bot${token}/sendMessage`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'HTML',
+        }),
+      },
+    );
     if (!tgRes.ok) throw new Error('Telegram API error (Message)');
 
     // If exactly 1 file, send as a single document
@@ -93,12 +107,16 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
       const blob = new Blob([file.buffer], { type: file.mimetype });
       formData.append('document', blob, file.originalname);
 
-      const docRes = await fetch(`https://api.telegram.org/bot${token}/sendDocument`, {
-        method: 'POST',
-        body: formData,
-      });
-      if (!docRes.ok) console.error('Failed to send document', file.originalname);
-    } 
+      const docRes = await fetch(
+        `https://api.telegram.org/bot${token}/sendDocument`,
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
+      if (!docRes.ok)
+        console.error('Failed to send document', file.originalname);
+    }
     // If 2-5 files, send as a single grouped album (MediaGroup)
     else if (files.length > 1) {
       const formData = new FormData();
@@ -110,16 +128,19 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
         formData.append(attachName, blob, file.originalname);
         return {
           type: 'document',
-          media: `attach://${attachName}`
+          media: `attach://${attachName}`,
         };
       });
 
       formData.append('media', JSON.stringify(mediaGroup));
 
-      const groupRes = await fetch(`https://api.telegram.org/bot${token}/sendMediaGroup`, {
-        method: 'POST',
-        body: formData,
-      });
+      const groupRes = await fetch(
+        `https://api.telegram.org/bot${token}/sendMediaGroup`,
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
       if (!groupRes.ok) {
         const err = await groupRes.text();
         console.error('Failed to send media group', err);
