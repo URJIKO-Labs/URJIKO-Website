@@ -11,7 +11,7 @@ function renderRealCoverImage(project, options = {}) {
   const borderStyle = isFlush
     ? 'border-radius: 0; box-shadow: none;'
     : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
-    
+
   if (isSmall) {
     // Mini Macbook for cards (Home / Portfolio Grid)
     return `
