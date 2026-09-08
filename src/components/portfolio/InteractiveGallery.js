@@ -32,7 +32,7 @@ export function renderInteractiveGallery(galleryItems) {
               aspect-ratio: 16/10;
               position: relative;
             ">
-              <img src="${item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             
             <!-- MacBook Pro text -->
