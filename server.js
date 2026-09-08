@@ -68,55 +68,62 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
 
     // If no files, just send standard message
     if (files.length === 0) {
-      const tgRes = await fetch(
-        `https://api.telegram.org/bot${token}/sendMessage`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-            parse_mode: 'HTML',
-          }),
-        },
-      );
+      const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
+      });
       if (!tgRes.ok) throw new Error('Telegram API error');
       return res.json({ ok: true });
     }
 
-    // If files are attached, send them using sendDocument
-    // For multiple files, we'll send the text message first, then upload documents one by one.
-    const tgRes = await fetch(
-      `https://api.telegram.org/bot${token}/sendMessage`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: 'HTML',
-        }),
-      },
-    );
+    // Send the text message first
+    const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
+    });
     if (!tgRes.ok) throw new Error('Telegram API error (Message)');
 
-    // Send documents
-    for (const file of files) {
+    // If exactly 1 file, send as a single document
+    if (files.length === 1) {
+      const file = files[0];
       const formData = new FormData();
       formData.append('chat_id', chatId);
-      // Construct a Blob/File from the memory buffer
       const blob = new Blob([file.buffer], { type: file.mimetype });
       formData.append('document', blob, file.originalname);
 
-      const docRes = await fetch(
-        `https://api.telegram.org/bot${token}/sendDocument`,
-        {
-          method: 'POST',
-          body: formData,
-        },
-      );
-      if (!docRes.ok)
-        console.error('Failed to send document', file.originalname);
+      const docRes = await fetch(`https://api.telegram.org/bot${token}/sendDocument`, {
+        method: 'POST',
+        body: formData,
+      });
+      if (!docRes.ok) console.error('Failed to send document', file.originalname);
+    } 
+    // If 2-5 files, send as a single grouped album (MediaGroup)
+    else if (files.length > 1) {
+      const formData = new FormData();
+      formData.append('chat_id', chatId);
+
+      const mediaGroup = files.map((file, i) => {
+        const attachName = `file${i}`;
+        const blob = new Blob([file.buffer], { type: file.mimetype });
+        formData.append(attachName, blob, file.originalname);
+        return {
+          type: 'document',
+          media: `attach://${attachName}`
+        };
+      });
+
+      formData.append('media', JSON.stringify(mediaGroup));
+
+      const groupRes = await fetch(`https://api.telegram.org/bot${token}/sendMediaGroup`, {
+        method: 'POST',
+        body: formData,
+      });
+      if (!groupRes.ok) {
+        const err = await groupRes.text();
+        console.error('Failed to send media group', err);
+      }
     }
 
     return res.json({ ok: true });
