@@ -2,9 +2,8 @@ export function renderContactForm() {
   return `
     <div class="card" style="background-color: var(--color-white); border: 1px solid var(--color-border-subtle);">
       <h3 class="text-navy font-bold mb-4" style="font-size: 1.5rem;">Project Inquiry</h3>
-      <p class="text-secondary mb-6">Fill out the form below and we'll review your message and get back to you as soon as possible.</p>
-      <p class="text-secondary mb-6">
-        You do not need a complete technical spec to reach out. Just tell us about the problem you are facing or the goal you want to achieve, and we'll help you figure out the right solution.
+      <p class="text-secondary mb-6" style="font-size: 0.95rem; line-height: 1.5;">
+        Tell us about the problem you're facing or the goal you want to achieve, and we'll help you figure out the right solution. No technical spec required!
       </p>
       
       <form id="urjiko-contact-form" class="flex flex-col gap-4">
