@@ -90,12 +90,12 @@ export function initContactForm() {
       // But we will send raw FormData so the backend can process files.
       // Remove the native file input data to avoid duplicates, we will append manually
       formData.delete('file-input-temp');
-      
+
       // Append accumulated files
-      selectedFiles.forEach(file => {
+      selectedFiles.forEach((file) => {
         formData.append('files', file);
       });
-      
+
       const res = await fetch(API_ENDPOINT, {
         method: 'POST',
         body: formData,
@@ -109,7 +109,9 @@ export function initContactForm() {
         throw new Error(
           'API not available. Please ensure the backend server is running.',
         );
-        throw new Error('API not available. Please ensure the backend server is running.');
+        throw new Error(
+          'API not available. Please ensure the backend server is running.',
+        );
       }
 
       if (!res.ok || !result.ok) {
@@ -142,28 +144,30 @@ export function initContactForm() {
 
   const fileInput = document.getElementById('file-input');
   const fileList = document.getElementById('file-list');
-  
+
   if (fileInput && fileList) {
     const renderFiles = () => {
       fileList.innerHTML = '';
       selectedFiles.forEach((file, index) => {
         const item = document.createElement('div');
-        item.style.cssText = 'display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: var(--color-navy); margin-top: 0.35rem; margin-right: 0.75rem; background: var(--color-bg-soft); padding: 2px 6px; border-radius: 4px;';
-        
+        item.style.cssText =
+          'display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: var(--color-navy); margin-top: 0.35rem; margin-right: 0.75rem; background: var(--color-bg-soft); padding: 2px 6px; border-radius: 4px;';
+
         const fileName = document.createElement('span');
         fileName.textContent = `📄 ${file.name}`;
-        
+
         const removeBtn = document.createElement('button');
         removeBtn.type = 'button';
         removeBtn.innerHTML = '&times;';
-        removeBtn.style.cssText = 'background: none; border: none; color: var(--color-error); font-size: 1rem; line-height: 1; cursor: pointer; padding: 0 0 0 2px;';
-        
+        removeBtn.style.cssText =
+          'background: none; border: none; color: var(--color-error); font-size: 1rem; line-height: 1; cursor: pointer; padding: 0 0 0 2px;';
+
         removeBtn.onclick = (e) => {
           e.preventDefault();
           selectedFiles.splice(index, 1);
           renderFiles();
         };
-        
+
         item.appendChild(fileName);
         item.appendChild(removeBtn);
         fileList.appendChild(item);
@@ -177,7 +181,7 @@ export function initContactForm() {
         e.target.value = '';
         return;
       }
-      
+
       selectedFiles = [...selectedFiles, ...newFiles];
       renderFiles();
       e.target.value = ''; // Reset input so same file can be selected again if removed
