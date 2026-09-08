@@ -108,10 +108,10 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
               </div>
             </div>
           `,
-          attachments: files.map(f => ({
+          attachments: files.map((f) => ({
             filename: f.originalname,
-            content: f.buffer
-          }))
+            content: f.buffer,
+          })),
         };
 
         await transporter.sendMail(mailOptions);
