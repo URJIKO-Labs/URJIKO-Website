@@ -144,15 +144,10 @@ export function initContactForm() {
   const fileList = document.getElementById('file-list');
   
   if (fileInput && fileList) {
-    fileInput.addEventListener('change', (e) => {
     const renderFiles = () => {
       fileList.innerHTML = '';
-      Array.from(e.target.files).forEach((file) => {
       selectedFiles.forEach((file, index) => {
         const item = document.createElement('div');
-        item.style.cssText =
-          'font-size: 0.75rem; color: var(--color-navy); margin-top: 0.25rem;';
-        item.textContent = `📄 ${file.name}`;
         item.style.cssText = 'display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: var(--color-navy); margin-top: 0.35rem; margin-right: 0.75rem; background: var(--color-bg-soft); padding: 2px 6px; border-radius: 4px;';
         
         const fileName = document.createElement('span');
