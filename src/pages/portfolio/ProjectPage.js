@@ -104,7 +104,7 @@ export function renderProjectPage(projectId) {
         ? `
     <section class="section" style="padding-bottom: var(--space-10);">
       <div class="container" style="max-width: 64rem;">
-        ${renderInteractiveGallery(project.gallery)}
+        ${renderInteractiveGallery(project.gallery, project.device)}
       </div>
     </section>
     `

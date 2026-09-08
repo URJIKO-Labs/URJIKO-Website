@@ -1,4 +1,4 @@
-﻿/**
+/**
  * URJIKO Labs — Portfolio Project Data
  * Structured data for all projects, separated from presentation.
  */
@@ -229,6 +229,7 @@ export const secondaryProjects = [
     id: 'haramaya-gym',
     name: 'Haramaya Gym',
     category: 'Business Website',
+    device: 'mobile',
     description:
       'A professional web presence for a fitness business — service presentation, responsive layout, and clear calls to action.',
     coverImage: '/images/haramaya-gym-hero.png',

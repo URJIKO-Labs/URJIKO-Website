@@ -2,14 +2,25 @@
  * URJIKO Labs — Interactive Gallery Component
  * Horizontal scroll gallery showing all screenshots in a row.
  */
-export function renderInteractiveGallery(galleryItems) {
+export function renderInteractiveGallery(galleryItems, device = 'laptop') {
   if (!galleryItems || galleryItems.length === 0) return '';
 
   const imagesHtml = galleryItems
     .map(
       (item, index) => `
-      <div class="gallery-scroll-item" style="flex-shrink: 0; width: 85%; max-width: 850px; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; padding: var(--space-4) 0;">
+      <div class="gallery-scroll-item" style="flex-shrink: 0; width: 85%; max-width: ${device === 'mobile' ? '320px' : '850px'}; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; padding: var(--space-4) 0;">
         
+        ${device === 'mobile' ? `
+        <!-- Mobile iPhone Frame -->
+        <div style="width: 100%; position: relative;">
+          <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
+            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
+            <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
+              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+          </div>
+        </div>
+        ` : `
         <!-- Macbook Frame -->
         <div class="macbook-wrapper" style="width: 100%; position: relative; perspective: 1000px;">
           <!-- Screen/Lid -->
@@ -56,6 +67,7 @@ export function renderInteractiveGallery(galleryItems) {
             <div style="width: 15%; height: 4px; background: #a5a5a5; border-radius: 0 0 4px 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
           </div>
         </div>
+        `}
 
         ${item.caption ? `<div style="margin-top: var(--space-6); background: var(--color-bg-soft); padding: var(--space-3) var(--space-5); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 80%;"><p class="text-center text-navy font-semibold" style="font-size: 0.9rem; margin: 0;">${item.caption}</p></div>` : ''}
       </div>

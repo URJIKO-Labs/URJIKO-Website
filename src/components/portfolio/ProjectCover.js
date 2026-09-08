@@ -8,7 +8,7 @@
 function renderRealCoverImage(project, options = {}) {
   const isSmall = options.isSmall || false;
   const isFlush = options.isFlush || false;
-  const device = options.device || 'laptop'; // 'laptop' or 'mobile'
+  const device = options.device || project.device || 'laptop'; // 'laptop' or 'mobile'
 
   const borderStyle = isFlush
     ? 'border-radius: 0; box-shadow: none;'
