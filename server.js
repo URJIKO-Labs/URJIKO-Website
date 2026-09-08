@@ -66,6 +66,62 @@ app.post('/api/contact', upload.array('files', 5), async (req, res) => {
     const esc = (s) => escapeHtml(s || 'Not specified');
     const message = `📩 <b>New Project Inquiry</b>\n\n👤 <b>Name:</b> ${esc(name)}\n🏢 <b>Org:</b> ${esc(organization)}\n📧 <b>Email:</b> ${esc(email)}\n📱 <b>Phone:</b> ${esc(phone)}\n💼 <b>Service:</b> ${esc(service)}\n💰 <b>Budget:</b> ${esc(budget)}\n📞 <b>Method:</b> ${esc(contactMethod)}\n⏰ <b>Timeline:</b> ${esc(timeline)}\n📝 <b>Description:</b>\n${esc(description)}`;
 
+    // --- EMAIL SETUP (Nodemailer) ---
+    const gmailUser = process.env.GMAIL_USER;
+    const gmailPass = process.env.GMAIL_APP_PASSWORD;
+
+    if (gmailUser && gmailPass) {
+      try {
+        const nodemailer = await import('nodemailer');
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: gmailUser,
+            pass: gmailPass,
+          },
+        });
+
+        const mailOptions = {
+          from: `"URJIKO Website" <${gmailUser}>`,
+          to: gmailUser, // Send to yourself
+          subject: `New Project Inquiry from ${name || 'Website'}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+              <div style="background-color: #0d1b2a; color: white; padding: 20px; text-align: center;">
+                <h2 style="margin: 0; font-size: 24px;">New Project Inquiry</h2>
+              </div>
+              <div style="padding: 20px; background-color: #f8fafc;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Name:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(name)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Organization:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(organization)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Email:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><a href="mailto:${esc(email)}">${esc(email)}</a></td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Phone:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(phone)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Service Needed:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(service)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Budget:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(budget)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Timeline:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(timeline)}</td></tr>
+                  <tr><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;"><strong>Contact Method:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">${esc(contactMethod)}</td></tr>
+                </table>
+                <div style="margin-top: 20px;">
+                  <strong>Project Description:</strong>
+                  <p style="background: white; padding: 15px; border-radius: 4px; border: 1px solid #e2e8f0; white-space: pre-wrap;">${esc(description)}</p>
+                </div>
+              </div>
+            </div>
+          `,
+          attachments: files.map(f => ({
+            filename: f.originalname,
+            content: f.buffer
+          }))
+        };
+
+        await transporter.sendMail(mailOptions);
+      } catch (emailErr) {
+        console.error('Failed to send Email:', emailErr);
+        // We do not throw here, because we still want to try sending the Telegram message
+      }
+    }
+    // --- END EMAIL SETUP ---
+
     // If no files, just send standard message
     if (files.length === 0) {
       const tgRes = await fetch(
