@@ -11,8 +11,39 @@ function renderRealCoverImage(project, options = {}) {
   const borderStyle = isFlush
     ? 'border-radius: 0; box-shadow: none;'
     : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
+    
+  if (isSmall) {
+    // Mini Macbook for cards (Home / Portfolio Grid)
+    return `
+      <div style="width: 100%; height: 100%; background: var(--color-bg-soft); display: flex; align-items: flex-end; justify-content: center; padding-top: 1.5rem; overflow: hidden; ${borderStyle}">
+        <div style="width: 85%; max-width: 320px; position: relative;">
+          <div style="background: #111; padding: 2% 2% 3% 2%; border-radius: 8px 8px 0 0; position: relative; z-index: 2;">
+            <div style="aspect-ratio: 16/10; overflow: hidden; border-radius: 2px;">
+              <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+          <div style="height: 6px; background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%); border-radius: 0 0 6px 6px; width: 110%; left: -5%; position: relative; z-index: 1;"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Large Macbook for Hero Cover (Project Detail Page)
   return `
-    <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; ${borderStyle}">
+    <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}">
+      <div style="width: 100%; max-width: 700px; position: relative; margin-top: 2rem;">
+          <div style="background: #111; padding: 2% 2% 4% 2%; border-radius: 12px 12px 0 0; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
+            <div style="position: absolute; top: 1.5%; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #333; border-radius: 50%;"></div>
+            <div style="background: #fff; border-radius: 4px; overflow: hidden; aspect-ratio: 16/10; position: relative;">
+              <img src="${project.coverImage}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="position: absolute; bottom: 1%; left: 50%; transform: translateX(-50%); color: #555; font-size: 0.5rem; font-family: sans-serif; letter-spacing: 1px;">MacBook Pro</div>
+          </div>
+          <div style="position: relative; height: 12px; background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%); border-radius: 0 0 16px 16px; width: 115%; left: -7.5%; z-index: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 15px 20px rgba(0,0,0,0.15); display: flex; justify-content: center;">
+            <div style="width: 15%; height: 4px; background: #a5a5a5; border-radius: 0 0 4px 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+          </div>
+      </div>
+    </div>
   `;
 }
 

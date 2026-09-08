@@ -9,13 +9,29 @@ const SOLUTION_CATEGORIES = [
     id: 'business-solutions',
     badge: 'BUSINESS OPERATIONS',
     title: 'Business Management Solutions',
-    problem: 'Disconnected sales and inventory, manual reporting, scattered customer records, poor operational visibility.',
-    solution: 'ERP, POS, inventory management, customer management, dashboards, and reporting systems.',
+    problem:
+      'Disconnected sales and inventory, manual reporting, scattered customer records, poor operational visibility.',
+    solution:
+      'ERP, POS, inventory management, customer management, dashboards, and reporting systems.',
     cards: [
-      { title: 'ERP & POS', description: 'Centralized point of sale and enterprise resource planning.' },
-      { title: 'Inventory Management', description: 'Real-time stock tracking and automated alerts.' },
-      { title: 'Customer Management', description: 'Centralized customer directory with transaction histories.' },
-      { title: 'Dashboards & Reports', description: 'Business intelligence and visual performance metrics.' },
+      {
+        title: 'ERP & POS',
+        description:
+          'Centralized point of sale and enterprise resource planning.',
+      },
+      {
+        title: 'Inventory Management',
+        description: 'Real-time stock tracking and automated alerts.',
+      },
+      {
+        title: 'Customer Management',
+        description:
+          'Centralized customer directory with transaction histories.',
+      },
+      {
+        title: 'Dashboards & Reports',
+        description: 'Business intelligence and visual performance metrics.',
+      },
     ],
     project: {
       name: 'SmartBiz ERP',
@@ -28,13 +44,27 @@ const SOLUTION_CATEGORIES = [
     id: 'transport-solutions',
     badge: 'TRANSPORT & OPERATIONS',
     title: 'Transport Management Solutions',
-    problem: 'Manual requests, difficult workflow tracking, poor operational visibility, role and approval complexity.',
-    solution: 'Transport management, request workflows, vehicle and driver coordination, administrative dashboards.',
+    problem:
+      'Manual requests, difficult workflow tracking, poor operational visibility, role and approval complexity.',
+    solution:
+      'Transport management, request workflows, vehicle and driver coordination, administrative dashboards.',
     cards: [
-      { title: 'Transport Requests', description: 'Digital dispatch workflows and trip approvals.' },
-      { title: 'Vehicle & Driver Management', description: 'Fleet registry and driver coordination.' },
-      { title: 'Operations Dashboard', description: 'Live operational control and monitoring.' },
-      { title: 'Reports & Administration', description: 'Automated reporting and administrative tools.' },
+      {
+        title: 'Transport Requests',
+        description: 'Digital dispatch workflows and trip approvals.',
+      },
+      {
+        title: 'Vehicle & Driver Management',
+        description: 'Fleet registry and driver coordination.',
+      },
+      {
+        title: 'Operations Dashboard',
+        description: 'Live operational control and monitoring.',
+      },
+      {
+        title: 'Reports & Administration',
+        description: 'Automated reporting and administrative tools.',
+      },
     ],
     project: {
       name: 'Transport Management',
@@ -47,13 +77,27 @@ const SOLUTION_CATEGORIES = [
     id: 'education-solutions',
     badge: 'EDUCATION',
     title: 'Education Management Solutions',
-    problem: 'Student records across spreadsheets, manual attendance, grade tracking complexity, timetable conflicts.',
-    solution: 'Student management, teacher management, attendance, grades, timetables, and administration systems.',
+    problem:
+      'Student records across spreadsheets, manual attendance, grade tracking complexity, timetable conflicts.',
+    solution:
+      'Student management, teacher management, attendance, grades, timetables, and administration systems.',
     cards: [
-      { title: 'Student & Teacher Management', description: 'Complete profiles, enrollment, and faculty directories.' },
-      { title: 'Attendance Tracking', description: 'Digital daily attendance with notifications.' },
-      { title: 'Grade Management', description: 'Gradebook and automated report card generation.' },
-      { title: 'Timetable & Scheduling', description: 'Automated class scheduling with conflict resolution.' },
+      {
+        title: 'Student & Teacher Management',
+        description: 'Complete profiles, enrollment, and faculty directories.',
+      },
+      {
+        title: 'Attendance Tracking',
+        description: 'Digital daily attendance with notifications.',
+      },
+      {
+        title: 'Grade Management',
+        description: 'Gradebook and automated report card generation.',
+      },
+      {
+        title: 'Timetable & Scheduling',
+        description: 'Automated class scheduling with conflict resolution.',
+      },
     ],
     project: {
       name: 'EduFlow',
@@ -66,20 +110,35 @@ const SOLUTION_CATEGORIES = [
     id: 'healthcare-solutions',
     badge: 'HEALTHCARE',
     title: 'Healthcare & Digital Platforms',
-    problem: 'Paper-based records, inefficient patient workflows, limited management visibility, manual administrative tasks.',
-    solution: 'Digital records, patient workflows, management dashboards, and administrative tools.',
+    problem:
+      'Paper-based records, inefficient patient workflows, limited management visibility, manual administrative tasks.',
+    solution:
+      'Digital records, patient workflows, management dashboards, and administrative tools.',
     cards: [
-      { title: 'Digital Records', description: 'Secure digital patient charts and medical history.' },
-      { title: 'Patient Workflows', description: 'Appointment scheduling and intake workflows.' },
-      { title: 'Management Dashboards', description: 'Facility performance and department analytics.' },
-      { title: 'Pharmacy & Inventory', description: 'Track medical supplies and prescription dispensing.' },
+      {
+        title: 'Digital Records',
+        description: 'Secure digital patient charts and medical history.',
+      },
+      {
+        title: 'Patient Workflows',
+        description: 'Appointment scheduling and intake workflows.',
+      },
+      {
+        title: 'Management Dashboards',
+        description: 'Facility performance and department analytics.',
+      },
+      {
+        title: 'Pharmacy & Inventory',
+        description: 'Track medical supplies and prescription dispensing.',
+      },
     ],
     project: {
       name: 'ShegerHealth',
       badge: 'HEALTHCARE',
       badgeClass: 'badge--navy',
       link: '/portfolio/shegerhealth',
-      disclaimer: 'ShegerHealth is a demonstration project exploring digital healthcare workflows.',
+      disclaimer:
+        'ShegerHealth is a demonstration project exploring digital healthcare workflows.',
     },
   },
 ];
@@ -88,10 +147,9 @@ const SOLUTION_CATEGORIES = [
  * Render Solution Categories
  */
 export function renderSolutionCategories() {
-  return SOLUTION_CATEGORIES.map((category, index) => {
   const html = SOLUTION_CATEGORIES.map((category, index) => {
     const bgClass = index % 2 === 0 ? 'bg-white' : 'bg-soft';
-    
+
     return `
       <section 
         id="${category.id}" 
@@ -134,18 +192,24 @@ export function renderSolutionCategories() {
                     ${icons.arrowRight('w-3 h-3')}
                   </a>
                 </div>
-                ${category.project.disclaimer ? `
+                ${
+                  category.project.disclaimer
+                    ? `
                   <p class="text-xs text-muted mb-0 mt-2 pt-2" style="border-top: 1px solid rgba(7, 87, 184, 0.12); line-height: 1.5;">
                     ${category.project.disclaimer}
                   </p>
-                ` : ''}
+                `
+                    : ''
+                }
               </div>
             </div>
 
             <!-- Right: Solution Cards -->
             <div class="flex flex-col gap-3">
             <div class="grid grid--2 gap-4">
-              ${category.cards.map(card => `
+              ${category.cards
+                .map(
+                  (card) => `
                 <div class="card" style="background: var(--color-white); border: 1px solid var(--color-border-subtle); padding: var(--space-4);">
                   <div class="flex items-center gap-2 mb-1">
                     <span style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-blue); display: inline-block; flex-shrink: 0;" aria-hidden="true"></span>
@@ -157,7 +221,9 @@ export function renderSolutionCategories() {
                     ${card.description}
                   </p>
                 </div>
-              `).join('')}
+              `,
+                )
+                .join('')}
             </div>
 
           </div>
@@ -166,15 +232,16 @@ export function renderSolutionCategories() {
       </section>
     `;
   }).join('\n');
-}
 
-
-  return html + `
+  return (
+    html +
+    `
     <style>
       @media (max-width: 480px) {
         .related-project-container { flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; }
         .related-project-link { margin-top: 0.25rem !important; }
       }
     </style>
-  `;
+  `
+  );
 }
