@@ -1,4 +1,7 @@
-const API_ENDPOINT = '/api/contact';
+// If the site is hosted on Vercel, forward the API requests to the Render backend
+const API_ENDPOINT = window.location.hostname.includes('vercel.app')
+  ? 'https://urjiko-website.onrender.com/api/contact'
+  : '/api/contact';
 
 const serviceLabels = {
   'web-dev': 'Website Development',
