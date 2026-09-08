@@ -85,6 +85,9 @@ export function initContactForm() {
 
     try {
       const formData = new FormData(form);
+
+      // If you are testing locally with Vite, API_ENDPOINT won't work.
+      // But we will send raw FormData so the backend can process files.
       // Remove the native file input data to avoid duplicates, we will append manually
       formData.delete('file-input-temp');
       
@@ -103,6 +106,9 @@ export function initContactForm() {
       if (contentType && contentType.includes('application/json')) {
         result = await res.json();
       } else {
+        throw new Error(
+          'API not available. Please ensure the backend server is running.',
+        );
         throw new Error('API not available. Please ensure the backend server is running.');
       }
 
@@ -138,10 +144,15 @@ export function initContactForm() {
   const fileList = document.getElementById('file-list');
   
   if (fileInput && fileList) {
+    fileInput.addEventListener('change', (e) => {
     const renderFiles = () => {
       fileList.innerHTML = '';
+      Array.from(e.target.files).forEach((file) => {
       selectedFiles.forEach((file, index) => {
         const item = document.createElement('div');
+        item.style.cssText =
+          'font-size: 0.75rem; color: var(--color-navy); margin-top: 0.25rem;';
+        item.textContent = `📄 ${file.name}`;
         item.style.cssText = 'display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: var(--color-navy); margin-top: 0.35rem; margin-right: 0.75rem; background: var(--color-bg-soft); padding: 2px 6px; border-radius: 4px;';
         
         const fileName = document.createElement('span');
