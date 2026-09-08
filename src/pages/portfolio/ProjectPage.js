@@ -1,4 +1,4 @@
-import { icons } from '../../components/common/Icons.js';
+﻿import { icons } from '../../components/common/Icons.js';
 import { featuredProjects } from '../../config/projects.js';
 import { renderProjectCover } from '../../components/portfolio/ProjectCover.js';
 import { renderInteractiveGallery } from '../../components/portfolio/InteractiveGallery.js';
@@ -33,21 +33,6 @@ export function renderProjectPage(projectId) {
 
   const coverHtml = renderProjectCover(project);
 
-  const galleryHtml =
-    project.gallery && project.gallery.length > 0
-      ? `
-      <section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-12);">
-        <div class="container text-center mb-10">
-          <h2 class="text-navy" style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Product Walkthrough</h2>
-          <p class="text-secondary mx-auto mt-4" style="max-width: 42rem; font-size: 1.1rem;">A closer look at the interfaces and workflows that make this system work.</p>
-        </div>
-        <div class="container" style="max-width: 64rem;">
-          ${renderInteractiveGallery(project.gallery)}
-        </div>
-      </section>
-    `
-      : '';
-
   return `
     <!-- Breadcrumbs -->
     <div class="container" style="padding-top: var(--space-6);">
@@ -62,66 +47,71 @@ export function renderProjectPage(projectId) {
       </nav>
     </div>
 
-    <!-- Case Study Hero -->
-    <section class="section" aria-labelledby="project-detail-heading" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
-      <div class="container">
-        <div class="grid" style="grid-template-columns: 1fr; gap: var(--space-10); @media(min-width: 900px) { grid-template-columns: 1.1fr 0.9fr; }">
-          
-          <div class="flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="badge ${status === 'Live' ? 'badge--success' : 'badge--blue'} text-xs">${status}</span>
-              <span class="badge badge--outline text-xs">${project.category}</span>
-            </div>
-            
-            <h1 id="project-detail-heading" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--color-navy); margin-bottom: var(--space-4); line-height: 1.1;">
-              ${project.name}
-            </h1>
-            
-            <p class="text-secondary mb-6" style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 500; color: var(--color-navy); line-height: 1.5;">
-              ${project.tagline}
-            </p>
-            
-            <p class="text-secondary mb-8" style="font-size: 1.05rem; line-height: 1.6; max-width: 36rem;">
-              ${project.description}
-            </p>
-            
-            <!-- Project Facts Row -->
-            <div class="grid grid--2 gap-4" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); padding: var(--space-4) 0; margin-bottom: var(--space-8);">
-              <div>
-                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Industry</div>
-                <div class="text-sm font-medium text-navy">${project.category}</div>
-              </div>
-              <div>
-                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Scope</div>
-                <div class="text-sm font-medium text-navy">${scope}</div>
-              </div>
-              <div>
-                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Status</div>
-                <div class="text-sm font-medium text-navy">${status}</div>
-              </div>
-              <div>
-                <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Platform</div>
-                <div class="text-sm font-medium text-navy">Responsive Web App</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-4 items-center">
-              <a href="/contact" data-link class="btn btn--primary">
-                <span>Discuss a similar project</span>
-                ${icons.arrowRight('w-4 h-4')}
-              </a>
-            </div>
+    <!-- Case Study Hero (Text Only) -->
+    <section class="section" aria-labelledby="project-detail-heading" style="padding-top: var(--space-6); padding-bottom: var(--space-6);">
+      <div class="container text-center">
+        <div style="max-width: 48rem; margin: 0 auto;">
+          <div class="flex items-center justify-center gap-2 mb-4">
+            <span class="badge ${status === 'Live' ? 'badge--success' : 'badge--blue'} text-xs">${status}</span>
+            <span class="badge badge--outline text-xs">${project.category}</span>
           </div>
           
-          <div class="flex items-center justify-center">
-            <div style="width: 100%;">
-              ${coverHtml}
+          <h1 id="project-detail-heading" style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--color-navy); margin-bottom: var(--space-4); line-height: 1.1;">
+            ${project.name}
+          </h1>
+          
+          <p class="text-secondary mb-6" style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 500; color: var(--color-navy); line-height: 1.5;">
+            ${project.tagline}
+          </p>
+          
+          <p class="text-secondary mb-8" style="font-size: 1.05rem; line-height: 1.6;">
+            ${project.description}
+          </p>
+          
+          <!-- Project Facts Row -->
+          <div class="flex flex-wrap justify-center gap-6" style="border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); padding: var(--space-4) 0; margin-bottom: var(--space-8);">
+            <div class="text-left">
+              <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Industry</div>
+              <div class="text-sm font-medium text-navy">${project.category}</div>
+            </div>
+            <div class="text-left">
+              <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Scope</div>
+              <div class="text-sm font-medium text-navy">${scope}</div>
+            </div>
+            <div class="text-left">
+              <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Status</div>
+              <div class="text-sm font-medium text-navy">${status}</div>
+            </div>
+            <div class="text-left">
+              <div class="text-xs text-muted font-semibold uppercase tracking-wide mb-1">Platform</div>
+              <div class="text-sm font-medium text-navy">Responsive Web App</div>
             </div>
           </div>
 
+          <div class="flex flex-wrap justify-center gap-4 items-center">
+            <a href="/contact" data-link class="btn btn--primary">
+              <span>Discuss a similar project</span>
+              ${icons.arrowRight('w-4 h-4')}
+            </a>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Top Gallery (Replaces Cover) -->
+    ${project.gallery && project.gallery.length > 0 ? `
+    <section class="section" style="padding-bottom: var(--space-10);">
+      <div class="container" style="max-width: 64rem;">
+        ${renderInteractiveGallery(project.gallery)}
+      </div>
+    </section>
+    ` : `
+    <section class="section" style="padding-bottom: var(--space-10);">
+      <div class="container" style="max-width: 64rem;">
+        ${coverHtml}
+      </div>
+    </section>
+    `}
 
     <!-- The Challenge & Workflow -->
     <section class="section" style="background: var(--color-bg-soft); padding-top: var(--space-10); padding-bottom: var(--space-10);">
@@ -144,9 +134,9 @@ export function renderProjectPage(projectId) {
               <div>
                 <div class="badge badge--outline mb-3">BEFORE</div>
                 <ul class="text-secondary text-sm flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Disconnected data sources</li>
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Manual reporting & calculations</li>
-                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">✕</span> Lack of real-time visibility</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Disconnected data sources</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Manual reporting & calculations</li>
+                  <li class="flex items-start gap-2"><span class="text-error mt-0.5">âœ•</span> Lack of real-time visibility</li>
                 </ul>
               </div>
 
@@ -159,9 +149,9 @@ export function renderProjectPage(projectId) {
               <div>
                 <div class="badge badge--blue mb-3">AFTER (URJIKO SOLUTION)</div>
                 <ul class="text-navy text-sm font-medium flex flex-col gap-3" style="list-style: none; padding: 0; margin: 0;">
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Single centralized database</li>
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Automated real-time metrics</li>
-                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">✓</span> Role-based operational dashboards</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Single centralized database</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Automated real-time metrics</li>
+                  <li class="flex items-start gap-2"><span class="text-success mt-0.5">âœ“</span> Role-based operational dashboards</li>
                 </ul>
               </div>
             </div>
@@ -179,7 +169,7 @@ export function renderProjectPage(projectId) {
       </div>
     </section>
 
-    ${galleryHtml}
+    
 
     <!-- Tech Stack & Results -->
     <section class="section" style="background: var(--color-navy); color: var(--color-white); padding-top: var(--space-12); padding-bottom: var(--space-12);">

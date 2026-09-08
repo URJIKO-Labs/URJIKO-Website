@@ -8,14 +8,34 @@
 function renderRealCoverImage(project, options = {}) {
   const isSmall = options.isSmall || false;
   const isFlush = options.isFlush || false;
+  const device = options.device || 'laptop'; // 'laptop' or 'mobile'
+  
   const borderStyle = isFlush
     ? 'border-radius: 0; box-shadow: none;'
     : 'border-radius: var(--radius-md); box-shadow: var(--shadow-sm);';
-    
+
   // Ensure leading slash to prevent nested URL path breakage (e.g., /portfolio/images/... -> /images/...)
-  const imgSrc = project.coverImage.startsWith('/') ? project.coverImage : '/' + project.coverImage;
+  const imgSrc = project.coverImage.startsWith('/')
+    ? project.coverImage
+    : '/' + project.coverImage;
 
   if (isSmall) {
+    if (device === 'mobile') {
+      // Mini iPhone for cards
+      return `
+        <div style="width: 100%; height: 100%; background: var(--color-bg-soft); display: flex; align-items: flex-end; justify-content: center; padding-top: 1.5rem; overflow: hidden; ${borderStyle}">
+          <div style="width: 50%; max-width: 160px; position: relative;">
+            <div style="background: #111; padding: 3% 3% 0 3%; border-radius: 20px 20px 0 0; position: relative; z-index: 2; box-shadow: inset 0 0 0 2px #333;">
+              <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 12px; background: #111; border-radius: 0 0 8px 8px; z-index: 3;"></div>
+              <div style="aspect-ratio: 9/19.5; overflow: hidden; border-radius: 16px 16px 0 0;">
+                <img src="${imgSrc}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
     // Mini Macbook for cards (Home / Portfolio Grid)
     return `
       <div style="width: 100%; height: 100%; background: var(--color-bg-soft); display: flex; align-items: flex-end; justify-content: center; padding-top: 1.5rem; overflow: hidden; ${borderStyle}">
@@ -26,6 +46,22 @@ function renderRealCoverImage(project, options = {}) {
             </div>
           </div>
           <div style="height: 6px; background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%); border-radius: 0 0 6px 6px; width: 110%; left: -5%; position: relative; z-index: 1;"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  if (device === 'mobile') {
+    // Large iPhone for Hero Cover
+    return `
+      <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}">
+        <div style="width: 100%; max-width: 320px; position: relative; margin-top: 2rem;">
+            <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
+              <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
+              <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
+                <img src="${imgSrc}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+            </div>
         </div>
       </div>
     `;
