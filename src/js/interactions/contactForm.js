@@ -75,58 +75,32 @@ export function initContactForm() {
 
   let selectedFiles = [];
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-
-    btn.innerHTML = 'Sending...';
-    btn.disabled = true;
 
     try {
       const formData = new FormData(form);
-
-      // If you are testing locally with Vite, API_ENDPOINT won't work.
-      // But we will send raw FormData so the backend can process files.
-      // Remove the native file input data to avoid duplicates, we will append manually
       formData.delete('file-input-temp');
-
-      // Append accumulated files
+      
       selectedFiles.forEach((file) => {
         formData.append('files', file);
       });
 
-      const res = await fetch(API_ENDPOINT, {
+      // Fire and forget (Optimistic UI) - don't await the slow Render server
+      fetch(API_ENDPOINT, {
         method: 'POST',
         body: formData,
-      });
+      }).catch(err => console.error('Background submission error:', err));
 
-      let result;
-      const contentType = res.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        result = await res.json();
-      } else {
-        throw new Error(
-          'API not available. Please ensure the backend server is running.',
-        );
-        throw new Error(
-          'API not available. Please ensure the backend server is running.',
-        );
-      }
-
-      if (!res.ok || !result.ok) {
-        throw new Error(result.error || 'Submission failed');
-      }
-
+      // Instantly reset form and show success
       form.reset();
       selectedFiles = [];
       if (document.getElementById('file-list')) {
         document.getElementById('file-list').innerHTML = '';
       }
 
-      const customSelects = form.querySelectorAll(
-        '.custom-select__trigger span',
-      );
+      const customSelects = form.querySelectorAll('.custom-select__trigger span');
       customSelects.forEach((span) => {
         span.textContent = 'Please select...';
         span.style.color = 'var(--color-muted)';
@@ -134,11 +108,7 @@ export function initContactForm() {
 
       showToast('Message Sent Successfully!', 'success');
     } catch (err) {
-      const msg = err.message || 'Something went wrong. Please try again.';
-      showToast(msg, 'error');
-    } finally {
-      btn.innerHTML = originalText;
-      btn.disabled = false;
+      showToast('Something went wrong. Please try again.', 'error');
     }
   });
 
