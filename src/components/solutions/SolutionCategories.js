@@ -88,7 +88,7 @@ const SOLUTION_CATEGORIES = [
  * Render Solution Categories
  */
 export function renderSolutionCategories() {
-  return SOLUTION_CATEGORIES.map((category, index) => {
+  const html = SOLUTION_CATEGORIES.map((category, index) => {
     const bgClass = index % 2 === 0 ? 'bg-white' : 'bg-soft';
     
     return `
@@ -165,12 +165,13 @@ export function renderSolutionCategories() {
       </section>
     `;
   }).join('\n');
-}
 
-
+  return html + `
     <style>
       @media (max-width: 480px) {
         .related-project-container { flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; }
         .related-project-link { margin-top: 0.25rem !important; }
       }
     </style>
+  `;
+}
