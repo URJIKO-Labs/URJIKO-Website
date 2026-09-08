@@ -123,12 +123,12 @@ export function renderSolutionCategories() {
 
               <!-- Related Project -->
               <div style="background: var(--color-bg-light-blue); border: 1px solid var(--color-border-blue); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4);">
-                <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center justify-between gap-3 related-project-container">
                   <div class="flex flex-wrap items-center gap-2">
                     <span class="badge ${category.project.badgeClass} text-xs">${category.project.badge}</span>
                     <span class="font-semibold text-navy" style="font-size: var(--font-size-sm);">${category.project.name}</span>
                   </div>
-                  <a href="${category.project.link}" data-link class="flex items-center gap-1" style="font-size: var(--font-size-xs); color: var(--color-blue); text-decoration: none; font-weight: 600;">
+                  <a href="${category.project.link}" data-link class="flex items-center gap-1 related-project-link" style="font-size: var(--font-size-xs); color: var(--color-blue); text-decoration: none; font-weight: 600;">
                     <span>View Project</span>
                     ${icons.arrowRight('w-3 h-3')}
                   </a>
@@ -166,3 +166,11 @@ export function renderSolutionCategories() {
     `;
   }).join('\n');
 }
+
+
+    <style>
+      @media (max-width: 480px) {
+        .related-project-container { flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; }
+        .related-project-link { margin-top: 0.25rem !important; }
+      }
+    </style>
