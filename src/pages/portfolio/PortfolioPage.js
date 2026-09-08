@@ -144,7 +144,45 @@ export function renderPortfolioPage() {
       </div>
     </section>
 
-    
+    <!-- More Projects -->
+    <section class="section" style="padding-top: 0; padding-bottom: var(--space-8); background: var(--color-bg-soft);">
+      <div class="container">
+        <h2 style="font-size: 1.1rem; font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-4);">More Projects</h2>
+        <div class="portfolio-more-grid" style="gap: var(--space-4);">
+          ${secondaryProjects
+            .map((project) => {
+              const secondaryImages = {
+                ethiobrew: 'ethiobrew-hero.png',
+                'haramaya-gym': 'haramaya-gym-hero.png',
+                'abebe-bookstore': 'abebe-bookstore-hero.png',
+              };
+              const img = secondaryImages[project.id];
+              return `
+            <div class="card flex flex-col" style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 2px 8px rgba(6, 36, 92, 0.04); transition: transform 0.2s, box-shadow 0.2s;">
+              ${
+                img
+                  ? `<div style="height: 140px; overflow: hidden;"><img src="${import.meta.env.BASE_URL}images/${img}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>`
+                  : renderSecondaryCover(project)
+              }
+              <div style="padding: var(--space-4); flex: 1; display: flex; flex-direction: column;">
+                <p class="text-secondary mb-3" style="font-size: 0.85rem; line-height: 1.5; flex: 1;">${project.description}</p>
+                <div class="flex flex-wrap gap-1.5 mb-3">
+                  ${project.capabilities
+                    .slice(0, 3)
+                    .map(
+                      (c) =>
+                        `<span class="badge badge--outline text-xs">${c}</span>`,
+                    )
+                    .join('')}
+                </div>
+              </div>
+            </div>
+          `;
+            })
+            .join('')}
+        </div>
+      </div>
+    </section>
 
     <!-- Capabilities Proof -->
     <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-8); background: var(--color-white); border-top: 1px solid var(--color-border-subtle);">

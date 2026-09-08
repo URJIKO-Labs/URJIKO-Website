@@ -52,14 +52,14 @@ function renderRealCoverImage(project, options = {}) {
   }
 
   if (device === 'mobile') {
-    // Large iPhone for Hero Cover
+    // Mobile-only project (always iPhone)
     return `
       <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}">
         <div style="width: 100%; max-width: 320px; position: relative; margin-top: 2rem;">
             <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
               <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
               <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
-                <img src="${imgSrc}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <img src="${imgSrc}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: top;">
               </div>
             </div>
         </div>
@@ -67,9 +67,17 @@ function renderRealCoverImage(project, options = {}) {
     `;
   }
 
-  // Large Macbook for Hero Cover (Project Detail Page)
+  // Responsive Laptop Cover (Macbook on Desktop, iPhone on Mobile)
   return `
-    <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); display: flex; align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}">
+    <style>
+      .mockup-desktop { display: none !important; }
+      .mockup-mobile { display: flex !important; }
+      @media(min-width: 768px) {
+        .mockup-desktop { display: flex !important; }
+        .mockup-mobile { display: none !important; }
+      }
+    </style>
+    <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}" class="mockup-desktop">
       <div style="width: 100%; max-width: 700px; position: relative; margin-top: 2rem;">
           <div style="background: #111; padding: 2% 2% 4% 2%; border-radius: 12px 12px 0 0; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
             <div style="position: absolute; top: 1.5%; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #333; border-radius: 50%;"></div>
@@ -80,6 +88,16 @@ function renderRealCoverImage(project, options = {}) {
           </div>
           <div style="position: relative; height: 12px; background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%); border-radius: 0 0 16px 16px; width: 115%; left: -7.5%; z-index: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 15px 20px rgba(0,0,0,0.15); display: flex; justify-content: center;">
             <div style="width: 15%; height: 4px; background: #a5a5a5; border-radius: 0 0 4px 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+          </div>
+      </div>
+    </div>
+    <div style="width: 100%; height: 100%; min-height: 400px; background: var(--color-bg-soft); align-items: center; justify-content: center; padding: var(--space-8) var(--space-4); ${borderStyle}" class="mockup-mobile">
+      <div style="width: 100%; max-width: 320px; position: relative; margin-top: 2rem;">
+          <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
+            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
+            <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
+              <img src="${imgSrc}" alt="${project.name}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: top;">
+            </div>
           </div>
       </div>
     </div>

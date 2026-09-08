@@ -11,60 +11,80 @@ export function renderInteractiveGallery(galleryItems, device = 'laptop') {
       <div class="gallery-scroll-item" style="flex-shrink: 0; width: 85%; max-width: ${device === 'mobile' ? '320px' : '850px'}; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; padding: var(--space-4) 0;">
         
         ${device === 'mobile' ? `
-        <!-- Mobile iPhone Frame -->
+        <!-- Mobile-only project (always iPhone) -->
         <div style="width: 100%; position: relative;">
           <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
             <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
             <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
-              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: top;">
             </div>
           </div>
         </div>
         ` : `
-        <!-- Macbook Frame -->
-        <div class="macbook-wrapper" style="width: 100%; position: relative; perspective: 1000px;">
-          <!-- Screen/Lid -->
-          <div style="
-            background: #111;
-            padding: 2% 2% 4% 2%;
-            border-radius: 12px 12px 0 0;
-            box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 2;
-          ">
-            <!-- Camera dot -->
-            <div style="position: absolute; top: 1.5%; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #333; border-radius: 50%;"></div>
-            
-            <!-- The actual screenshot -->
+        <!-- Responsive Laptop Cover (Macbook on Desktop, iPhone on Mobile) -->
+        <style>
+          .gallery-mockup-desktop { display: none !important; }
+          .gallery-mockup-mobile { display: block !important; width: 100%; max-width: 320px; margin: 0 auto; }
+          @media(min-width: 768px) {
+            .gallery-mockup-desktop { display: block !important; width: 100%; }
+            .gallery-mockup-mobile { display: none !important; }
+          }
+        </style>
+
+        <div class="gallery-mockup-mobile">
+          <div style="background: #111; padding: 2.5%; border-radius: 36px; box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15); position: relative; z-index: 2;">
+            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #111; border-radius: 0 0 12px 12px; z-index: 3;"></div>
+            <div style="background: #fff; border-radius: 28px; overflow: hidden; aspect-ratio: 9/19.5; position: relative;">
+              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: top;">
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-mockup-desktop">
+          <div class="macbook-wrapper" style="width: 100%; position: relative; perspective: 1000px;">
+            <!-- Screen/Lid -->
             <div style="
-              background: #fff;
-              border-radius: 4px;
-              overflow: hidden;
-              aspect-ratio: 16/10;
+              background: #111;
+              padding: 2% 2% 4% 2%;
+              border-radius: 12px 12px 0 0;
+              box-shadow: inset 0 0 0 2px #444, 0 10px 30px rgba(0,0,0,0.15);
               position: relative;
+              z-index: 2;
             ">
-              <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <!-- Camera dot -->
+              <div style="position: absolute; top: 1.5%; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #333; border-radius: 50%;"></div>
+              
+              <!-- The actual screenshot -->
+              <div style="
+                background: #fff;
+                border-radius: 4px;
+                overflow: hidden;
+                aspect-ratio: 16/10;
+                position: relative;
+              ">
+                <img src="${item.src.startsWith('/') ? item.src : '/' + item.src}" alt="${item.alt || 'Screenshot ' + (index + 1)}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+              
+              <!-- MacBook Pro text -->
+              <div style="position: absolute; bottom: 1%; left: 50%; transform: translateX(-50%); color: #555; font-size: 0.5rem; font-family: sans-serif; letter-spacing: 1px;">MacBook Pro</div>
             </div>
             
-            <!-- MacBook Pro text -->
-            <div style="position: absolute; bottom: 1%; left: 50%; transform: translateX(-50%); color: #555; font-size: 0.5rem; font-family: sans-serif; letter-spacing: 1px;">MacBook Pro</div>
-          </div>
-          
-          <!-- Base/Keyboard lip -->
-          <div style="
-            position: relative;
-            height: 12px;
-            background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%);
-            border-radius: 0 0 16px 16px;
-            width: 115%;
-            left: -7.5%;
-            z-index: 1;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 15px 20px rgba(0,0,0,0.15);
-            display: flex;
-            justify-content: center;
-          ">
-            <!-- Trackpad notch -->
-            <div style="width: 15%; height: 4px; background: #a5a5a5; border-radius: 0 0 4px 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+            <!-- Base/Keyboard lip -->
+            <div style="
+              position: relative;
+              height: 12px;
+              background: linear-gradient(to bottom, #d5d5d5 0%, #b3b3b3 100%);
+              border-radius: 0 0 16px 16px;
+              width: 115%;
+              left: -7.5%;
+              z-index: 1;
+              box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 15px 20px rgba(0,0,0,0.15);
+              display: flex;
+              justify-content: center;
+            ">
+              <!-- Trackpad notch -->
+              <div style="width: 15%; height: 4px; background: #a5a5a5; border-radius: 0 0 4px 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+            </div>
           </div>
         </div>
         `}
